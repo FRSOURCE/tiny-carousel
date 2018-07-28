@@ -1,6 +1,6 @@
 {
   "name": "frs-table-calendar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Calendar extension for FRSolutions/FRS-table.",
   "main": "index.js",
   "scripts": {
