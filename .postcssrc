@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "precss"          : {
+    },
+    "postcss-import"  : {
+    },
+    "postcss-reporter": {
+      "clearReportedMessages": true
+    }
+  }
+}
