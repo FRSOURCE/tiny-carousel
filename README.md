@@ -1,2 +1,4 @@
-# FRS-tiny-carousel
-Mobile &amp; desktop-friendly, tiny, efficient (vanilaJS) carousel which takes advantage of CSS snap points (or polyfills it)!
+![Tiny carousel library logo](src/logo.png)
+
+# @frsource/tiny-carousel
+Mobile &amp; desktop-friendly, tiny, efficient (vanillaJS) carousel which takes advantage of CSS snap points (or polyfills it)!

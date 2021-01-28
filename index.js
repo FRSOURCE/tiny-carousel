@@ -1,1 +1,0 @@
-require('./src/FRS-tiny-carousel.js');

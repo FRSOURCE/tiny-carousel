@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../src/FRS-tiny-carousel.js"></script>
+  <link rel="stylesheet" type="text/css" href="./tiny-carousel.css">
+  <script src="./tiny-carousel.umd.js"></script>
 </head>
 <body>
 <style>
@@ -20,6 +21,12 @@
 
   body, h1, h2, p {
     line-height: 1.285em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 
   main {
@@ -92,6 +99,10 @@
     text-align: center;
   }
 
+  .simple-gallery .frs-tc-item {
+    height: 600px; /* to overcome shift on load */
+  }
+
   @media (min-device-width: 800px) {
     h1, h2 {
       margin-left: 0;
@@ -147,45 +158,51 @@
 <main>
   <section class="example-section" id="1-as-image-carousel">
     <header><h2>Using as a scroll-only image carousel</h2></header>
-    <article class="frs-tc-wrapper simple-gallery">
-      <section id="example-1-1-1">
-        <img src="https://choralista.pl/cfs/files/files/7pGEYN92YG8vyGcEJ/DemoStampRotate01-e1400242575670.png"/>
+    <ul class="frs-tc simple-gallery">
+      <li id="example-1-1-1" class="frs-tc-item">
+        <img src="https://picsum.photos/1440/620.jpg?random=1"/>
         <p>Some caption</p>
-      </section>
-      <section id="example-1-1-2">
-        <img src="https://choralista.pl/cfs/files/files/7pGEYN92YG8vyGcEJ/DemoStampRotate01-e1400242575670.png"/>
+      </li>
+      <li id="example-1-1-2" class="frs-tc-item">
+        <img src="https://picsum.photos/1440/620.jpg?random=2"/>
         <p>Some caption #2</p>
-      </section>
-    </article>
+      </li>
+      <li id="example-1-1-3" class="frs-tc-item">
+        <img src="https://picsum.photos/1440/520.jpg?random=3"/>
+        <p>Some caption #3</p>
+      </li>
+    </ul>
   </section>
   <section class="example-section" id="2-as-mobile-view-slider">
     <header><h2>Using as a mobile-only view slider</h2></header>
-    <article class="phone-wrapper">
-      <section id="example-2-1-1">
-        <header>
-          <h4>Some heading</h4>
-          <a href="#example-2-1-2">Next&nbsp;&gt;</a>
-        </header>
-        <div class="example-mobile-body">
-          <p>This is example body of your mobile application.</p>
-          <p>Try to swipe the screen of click Next/Prev button to see power of FRS-tiny-carousel!</p>
-        </div>
-      </section>
-      <section id="example-2-1-2">
-        <header>
-          <a href="#example-2-1-1">&lt;&nbsp;Prev</a>
-          <h4>Some heading #2</h4>
-        </header>
-        <div class="example-mobile-body">
-          <p>Pretty neat, isn't it?</p>
-        </div>
-      </section>
-    </article>
+    <div class="phone-wrapper">
+      <article>
+        <section id="example-2-1-1">
+          <header>
+            <h4>Some heading</h4>
+            <a href="#example-2-1-2">Next&nbsp;&gt;</a>
+          </header>
+          <div class="example-mobile-body">
+            <p>This is example body of your mobile application.</p>
+            <p>Try to swipe the screen of click Next/Prev button to see power of @frsource/tiny-carousel!</p>
+          </div>
+        </section>
+        <section id="example-2-1-2">
+          <header>
+            <a href="#example-2-1-1">&lt;&nbsp;Prev</a>
+            <h4>Some heading #2</h4>
+          </header>
+          <div class="example-mobile-body">
+            <p>Pretty neat, isn't it?</p>
+          </div>
+        </section>
+      </article>
+    </div>
   </section>
 </main>
 <script type="application/javascript">
-  new FRSTinyCarousel(document.querySelectorAll('.phone-wrapper'));
-  new FRSTinyCarousel(document.querySelectorAll('.frs-tc-wrapper'));
+  console.log(new frsTinyCarousel.FRSTinyCarousel(document.querySelector('.frs-tc')).use(frsTinyCarouselEvents).init())
+  console.log(new frsTinyCarousel.FRSTinyCarousel(document.querySelector('article'), {fallback: {enable: false}}))
 </script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+{
+  "name": "@frsource/tiny-carousel-core",
+  "amdName": "tinyCarouselCore",
+  "version": "0.0.0",
+  "description": "Core module for @frsource/tiny-carousel, based on CSS scroll snap feature 🚀",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "exports": "./dist/index.modern.js",
+  "sass": "src/styles/index.scss",
+  "styles": "dist/index.css",
+  "scripts": {
+    "lint": "concurrently yarn:lint:*",
+    "lint:fix": "concurrently 'yarn lint:scripts --fix' 'yarn lint:styles --fix'",
+    "lint:scripts": "eslint src/. --ext .js,.jsx,.ts,.tsx",
+    "lint:styles": "stylelint 'src/**/**.scss'",
+    "test": "concurrently yarn:test:*",
+    "test:coverage": "concurrently yarn:test:coverage:*",
+    "test:scripts:unit": "jest --config ../../jest.config.js 'src/.*\\.spec\\.test\\.ts'",
+    "test:coverage:scripts:unit": "yarn test:scripts:unit --coverage",
+    "watch:test": "concurrently yarn:test:watch:*",
+    "watch:test:scripts:unit": "yarn test:scripts:unit --watch",
+    "build": "microbundle",
+    "start": "microbundle watch",
+    "docs:dev": "microbundle watch -o ../../docs/.vuepress/public/packages/core.js --no-pkg-main -f umd",
+    "docs:build": "microbundle -o ../../docs/.vuepress/public/packages/core.js --no-pkg-main -f umd"
+  },
+  "keywords": [
+    "carousel",
+    "slider",
+    "swiper",
+    "tiny",
+    "core",
+    "efficient",
+    "modular",
+    "lightweight",
+    "mobile-friendly",
+    "css snap",
+    "scroll snap",
+    "snapping points",
+    "vanillaJS",
+    "accessibility",
+    "css",
+    "js"
+  ],
+  "author": "Jakub Freisler <jakub.freisler@frsource.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FRSource/tiny-carousel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRSource/tiny-carousel.git"
+  },
+  "homepage": "https://www.frsource.org/tiny-carousel/core/",
+  "dependencies": {
+    "@frsource/frs-hide-scrollbar": "^2.0.4",
+    "@frsource/tiny-carousel-utils": "*"
+  }
+}

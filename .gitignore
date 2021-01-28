@@ -1,3 +1,8 @@
 node_modules
 .cache
 report.html
+.nyc_output
+.vscode
+dist
+docs/.vuepress/public/packages
+coverage

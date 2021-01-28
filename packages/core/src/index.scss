@@ -1,0 +1,36 @@
+@import '~@frsource/frs-hide-scrollbar';
+
+.frs-tc {
+  display: flex;
+  height: 100%;
+  overflow: scroll;
+
+  -webkit-overflow-scrolling: touch;
+
+  scroll-behavior: smooth;
+  scroll-snap-destination: 0% 100%;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  width: 100%;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+
+  @supports (scroll-snap-align: start) {
+    /* modern scroll snap points */
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.frs-tc-item {
+  flex: 0 0 100%;
+  overflow: hidden;
+  scroll-snap-align: start;
+  width: 100%;
+
+  @supports (scroll-snap-align: start) {
+    /* modern scroll snap points */
+    scroll-snap-align: center;
+  }
+}

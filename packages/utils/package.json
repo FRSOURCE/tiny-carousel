@@ -1,0 +1,52 @@
+{
+  "name": "@frsource/tiny-carousel-utils",
+  "amdName": "tinyCarouselUtils",
+  "version": "0.0.0",
+  "description": "Utils used by @frsource/tiny-carousel.",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "exports": "./dist/index.modern.js",
+  "scripts": {
+    "lint": "concurrently yarn:lint:*",
+    "lint:fix": "concurrently 'yarn lint:scripts --fix'",
+    "lint:scripts": "eslint src/. --ext .js,.jsx,.ts,.tsx",
+    "test": "concurrently yarn:test:*",
+    "test:scripts:unit": "jest",
+    "build": "microbundle",
+    "start": "microbundle watch",
+    "docs:dev": "microbundle watch -o ../../docs/.vuepress/public/packages/utils.js --no-pkg-main -f umd",
+    "docs:build": "microbundle -o ../../docs/.vuepress/public/packages/utils.js --no-pkg-main -f umd"
+  },
+  "keywords": [
+    "carousel",
+    "slider",
+    "swiper",
+    "tiny",
+    "utils",
+    "efficient",
+    "modular",
+    "lightweight",
+    "mobile-friendly",
+    "css snap",
+    "scroll snap",
+    "snapping points",
+    "vanillaJS",
+    "accessibility",
+    "css",
+    "js"
+  ],
+  "author": "Jakub Freisler <jakub.freisler@frsource.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FRSource/tiny-carousel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRSource/tiny-carousel.git"
+  },
+  "homepage": "https://www.frsource.org/tiny-carousel/utils/"
+}
