@@ -1,6 +1,6 @@
 # Usage
 
-Let's say this is how you bootstrap [**Vue I18n**](https://github.com/kazupon/vue-i18n) in your application:
+Let’s say this is how you bootstrap [**Vue I18n**](https://github.com/kazupon/vue-i18n) in your application:
 
 ```typescript
 import Vue from 'vue';
@@ -22,12 +22,12 @@ new Vue({
 }).$mount('#app');
 ```
 
-In this case, to integrate our library you only need to follow two simple steps:
+In this case, to integrate our library you only need to follow two steps:
 
-- Import the **Vue I18n Phrase In-Context Editor** library.
-- Create new **Vue I18n Phrase In-Context Editor** instance, passing **Vue I18n** instance as a first argument and *Phrase Config* as a second.
+- Import the **Vue I18n Phrase In-Context Editor** library
+- Create new **Vue I18n Phrase In-Context Editor** instance, passing **Vue I18n** instance as a first argument and *Phrase Configuration* as a second
 
-Sounds easy enough, right? Let's have a look at an updated example:
+Let’s have a look at an updated example:
 
 ```typescript{3,15-18}
 import Vue from 'vue';
@@ -57,4 +57,4 @@ new Vue({
 
 From now on, the **In-Context Editor** is fully integrated into your Vue app, congratulations! :tada:
 
-For further information about the possible configuration options and useful methods, please have a look at our [API docs](../../api).
+For further information about the possible configuration options and useful methods, please have a look at our [API reference](../nav.02.api-reference).

@@ -15,7 +15,6 @@
     "en-capitalization": true,
     "no-dead-link": {
       "checkRelative": true,
-      "baseURI": 'https://localhost:8080/tiny-carousel/',
       "ignore": [],
       "preferGET": [],
       "ignoreRedirects": false,
@@ -23,16 +22,20 @@
     },
     "no-empty-section": true,
     "no-start-duplicated-conjunction": true,
-    "no-todo": true,
+    "no-todo": false,
     "period-in-list-item": true,
     "spelling": {
         "language": "en",
-        "skipPatterns": ["JavaScript", "CDN", "frsource", "vanillaJS", "polyfills", "performant", "customizable"]
+        "skipPatterns": [
+          "I18n", "Vue", "/(?:\\s|^):[a-z]+:(?:\\s|$)/ig",
+          "JavaScript", "CDN", "TODO", "frsource", "vanillaJS",
+          "polyfills", "performant", "customizable"
+        ]
     },
     "stop-words": true,
     "terminology": true,
     "unexpanded-acronym": {
-      "ignore_acronyms" : ["CSS"]
+      "ignore_acronyms" : ["CSS", "TODO", "API"]
     }
   }
 }
