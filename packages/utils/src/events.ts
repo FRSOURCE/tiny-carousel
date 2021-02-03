@@ -4,8 +4,8 @@ export interface EventDetailMap {
   'before:go-to': { to: { index: number; } };
   'after:go-to': { to: { index: number; }; };
   'error:go-to': { to: { index: number; }; cause: 'overflow' };
-  'before:parse-possible-items'?: undefined;
-  'after:parse-possible-items'?: undefined;
+  'before:find-possible-items'?: undefined;
+  'after:find-possible-items'?: undefined;
 }
 export type CustomEventListener<E extends keyof EventDetailMap = keyof EventDetailMap> =
   ((e: CustomEvent<EventDetailMap[E]>)=> void);

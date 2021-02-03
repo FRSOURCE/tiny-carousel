@@ -12,10 +12,14 @@
   "exports": "./dist/index.modern.js",
   "scripts": {
     "lint": "concurrently yarn:lint:*",
-    "lint:fix": "concurrently 'yarn lint:scripts --fix'",
     "lint:scripts": "eslint src/. --ext .js,.jsx,.ts,.tsx",
+    "fix:lint": "concurrently 'yarn lint:scripts --fix'",
     "test": "concurrently yarn:test:*",
-    "test:scripts:unit": "jest",
+    "test:scripts:unit": "jest --config ../../jest.config.js 'src/.*\\.spec\\.test\\.ts'",
+    "coverage": "concurrently yarn:coverage:*",
+    "coverage:scripts": "yarn test:scripts:unit --coverage",
+    "watch:test": "concurrently yarn:watch:test:*",
+    "watch:test:scripts:unit": "yarn test:scripts:unit --watch",
     "build": "microbundle",
     "docs:dev": "microbundle watch -o ../../docs/.vuepress/public/packages/pluginCustomEvents.js --no-pkg-main -f umd",
     "docs:build": "microbundle -o ../../docs/.vuepress/public/packages/pluginCustomEvents.js --no-pkg-main -f umd"

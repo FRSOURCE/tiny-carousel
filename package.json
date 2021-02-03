@@ -9,10 +9,12 @@
     "publish": "lerna publish",
     "start": "lerna run start --parallel",
     "build": "lerna run build",
-    "test": "lerna run --parallel test",
-    "lint": "concurrently 'lerna run --parallel lint' 'yarn lint:text'",
-    "lint:fix": "concurrently 'lerna run --parallel lint:fix' 'yarn lint:text --fix'",
+    "test": "lerna run test --parallel",
+    "watch:test": "lerna run watch:test --parallel",
+    "coverage": "lerna run coverage --parallel",
+    "lint": "concurrently 'lerna run lint --parallel' 'yarn lint:text'",
     "lint:text": "textlint docs/**/*",
+    "fix:lint": "concurrently 'lerna run fix:lint --parallel' 'yarn lint:text --fix'",
     "postinstall": "lerna bootstrap",
     "what-changed": "lerna changed",
     "diff": "lerna diff",
@@ -51,6 +53,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.7",
+    "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
     "concurrently": "^5.3.0",
@@ -90,6 +93,7 @@
     "textlint-rule-stop-words": "^2.0.9",
     "textlint-rule-terminology": "^2.1.4",
     "textlint-rule-unexpanded-acronym": "^1.2.4",
+    "ts-jest": "^26.5.0",
     "typescript": "^4.1.3",
     "vuepress": "^1.8.0",
     "vuepress-bar": "^0.3.2",
@@ -106,6 +110,8 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "concurrently 'yarn lint' 'yarn test'",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }

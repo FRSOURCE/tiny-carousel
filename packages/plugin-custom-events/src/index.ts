@@ -47,11 +47,11 @@ export const pluginCustomEvents = {
       return result;
     };
 
-    const parsePossibleItems = instance.parsePossibleItems;
-    instance.parsePossibleItems = function(...args) {
-      this.dispatch('before:parse-possible-items');
-      const result = parsePossibleItems.apply(this, args);
-      this.dispatch('after:parse-possible-items');
+    const findPossibleItems = instance.findPossibleItems;
+    instance.findPossibleItems = function(...args) {
+      this.dispatch('before:find-possible-items');
+      const result = findPossibleItems.apply(this, args);
+      this.dispatch('after:find-possible-items');
       return result;
     };
 
@@ -62,10 +62,9 @@ export const pluginCustomEvents = {
       const result = goTo.apply(this, args);
       result
         ? this.dispatch('after:go-to', goToEventPayload)
-        : dispatch(
-          this.carouselElement,
+        : this.dispatch(
           'error:go-to',
-          Object.assign(goToEventPayload, {cause: 'overflow'} as { cause: EventDetailMap['error:go-to']['cause'] })
+          Object.assign({}, goToEventPayload, {cause: 'overflow'} as { cause: EventDetailMap['error:go-to']['cause'] })
         );
       return result;
     };

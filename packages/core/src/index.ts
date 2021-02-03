@@ -63,13 +63,17 @@ export class TinyCarousel {
   private get _carouselScrollPositionX () {
     let scrollPositionX = this.carouselElement.scrollLeft + this.carouselElement.clientWidth / 2;
     // to overcome calculation problems when offsetLeft is calculated not from this.carousel, but from body
-    if (this.items.length && this.items[0].offsetParent !== this.carouselElement) {
+    if (this.items[0]?.offsetParent !== this.carouselElement) {
       scrollPositionX += this.carouselElement.offsetLeft;
     }
 
     return scrollPositionX;
   }
 
+
+  /*
+   * Returns an index of the active item or -1 if items array is empty.
+   */
   get active () {
     if (this._active !== void 0) return this._active;
     const scrollPositionX = this._carouselScrollPositionX;
