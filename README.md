@@ -16,11 +16,11 @@
 <h1 align="center">Tiny carousel - your favourite carousel library 👑</h1>
 
 <p align="center">
-  <a href="https://www.frsource.org/tiny-carousel/nav.01.guide">Getting Started</a>
+  <a href="https://www.frsource.org/tiny-carousel/guide/">Getting Started</a>
   ·
-  <a href="https://www.frsource.org/tiny-carousel/nav.03.contribution.md">Contribution</a>
+  <a href="https://www.frsource.org/tiny-carousel/contribution/">Contribution</a>
   ·
-  <a href="https://www.frsource.org/tiny-carousel">Documentation</a>
+  <a href="https://www.frsource.org/tiny-carousel/">Documentation</a>
   ·
   <a href="https://github.com/FRSOURCE/tiny-carousel/issues">File an Issue</a>
   ·
@@ -51,23 +51,23 @@
 
 ## Documentation
 
-For docs, please visit [frsource.org/tiny-carousel](https://www.frsource.org/tiny-carousel)
+For docs, please visit [frsource.org/tiny-carousel](https://www.frsource.org/tiny-carousel/)
 
-- [Getting Started](https://www.frsource.org/tiny-carousel/nav.01.guide)
-- [API Reference](https://www.frsource.org/tiny-carousel/nav.02.api-reference)
-- [Ecosystem & plugins](https://www.frsource.org/tiny-carousel/nav.03.ecosystem)
+- [Getting Started](https://www.frsource.org/tiny-carousel/guide/)
+- [API Reference](https://www.frsource.org/tiny-carousel/api-reference/)
+- [Ecosystem & plugins](https://www.frsource.org/tiny-carousel/ecosystem/)
 
-## Quickstart
+## Quick start
 
-[Read the guide on how to get started!](https://www.frsource.org/tiny-carousel/nav.01.guide)
+[Read the guide on how to get started!](https://www.frsource.org/tiny-carousel/guide/)
 
 ## Questions
 
-Don't hesitate to reach out by asking a question on the [dicussions board](https://github.com/FRSOURCE/tiny-carousel/discussions)!
+Don’t hesitate to ask a question directly on the [discussions board](https://github.com/FRSOURCE/tiny-carousel/discussions)!
 
 ## Changelog
 
-Changes for every release are documented in the [release notes](https://github.com/FRSOURCE/tiny-carousel/releases) and [CHANGELOG](https://github.com/FRSOURCE/tiny-carousel/blob/master/CHANGELOG).
+Changes for every release are documented in the [release notes](https://github.com/FRSOURCE/tiny-carousel/releases) and [CHANGELOG](https://github.com/FRSOURCE/tiny-carousel/blob/master/CHANGELOG.md).
 
 ## License
 

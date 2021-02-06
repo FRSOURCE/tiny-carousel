@@ -29,13 +29,14 @@
         "skipPatterns": [
           "I18n", "Vue", "/(?:\\s|^):[a-z]+:(?:\\s|$)/ig",
           "JavaScript", "CDN", "TODO", "frsource", "vanillaJS",
-          "polyfills", "performant", "customizable"
+          "polyfills", "performant", "customizable", "/changelog/i",
+          "2020", "Jakub", "Freisler", "FRSOURCE", "FRS"
         ]
     },
     "stop-words": true,
     "terminology": true,
     "unexpanded-acronym": {
-      "ignore_acronyms" : ["CSS", "TODO", "API"]
+      "ignore_acronyms" : ["CSS", "TODO", "API", "MIT", "FRS"]
     }
   }
 }
