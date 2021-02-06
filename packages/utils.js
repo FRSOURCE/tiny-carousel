@@ -1,0 +1,2 @@
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n(exports):"function"==typeof define&&define.amd?define(["exports"],n):n((e||self).tinyCarouselUtils={})}(this,function(e){e.dispatch=function(e,n,t,i){return e.dispatchEvent(new CustomEvent(n,Object.assign({detail:t},i)))},e.off=function(e,n,t){e.removeEventListener(n,t)},e.on=function(e,n,t,i){e.addEventListener(n,t,i)}});
+//# sourceMappingURL=utils.js.map
