@@ -1,4 +1,3 @@
-
 # Introduction
 
 **Tiny carousel** is a modular slider based on the modern CSS snap points technique. This makes the library fully customizable, really lightweight and incredibly performant with the smoothest mobile drag & drop support ever possible!

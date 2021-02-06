@@ -15,6 +15,7 @@
     "lint": "concurrently 'lerna run lint --parallel' 'yarn lint:text'",
     "lint:text": "textlint docs/**/*",
     "fix:lint": "concurrently 'lerna run fix:lint --parallel' 'yarn lint:text --fix'",
+    "link": "lerna link",
     "postinstall": "lerna bootstrap",
     "what-changed": "lerna changed",
     "diff": "lerna diff",
@@ -24,7 +25,7 @@
     "docs:dev:vuepress": "vuepress dev docs",
     "docs:dev:packages": "lerna run --parallel docs:dev",
     "predocs:build": "yarn clean:docs:bundles",
-    "docs:build": "lerna run --parallel docs:build",
+    "docs:build": "lerna run --stream docs:build",
     "postdocs:build": "vuepress build docs"
   },
   "keywords": [
@@ -96,7 +97,6 @@
     "ts-jest": "^26.5.0",
     "typescript": "^4.1.3",
     "vuepress": "^1.8.0",
-    "vuepress-bar": "^0.3.2",
     "vuepress-plugin-clean-urls": "^1.1.2",
     "vuepress-plugin-seo": "^0.1.4"
   },

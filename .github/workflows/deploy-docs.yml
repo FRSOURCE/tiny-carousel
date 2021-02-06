@@ -1,14 +1,16 @@
-name: Test coverage 
-on: [push, pull_request]
+name: Deploy docs
+on:
+  push:
+    branches:
+      - master
 jobs:
-  test-coverage:
-    name: Test coverage
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
         with:
-          node-version: '15.x'
+          persist-credentials: false
       - name: Set yarn cache directory
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -35,4 +37,12 @@ jobs:
         run: yarn link
       - name: Build packages to get cross-references working 🔧
         run: yarn build
-      - run: yarn coverage
+      - name: Build docs 📄
+        run: yarn docs:build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs/.vuepress/dist
+          CLEAN: true

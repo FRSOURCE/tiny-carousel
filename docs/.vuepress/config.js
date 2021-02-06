@@ -1,5 +1,6 @@
-const getConfig = require("vuepress-bar");
-const { nav, sidebar } = getConfig();
+const fs = require('fs');
+const path = require('path');
+const { /* parseFrontmatter, parseVueFrontmatter,  */isIndexFile: { isIndexFile } } = require('@vuepress/shared-utils');
 
 module.exports = {
     title: 'Tiny carousel',
@@ -8,10 +9,13 @@ module.exports = {
     themeConfig: {
         logo: '/logo.svg',
         nav: [
-            ...nav,
+            { text: 'Home', link: '/' },
+            { text: 'Documentation', link: '/guide/' },
             { text: 'Looking for Web wizards?', link: 'https://www.frsource.org/' }
         ],
-        sidebar,
+        sidebar: [
+            ...getSideBar()
+        ],
         searchPlaceholder: 'Search in docs...',
         repo: 'frsource/tiny-carousel',
         docsDir: 'docs',
@@ -56,4 +60,27 @@ module.exports = {
             })
         ]
     ],
+}
+
+function getSideBar() {
+    const ignoreDirs = ['.vuepress'];
+    
+    return fs
+        .readdirSync(path.join(__dirname, '..'), { withFileTypes: true })
+        .filter(item =>
+            item.isDirectory() &&
+            !ignoreDirs.includes(item.name.toLowerCase())
+        )
+        .reverse()
+        .reduce((p, { name }) => {
+            p.push('/' + name + '/');
+            fs.readdirSync(path.join(__dirname, '..', name), { withFileTypes: true })
+                .forEach(item => {
+                    if (item.isFile() && !isIndexFile(item.name)) {
+                        const subPageName = item.name.substring(0, item.name.lastIndexOf('.'));
+                        p.push('/' + name + '/' + subPageName);
+                    }
+                });
+            return p;
+        }, [])
 }

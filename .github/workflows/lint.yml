@@ -9,5 +9,30 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '15.x'
-      - run: yarn install
+      - name: Set yarn cache directory
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache node modules
+        id: lerna-yarn-cache
+        uses: actions/cache@v2
+        env:
+            cache-name: cache-node-modules
+        with:
+            path: |
+                ${{ steps.yarn-cache-dir-path.outputs.dir }}
+                node_modules
+                */*/node_modules
+            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+            restore-keys: |
+                ${{ runner.os }}-build-${{ env.cache-name }}-
+                ${{ runner.os }}-build-
+                ${{ runner.os }}-
+      - name: Install dependencies if needed.
+        if: steps.lerna-yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --ignore-platform --frozen-lockfile
+      - name: Link package directories together if it's not already done as a part of install.
+        if: steps.lerna-yarn-cache.outputs.cache-hit == 'true'
+        run: yarn link
+      - name: Build packages to get cross-references working 🔧
+        run: yarn build
       - run: yarn lint
