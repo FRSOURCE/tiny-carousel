@@ -43,7 +43,7 @@ export class TinyCarousel {
 
     this.items = this.findPossibleItems();
 
-    on(this.carouselElement, 'scroll', this.resetActive.bind(this), { passive: true });
+    on(carouselElement, 'scroll', this.resetActive.bind(this), { passive: true });
   }
 
   use<PD extends PluginDefinition>(pluginDefinition: PD, ...args: OmitFirstItem<Parameters<PD['install']>>) {
@@ -52,19 +52,22 @@ export class TinyCarousel {
   }
 
   init() {
-    this.carouselElement.classList.add(this.config.className);
-    this.carouselElement.classList.add(this.config.hideScrollClassName);
+    const { classList } = this.carouselElement;
+    const { config } = this;
+    classList.add(config.className);
+    classList.add(config.hideScrollClassName);
 
-    this.goTo(this.config.active);
+    this.goTo(config.active);
 
     return this;
   }
 
   private get _carouselScrollPositionX () {
-    let scrollPositionX = this.carouselElement.scrollLeft + this.carouselElement.clientWidth / 2;
+    const { carouselElement } = this;
+    let scrollPositionX = carouselElement.scrollLeft + carouselElement.clientWidth / 2;
     // to overcome calculation problems when offsetLeft is calculated not from this.carousel, but from body
-    if (this.items[0]?.offsetParent !== this.carouselElement) {
-      scrollPositionX += this.carouselElement.offsetLeft;
+    if (this.items[0]?.offsetParent !== carouselElement) {
+      scrollPositionX += carouselElement.offsetLeft;
     }
 
     return scrollPositionX;
@@ -109,13 +112,14 @@ export class TinyCarousel {
   
   findPossibleItems () {
     const children = Array.from(this.carouselElement.children) as HTMLElement[];
-    const filtredChildren = children.filter(child => child.classList.contains(this.config.itemClassName));
+    const { itemClassName } = this.config;
+    const filtredChildren = children.filter(child => child.classList.contains(itemClassName));
 
     if (filtredChildren.length) {
       return filtredChildren;
     } else {
       children.forEach(child => {
-        child.classList.add(this.config.itemClassName)
+        child.classList.add(itemClassName)
       });
       return children;
     }
