@@ -1,0 +1,45 @@
+{
+  "name": "@frsource/tiny-carousel-docs",
+  "version": "0.0.0",
+  "description": "Documentation for @frsource/tiny-carousel 📄",
+  "main": ".vuepress/dist/index.html",
+  "scripts": {
+    "lint": "concurrently yarn:lint:*",
+    "lint:text": "textlint **/*.md",
+    "fix:lint": "concurrently 'yarn lint:scripts --fix' 'yarn lint:styles --fix' 'yarn lint:text --fix'",
+    "build": "vuepress build .",
+    "start": "vuepress dev ."
+  },
+  "keywords": [
+    "carousel",
+    "slider",
+    "swiper",
+    "tiny",
+    "documentation",
+    "docs",
+    "vuepress",
+    "efficient",
+    "modular",
+    "lightweight",
+    "mobile-friendly",
+    "css snap",
+    "scroll snap",
+    "snapping points"
+  ],
+  "author": "Jakub Freisler <jakub.freisler@frsource.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FRSource/tiny-carousel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRSource/tiny-carousel.git"
+  },
+  "homepage": "https://www.frsource.org/tiny-carousel/",
+  "dependencies": {
+    "@frsource/tiny-carousel-utils": "*",
+    "@frsource/tiny-carousel-core": "*",
+    "@frsource/tiny-carousel-plugin-custom-events": "*",
+    "@frsource/tiny-carousel-plugin-scroll-snap-fallback": "*"
+  }
+}

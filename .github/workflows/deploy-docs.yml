@@ -35,14 +35,12 @@ jobs:
       - name: Link package directories together if it's not already done as a part of install.
         if: steps.lerna-yarn-cache.outputs.cache-hit == 'true'
         run: yarn link
-      - name: Build packages to get cross-references working 🔧
+      - name: Build packages 🔧 (docs included 📄) 
         run: yarn build
-      - name: Build docs 📄
-        run: yarn docs:build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: docs/.vuepress/dist
+          FOLDER: packages/docs/.vuepress/dist
           CLEAN: true

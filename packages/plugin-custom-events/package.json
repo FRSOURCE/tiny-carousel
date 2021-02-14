@@ -20,9 +20,7 @@
     "coverage:scripts": "yarn test:scripts:unit --coverage",
     "watch:test": "concurrently yarn:watch:test:*",
     "watch:test:scripts:unit": "yarn test:scripts:unit --watch",
-    "build": "microbundle",
-    "docs:dev": "microbundle watch -o ../../docs/.vuepress/public/packages/pluginCustomEvents.js --no-pkg-main -f umd",
-    "docs:build": "microbundle -o ../../docs/.vuepress/public/packages/pluginCustomEvents.js --no-pkg-main -f umd"
+    "build": "microbundle"
   },
   "devDependencies": {
     "@frsource/tiny-carousel-core": "*"

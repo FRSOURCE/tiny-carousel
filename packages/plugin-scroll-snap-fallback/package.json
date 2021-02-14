@@ -21,9 +21,7 @@
     "watch:test": "concurrently yarn:watch:test:*",
     "watch:test:scripts:unit": "yarn test:scripts:unit --watch",
     "build": "microbundle",
-    "start": "microbundle watch",
-    "docs:dev": "microbundle watch -o ../../docs/.vuepress/public/packages/pluginScrollSnapFallback.js --no-pkg-main -f umd",
-    "docs:build": "microbundle -o ../../docs/.vuepress/public/packages/pluginScrollSnapFallback.js --no-pkg-main -f umd"
+    "start": "microbundle watch"
   },
   "keywords": [
     "carousel",

@@ -18,7 +18,7 @@ module.exports = {
         ],
         searchPlaceholder: 'Search in docs...',
         repo: 'frsource/tiny-carousel',
-        docsDir: 'docs',
+        docsDir: 'packages/docs',
         editLinks: true,
         editLinkText: 'Help us improve this page on GitHub',
         smoothScroll: true,
@@ -63,7 +63,7 @@ module.exports = {
 }
 
 function getSideBar() {
-    const ignoreDirs = ['.vuepress'];
+    const ignoreDirs = ['.vuepress', 'node_modules'];
     
     return fs
         .readdirSync(path.join(__dirname, '..'), { withFileTypes: true })

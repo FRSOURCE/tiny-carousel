@@ -8,25 +8,17 @@
   "scripts": {
     "publish": "lerna publish",
     "start": "lerna run start --parallel",
-    "build": "lerna run build",
+    "build": "lerna run build --stream",
     "test": "lerna run test --parallel",
     "watch:test": "lerna run watch:test --parallel",
     "coverage": "lerna run coverage --parallel",
     "lint": "concurrently 'lerna run lint --parallel' 'yarn lint:text'",
-    "lint:text": "textlint docs/**/* README.md packages/*/README.md",
+    "lint:text": "textlint README.md packages/*/README.md",
     "fix:lint": "concurrently 'lerna run fix:lint --parallel' 'yarn lint:text --fix'",
     "link": "lerna link",
     "postinstall": "lerna bootstrap",
     "what-changed": "lerna changed",
-    "diff": "lerna diff",
-    "clean:docs:bundles": "rimraf docs/.vuepress/public/packages/*",
-    "predocs:dev": "yarn clean:docs:bundles",
-    "docs:dev": "concurrently yarn:docs:dev:*",
-    "docs:dev:vuepress": "vuepress dev docs",
-    "docs:dev:packages": "lerna run --parallel docs:dev",
-    "predocs:build": "yarn clean:docs:bundles",
-    "docs:build": "lerna run --stream docs:build",
-    "postdocs:build": "vuepress build docs"
+    "diff": "lerna diff"
   },
   "keywords": [
     "carousel",
