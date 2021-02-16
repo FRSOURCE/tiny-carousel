@@ -8,7 +8,7 @@ Our team needed to add multiple carousel instances to the single view for a cros
 
 ## How does it work
 
-**Tiny carousel** is a name for the whole ecosystem of modules that can be used to setup a hugely customized slider for your web app! The main part is the **core** module which creates the simplest form of carousel and allows to extend it by adding other plugins.
+**Tiny carousel** is a name for the whole ecosystem of modules that can be used to setup a hugely customized slider for your web app! The main part is the [**core** module](./usage/#core) which creates the simplest form of carousel and allows to extend it by adding other plugins.
 
 The main sliding functionality is based on the [CSS scroll-snap](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap) and is supported by every [modern browser](https://caniuse.com/?search=scroll%20snap). This gives the library a native-like responsiveness and makes it a really lightweight solution. To understand scroll snapping better we suggest to read [this great article published on CSS-TRICKS](https://css-tricks.com/practical-css-scroll-snapping/).
 

@@ -14,7 +14,7 @@
     },
     "en-capitalization": true,
     "no-dead-link": {
-      "checkRelative": true,
+      "checkRelative": false,
       "ignore": [],
       "preferGET": [],
       "ignoreRedirects": false,
