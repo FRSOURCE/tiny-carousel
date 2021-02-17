@@ -4,7 +4,18 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "conventionalCommits": true
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "createRelease": "github",
+      "loglevel": "verbose",
+      "message": "chore(release): publish [ci skip]",
+      "ignoreChanges": [
+        "**/README.md",
+        "README.md",
+        "**/*.test.ts",
+        "./package.json",
+        "./.github/**"
+      ]
     }
   }
 }

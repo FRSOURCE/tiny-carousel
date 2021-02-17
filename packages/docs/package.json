@@ -36,6 +36,9 @@
     "url": "git+https://github.com/FRSource/tiny-carousel.git"
   },
   "homepage": "https://www.frsource.org/tiny-carousel/",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@frsource/tiny-carousel-utils": "*",
     "@frsource/tiny-carousel-core": "*",

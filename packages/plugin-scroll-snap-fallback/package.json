@@ -52,6 +52,9 @@
     "url": "git+https://github.com/FRSource/tiny-carousel.git"
   },
   "homepage": "https://www.frsource.org/tiny-carousel/plugin-events/",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@frsource/tiny-carousel-core": "*",
     "@frsource/tiny-carousel-utils": "*"

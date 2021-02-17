@@ -54,6 +54,9 @@
     "url": "git+https://github.com/FRSource/tiny-carousel.git"
   },
   "homepage": "https://www.frsource.org/tiny-carousel/core/",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@frsource/frs-hide-scrollbar": "^2.0.4",
     "@frsource/tiny-carousel-utils": "*"
