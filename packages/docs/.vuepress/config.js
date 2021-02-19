@@ -6,6 +6,7 @@ module.exports = {
     title: 'Tiny carousel',
     description: 'Plugin for i18next that paires well with Phrase In-Context Editor.',
     base: '/tiny-carousel/',
+    theme: 'default-prefers-color-scheme',
     themeConfig: {
         logo: '/logo.svg',
         nav: [

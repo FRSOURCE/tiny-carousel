@@ -44,5 +44,8 @@
     "@frsource/tiny-carousel-plugin-custom-events": "^0.1.0",
     "@frsource/tiny-carousel-plugin-scroll-snap-fallback": "^0.1.0",
     "@frsource/tiny-carousel-utils": "^0.1.0"
+  },
+  "devDependencies": {
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   }
 }
