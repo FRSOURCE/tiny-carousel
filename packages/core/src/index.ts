@@ -47,13 +47,14 @@ export class TinyCarousel {
   }
 
   use<PD extends PluginDefinition>(pluginDefinition: PD, ...args: OmitFirstItem<Parameters<PD['install']>>) {
-    (pluginDefinition as PluginDefinition<unknown[]>).install(this, ...args)
+    (pluginDefinition as PluginDefinition<unknown[]>).install(this, ...args);
     return this;
   }
 
   init() {
     const { classList } = this.carouselElement;
     const { config } = this;
+
     classList.add(config.className);
     classList.add(config.hideScrollClassName);
 
@@ -72,7 +73,6 @@ export class TinyCarousel {
 
     return scrollPositionX;
   }
-
 
   /*
    * Returns an index of the active item or -1 if items array is empty.
@@ -115,9 +115,8 @@ export class TinyCarousel {
     const { itemClassName } = this.config;
     const filtredChildren = children.filter(child => child.classList.contains(itemClassName));
 
-    if (filtredChildren.length) {
-      return filtredChildren;
-    } else {
+    if (filtredChildren.length) return filtredChildren;
+    else {
       children.forEach(child => {
         child.classList.add(itemClassName)
       });
@@ -125,5 +124,3 @@ export class TinyCarousel {
     }
   }
 }
-
-
