@@ -1,3 +1,4 @@
+import './index.scss';
 import { on } from '@frsource/tiny-carousel-utils';
 import type { DeepPartial, OmitFirstItem } from './helpers';
 
