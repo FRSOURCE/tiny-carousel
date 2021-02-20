@@ -4,6 +4,7 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
+      "verifyAccess": false,
       "allowBranch": "master",
       "conventionalCommits": true,
       "createRelease": "github",

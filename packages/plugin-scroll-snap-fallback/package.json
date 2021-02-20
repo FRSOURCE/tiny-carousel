@@ -2,7 +2,7 @@
   "name": "@frsource/tiny-carousel-plugin-scroll-snap-fallback",
   "amdName": "tinyCarouselpluginScrollSnapFallback",
   "version": "0.1.0",
-  "description": "@frsource/tiny-carousel plugin which adds eventbus, methods helping with event-handling & CustomEvents firing 🔥",
+  "description": "@frsource/tiny-carousel plugin adding scroll snap API fallback polyfill 🧩",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
