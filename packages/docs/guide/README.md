@@ -13,4 +13,4 @@ Our team needed to add multiple carousel instances to the single view for a cros
 The main sliding functionality is based on the [CSS scroll-snap](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap) and is supported by every [modern browser](https://caniuse.com/?search=scroll%20snap). This gives the library a native-like responsiveness and makes it a really lightweight solution. To understand scroll snapping better we suggest to read [this great article published on CSS-TRICKS](https://css-tricks.com/practical-css-scroll-snapping/).
 
 
-After this brief introduction let’s jump to the next chapter! Now the time has come to learn how to install and use this package 💪
+After this brief introduction let’s jump to the next chapter! Now the time has come to learn how to install this package 💪

@@ -27,10 +27,11 @@
     "spelling": {
         "language": "en",
         "skipPatterns": [
-          "I18n", "Vue", "/(?:\\s|^):[a-z]+:(?:\\s|$)/ig",
-          "JavaScript", "CDN", "TODO", "frsource", "vanillaJS",
-          "polyfills", "performant", "customizable", "/changelog/i",
-          "2020", "Jakub", "Freisler", "FRSOURCE", "FRS"
+          "/\\b(?:JavaScript|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|Jakub|vanillaJS|customizable|polyfills|performant|2020)\\b/g",
+          "/\\bchangelog\\b/i",
+          "/(?:\\s|^):[a-z]+:(?:\\s|$)/ig",
+          "/(?:\\s|^)<[a-z].*>?(?:\\s|$)/ig",
+          "/\\b’ve\\b/i"
         ]
     },
     "stop-words": true,
