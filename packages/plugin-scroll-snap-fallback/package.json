@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-plugin-scroll-snap-fallback",
   "amdName": "tinyCarouselpluginScrollSnapFallback",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "@frsource/tiny-carousel plugin adding scroll snap API fallback polyfill 🧩",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -56,7 +56,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@frsource/tiny-carousel-core": "^0.1.1",
-    "@frsource/tiny-carousel-utils": "^0.1.1"
+    "@frsource/tiny-carousel-core": "^0.1.2",
+    "@frsource/tiny-carousel-utils": "^0.1.2"
   }
 }
