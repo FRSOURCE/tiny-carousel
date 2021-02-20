@@ -1,5 +1,5 @@
-import { on } from "@frsource/tiny-carousel-utils";
-import type { DeepPartial, OmitFirstItem } from "./helpers";
+import { on } from '@frsource/tiny-carousel-utils';
+import type { DeepPartial, OmitFirstItem } from './helpers';
 
 export type PluginDefinition<C extends unknown[] | undefined = undefined> = C extends unknown[]
   ? {

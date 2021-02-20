@@ -1,5 +1,5 @@
-import { EventDetailMap, CustomEventListener, on, off, dispatch } from "@frsource/tiny-carousel-utils";
-import type { TinyCarousel, PluginDefinition } from "@frsource/tiny-carousel-core";
+import { EventDetailMap, CustomEventListener, on, off, dispatch } from '@frsource/tiny-carousel-utils';
+import type { TinyCarousel, PluginDefinition } from '@frsource/tiny-carousel-core';
 
 type InstanceOnFn = {
   <E extends keyof EventDetailMap>(event: E, handler: CustomEventListener<E>, options?: boolean | AddEventListenerOptions): TinyCarousel;

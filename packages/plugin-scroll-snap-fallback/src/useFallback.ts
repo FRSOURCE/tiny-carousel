@@ -1,5 +1,5 @@
-import type { TinyCarousel } from "@frsource/tiny-carousel-core";
-import { on } from "@frsource/tiny-carousel-utils";
+import type { TinyCarousel } from '@frsource/tiny-carousel-core';
+import { on } from '@frsource/tiny-carousel-utils';
 
 export const useFallback = (
     carousel: Pick<TinyCarousel, 'items' | 'carouselElement'>,

@@ -1,5 +1,5 @@
-import type { PluginDefinition } from "@frsource/tiny-carousel-core";
-import { useFallback } from "./useFallback";
+import type { PluginDefinition } from '@frsource/tiny-carousel-core';
+import { useFallback } from './useFallback';
 
 export const pluginScrollSnapFallback = {
   install: (instance, config = {}) => {

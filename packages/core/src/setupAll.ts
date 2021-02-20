@@ -1,5 +1,5 @@
-import type { Config } from ".";
-import { TinyCarousel } from ".";
+import type { Config } from '.';
+import { TinyCarousel } from '.';
 
 export const setupAll = (_elements: NodeListOf<HTMLElement>, config: Config | Config[]) => {
   const elements = Array.from(_elements);
