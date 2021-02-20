@@ -11,7 +11,7 @@
   "module": "dist/index.mjs",
   "exports": "./dist/index.modern.js",
   "sass": "src/styles/index.scss",
-  "styles": "dist/index.css",
+  "style": "dist/index.css",
   "scripts": {
     "lint": "concurrently yarn:lint:*",
     "lint:scripts": "eslint src/. --ext .js,.jsx,.ts,.tsx",
