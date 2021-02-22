@@ -17,12 +17,28 @@ See the example below which uses only a core package:
     title="Basic Tiny Carousel Core example"
     description="The most simplistic usage example of @frsource/tiny-carousel-core package"
 >
-  <template slot="pug">
-// You can navigate through slides using: scroll, arrows or (on touch devices) swiping
-ul
-  each v, i in Array(6)
-    li
-      img(src=`https://picsum.photos/seed/${i+1}/800/600`)
+  <template slot="html">
+&lt;!-- You can navigate through slides using: scroll, arrows (first focus carousel with a click) or (on touch devices) swiping -->
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/1/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/2/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/3/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/4/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/5/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/6/800/600"&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
   </template>
   <template slot="scss">
 <div>
@@ -56,21 +72,34 @@ Next, we can try out using core JavaScript API to add next/previous buttons with
     description="A bit more advanced usage example of @frsource/tiny-carousel-core library"
     default-tab="js"
 >
-  <template slot="pug">
-nav
-  button(type="button" class="first")
-    | <<
-  button(type="button" class="prev")
-    | <
-  button(type="button" class="next")
-    | >
-  button(type="button" class="last")
-    | >>
+  <template slot="html">
+&lt;nav&gt;
+  &lt;button type="button" class="first"&gt;&amp;lt;&amp;lt;&lt;/button&gt;
+  &lt;button type="button" class="prev"&gt;&amp;lt;&lt;/button&gt;
+  &lt;button type="button" class="next"&gt;&amp;gt;&lt;/button&gt;
+  &lt;button type="button" class="last"&gt;&amp;gt;&amp;gt;&lt;/button&gt;
+&lt;/nav&gt;
 <!-- -->
-ul
-  each v, i in Array(6)
-    li
-      img(src=`https://picsum.photos/seed/${i+1}/800/600`)
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/1/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/2/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/3/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/4/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/5/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/6/800/600"&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
   </template>
   <template slot="scss">
 <div>
