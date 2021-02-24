@@ -11,10 +11,20 @@
       "loglevel": "verbose",
       "message": "chore(release): publish [ci skip]",
       "ignoreChanges": [
-        "**/README.md",
-        "README.md",
+        "**/*.md",
+        "*.md",
         "**/*.test.ts",
-        "./package.json",
+        "package.json",
+        "*.config.js",
+        ".postcssrc",
+        ".textlintrc",
+        ".eslintrc.js",
+        ".eslintignore",
+        ".gitignore",
+        ".releaserc",
+        "lerna.json",
+        "stylelint.json",
+        "**/package.json",
         "./.github/**"
       ]
     }
