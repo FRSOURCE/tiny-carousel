@@ -21,7 +21,6 @@
         ".eslintrc.js",
         ".eslintignore",
         ".gitignore",
-        ".releaserc",
         "lerna.json",
         "stylelint.json",
         "**/package.json",

@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          # pulls all commits (needed for lerna / semantic release to correctly version)
+          fetch-depth: "0"
+      - name: Pull git tags (needed for lerna / semantic release to correctly version)
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - name: Setup git user
         run: |
             git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
