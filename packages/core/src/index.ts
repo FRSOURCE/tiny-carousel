@@ -16,6 +16,7 @@ export interface Config {
   // TODO: better documentation
   // internal, change only if you know what you're doing!
   hideScrollClassName: string;
+  items: HTMLElement[];
 }
 
 const _defaultConfig: Config = {
@@ -23,26 +24,26 @@ const _defaultConfig: Config = {
   className: 'frs-tc',
   itemClassName: 'frs-tc-item',
   hideScrollClassName: 'frs-hide-scroll', // default frs-hide-scrollbar classname, for private use only
+  items: [],
 };
 
 
 export class TinyCarousel {
   public config: Config;
-  public items!: HTMLElement[];
   private _active?: number;
 
   static get defaultConfig () {
     return Object.assign({}, _defaultConfig);
   }
 
-  static updateDefaultConfig (_value: DeepPartial<Config>) {
-    Object.assign(_defaultConfig, _value);
+  static updateDefaultConfig (config: DeepPartial<Config>) {
+    Object.assign(_defaultConfig, config);
   }
 
   constructor(public carouselElement: HTMLElement, _config: DeepPartial<Config> = {}) {
     this.config = Object.assign({}, _defaultConfig, _config);
 
-    this.items = this.findPossibleItems();
+    if (!_config.items) this.config.items = this.findPossibleItems();
 
     on(carouselElement, 'scroll', this.resetActive.bind(this), { passive: true });
   }
@@ -53,23 +54,23 @@ export class TinyCarousel {
   }
 
   init() {
-    const { classList } = this.carouselElement;
-    const { config } = this;
+    this.carouselElement.classList.add(this.config.className);
+    this.carouselElement.classList.add(this.config.hideScrollClassName);
 
-    classList.add(config.className);
-    classList.add(config.hideScrollClassName);
+    this.config.items.forEach(({ classList }) => {
+      classList.add(this.config.itemClassName)
+    });
 
-    this.goTo(config.active);
+    this.goTo(this.config.active);
 
     return this;
   }
 
   private get _carouselScrollPositionX () {
-    const { carouselElement } = this;
-    let scrollPositionX = carouselElement.scrollLeft + carouselElement.clientWidth / 2;
+    let scrollPositionX = this.carouselElement.scrollLeft + this.carouselElement.clientWidth / 2;
     // to overcome calculation problems when offsetLeft is calculated not from this.carousel, but from body
-    if (this.items[0]?.offsetParent !== carouselElement) {
-      scrollPositionX += carouselElement.offsetLeft;
+    if (this.config.items[0]?.offsetParent !== this.carouselElement) {
+      scrollPositionX += this.carouselElement.offsetLeft;
     }
 
     return scrollPositionX;
@@ -83,18 +84,18 @@ export class TinyCarousel {
     const scrollPositionX = this._carouselScrollPositionX;
     let i = -1;
     let item: HTMLElement;
-    while (!!(item = this.items[++i]) && scrollPositionX >= item.offsetLeft);
+    while (!!(item = this.config.items[++i]) && scrollPositionX >= item.offsetLeft);
     return this._active = --i;
   }
 
   goTo (n: number): boolean {
     // recursion to avoid situations when -n > this.items.length
-    if (n < 0) return this.goTo(n + this.items.length);
+    if (n < 0) return this.goTo(n + this.config.items.length);
     
-    const last = this.items.length - 1;
+    const last = this.config.items.length - 1;
     if (n > last) return false;
 
-    this.carouselElement.scrollLeft = this.items[n].offsetLeft;
+    this.carouselElement.scrollLeft = this.config.items[n].offsetLeft;
 
     return true;
   }
@@ -117,11 +118,7 @@ export class TinyCarousel {
     const filtredChildren = children.filter(child => child.classList.contains(itemClassName));
 
     if (filtredChildren.length) return filtredChildren;
-    else {
-      children.forEach(child => {
-        child.classList.add(itemClassName)
-      });
-      return children;
-    }
+    
+    return children;
   }
 }
