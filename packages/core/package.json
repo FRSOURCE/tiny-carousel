@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-core",
   "amdName": "tinyCarouselCore",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Core module for @frsource/tiny-carousel, based on CSS scroll snap feature 🚀",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
