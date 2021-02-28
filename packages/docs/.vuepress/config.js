@@ -39,6 +39,17 @@ module.exports = {
         ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/' }],
         ['link', { as: 'style', href: 'https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap' }],
         ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap' }],
+        ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+        ['link', { rel: 'alternate icon', sizes: '32x32', href: '/favicon-32x32.png?v=2', type: 'image/png' }],
+        ['link', { rel: 'alternate icon', sizes: '16x16', href: '/favicon-16x16.png?v=2', type: 'image/png' }],
+        ['link', { rel: 'manifest', href: '/site.webmanifest?v=2' }],
+        ['meta', { name: 'theme-color', content: '#ffffff' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'white' }],
+        ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=2' }],
+        ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=2', color: '#f150a0' }],
+        ['link', { rel: 'shortcut icon', href: '/favicon.ico?v=2' }],
+        ['meta', { name: 'msapplication-TileColor', content: '#f150a0' }]
     ],
     markdown: {
         extractHeaders: ['h2', 'h3', 'h4', 'h5'],
@@ -70,6 +81,16 @@ module.exports = {
                 name: 'scroll-anchor-into-view-plugin',
                 clientRootMixin: require('path').resolve(__dirname, 'mixins', 'scrollAnchorIntoView.js')
             })
+        ],
+        [
+            '@vuepress/pwa',
+            {
+                serviceWorker: true,
+                updatePopup: {
+                    message: 'New content is available.',
+                    buttonText: 'Refresh'
+                }
+            }
         ]
     ],
 }
