@@ -1,6 +1,12 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/">
-    <img src="https://img.shields.io/npm/v/@frsource/tiny-carousel" alt="NPM version badge">
+    <img src="https://img.shields.io/npm/v/@frsource/tiny-carousel-core" alt="NPM version badge">
+  </a>
+  <a href="https://bundlephobia.com/result?p=@frsource/tiny-carousel-core" title="Visit bundlephobia for more details!">
+    <img src="https://img.shields.io/bundlephobia/minzip/@frsource/tiny-carousel-core" alt="Core bundle size badge. Data from bundlephobia.com">
+  </a>
+  <a href="https://bundlephobia.com/result?p=@frsource/tiny-carousel-core">
+    <img src="https://badgen.net/bundlephobia/tree-shaking/@frsource/tiny-carousel-core" alt="Tree shaking supported">
   </a>
   <a href="https://github.com/semantic-release/semantic-release">
     <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-relase badge">
@@ -33,7 +39,7 @@
   <i>An extendable library for providing any kind of carousel/slider UI experience.
     <br>Mobile &amp; desktop-friendly
     <br>Tiny & performant - takes advantage of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS snap points</a>.
-    <br>Published as treeshakeable bundles, separately for JS ES5 or modern browsers thanks to <a href="https://www.npmjs.com/package/microbundle">microbundle</a>.</i>
+    <br>Published as treeshakeable bundles, separate for JS ES5 or modern browsers thanks to <a href="https://www.npmjs.com/package/microbundle">microbundle</a>.</i>
     <br>Written completely in <a href="https://www.typescriptlang.org">typescript</a>.
   <br>
   <br>
@@ -67,7 +73,7 @@ Don’t hesitate to ask a question directly on the [discussions board](https://g
 
 ## Changelog
 
-Changes for every release are documented in the [release notes](https://github.com/FRSOURCE/tiny-carousel/releases) and [CHANGELOG](https://github.com/FRSOURCE/tiny-carousel/blob/master/CHANGELOG.md).
+Changes for every release are documented in the [release notes](https://github.com/FRSOURCE/tiny-carousel/releases) and [CHANGELOG files of every package](https://github.com/FRSOURCE/tiny-carousel/tree/master/packages).
 
 ## License
 
