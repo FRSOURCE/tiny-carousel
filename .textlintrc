@@ -27,7 +27,7 @@
     "spelling": {
         "language": "en",
         "skipPatterns": [
-          "/\\b(?:JavaScript|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|Jakub|vanillaJS|customizable|polyfills|performant|2020)\\b/g",
+          "/\\b(?:JavaScript|PluginDefinition|interface|getter|Getter|defaultConfig|doesn’t|TinyCarousel|carouselElement|CarouselElement|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|Jakub|vanillaJS|customizable|polyfills|performant|2020)\\b/g",
           "/\\bchangelog\\b/i",
           "/(?:\\s|^):[a-z]+:(?:\\s|$)/ig",
           "/(?:\\s|^)<[a-z].*>?(?:\\s|$)/ig",
@@ -37,7 +37,7 @@
     "stop-words": true,
     "terminology": true,
     "unexpanded-acronym": {
-      "ignore_acronyms" : ["CSS", "TODO", "API", "MIT", "FRS"]
+      "ignore_acronyms" : ["CSS", "TODO", "API", "MIT", "FRS", "HTML"]
     }
   }
 }

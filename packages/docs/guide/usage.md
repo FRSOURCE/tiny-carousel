@@ -151,6 +151,8 @@ document.querySelector('.last')
 </ExampleSection>
 <!-- textlint-enable -->
 
-In most cases, the same functionality can be obtained using proper Tiny Carousel plugins - we’ve got you covered! But, if you ever find yourself in a situation where you need to do something more custom - know that Tiny Carousel JavaScript API is there and is ready to be used! Read more in the [API docs for core package](../../api-reference#core).
+In most cases, the same functionality can be obtained using proper Tiny Carousel plugin - we’ve got you covered! But, if you ever find yourself in a situation where you need to do something more custom - know that Tiny Carousel JavaScript API is there and is ready to be used! Read more in the [API docs for core package](../../api-reference/core).
+
+
 
 For further information about the possible configuration options and useful methods, please have a look at our [API reference](../../api-reference).

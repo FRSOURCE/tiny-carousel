@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { /* parseFrontmatter, parseVueFrontmatter,  */isIndexFile: { isIndexFile } } = require('@vuepress/shared-utils');
+const { isIndexFile: { isIndexFile }, slugify } = require('@vuepress/shared-utils');
 
 module.exports = {
     title: 'Tiny carousel',
@@ -8,15 +8,22 @@ module.exports = {
     base: '/tiny-carousel/',
     theme: 'default-prefers-color-scheme',
     themeConfig: {
+        sidebarDepth: 2,
         logo: '/logo.svg',
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Documentation', link: '/guide/' },
+            {
+                text: 'Documentation',
+                ariaLabel: 'Documentation Menu',
+                items: [
+                  { text: 'Guide', link: '/guide/' },
+                  { text: 'Api reference', link: '/api-reference/' },
+                  { text: 'Ecosystem', link: '/ecosystem/' }
+                ]
+            },
+            { text: 'Contribution', link: '/contribution/' },
             { text: 'Looking for Web wizards?', link: 'https://www.frsource.org/' }
         ],
-        sidebar: [
-            ...getSideBar()
-        ],
+        sidebar: getSideBar(),
         searchPlaceholder: 'Search in docs...',
         repo: 'frsource/tiny-carousel',
         docsDir: 'packages/docs',
@@ -24,6 +31,7 @@ module.exports = {
         editLinkText: 'Help us improve this page on GitHub',
         smoothScroll: true,
         displayAllHeaders: true,
+        sidebarDepth: 4,
         image: '/logo.jpg',
         domain: 'https://www.frsource.org/tiny-carousel/'
     },
@@ -32,6 +40,9 @@ module.exports = {
         ['link', { as: 'style', href: 'https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap' }],
         ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap' }],
     ],
+    markdown: {
+        extractHeaders: ['h2', 'h3', 'h4', 'h5'],
+    },
     plugins: [
         '@vuepress/last-updated',
         [
@@ -74,14 +85,15 @@ function getSideBar() {
         )
         .reverse()
         .reduce((p, { name }) => {
-            p.push('/' + name + '/');
-            fs.readdirSync(path.join(__dirname, '..', name), { withFileTypes: true })
-                .forEach(item => {
-                    if (item.isFile() && !isIndexFile(item.name)) {
-                        const subPageName = item.name.substring(0, item.name.lastIndexOf('.'));
-                        p.push('/' + name + '/' + subPageName);
-                    }
-                });
+            p['/' + name + '/'] = 
+                fs.readdirSync(path.join(__dirname, '..', name), { withFileTypes: true })
+                    .reduce((p, item) => {
+                        if (item.isFile() && !isIndexFile(item.name)) {
+                            const subPageName = item.name.substring(0, item.name.lastIndexOf('.'));
+                            p.push(subPageName);
+                        }
+                        return p;
+                    }, ['']);
             return p;
-        }, [])
+        }, {})
 }
