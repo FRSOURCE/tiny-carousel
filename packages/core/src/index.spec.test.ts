@@ -27,7 +27,8 @@ const defaultConfiguration = {
   active: 0,
   className: 'frs-tc',
   hideScrollClassName: 'frs-hide-scroll',
-  itemClassName: 'frs-tc-item'
+  itemClassName: 'frs-tc-item',
+  items: [],
 };
 
 describe('::defaultConfig::get', () => {
@@ -77,6 +78,7 @@ describe('constructor', () => {
         className: 'frs-tc',
         hideScrollClassName: 'frs-hide-scroll',
         itemClassName: 'frs-tc-item',
+        items: [],
       });
     });
   });
@@ -91,6 +93,7 @@ describe('constructor', () => {
         className: 'frs-tc',
         hideScrollClassName: 'frs-hide-scroll',
         itemClassName: 'frs-tc-item',
+        items: [],
       });
       config = undefined;
     });
@@ -274,14 +277,14 @@ describe('active::get', () => {
     it('should return proper 1', () => {
       Object.defineProperty(element, 'scrollLeft', { value: 150 });
       Object.defineProperty(element, 'clientWidth', { value: 5 });
-      Object.defineProperty(carousel.items[0], 'offsetParent', { value: carousel.carouselElement });
+      Object.defineProperty(carousel.config.items[0], 'offsetParent', { value: carousel.carouselElement });
       expect(carousel.active).toBe(1);
     });
   });
 
   describe('when items array is empty', () => {
     it('should return proper -1', () => {
-      carousel.items = [];
+      carousel.config.items = [];
       expect(carousel.active).toBe(-1);
     });
   });
