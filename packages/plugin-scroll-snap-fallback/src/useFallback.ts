@@ -11,11 +11,11 @@ export const useFallback = (
 
     let timeoutId: number | undefined = void 0;
     let initialScrollLeft: number | undefined = void 0;
-    let preventScrollEvent = 0;
+    let preventScrollEvent = 2;
     // TODO: cover this method with tests
     /* istanbul ignore next */
     const timeoutedOnScroll = (e: Event) => {
-      if (--preventScrollEvent) return preventScrollEvent = 0;
+      if (--preventScrollEvent) return;
       initialScrollLeft = initialScrollLeft || (e.target as TinyCarousel['carouselElement']).scrollLeft;
       clearTimeout(timeoutId);
   
