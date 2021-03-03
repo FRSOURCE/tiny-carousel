@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.9 (2021-03-03)
+
+
+### Bug Fixes
+
+* migrate useFallback to new carousel structure ([747db44](https://github.com/FRSource/tiny-carousel/commit/747db447997b90c95c041e48184a5fdcb3eb12fc))
+* useFallback scroll preventing ([ecc4ce7](https://github.com/FRSource/tiny-carousel/commit/ecc4ce71d7ff2f514acaac9079f7ca17fd9aa6eb))
+
+
+
+
+
 ## [0.1.8](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-scroll-snap-fallback@0.1.7...@frsource/tiny-carousel-plugin-scroll-snap-fallback@0.1.8) (2021-02-28)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-scroll-snap-fallback
