@@ -2,7 +2,7 @@ import type { TinyCarousel } from '@frsource/tiny-carousel-core';
 import { on } from '@frsource/tiny-carousel-utils';
 
 export const useFallback = (
-    carousel: Pick<TinyCarousel, 'items' | 'carouselElement'>,
+    carousel: Pick<TinyCarousel, 'config' | 'carouselElement'>,
     config: { scrollTimeout?: number }
   ) => {
     // TODO: remove ignore when E2E test are in place
@@ -31,7 +31,7 @@ export const useFallback = (
       initialScrollLeft = void 0;
   
       const scrollLeft = carousel.carouselElement.scrollLeft;
-      const children = [...carousel.items];
+      const children = [...carousel.config.items];
       const direction = oldInitialScrollLeft > scrollLeft ? -1 : 0;
       let offset = 0;
       let elementToSnap: HTMLElement;
