@@ -98,6 +98,22 @@ describe('constructor', () => {
       config = undefined;
     });
   });
+
+  describe('when config with items property set passed in as a parameter', () => {
+    it('shouldn`t call findPossible items and leave items as they were', () => {
+      config = {items: [ document.body /* any HTMLElement */ ]};
+      initializeCarousel();
+  
+      expect(carousel.config).toEqual({
+        active: 0,
+        className: 'frs-tc',
+        hideScrollClassName: 'frs-hide-scroll',
+        itemClassName: 'frs-tc-item',
+        items: config.items,
+      });
+      config = undefined;
+    });
+  });
 });
 
 describe('use', () => {
