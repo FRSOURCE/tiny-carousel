@@ -102,7 +102,7 @@ Core is the module providing main Tiny Carousel functionalities and API. It expo
 
 - **Usage:**
 
-    Method used to setup a Tiny Carousel plugin. Number of arguments and their types are dependent on what plugin is being installed. For details, head to the documentation of the plugin you’d like to use.
+    Method used to setup any of the Tiny Carousel plugins. Number of arguments and their types are dependent on what plugin is being installed. For details, head to the documentation of the plugin you’d like to use.
 
 <!-- textlint-disable -->
 ### carousel.init

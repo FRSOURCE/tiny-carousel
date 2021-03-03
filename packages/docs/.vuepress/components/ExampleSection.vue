@@ -1,10 +1,10 @@
 <template>
-  <section>
+  <section :style="{height}">
     <div
       :class="className"
       :data-prefill="prefilDataStringified"
-      style="height: 400px; overflow: auto;"
-      data-height="400"
+      :style="{height, overflow: 'auto'}"
+      :data-height="height"
       data-active-tab-color="rgb(241, 80, 160)"
       data-border="none"
       :data-default-tab="preparsedDefaultTab"
@@ -57,6 +57,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    height: {
+      type: String,
+      default: '400px',
+    }
   },
   async mounted() {
     await (scriptLoadPromise || loadEmbedScript());

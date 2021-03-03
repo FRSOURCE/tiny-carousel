@@ -27,7 +27,7 @@
     "spelling": {
         "language": "en",
         "skipPatterns": [
-          "/\\b(?:JavaScript|PluginDefinition|interface|getter|Getter|defaultConfig|doesn’t|TinyCarousel|carouselElement|CarouselElement|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|Jakub|vanillaJS|customizable|polyfills|performant|2020)\\b/g",
+          "/\\b(?:JavaScript|polyfill|Config|PluginDefinition|interface|getter|Getter|defaultConfig|doesn’t|TinyCarousel|carouselElement|CarouselElement|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|Jakub|vanillaJS|customizable|polyfills|performant|2020)\\b/g",
           "/\\bchangelog\\b/i",
           "/(?:\\s|^):[a-z]+:(?:\\s|$)/ig",
           "/(?:\\s|^)<[a-z].*>?(?:\\s|$)/ig",

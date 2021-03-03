@@ -21,7 +21,7 @@ To load it via CDN:
 ```
 
 ::: tip
-For information about installing & configuring plugins - please find correct plugin page using the left-side navigation menu.
+For information about installing & configuring plugins - please find correct the plugin page in the "Usage" section of the left-side navigation menu.
 :::
 
 That’s it, now you can use core features of [Tiny carousel](../usage#core)! To learn how to use these - please head to the next chapter.
