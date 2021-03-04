@@ -1,11 +1,10 @@
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface EventDetailMap {
-  'before:init'?: undefined;
-  'after:init'?: undefined;
-  'before:go-to': { to: { index: number; } };
-  'after:go-to': { to: { index: number; }; };
-  'error:go-to': { to: { index: number; }; cause: 'overflow' };
-  'before:find-possible-items'?: undefined;
-  'after:find-possible-items'?: undefined;
+  /**
+     * interface used to specify custom event names 
+     * and possible types for data passed along with each event type
+     * for the usage example, please have a look into @frsource/tiny-carousel-plugin-custom-events codebase
+     **/
 }
 export type CustomEventListener<E extends keyof EventDetailMap = keyof EventDetailMap> =
   ((e: CustomEvent<EventDetailMap[E]>)=> void);

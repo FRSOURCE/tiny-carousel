@@ -1,5 +1,11 @@
 import { off, on, dispatch } from "./events";
 
+declare module './events' {
+  interface EventDetailMap {
+    'before:go-to': { to: { index: number; } };
+  }
+}
+
 const event = 'before:go-to';
 const options: AddEventListenerOptions = { passive: true };
 let element: HTMLElement;
