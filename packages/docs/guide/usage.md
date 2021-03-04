@@ -68,7 +68,7 @@ Next, we can try out using core JavaScript API to add next/previous buttons with
 
 <!-- textlint-disable -->
 <ExampleSection
-    title="Advances Tiny Carousel Core example"
+    title="Advanced Tiny Carousel Core example"
     description="A bit more advanced usage example of @frsource/tiny-carousel-core library"
     default-tab="js"
 >
@@ -175,8 +175,8 @@ Then, add it to your carousel instance using [`carousel.use` method](../api-refe
 
 <!-- textlint-disable -->
 <ExampleSection
-    title="Advances Tiny Carousel Core example"
-    description="A bit more advanced usage example of @frsource/tiny-carousel-core library"
+    title="Example on how to use Tiny Carousel Scroll Snap Fallback"
+    description="This example code shows how to use @frsource/tiny-carousel-plugin-scroll-snap-fallback library in your project"
     default-tab="js"
 >
   <template slot="html">
@@ -230,6 +230,16 @@ const carousel = new TinyCarousel(
 
 That’s it - the polyfill will be automatically added to your carousel instance whenever [CSS scroll-snap feature](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap) is not supported!
 
-For information about plugin options, please head to the [API reference](../../api-reference/plugin-scroll-snap-fallback/#config).
+For information about plugin options, please head to [it`s API reference](../../api-reference/plugin-scroll-snap-fallback/#config).
+
+<!-- textlint-disable stop-words -->
+:::tip Help us improve the documentation
+Hey, it seems you’ve made it to the very bottom of our usage guide! Thank you for taking such interest in our library - we hope it will make your journey easier! ✈️
+
+However, if you feel that something could be described better or if you saw any typo/error please feel free to use the "Help us improve this page on GitHub" button placed on the very bottom of this page. Don’t hesitate to write a suggestion in the "issues" tab or file a PR with a fix!
+
+Thank you! Any help is kindly appreciated 🙏
+:::
+<!-- texlint-enable -->
 
 For further information about the possible configuration options and useful methods, please have a look at our [API reference](../../api-reference).
