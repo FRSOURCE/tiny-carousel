@@ -1,6 +1,19 @@
 import { EventDetailMap, CustomEventListener, on, off, dispatch } from '@frsource/tiny-carousel-utils';
 import type { TinyCarousel, PluginDefinition } from '@frsource/tiny-carousel-core';
 
+declare module '@frsource/tiny-carousel-utils' {
+  interface EventDetailMap {
+    'before:init'?: undefined;
+    'after:init'?: undefined;
+    'before:go-to': { to: { index: number; } };
+    'after:go-to': { to: { index: number; }; };
+    'error:go-to': { to: { index: number; }; cause: 'overflow' };
+    'before:find-possible-items'?: undefined;
+    'after:find-possible-items'?: undefined;
+  }
+}
+
+
 type InstanceOnFn = {
   <E extends keyof EventDetailMap>(event: E, handler: CustomEventListener<E>, options?: boolean | AddEventListenerOptions): TinyCarousel;
   (event: string, handler: EventListener, options?: boolean | AddEventListenerOptions): TinyCarousel;
@@ -16,17 +29,6 @@ type InstanceDispatchFn = {
   <E extends keyof EventDetailMap>(event: E, payload: EventDetailMap[E], options?: EventInit): TinyCarousel;
 };
 
-declare module '@frsource/tiny-carousel-utils' {
-  interface EventDetailMap {
-    'before:init'?: undefined;
-    'after:init'?: undefined;
-    'before:go-to': { to: { index: number; } };
-    'after:go-to': { to: { index: number; }; };
-    'error:go-to': { to: { index: number; }; cause: 'overflow' };
-    'before:find-possible-items'?: undefined;
-    'after:find-possible-items'?: undefined;
-  }
-}
 
 declare module '@frsource/tiny-carousel-core' {
   interface TinyCarousel {

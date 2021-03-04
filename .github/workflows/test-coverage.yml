@@ -33,6 +33,9 @@ jobs:
       - name: Link package directories together if it's not already done as a part of install.
         if: steps.lerna-yarn-cache.outputs.cache-hit == 'true'
         run: yarn link
+      - name: Run lerna bootstrap if it's not already done as a part of install.
+        if: steps.lerna-yarn-cache.outputs.cache-hit == 'true'
+        run: yarn lerna bootstrap
       - name: Build packages to get cross-references working 🔧
         run: yarn build
       - run: yarn coverage
