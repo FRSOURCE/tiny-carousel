@@ -4,7 +4,7 @@ const { isIndexFile: { isIndexFile }, slugify } = require('@vuepress/shared-util
 
 module.exports = {
     title: 'Tiny carousel',
-    description: 'Plugin for i18next that paires well with Phrase In-Context Editor.',
+    description: 'Mobile & desktop-friendly, tiny, efficient (vanilaJS) carousel which takes advantage of CSS snap points (or polyfills it)!',
     base: '/tiny-carousel/',
     theme: 'default-prefers-color-scheme',
     themeConfig: {
