@@ -121,7 +121,7 @@ describe('use', () => {
   const plugin = { install };
   beforeEach(initializeCarousel);
 
-  it('shoudl call plugin install method with the carousel context as a first argument', () => {
+  it('should call plugin install method with the carousel context as a first argument', () => {
     carousel.use(plugin);
     expect(install).toHaveBeenCalledTimes(1);
     expect(install).toHaveBeenCalledWith(carousel);
