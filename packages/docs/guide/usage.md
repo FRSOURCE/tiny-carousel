@@ -153,6 +153,81 @@ document.querySelector('.last')
 
 In most cases, the same functionality can be obtained using proper Tiny Carousel plugin - we’ve got you covered! But, if you ever find yourself in a situation where you need to do something more custom - know that Tiny Carousel JavaScript API is there and is ready to be used! Read more in the [API docs for core package](../../api-reference/core).
 
+## Plugin Custom Events
+
+This plugin adds [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent) for the most important methods of the [Core Tiny Carousel API](../../api-reference/core). Also, it extends Tiny Carousel instance with additional method for event handling.
+
+API Reference and the list of all events raised by this plugin you will find [here](../../api-reference/plugin-custom-events).
+
+Let’s try to use it - first you need to install the plugin using one of a package managers:
+
+```bash
+# yarn
+yarn add @frsource/tiny-carousel-plugin-custom-events
+
+# npm
+npm install @frsource/tiny-carousel-plugin-custom-events
+```
+
+Then, add it to your carousel instance using [`carousel.use` method](../api-reference/core/#carousel-use). That’s it, now you can use methods newly added by the Tiny Carousel Plugin Custom Events, like `carousel.on()` on the example below:
+
+<!-- textlint-disable -->
+<ExampleSection
+    title="Example on how to use Tiny Carousel Custom Events"
+    description="This example code shows how to use 'carousel.on()' method coming from @frsource/tiny-carousel-plugin-custom-events library"
+    default-tab="js"
+>
+  <template slot="html">
+&lt;h3&gt;Tiny Carousel is not loaded yet ⏳&lt;/h3&gt;
+<!-- -->
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/1/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/2/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/3/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/4/800/600"&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+  </template>
+  <template slot="scss">
+<div>
+@import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
+<!-- -->
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</div>
+  </template>
+  <template slot="js">
+import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
+import { pluginCustomEvents } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-custom-events';
+<!-- -->
+const carousel = new TinyCarousel(
+  document.querySelector('ul')
+)
+  .use(pluginCustomEvents)
+/**
+ * Let's add custom event handler to
+ * show the message 
+ * after the carousel is loaded
+ **/
+  .on('after:init', () => {
+    document.querySelector('h3')
+      .textContent = 'Carousel has been loaded! 🚀';
+  })
+  .init();
+  </template>
+</ExampleSection>
+<!-- textlint-enable -->
+
 ## Plugin Scroll Snap Fallback
 
 Even though the browser support of the [CSS scroll-snap feature](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap) is pretty good:
