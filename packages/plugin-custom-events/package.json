@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-plugin-custom-events",
   "amdName": "tinyCarouselPluginCustomEvents",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "@frsource/tiny-carousel plugin which adds eventbus, helper method for event-handling & CustomEvents firing 🔥",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
