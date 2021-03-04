@@ -17,7 +17,7 @@
   </a>
 </p>
 
-<h1 align="center">Plugin for @frsource/tiny-carousel that triggers custom events (and gives a nice API to interact with them) 🎭</h1>
+<h1 align="center">Plugin for @frsource/tiny-carousel that triggers custom events (and&nbsp;gives&nbsp;a&nbsp;nice&nbsp;API to interact with them) 🎭</h1>
 
 <p align="center">
   <a href="https://www.frsource.org/tiny-carousel/guide/usage/#plugin-custom-events">Usage guide</a>
@@ -42,7 +42,7 @@
 
 
 <p align="center">
-  <img src="src/logo.png" alt="Tiny carousel library logo" height="120px"/>
+  <img src="../../src/logo.png" alt="Tiny carousel library logo" height="120px"/>
   <br>
   <a href="https://www.frsource.org/tiny-carousel"><strong>www.frsource.org/tiny-carousel</strong></a>
   <br>

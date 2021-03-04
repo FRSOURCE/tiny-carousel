@@ -33,7 +33,7 @@
 
 <p align="center">
   <br>
-  <i>The plugin for the Tiny Carousel <a href="https://www.frsource.org/tiny-carousel/ecosystem/">ecosystem</a> that add scroll snap fallback for older browsers.
+  <i>The plugin for the Tiny Carousel <a href="https://www.frsource.org/tiny-carousel/ecosystem/">ecosystem</a> that adds a scroll snap fallback for older browsers.
     <br>Polyfills <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS snap points</a> (by default) only when needed.
   <br>
   <br>
@@ -41,7 +41,7 @@
 
 
 <p align="center">
-  <img src="src/logo.png" alt="Tiny carousel library logo" height="120px"/>
+  <img src="../../src/logo.png" alt="Tiny carousel library logo" height="120px"/>
   <br>
   <a href="https://www.frsource.org/tiny-carousel"><strong>www.frsource.org/tiny-carousel</strong></a>
   <br>
