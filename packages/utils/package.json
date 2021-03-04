@@ -15,7 +15,7 @@
     "lint:scripts": "eslint src/. --ext .js,.jsx,.ts,.tsx",
     "fix:lint": "concurrently 'yarn lint:scripts --fix'",
     "test": "concurrently yarn:test:*",
-    "test:scripts:unit": "jest --config ../../jest.config.js 'src/.*\\.spec\\.test\\.ts'",
+    "test:scripts:unit": "jest --config ../../jest.config.js 'utils/src/.*\\.spec\\.test\\.ts'",
     "coverage": "concurrently yarn:coverage:*",
     "coverage:scripts": "yarn test:scripts:unit --coverage",
     "watch:test": "concurrently yarn:watch:test:*",
