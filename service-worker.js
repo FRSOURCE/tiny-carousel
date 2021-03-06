@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "feecc8e049a9d547e2e205621eafd0ab"
+    "revision": "89631ea64966e4e0b6b7a91f31e9e5ff"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -39,19 +39,19 @@ self.__precacheManifest = [
   },
   {
     "url": "api-reference/core/index.html",
-    "revision": "db0a41f4fd40d03c43835fc564f4e714"
+    "revision": "35c6870070832500bd11e4577280b510"
   },
   {
     "url": "api-reference/index.html",
-    "revision": "fad950678d7e36ec6eef6ea556349261"
+    "revision": "d0bc2dc542d3592c6564485e6d3c75f9"
   },
   {
     "url": "api-reference/plugin-custom-events/index.html",
-    "revision": "5b0a18b55dbed1defecfc38684e679cf"
+    "revision": "54e7195a6910e60ac86ca34efefb95bf"
   },
   {
     "url": "api-reference/plugin-scroll-snap-fallback/index.html",
-    "revision": "7d0e0b2710077599a09fb52aa6f1472c"
+    "revision": "85484125f12e5154b632d72a24bd49ca"
   },
   {
     "url": "apple-touch-icon.png",
@@ -158,20 +158,20 @@ self.__precacheManifest = [
     "revision": "dfc152e750aca6ac96849d18207dc107"
   },
   {
-    "url": "assets/js/app.0b777427.js",
-    "revision": "9e5c5e4a85cb58431adbe0207063ad11"
+    "url": "assets/js/app.b9d51b50.js",
+    "revision": "2f5bfd803288b1bd60e7c2a3dbb0c577"
   },
   {
     "url": "CHANGELOG/index.html",
-    "revision": "8564dd7d82815eef747a4d8e655e644d"
+    "revision": "7889916c34591cf043d927a713fca699"
   },
   {
     "url": "contribution/index.html",
-    "revision": "e99c97b537009516d671103ad518626d"
+    "revision": "02016b00252408b7789b6cf41567b032"
   },
   {
     "url": "ecosystem/index.html",
-    "revision": "f68552735aad49cc6c0b399f2a9ff9b6"
+    "revision": "f04af083d2457e46ee0b10031dd3d385"
   },
   {
     "url": "favicon-16x16.png",
@@ -183,19 +183,19 @@ self.__precacheManifest = [
   },
   {
     "url": "guide/index.html",
-    "revision": "2d3b988b4b0e280316275387d6faf4ad"
+    "revision": "352211642138ed4ad2f912eda2463235"
   },
   {
     "url": "guide/installation/index.html",
-    "revision": "bf59a55fe88add5d2732e8459155ba74"
+    "revision": "876b2dc57faf2bfcb66910e1ad5509d0"
   },
   {
     "url": "guide/usage/index.html",
-    "revision": "077a9f2a08b0bdc51e2e9e66180832ba"
+    "revision": "082d85246c3a8a23daf337f575bb3b63"
   },
   {
     "url": "index.html",
-    "revision": "e93d1d25575f5923c980a1c5e33e4241"
+    "revision": "fea762166c158b1c724fe1d2fddf4a77"
   },
   {
     "url": "logo.jpg",
