@@ -12,6 +12,10 @@ The main package of the Tiny Carousel [ecosystem](../../ecosystem) which gives t
 
 See the example below which uses only a core package:
 
+::: warning The animations in an example are not working.
+By default, the core package disables scroll animations for some users to make the carousel accessible for the broader audience. If somebody (maybe you?) have the `reduce motion` option enabled in the system settings of his/her device - the carousel will follow that rule and turn off the animations. To learn more, please read [this article](https://web.dev/prefers-reduced-motion/).
+:::
+
 <!-- textlint-disable -->
 <ExampleSection
     title="Basic Tiny Carousel Core example"
