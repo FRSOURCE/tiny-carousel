@@ -1,11 +1,5 @@
 import { off, on, dispatch } from "./events";
 
-declare module './events' {
-  interface EventDetailMap {
-    'before:go-to': { to: { index: number; } };
-  }
-}
-
 const event = 'before:go-to';
 const options: AddEventListenerOptions = { passive: true };
 let element: HTMLElement;
@@ -58,7 +52,7 @@ describe('dispatch', () => {
   beforeEach(() => dispatchEventSpy = jest.spyOn(element, 'dispatchEvent'));
 
   it('should dispatch a CustomEvent with proper event name, payload & event options', () => {
-    dispatch(element, event, payload, { bubbles: true });
+    dispatch(element, event as unknown as never, payload as unknown as never, { bubbles: true });
     expect(dispatchEventSpy).toHaveBeenCalledWith(expect.any(CustomEvent));
     expect(dispatchEventSpy).toHaveBeenCalledWith(expect.objectContaining({
       type: event,
@@ -69,7 +63,7 @@ describe('dispatch', () => {
   
   it('should trigger an event handler with CustomEvent with proper event name & payload as a payload', () => {
     on(element, event, handler);
-    dispatch(element, event, payload);
+    dispatch(element, event as unknown as never, payload as unknown as never);
     
     expect(dispatchEventSpy).toHaveBeenCalledWith(expect.any(CustomEvent));
     expect(handler).toHaveBeenCalledWith(expect.objectContaining({ detail: payload }));
