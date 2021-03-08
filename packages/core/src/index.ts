@@ -88,16 +88,16 @@ export class TinyCarousel {
     return this._active = --i;
   }
 
-  goTo (n: number): boolean {
-    // recursion to avoid situations when -n > this.items.length
-    if (n < 0) return this.goTo(n + this.config.items.length);
-    
-    const last = this.config.items.length - 1;
-    if (n > last) return false;
+  goTo (n: number) {
+    const len = this.config.items.length;
+    // treat negative numbers as counting from the end of items array
+    while (n < 0) n += len; 
+    // treat numbers >= items length as overflow - start counting the rest from the beginning
+    while (n >= len) n -= len;
 
     this.carouselElement.scrollLeft = this.config.items[n].offsetLeft;
 
-    return true;
+    return this;
   }
 
   next () {

@@ -124,13 +124,14 @@ Core is the module providing main Tiny Carousel functionalities and API. It expo
 
     - `{number} index`
 
-- **Returns:** `true | false` - whether slide change task finished successfully. Possible cases of `false` being returned:
-    - Provided `index` number argument was greater than index number of the last slide
+- **Returns:** `this` - this TinyCarousel instance (for chaining purposes)
 
 - **Usage:**
 
     Method which allows to change the current slide.
-    `index` parameter should be a numeric value between the **negated** index number of the last slide and the index number of the last slide. For `index` values less than 0, the new active slide is counted from the end of items array. For example: when there are 3 slides and `carousel.goTo(-1)` is called, the new active index will be 3 - because that’s the last index in the [`config.items` array](#config).
+    `index` parameter should be **any** numeric value (even negated).
+    - For `index` values less than 0, the new active slide is counted from the end of items array. For example: when there are 3 slides and `carousel.goTo(-1)` is called, the new active index will be 3 - because that’s the last index in the [`config.items` array](#config)
+    - For `index` values <!-- textlint-disable alex -->bigger<!-- textlint-enable --> than the number of items or smaller than the negated number of items, number of items will be subtracted/added to the `index` value. Whole operation will be repeated until `index` is within the range from negated items array length to items array length
 
 
 <!-- textlint-disable -->

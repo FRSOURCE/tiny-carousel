@@ -143,7 +143,7 @@ describe('init', () => {
   let goToSpy: jest.SpyInstance;
   beforeAll(() => {
     config = {className: 'something', active: 2};
-    goToSpy = jest.spyOn(TinyCarousel.prototype, 'goTo').mockReturnValue(true);
+    goToSpy = jest.spyOn(TinyCarousel.prototype, 'goTo').mockReturnValue(carousel);
   });
   beforeEach(initializeCarousel);
   afterAll(() => {
@@ -170,8 +170,8 @@ describe('init', () => {
 describe('goTo', () => {
   beforeEach(initializeCarousel);
 
-  it('should return true on active page change success', () => {
-    expect(carousel.goTo(0)).toBeTruthy();
+  it('should return carousel instance', () => {
+    expect(carousel.goTo(0)).toBe(carousel);
   });
 
   it('should move carousel to the correct position', () => {
@@ -180,13 +180,9 @@ describe('goTo', () => {
   });
 
   describe('when value is bigger than items count', () => {
-    it('should return false', () => {
-      expect(carousel.goTo(4)).toBeFalsy();
-    });
-
-    it('should not move the carousel', () => {
+    it('should handle the overflow gracefully and move carousel to the correct position', () => {
       carousel.goTo(4);
-      expect(element.scrollLeft).toBe(0);
+      expect(element.scrollLeft).toBe(150);
     });
   });
 
@@ -208,7 +204,7 @@ describe('goTo', () => {
 describe('next', () => {
   let goToSpy: jest.SpyInstance;
   beforeAll(() => {
-    goToSpy = jest.spyOn(TinyCarousel.prototype, 'goTo').mockReturnValue(true);
+    goToSpy = jest.spyOn(TinyCarousel.prototype, 'goTo').mockReturnValue(carousel);
   });
   beforeEach(initializeCarousel);
   afterAll(() => goToSpy.mockRestore());
@@ -225,7 +221,7 @@ describe('prev', () => {
   const initializeCarouselAtActiveItem = (n: number) => {
     initializeCarousel();
     carousel.goTo(n);
-    goToSpy = jest.spyOn(carousel, 'goTo').mockReturnValue(true);
+    goToSpy = jest.spyOn(carousel, 'goTo').mockReturnValue(carousel);
   };
   afterEach(() => goToSpy.mockRestore());
 
