@@ -2,7 +2,7 @@
 
 This plugin triggers [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent) for Tiny Carousel core lifecycle events. This allows for the external code to be triggered right when it is necessary. Before or after an exact action - for example after the current slide index is changed.
 
-The plugin also extends Tiny Carousel instance with additional methods read more about it in the [instance methods section](#instance-methods).
+The plugin also extends Tiny Carousel instance with additional methods. Read more about it in the [instance methods section](#instance-methods).
 
 :::tip
 This plugin is often a required dependency for the other parts of Tiny Carousel [ecosystem](../../ecosystem/).

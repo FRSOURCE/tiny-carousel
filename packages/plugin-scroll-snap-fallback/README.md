@@ -16,7 +16,7 @@
   </a>
 </p>
 
-<h1 align="center">Add CSS Scroll Snap fallback to your @frsource/tiny-carousel 🏃</h1>
+<h1 align="center">Add CSS Scroll Snap fallback polyfill to your @frsource/tiny-carousel 🧩</h1>
 
 <p align="center">
   <a href="https://www.frsource.org/tiny-carousel/guide/usage/#plugin-scroll-snap-fallback">Usage guide</a>

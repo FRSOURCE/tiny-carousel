@@ -10,7 +10,7 @@ Always try to use proper semantic tags/attributes when setting up a carousel to 
 
 The main package of the Tiny Carousel [ecosystem](../../ecosystem) which gives the most basic carousel API. Try it out before using additional plugins - it might be enough in the most basic scenarios.
 
-See the example below which uses only a core package:
+To use this package you need to import **both the SASS/CSS and Typescript/JavaScript files**. See the example below which uses **only** the core package:
 
 ::: warning The animations in an example are not working.
 By default, the core package disables scroll animations for some users to make the carousel accessible for the broader audience. If somebody (maybe you?) have the `reduce motion` option enabled in the system settings of his/her device - the carousel will follow that rule and turn off the animations. To learn more, please read [this article](https://web.dev/prefers-reduced-motion/).
