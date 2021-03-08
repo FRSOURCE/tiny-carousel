@@ -41,7 +41,7 @@
 
 
 <p align="center">
-  <img src="../../src/logo.png" alt="Tiny carousel library logo" height="120px"/>
+  <img src="https://github.com/FRSOURCE/tiny-carousel/blob/master/src/logo.png" alt="Tiny carousel library logo" height="120px"/>
   <br>
   <a href="https://www.frsource.org/tiny-carousel"><strong>www.frsource.org/tiny-carousel</strong></a>
   <br>
