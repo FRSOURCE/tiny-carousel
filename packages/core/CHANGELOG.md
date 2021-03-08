@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2021-03-08)
+
+
+### Features
+
+* support overflowing in the goTo method ([0deaf1d](https://github.com/FRSource/tiny-carousel/commit/0deaf1dfa7f17f55c2d4c454d1cc10f18ad7f8a0))
+
+
+### BREAKING CHANGES
+
+* `goTo` method now doesn't return boolean, but the carousel instance
+* `goTo` change in index overflow handling - now it will start again from the start
+
+
+
+
+
 ## [0.2.2](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-core@0.2.1...@frsource/tiny-carousel-core@0.2.2) (2021-03-04)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-core

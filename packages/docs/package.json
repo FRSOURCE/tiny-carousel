@@ -1,6 +1,6 @@
 {
   "name": "@frsource/tiny-carousel-docs",
-  "version": "0.1.14",
+  "version": "0.2.0",
   "description": "Documentation for @frsource/tiny-carousel 📄",
   "main": ".vuepress/dist/index.html",
   "scripts": {
@@ -40,9 +40,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@frsource/tiny-carousel-core": "^0.2.2",
-    "@frsource/tiny-carousel-plugin-custom-events": "^0.1.11",
-    "@frsource/tiny-carousel-plugin-scroll-snap-fallback": "^0.1.11",
+    "@frsource/tiny-carousel-core": "^0.3.0",
+    "@frsource/tiny-carousel-plugin-custom-events": "^0.1.12",
+    "@frsource/tiny-carousel-plugin-scroll-snap-fallback": "^0.1.12",
     "@frsource/tiny-carousel-utils": "^0.1.8"
   },
   "devDependencies": {
