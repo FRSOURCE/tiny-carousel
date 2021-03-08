@@ -1,0 +1,68 @@
+{
+  "name": "@frsource/tiny-carousel-plugin-autoplay",
+  "amdName": "tinyCarouselPluginAutoplay",
+  "version": "0.0.1",
+  "description": "Autoplay for your @frsource/tiny-carousel ⏯",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "exports": "./dist/index.modern.js",
+  "scripts": {
+    "lint": "concurrently yarn:lint:*",
+    "lint:scripts": "eslint src/. --ext .js,.jsx,.ts,.tsx",
+    "fix:lint": "concurrently 'yarn lint:scripts --fix'",
+    "test": "concurrently yarn:test:*",
+    "test:scripts:unit": "jest --config ../../jest.config.js 'plugin-autoplay/src/.*\\.spec\\.test\\.ts'",
+    "coverage": "concurrently yarn:coverage:*",
+    "coverage:scripts": "yarn test:scripts:unit --coverage",
+    "watch:test": "concurrently yarn:watch:test:*",
+    "watch:test:scripts:unit": "yarn test:scripts:unit --watch",
+    "build": "microbundle",
+    "start": "microbundle watch"
+  },
+  "keywords": [
+    "carousel",
+    "slider",
+    "swiper",
+    "tiny",
+    "autoplay",
+    "efficient",
+    "modular",
+    "lightweight",
+    "mobile-friendly",
+    "play",
+    "pause",
+    "start",
+    "stop",
+    "css snap",
+    "snapping points",
+    "vanillaJS",
+    "accessibility",
+    "css",
+    "js"
+  ],
+  "author": "Jakub Freisler <jakub.freisler@frsource.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FRSource/tiny-carousel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRSource/tiny-carousel.git"
+  },
+  "homepage": "https://www.frsource.org/tiny-carousel/ecosystem/#plugin-autoplay/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@frsource/tiny-carousel-core": "^0.2.2",
+    "@frsource/tiny-carousel-utils": "^0.1.8"
+  },
+  "peerDependencies": {
+    "@frsource/tiny-carousel-core": "^0.2.2",
+    "@frsource/tiny-carousel-utils": "^0.1.8"
+  }
+}

@@ -13,13 +13,6 @@
         "ignore": []
     },
     "en-capitalization": true,
-    "no-dead-link": {
-      "checkRelative": false,
-      "ignore": [],
-      "preferGET": [],
-      "ignoreRedirects": false,
-      "retry": 2
-    },
     "no-empty-section": true,
     "no-start-duplicated-conjunction": true,
     "no-todo": false,
@@ -27,7 +20,7 @@
     "spelling": {
         "language": "en",
         "skipPatterns": [
-          "/\\b(?:JavaScript|lifecycle|CustomEvents?|polyfill|Config|PluginDefinition|interface|getter|Getter|defaultConfig|doesn’t|TinyCarousel|carouselElement|CarouselElement|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|Jakub|vanillaJS|customizable|polyfills|performant|2020)\\b/g",
+          "/\\b(?:JavaScript|autoplay|Autoplay|lifecycle|CustomEvents?|polyfill|Config|PluginDefinition|interface|getter|Getter|defaultConfig|doesn’t|TinyCarousel|carouselElement|CarouselElement|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|Jakub|vanillaJS|customizable|polyfills|performant|2020|2021)\\b/g",
           "/\\bchangelog\\b/i",
           "/(?:\\s|^):[a-z]+:(?:\\s|$)/ig",
           "/(?:\\s|^)<[a-z].*>?(?:\\s|$)/ig",
@@ -37,7 +30,7 @@
     "stop-words": true,
     "terminology": true,
     "unexpanded-acronym": {
-      "ignore_acronyms" : ["CSS", "TODO", "API", "MIT", "FRS", "HTML"]
+      "ignore_acronyms" : ["CSS", "SASS", "TODO", "API", "MIT", "FRS", "HTML"]
     }
   }
 }
