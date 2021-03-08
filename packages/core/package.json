@@ -53,11 +53,15 @@
     "type": "git",
     "url": "git+https://github.com/FRSource/tiny-carousel.git"
   },
-  "homepage": "https://www.frsource.org/tiny-carousel/core/",
+  "homepage": "https://www.frsource.org/tiny-carousel/ecosystem/#core",
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@frsource/frs-hide-scrollbar": "^2.0.4",
+    "@frsource/tiny-carousel-utils": "^0.1.8"
+  },
+  "peerDependencies": {
     "@frsource/frs-hide-scrollbar": "^2.0.4",
     "@frsource/tiny-carousel-utils": "^0.1.8"
   }

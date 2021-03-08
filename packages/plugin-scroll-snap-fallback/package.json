@@ -1,8 +1,8 @@
 {
   "name": "@frsource/tiny-carousel-plugin-scroll-snap-fallback",
-  "amdName": "tinyCarouselpluginScrollSnapFallback",
+  "amdName": "tinyCarouselPluginScrollSnapFallback",
   "version": "0.1.11",
-  "description": "@frsource/tiny-carousel plugin adding scroll snap API fallback polyfill 🧩",
+  "description": "Add CSS Scroll Snap fallback polyfill to your @frsource/tiny-carousel 🧩",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -51,9 +51,13 @@
     "type": "git",
     "url": "git+https://github.com/FRSource/tiny-carousel.git"
   },
-  "homepage": "https://www.frsource.org/tiny-carousel/plugin-events/",
+  "homepage": "https://www.frsource.org/tiny-carousel/ecosystem/#plugin-scroll-snap-fallback",
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "@frsource/tiny-carousel-core": "^0.2.2",
+    "@frsource/tiny-carousel-utils": "^0.1.8"
   },
   "devDependencies": {
     "@frsource/tiny-carousel-core": "^0.2.2",

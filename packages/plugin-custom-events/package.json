@@ -2,7 +2,7 @@
   "name": "@frsource/tiny-carousel-plugin-custom-events",
   "amdName": "tinyCarouselPluginCustomEvents",
   "version": "0.1.11",
-  "description": "@frsource/tiny-carousel plugin which adds eventbus, helper method for event-handling & CustomEvents firing 🔥",
+  "description": "@frsource/tiny-carousel plugin which adds eventbus, helper methods for event-handling & fires CustomEvents 🔥",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -57,7 +57,7 @@
     "type": "git",
     "url": "git+https://github.com/FRSource/tiny-carousel.git"
   },
-  "homepage": "https://www.frsource.org/tiny-carousel/plugin-events/",
+  "homepage": "https://www.frsource.org/tiny-carousel/ecosystem/#plugin-custom-events",
   "publishConfig": {
     "access": "public"
   }
