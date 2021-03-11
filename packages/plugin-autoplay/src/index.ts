@@ -42,7 +42,7 @@ export const pluginAutoplay = {
     };
 
     instance.play = function({ autoplayImmediate } = {}) {
-      clearListeners(this);
+      this.pause();
       const player = () => {
         if (
           timeout || (
