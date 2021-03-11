@@ -14,16 +14,16 @@ For configuration options please see [`PluginConfig`](#pluginconfig) below.
 
 - **Properties:**
 
-    - `{number} autoplayTimeout`
-    - `{boolean} autoplayImmediate`
-    - `{boolean} pauseOnHover`
+    - `{number} autoplayTimeout = 4000`
+    - `{boolean} autoplayImmediate = false`
+    - `{boolean} pauseOnHover = true`
 
 - **Details:**
 
     `PluginConfig` is an object passed along to the [`carousel.use` method](./core/#carousel-use).
-    - `autoplayImmediate` decides whether the first slide change should happen immediately after running [`carousel.play`](#carousel.play) method or after a timeout
-    - `autoplayTimeout` sets a time delay (in milliseconds) between slide changes
-    - `pauseOnHover` specifies if the carousel autoplay should pause when hovered over and resume automatically when loses focus
+    - `autoplayImmediate` decides whether the first slide change should happen immediately after running [`carousel.play`](#carousel.play) method or after a timeout. Default value: `4000`
+    - `autoplayTimeout` sets a time delay (in milliseconds) between slide changes. Default value: `false`
+    - `pauseOnHover` specifies if the carousel autoplay should pause when hovered over and resume automatically when loses focus. Default value: `true`
 
 ## Instance methods
 
