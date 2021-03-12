@@ -1,6 +1,6 @@
 # Plugin Autoplay
 
-This plugin adds autoplay feature for the Tiny Carousel. All you need to do is to install the plugin and watch that the slides are changing automatically!
+This plugin adds autoplay feature to the Tiny Carousel. All you need to do is to install the plugin and watch that the slides are changing automatically!
 
 The plugin also extends Tiny Carousel instance with additional methods. Read more about it in the [instance methods section](#instance-methods).
 

@@ -157,9 +157,99 @@ document.querySelector('.last')
 
 In most cases, the same functionality can be obtained using proper Tiny Carousel plugin - we’ve got you covered! But, if you ever find yourself in a situation where you need to do something more custom - know that Tiny Carousel JavaScript API is there and is ready to be used! Read more in the [API docs for core package](../../api-reference/core).
 
+## Plugin Autoplay
+
+This plugin adds autoplay feature to the Tiny Carousel. Also, it extends Tiny Carousel instance with [additional methods](../api-reference/plugin-autoplay/#instance-methods) for event handling.
+
+More detailed info about the plugin’s API can be found [here](../../api-reference/plugin-autoplay).
+
+To install the plugin use one of the commands below:
+
+```bash
+# yarn
+yarn add @frsource/tiny-carousel-plugin-autoplay
+
+# npm
+npm install @frsource/tiny-carousel-plugin-autoplay
+```
+
+After installation, you need to add the plugin to your Tiny Carousel instance using [`carousel.use` method](../api-reference/core/#carousel-use). Provide it with the options object to override the default configuration.
+
+For reference and information about the defaults, please see [`PluginConfig` documentation page](../api-reference/plugin-autoplay/#pluginconfig) or have a look at the example below:
+
+<!-- textlint-disable -->
+<ExampleSection
+    title="Example on how to use Tiny Carousel Autoplay"
+    description="This example code shows how to use 'carousel.play()' and `carousel.pause()` methods coming from @frsource/tiny-carousel-plugin-autoplay library"
+    default-tab="js"
+>
+  <template slot="html">
+&lt;button class="play" type="button"&gt;PLAY&lt;/button&gt;
+&lt;button class="pause" type="button"&gt;PAUSE&lt;/button&gt;
+<!-- -->
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/1/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/2/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/3/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/4/800/600"&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+  </template>
+  <template slot="scss">
+<div>
+@import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
+<!-- -->
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</div>
+  </template>
+  <template slot="js">
+import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
+import { pluginAutoplay } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-autoplay';
+<!-- -->
+const carousel = new TinyCarousel(
+  document.querySelector('ul')
+)
+  .use(pluginAutoplay, {
+    autoplayTimeout: 3000,
+    // [ms] default value is 4000
+    autoplayImmediate: false,
+    // whether to change first slide right after the play action or after a timeout, default value: false
+    pauseOnHover: true,
+    // should the carousel be paused on hover, default value: true
+  })
+  .init()
+  // to autoplay the carousel on page load
+  // just uncomment the line below:
+  // .play();
+<!-- -->
+document.querySelector('.play')
+  .addEventListener('click',
+    () => carousel.play()
+  );
+<!-- -->
+document.querySelector('.pause')
+  .addEventListener('click',
+    () => carousel.pause()
+  );
+  </template>
+</ExampleSection>
+<!-- textlint-enable -->
+
+
 ## Plugin Custom Events
 
-This plugin adds [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent) for the most important methods of the [Core Tiny Carousel API](../../api-reference/core). Also, it extends Tiny Carousel instance with additional method for event handling.
+This plugin adds [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent) for the most important methods of the [Core Tiny Carousel API](../../api-reference/core). Also, it extends Tiny Carousel instance with additional methods for the event handling.
 
 API Reference and the list of all events raised by this plugin you will find [here](../../api-reference/plugin-custom-events).
 
