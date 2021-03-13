@@ -24,7 +24,8 @@
         "lerna.json",
         "stylelint.json",
         "**/package.json",
-        "./.github/**"
+        "./.github/**",
+        "./.husky/**"
       ]
     }
   }
