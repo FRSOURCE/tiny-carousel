@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-docs@0.2.0...@frsource/tiny-carousel-docs@0.2.1) (2021-03-13)
+
+**Note:** Version bump only for package @frsource/tiny-carousel-docs
+
+
+
+
+
 # [0.2.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-docs@0.1.14...@frsource/tiny-carousel-docs@0.2.0) (2021-03-08)
 
 
