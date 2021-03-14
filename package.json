@@ -20,7 +20,8 @@
     "link": "lerna link",
     "postinstall": "lerna bootstrap",
     "what-changed": "lerna changed",
-    "diff": "lerna diff"
+    "diff": "lerna diff",
+    "prepare": "husky install"
   },
   "keywords": [
     "carousel",

@@ -36,6 +36,8 @@ jobs:
       - name: Install dependencies if needed.
         if: steps.lerna-yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --ignore-platform --frozen-lockfile
+        env:
+          HUSKY: 0
       - name: Link package directories together if it's not already done as a part of install.
         if: steps.lerna-yarn-cache.outputs.cache-hit == 'true'
         run: yarn link
