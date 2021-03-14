@@ -5,7 +5,11 @@ Tiny Carousel is a modern, modular carousel library which consist of the whole e
 ## Core
 The main entry point is always a core package, which provides the most basic carousel API and allows extending of it functionalities.
 
-For now, the only and only core package is a [`@frsource/tiny-carousel-core`](./api-reference/core). It’s a CSS scroll snap points based carousel system. Usage of this native API makes is snappy, lightweight and accessible solution.
+For now, the only and only core package is a [`@frsource/tiny-carousel-core`](https://www.npmjs.com/package/@frsource/tiny-carousel-core). It’s a CSS scroll snap points-based carousel system. Usage of this native API makes is snappy, lightweight and accessible solution.
+
+Learn more about the core package:
+| [API reference](./api-reference/core) | [Usage guide](./guide/usage#core) |
+| - | - |
 
 ## Plugins
 
