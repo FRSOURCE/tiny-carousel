@@ -44,8 +44,6 @@ export class TinyCarousel {
     this.config = Object.assign({}, _defaultConfig, _config);
 
     if (!_config.items) this.config.items = this.findPossibleItems();
-
-    on(carouselElement, 'scroll', this.resetActive.bind(this), { passive: true });
   }
 
   use<PD extends PluginDefinition>(pluginDefinition: PD, ...args: OmitFirstItem<Parameters<PD['install']>>) {
@@ -54,6 +52,8 @@ export class TinyCarousel {
   }
 
   init() {
+    on(this.carouselElement, 'scroll', this.resetActive.bind(this), { passive: true });
+
     this.carouselElement.classList.add(this.config.className);
     this.carouselElement.classList.add(this.config.hideScrollClassName);
 
