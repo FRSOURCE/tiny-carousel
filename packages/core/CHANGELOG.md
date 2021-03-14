@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-core@0.3.1...@frsource/tiny-carousel-core@0.4.0) (2021-03-14)
+
+
+### Features
+
+* **core:** move the scroll handler setup to init ([a625dc3](https://github.com/FRSource/tiny-carousel/commit/a625dc398824bae4940f32a43cf2884390d668fc))
+
+
+
+
+
 ## [0.3.1](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-core@0.3.0...@frsource/tiny-carousel-core@0.3.1) (2021-03-13)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-core

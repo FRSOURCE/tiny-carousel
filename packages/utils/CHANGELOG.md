@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-utils@0.1.9...@frsource/tiny-carousel-utils@0.2.0) (2021-03-14)
+
+
+### Features
+
+* **utils:** better typings for event targets ([0ee1fdc](https://github.com/FRSource/tiny-carousel/commit/0ee1fdcbf7c62beebb2a956748dbe98e3764ae54))
+
+
+
+
+
 ## [0.1.9](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-utils@0.1.8...@frsource/tiny-carousel-utils@0.1.9) (2021-03-13)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-utils
