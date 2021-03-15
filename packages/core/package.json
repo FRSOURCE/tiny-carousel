@@ -57,12 +57,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
-    "@frsource/frs-hide-scrollbar": "^2.0.4",
+  "dependencies": {
     "@frsource/tiny-carousel-utils": "^0.2.0"
   },
   "peerDependencies": {
-    "@frsource/frs-hide-scrollbar": "^2.0.4",
-    "@frsource/tiny-carousel-utils": "^0.1.8"
+    "@frsource/frs-hide-scrollbar": "^2.0.5"
+  },
+  "devDependencies": {
+    "@frsource/frs-hide-scrollbar": "^2.0.5"
   }
 }

@@ -22,7 +22,7 @@
     "watch:test:scripts:unit": "yarn test:scripts:unit --watch",
     "build": "microbundle"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "@frsource/tiny-carousel-core": "^0.4.0"
   },
   "dependencies": {
