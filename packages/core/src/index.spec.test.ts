@@ -64,11 +64,6 @@ describe('constructor', () => {
     expect(findPossibleItemsSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('should bind handler to the "scroll" event', () => {
-    initializeCarousel();
-    expect(on).toHaveBeenCalledWith(element, 'scroll', expect.any(Function), { passive: true });
-  });
-
   describe('when no config passed', () => {
     it('should provide defaults', () => {
       initializeCarousel();
@@ -149,6 +144,11 @@ describe('init', () => {
   afterAll(() => {
     config = undefined;
     goToSpy.mockRestore();
+  });
+
+  it('should bind handler to the "scroll" event', () => {
+    carousel.init();
+    expect(on).toHaveBeenCalledWith(element, 'scroll', expect.any(Function), { passive: true });
   });
 
   it('should add classnames from the config', () => {
