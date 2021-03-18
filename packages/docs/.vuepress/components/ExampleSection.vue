@@ -92,3 +92,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+pre[data-lang]::before {
+  content: attr(data-lang);
+  display: block;
+  margin-top: -.9rem;
+  margin-bottom: .5rem;
+  font-size: .8em;
+  opacity: .4;
+  text-transform: uppercase;
+}
+</style>
