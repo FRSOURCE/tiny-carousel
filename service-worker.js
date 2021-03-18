@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "2175b6411a3874bf60164b251aa12554"
+    "revision": "c662f6da061550160780f894a79d124d"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -39,23 +39,23 @@ self.__precacheManifest = [
   },
   {
     "url": "api-reference/core/index.html",
-    "revision": "90e8234ba1665c12cad10754363ec2ea"
+    "revision": "62601556bda25e6fb905e75d9856203a"
   },
   {
     "url": "api-reference/index.html",
-    "revision": "b5118afe87e2035ccad31010ca23ddfe"
+    "revision": "90b34a61f7c4bfa6b941caa75687922a"
   },
   {
     "url": "api-reference/plugin-autoplay/index.html",
-    "revision": "3c5debd568375d9662a436e8dedaf817"
+    "revision": "5156ca2a0526388538a7d04e0d3d407d"
   },
   {
     "url": "api-reference/plugin-custom-events/index.html",
-    "revision": "34090edb324b874b1c9ba72e5347cf64"
+    "revision": "0eec5b8a673c0cc15f6a68126a479403"
   },
   {
     "url": "api-reference/plugin-scroll-snap-fallback/index.html",
-    "revision": "a5fc941e6eac968d1170cd7fd870e1c1"
+    "revision": "8966207f310c3a20206178114439812d"
   },
   {
     "url": "apple-touch-icon.png",
@@ -166,20 +166,20 @@ self.__precacheManifest = [
     "revision": "410004a5cefb90a6d3a818caff429e02"
   },
   {
-    "url": "assets/js/app.361f169b.js",
-    "revision": "2206030c3a2471703defccf4f4ff7ce5"
+    "url": "assets/js/app.5ebf7d48.js",
+    "revision": "0ca013db38f6fc840446199b22f6e772"
   },
   {
     "url": "CHANGELOG/index.html",
-    "revision": "a9c5b6f3a1bb91dba3940743671e04eb"
+    "revision": "0a0afe271bb4bed2a303905bb2292e98"
   },
   {
     "url": "contribution/index.html",
-    "revision": "7e491d948172379c506e56e3a6335fcc"
+    "revision": "2e2ad39d7b9ce72d5e8f497f8197a3b5"
   },
   {
     "url": "ecosystem/index.html",
-    "revision": "7f8fe8976b0d8b123ca975e69576fb12"
+    "revision": "88fb5732e7cb4f38aaf0ea205f3269e4"
   },
   {
     "url": "favicon-16x16.png",
@@ -191,19 +191,19 @@ self.__precacheManifest = [
   },
   {
     "url": "guide/index.html",
-    "revision": "b0ba45511e3f02bd3782d3680e263296"
+    "revision": "d199995b37e8d67f687833d59de24453"
   },
   {
     "url": "guide/installation/index.html",
-    "revision": "012c27bae08830e3c79481413f28b57b"
+    "revision": "6c293756bfeb7459f45b59f5ec553b2d"
   },
   {
     "url": "guide/usage/index.html",
-    "revision": "ca574d1cfa653ff7ed168ef284e58b31"
+    "revision": "e774366c4807081a8ab2f83cd33065a5"
   },
   {
     "url": "index.html",
-    "revision": "53487264f303f4c2e543a6a3ab895df3"
+    "revision": "1f83b42d0a52f3a48ab1e8725fb5f6fb"
   },
   {
     "url": "logo.jpg",
