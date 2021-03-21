@@ -39,8 +39,8 @@
   <i>An extendable library for providing any kind of carousel/slider UI experience.
     <br>Mobile &amp; desktop-friendly
     <br>Tiny & performant - takes advantage of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS snap points</a>.
-    <br>Published as treeshakeable bundles, separate for JS ES5 or modern browsers thanks to <a href="https://www.npmjs.com/package/microbundle">microbundle</a>.</i>
-    <br>Written completely in <a href="https://www.typescriptlang.org">typescript</a>.
+    <br>Published as treeshakeable bundles, separate for JS ES5 or modern browsers thanks to <a href="https://www.npmjs.com/package/microbundle">microbundle</a>.
+    <br>Written completely in <a href="https://www.typescriptlang.org">typescript</a>.</i>
   <br>
   <br>
 </p>

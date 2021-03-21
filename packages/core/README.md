@@ -34,7 +34,7 @@
 <p align="center">
   <br>
   <i>The main package of the Tiny Carousel <a href="https://www.frsource.org/tiny-carousel/ecosystem/">ecosystem</a> which gives the most basic carousel API.
-    <br>Takes advantage of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS snap points</a>.
+    <br>Takes advantage of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS snap points</a>.</i>
   <br>
   <br>
 </p>

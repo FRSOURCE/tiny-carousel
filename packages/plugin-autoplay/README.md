@@ -36,7 +36,7 @@
   <i>The plugin for the Tiny Carousel <a href="https://www.frsource.org/tiny-carousel/ecosystem/">ecosystem</a>.
     <br>Adds play/pause methods to the carousel instance.
     <br>Allows to enable autoplay with a set timeout.
-  <br>
+  <br></i>
   <br>
 </p>
 

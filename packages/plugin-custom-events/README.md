@@ -36,7 +36,7 @@
   <i>The plugin being a part of the Tiny Carousel <a href="https://www.frsource.org/tiny-carousel/ecosystem/">ecosystem</a>.
     <br>Triggers <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent">native CustomEvents</a> for all of the most important Tiny Carousel methods (<a href="https://www.frsource.org/tiny-carousel/api-reference/plugin-custom-events/#events">event list</a>).
     <br>Extends Tiny Carousel with <a href="https://www.frsource.org/tiny-carousel/api-reference/plugin-custom-events#instance-methods">additional instance methods</a>.
-  <br>
+  <br></i>
   <br>
 </p>
 

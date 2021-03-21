@@ -246,7 +246,6 @@ document.querySelector('.pause')
 </ExampleSection>
 <!-- textlint-enable -->
 
-
 ## Plugin Custom Events
 
 This plugin adds [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent) for the most important methods of the [Core Tiny Carousel API](../../api-reference/core). Also, it extends Tiny Carousel instance with additional methods for the event handling.
