@@ -1,7 +1,14 @@
-import { on } from '@frsource/tiny-carousel-utils';
+import { on, horizontalSnapToIndex, horizontalScrollContainerCenter } from '@frsource/tiny-carousel-utils';
 import { TinyCarousel } from '.';
 
 jest.mock('@frsource/tiny-carousel-utils');
+const { 
+  horizontalSnapToIndex: horizontalSnapToIndexActual,
+  horizontalScrollContainerCenter: horizontalScrollContainerCenterActual,
+} = jest.requireActual('@frsource/tiny-carousel-utils');
+
+const horizontalSnapToIndexMock = horizontalSnapToIndex as jest.Mock;
+const horizontalScrollContainerCenterMock = horizontalScrollContainerCenter as jest.Mock;
 
 let carousel: TinyCarousel;
 let element: HTMLElement;
@@ -17,6 +24,11 @@ const initializeCarousel = () => {
   Object.defineProperty(element.children[2], 'offsetLeft', { value: 300 });
   carousel = new TinyCarousel(element, config);
 };
+
+beforeAll(() => {
+  horizontalSnapToIndexMock.mockImplementation(horizontalSnapToIndexActual);
+  horizontalScrollContainerCenterMock.mockImplementation(horizontalScrollContainerCenterActual);
+});
 
 afterEach(() => {
   document.body.innerHTML = '';
@@ -295,7 +307,7 @@ describe('active::get', () => {
   });
 
   describe('when items array is empty', () => {
-    it('should return proper -1', () => {
+    it('should return 0', () => {
       carousel.config.items = [];
       expect(carousel.active).toBe(-1);
     });
