@@ -309,7 +309,7 @@ describe('active::get', () => {
   describe('when items array is empty', () => {
     it('should return 0', () => {
       carousel.config.items = [];
-      expect(carousel.active).toBe(-1);
+      expect(carousel.active).toBe(0);
     });
   });
 });
