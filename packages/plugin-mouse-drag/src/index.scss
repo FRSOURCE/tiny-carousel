@@ -1,0 +1,17 @@
+.frs-tc {
+  $self: &;
+
+  &--draggable {
+    cursor: grab;
+  }
+
+  &--dragging,
+  &--momentum {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
+
+  &--dragging {
+    cursor: grabbing;
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "@frsource/tiny-carousel-plugin-mouse-drag",
+  "amdName": "tinyCarouselPluginMouseDrag",
+  "version": "0.0.1",
+  "description": "Allow desktop users to swipe through the @frsource/tiny-carousel ✋",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "exports": "./dist/index.modern.js",
+  "sass": "src/index.scss",
+  "styles": "dist/index.css",
+  "scripts": {
+    "lint": "concurrently yarn:lint:*",
+    "lint:scripts": "eslint src/. --ext .js,.jsx,.ts,.tsx",
+    "lint:styles": "stylelint 'src/**.scss'",
+    "fix:lint": "concurrently 'yarn lint:scripts --fix'",
+    "test": "concurrently yarn:test:*",
+    "test:scripts:unit": "jest --config ../../jest.config.js 'plugin-mouse-drag/src/.*\\.spec\\.test\\.ts'",
+    "coverage": "concurrently yarn:coverage:*",
+    "coverage:scripts": "yarn test:scripts:unit --coverage",
+    "watch:test": "concurrently yarn:watch:test:*",
+    "watch:test:scripts:unit": "yarn test:scripts:unit --watch",
+    "build": "microbundle",
+    "start": "microbundle watch"
+  },
+  "keywords": [
+    "carousel",
+    "slider",
+    "swiper",
+    "tiny",
+    "drag",
+    "swipe",
+    "dnd",
+    "drag and drop",
+    "desktop",
+    "mouse drag",
+    "efficient",
+    "modular",
+    "lightweight",
+    "mobile-friendly",
+    "css snap",
+    "snapping points",
+    "vanillaJS",
+    "accessibility",
+    "css",
+    "js"
+  ],
+  "author": "Jakub Freisler <jakub.freisler@frsource.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FRSource/tiny-carousel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRSource/tiny-carousel.git"
+  },
+  "homepage": "https://www.frsource.org/tiny-carousel/ecosystem/#plugin-mouse-drag/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@frsource/tiny-carousel-core": "^0.4.0"
+  },
+  "dependencies": {
+    "@frsource/tiny-carousel-utils": "^0.2.0"
+  }
+}
