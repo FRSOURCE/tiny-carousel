@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-utils@0.2.0...@frsource/tiny-carousel-utils@0.3.0) (2021-03-21)
+
+
+### Features
+
+* **utils:** add dom utils ([ccc2aca](https://github.com/FRSource/tiny-carousel/commit/ccc2aca6a8ff44fa5049af9840ceb8776d783109))
+* **utils:** add throttle implementation ([0a46903](https://github.com/FRSource/tiny-carousel/commit/0a46903b3ecb8eec117f8d9f98ab1e8b328d0744))
+
+
+
+
+
 # [0.2.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-utils@0.1.9...@frsource/tiny-carousel-utils@0.2.0) (2021-03-14)
 
 

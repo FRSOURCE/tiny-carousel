@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-plugin-autoplay",
   "amdName": "tinyCarouselPluginAutoplay",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Autoplay for your @frsource/tiny-carousel ⏯",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -61,6 +61,6 @@
     "@frsource/tiny-carousel-core": "^0.4.0"
   },
   "dependencies": {
-    "@frsource/tiny-carousel-utils": "^0.2.0"
+    "@frsource/tiny-carousel-utils": "^0.3.0"
   }
 }

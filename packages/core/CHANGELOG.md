@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-core@0.4.0...@frsource/tiny-carousel-core@0.5.0) (2021-03-21)
+
+
+### Features
+
+* **core:** use dom utils ([bc89d31](https://github.com/FRSource/tiny-carousel/commit/bc89d31cb0f8e48bcd5ac278ebadebf822b425e9))
+
+
+
+
+
 # [0.4.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-core@0.3.1...@frsource/tiny-carousel-core@0.4.0) (2021-03-14)
 
 
