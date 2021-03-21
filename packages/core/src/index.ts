@@ -1,5 +1,5 @@
 import './index.scss';
-import { on } from '@frsource/tiny-carousel-utils';
+import { on, horizontalSnapToIndex, horizontalScrollContainerCenter } from '@frsource/tiny-carousel-utils';
 import type { DeepPartial, OmitFirstItem } from './helpers';
 
 export type PluginDefinition<C extends unknown[] | undefined = undefined> = C extends unknown[]
@@ -66,26 +66,16 @@ export class TinyCarousel {
     return this;
   }
 
-  private get _carouselScrollPositionX () {
-    let scrollPositionX = this.carouselElement.scrollLeft + this.carouselElement.clientWidth / 2;
-    // to overcome calculation problems when offsetLeft is calculated not from this.carousel, but from body
-    if (this.config.items[0]?.offsetParent !== this.carouselElement) {
-      scrollPositionX += this.carouselElement.offsetLeft;
-    }
-
-    return scrollPositionX;
-  }
-
   /*
    * Returns an index of the active item or -1 if items array is empty.
    */
   get active () {
     if (this._active !== void 0) return this._active;
-    const scrollPositionX = this._carouselScrollPositionX;
-    let i = -1;
-    let item: HTMLElement;
-    while (!!(item = this.config.items[++i]) && scrollPositionX >= item.offsetLeft);
-    return this._active = --i;
+  
+    return this._active = horizontalSnapToIndex(
+      this.config.items,
+      horizontalScrollContainerCenter(this.carouselElement, this.config.items[0]),
+    );
   }
 
   goTo (n: number) {
