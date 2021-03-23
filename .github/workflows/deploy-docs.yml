@@ -5,6 +5,8 @@ on:
       - master
 jobs:
   build-and-deploy:
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    name: Build and deploy docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️

@@ -5,9 +5,9 @@ on:
       - master
 jobs:
   release:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     name: Release
     runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - uses: actions/checkout@v2
         with:
