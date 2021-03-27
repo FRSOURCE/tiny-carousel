@@ -60,5 +60,8 @@
   },
   "dependencies": {
     "@frsource/tiny-carousel-utils": "^0.3.0"
+  },
+  "devDependencies": {
+    "@frsource/tiny-carousel-core": "^0.6.0"
   }
 }

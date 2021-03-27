@@ -60,5 +60,8 @@
   "homepage": "https://www.frsource.org/tiny-carousel/ecosystem/#plugin-custom-events",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@frsource/tiny-carousel-core": "^0.6.0"
   }
 }
