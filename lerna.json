@@ -23,7 +23,6 @@
         ".gitignore",
         "lerna.json",
         "stylelint.json",
-        "**/package.json",
         "./.github/**",
         "./.husky/**"
       ]
