@@ -1,6 +1,9 @@
 @import '~@frsource/frs-hide-scrollbar';
 
-.frs-tc {
+$class-name: 'frs-tc' !default;
+$item-class-name: 'frs-tc-item' !default;
+
+.#{$class-name} {
   display: flex;
   height: 100%;
   overflow: scroll;
@@ -23,7 +26,7 @@
   }
 }
 
-.frs-tc-item {
+.#{$item-class-name} {
   flex: 0 0 100%;
   overflow: hidden;
   scroll-snap-align: start;
