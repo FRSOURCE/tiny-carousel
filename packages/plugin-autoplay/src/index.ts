@@ -36,24 +36,13 @@ export const pluginAutoplay = {
     let mouseOverListener: ()=>void;
     let mouseOutListener: ()=>void;
 
-    const clearListeners = (instance: TinyCarousel) => {
-      off(instance.carouselElement, 'mouseover', mouseOverListener);
-      off(instance.carouselElement, 'mouseout', mouseOutListener);
+    const clearListeners = function ({ carouselElement }: TinyCarousel) {
+      off(carouselElement, 'mouseover', mouseOverListener);
+      off(carouselElement, 'mouseout', mouseOutListener);
     };
 
     instance.play = function({ autoplayImmediate } = {}) {
       this.pause();
-      const player = () => {
-        if (
-          timeout || (
-            typeof autoplayImmediate === 'boolean'
-              ? autoplayImmediate
-              : this.config.autoplayImmediate
-          )
-        ) instance.next();
-
-        timeout = (setTimeout as Window['setTimeout'])(player, this.config.autoplayTimeout);
-      };
 
       if (this.config.pauseOnHover) {
         mouseOverListener = this.pause.bind(this, { leavePauseOnHoverListeners: true });
@@ -63,7 +52,20 @@ export const pluginAutoplay = {
         on(this.carouselElement, 'mouseout', mouseOutListener);
       }
 
+      const player = () => {
+        if (
+          timeout || (
+            typeof autoplayImmediate === 'undefined'
+              ? this.config.autoplayImmediate
+              : autoplayImmediate
+          )
+        ) instance.next();
+
+        timeout = (setTimeout as Window['setTimeout'])(player, this.config.autoplayTimeout);
+      };
+
       player();
+
       return this;
     };
 
