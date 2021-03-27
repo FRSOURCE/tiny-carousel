@@ -1,6 +1,6 @@
 $mouse-drag-class-name: 'frs-tc--md' !default;
 $mouse-drag-dragging-class-name: 'frs-tc--mdd' !default;
-$mouse-drag-momentum-class-name: 'frs-tc--mdn' !default;
+$mouse-drag-momentum-class-name: 'frs-tc--mdm' !default;
 
 .#{$mouse-drag-class-name} {
   cursor: grab;
