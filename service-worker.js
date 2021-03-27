@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "c2f2dfffcfac2406aca5d13325852ea9"
+    "revision": "5c9a808c24be6d581b595e6e4d456c5d"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -39,23 +39,23 @@ self.__precacheManifest = [
   },
   {
     "url": "api-reference/core/index.html",
-    "revision": "3a8e9378c4a738e4d9b5c3faa05449e4"
+    "revision": "9b2bbfb31369a0595c301b2da6562154"
   },
   {
     "url": "api-reference/index.html",
-    "revision": "295f0094232790a2149cb9b0320bc754"
+    "revision": "1825d675073f6d3e278809fc58c3557c"
   },
   {
     "url": "api-reference/plugin-autoplay/index.html",
-    "revision": "0711861f081b91b7c6c9d9a1b0cb139e"
+    "revision": "093ca789c6e2a79042a1140408193105"
   },
   {
     "url": "api-reference/plugin-custom-events/index.html",
-    "revision": "68f2e6ac95b07ffa50b26296058eaecd"
+    "revision": "fb1a42737f5ba2d7f39bf648f6063fde"
   },
   {
     "url": "api-reference/plugin-scroll-snap-fallback/index.html",
-    "revision": "95c6fb28edb33941e86c4d87480d4fd1"
+    "revision": "302c594d9e789801267988433a0fca35"
   },
   {
     "url": "apple-touch-icon.png",
@@ -82,8 +82,8 @@ self.__precacheManifest = [
     "revision": "4d756c6b57357f24c2655d35a8258248"
   },
   {
-    "url": "assets/js/13.d40e9808.js",
-    "revision": "1696831b15d6be73117d39fdabcb0f4b"
+    "url": "assets/js/13.40df5e15.js",
+    "revision": "ce9d60b59c20a2a03636757b00d0316c"
   },
   {
     "url": "assets/js/14.ac6faccb.js",
@@ -166,20 +166,20 @@ self.__precacheManifest = [
     "revision": "e09b10eed7c4009d85b0987420343d66"
   },
   {
-    "url": "assets/js/app.8ae5a8e0.js",
-    "revision": "23db680179a307e433411d53ef7f87bf"
+    "url": "assets/js/app.a0dcc402.js",
+    "revision": "0c9c2edb437443469394ee41d13b305a"
   },
   {
     "url": "CHANGELOG/index.html",
-    "revision": "0a14faa2c823352888a7f26acbaa6c91"
+    "revision": "a87103219d7d7a9848067a71a4165a4e"
   },
   {
     "url": "contribution/index.html",
-    "revision": "c4d8c4bbde048227e60bba2ef261a945"
+    "revision": "dc36af24a6cd019013ab5daed40dabad"
   },
   {
     "url": "ecosystem/index.html",
-    "revision": "c7d69fc31c1dd57d940d7b2be1d48bb1"
+    "revision": "58e28bbb7d7bc667ef59bf060112147c"
   },
   {
     "url": "favicon-16x16.png",
@@ -191,19 +191,19 @@ self.__precacheManifest = [
   },
   {
     "url": "guide/index.html",
-    "revision": "a11298eb8bb1a1e1ce4207e52d3bae8c"
+    "revision": "d4d1bc3d99a013c85efe66d43b3d60b3"
   },
   {
     "url": "guide/installation/index.html",
-    "revision": "fb073e81eadd254c0d73d300efc5d436"
+    "revision": "6d8f75170f3207ccf63a90fc6824f68a"
   },
   {
     "url": "guide/usage/index.html",
-    "revision": "c2998a606a266762e090996ae17ca68d"
+    "revision": "c1a9505e1d36c548a54c9482720f777d"
   },
   {
     "url": "index.html",
-    "revision": "d8f7ba5e2f311e425e11b3a9afb46c54"
+    "revision": "3c90d6192a644d237f4c7f6ed91339df"
   },
   {
     "url": "logo.jpg",
