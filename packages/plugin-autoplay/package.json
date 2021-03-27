@@ -58,7 +58,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@frsource/tiny-carousel-core": "^0.5.0"
+    "@frsource/tiny-carousel-core": "^0.6.0"
   },
   "dependencies": {
     "@frsource/tiny-carousel-utils": "^0.3.0"
