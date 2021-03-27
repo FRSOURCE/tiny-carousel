@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-mouse-drag@0.1.1...@frsource/tiny-carousel-plugin-mouse-drag@0.2.0) (2021-03-27)
+
+
+### Features
+
+* **plugin-mouse-drag:** make scss configurable ([94d86ca](https://github.com/FRSource/tiny-carousel/commit/94d86ca6a2273575963e8d8ce88ac6a64ddbb8cb))
+
+
+
+
+
 ## [0.1.1](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-mouse-drag@0.1.0...@frsource/tiny-carousel-plugin-mouse-drag@0.1.1) (2021-03-27)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-mouse-drag
