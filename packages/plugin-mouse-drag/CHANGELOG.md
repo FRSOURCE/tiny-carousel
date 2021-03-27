@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-mouse-drag@0.2.0...@frsource/tiny-carousel-plugin-mouse-drag@0.2.1) (2021-03-27)
+
+
+### Bug Fixes
+
+* **plugin-mouse-drag:** fix default momentum class name ([a4022b7](https://github.com/FRSource/tiny-carousel/commit/a4022b751061eca819484d18f1c3d5bc78605abb))
+
+
+
+
+
 # [0.2.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-mouse-drag@0.1.1...@frsource/tiny-carousel-plugin-mouse-drag@0.2.0) (2021-03-27)
 
 
