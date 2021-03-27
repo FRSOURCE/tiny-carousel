@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2021-03-27)
+
+
+### Bug Fixes
+
+* packages build order via dependency order ([4498131](https://github.com/FRSource/tiny-carousel/commit/449813143a59ceb34b4d5014902c587bd029ef9f))
+
+
+### Features
+
+* **plugin-autoplay:** reduce bundle size ([d533746](https://github.com/FRSource/tiny-carousel/commit/d5337464d4c2c5c4df340e36cdbae51a3b4e35d7))
+
+
+
+
+
 ## [0.1.4](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-autoplay@0.1.3...@frsource/tiny-carousel-plugin-autoplay@0.1.4) (2021-03-21)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-autoplay
