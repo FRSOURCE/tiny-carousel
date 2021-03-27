@@ -10,6 +10,16 @@ Always try to use proper semantic tags/attributes when setting up a carousel to 
 
 The main package of the Tiny Carousel [ecosystem](../../ecosystem) which gives the most basic carousel API. Try it out before using additional plugins - it might be enough in the most basic scenarios.
 
+First, you need to install the core library using one of the package managers:
+
+```bash
+# yarn
+yarn add @frsource/tiny-carousel-core
+
+# npm
+npm install @frsource/tiny-carousel-core
+```
+
 To use this package you need to import **both the SASS/CSS and Typescript/JavaScript files**.
 
 ::: warning The animations in an example are not working.
@@ -323,6 +333,85 @@ const carousel = new TinyCarousel(
 </ExampleSection>
 <!-- textlint-enable -->
 
+## Plugin Mouse Drag
+
+This plugin adds drag/swipe support for mouse users (especially on desktop).
+
+API Reference and the list of all events raised by this plugin you will find [here](../../api-reference/plugin-mouse-drag).
+
+To use this package you need to import **both the SASS/CSS and Typescript/JavaScript files**.
+
+Let’s try to use it - first you need to install the plugin using one of a package managers:
+
+```bash
+# yarn
+yarn add @frsource/tiny-carousel-plugin-mouse-drag
+
+# npm
+npm install @frsource/tiny-carousel-plugin-mouse-drag
+```
+
+After you add it to your carousel instance (using [`carousel.use` method](../api-reference/core/#carousel-use)) and [import CSS/Sass styling](../api-reference/plugin-mouse-drag/#styling) the plugin will start working immediately! From now on, every desktop/mouse user will be able to swipe through the slides by clicking & dragging across the carousel.
+
+See the example below on the device with mouse connected to see the plugin in action:
+
+<!-- textlint-disable -->
+<ExampleSection
+    title="Example on how to use Tiny Carousel Mouse Drag"
+    description="This example code shows @frsource/tiny-carousel-plugin-mouse-drag library in action - now mouse users can swipe the carousel"
+    default-tab="js"
+>
+  <template slot="html">
+&lt;h3&gt;The carousel is now swipeable, even on desktop 🖐&lt;/h3&gt;
+<!-- -->
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/1/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/2/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/3/800/600"&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="https://picsum.photos/seed/4/800/600"&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+  </template>
+  <template slot="scss">
+<div>
+@import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
+@import "https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-mouse-drag/dist/index.css";
+<!-- -->
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</div>
+  </template>
+  <template slot="js">
+import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
+import { pluginMouseDrag } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-mouse-drag';
+<!-- -->
+const carousel = new TinyCarousel(
+  document.querySelector('ul')
+)
+  .use(
+    pluginMouseDrag,
+    // you can pass along an configuration object
+    // for all options please refer to:
+    // https://www.frsource.org/tiny-carousel/api-reference/plugin-mouse-drag/#pluginconfig
+    // uncomment the line below to try out
+    // swiping with smaller gravity
+    // { mouseDragMomentumGravity: 0.5 }
+  )
+  .init();
+  </template>
+</ExampleSection>
+<!-- textlint-enable -->
+
 ## Plugin Scroll Snap Fallback
 
 Even though the browser support of the [CSS scroll-snap feature](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap) is pretty good:
@@ -390,7 +479,7 @@ const carousel = new TinyCarousel(
     pluginScrollSnapFallback,
     // you can pass along an configuration object
     // for all options please refer to:
-    // https://www.frsource.org/tiny-carousel/api-reference/plugin-scroll-snap-fallback/#config
+    // https://www.frsource.org/tiny-carousel/api-reference/plugin-scroll-snap-fallback/#pluginconfig
     //{ force: true }
   )
   .init();
