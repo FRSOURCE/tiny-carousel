@@ -2,6 +2,35 @@
 
 Core is the module providing main Tiny Carousel functionalities and API. It exports the TinyCarousel class.
 
+## Styling
+
+Styling can be imported via:
+
+> Sass: `@frsource/tiny-carousel-core/src/index.scss`
+>
+> CSS: `@frsource/tiny-carousel-core/dist/index.css`
+
+When importing Sass source file you can configure [the variables](sass-lang.com/documentation/variables):
+
+- **Sass variables:**
+
+    - `{string} $class-name = "frs-tc"`
+    - `{string} $item-class-name = "frs-tc-item"`
+
+- **Details:**
+
+    - `$class-name` is a class name added to the carousel element
+    - `$item-class-name` is a class name added to the carousel items (slides)
+
+:::tip
+This packages uses [`@frsource/frs-hide-scrollbar`](https://www.npmjs.com/package/@frsource/frs-hide-scrollbar) to hide native scrollbars. So, when importing the core Sass styling you have a possibility to set [`@frsource/frs-hide-scrollbar` configuration](https://www.frsource.org/FRS-hide-scrollbar/usage) beforehand.
+For example, this might be useful to change the default `frs-hide-scroll` class name:
+```scss
+$frs-hide-scroll-classname: "your-new-hide-scroll-classname";
+@import '~@frsource/tiny-carousel-core';
+```
+:::
+
 <!-- textlint-disable -->
 ## Global API
 
@@ -196,11 +225,11 @@ To recalculate [`carousel.active`](#carousel-active) in place, call `carousel.re
 
 - **Properties:**
 
-    - `{number} active`
-    - `{string} className`
-    - `{string} itemClassName`
-    - `{string} hideScrollClassName`
-    - `HTMLElement[] items`
+    - `{number} active = 0`
+    - `{string} className = "frs-tc"`
+    - `{string} itemClassName = "frs-tc-item"`
+    - `{string} hideScrollClassName - "frs-hide-scroll"`
+    - `HTMLElement[] items = []`
 
 - **Details:**
 
