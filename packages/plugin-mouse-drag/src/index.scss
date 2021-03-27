@@ -1,17 +1,17 @@
-.frs-tc {
-  $self: &;
+$mouse-drag-class-name: 'frs-tc--md' !default;
+$mouse-drag-dragging-class-name: 'frs-tc--mdd' !default;
+$mouse-drag-momentum-class-name: 'frs-tc--mdn' !default;
 
-  &--draggable {
-    cursor: grab;
-  }
+.#{$mouse-drag-class-name} {
+  cursor: grab;
+}
 
-  &--dragging,
-  &--momentum {
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-  }
+.#{$mouse-drag-dragging-class-name},
+.#{$mouse-drag-momentum-class-name} {
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
 
-  &--dragging {
-    cursor: grabbing;
-  }
+.#{$mouse-drag-dragging-class-name} {
+  cursor: grabbing;
 }
