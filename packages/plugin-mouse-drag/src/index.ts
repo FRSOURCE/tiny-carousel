@@ -41,7 +41,6 @@ export const pluginMouseDrag = {
     let throttledMouseMove: EventListener;
     let pos: { top: number, left: number, diffX: number, diffY: number };
 
-    
     function mouseDownHandler(e: MouseEvent) {
       instance.carouselElement.classList.add(instance.config.mouseDragDraggingClassName);
       e.preventDefault();
