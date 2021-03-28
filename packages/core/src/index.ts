@@ -13,8 +13,10 @@ export interface Config {
   active: number;
   className: string;
   itemClassName: string;
-  // TODO: better documentation
-  // internal, change only if you know what you're doing!
+  /**
+   * To be changed together with `$frs-hide-scroll` Sass variable
+   * More info: https://www.frsource.org/tiny-carousel/api-reference/core/#styling
+   */
   hideScrollClassName: string;
   items: HTMLElement[];
 }

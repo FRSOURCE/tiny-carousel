@@ -235,6 +235,10 @@ To recalculate [`carousel.active`](#carousel-active) in place, call `carousel.re
 
     Data type which holds most of the Tiny Carousel configuration.
 
+:::tip
+When changing `hideScrollClassName` always remember to change the `$frs-hide-scroll` Sass variable as well. More information available in [the styling section](#styling) or [`@frsource/frs-hide-scrollbar` documentation](https://www.frsource.org/FRS-hide-scrollbar/usage).
+:::
+
 ### PluginDefinition
 
 - **Methods:**
