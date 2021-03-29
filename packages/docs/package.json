@@ -46,6 +46,10 @@
     "@frsource/tiny-carousel-utils": "^0.3.0"
   },
   "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.8.2",
+    "vuepress": "^1.8.0",
+    "vuepress-plugin-clean-urls": "^1.1.2",
+    "vuepress-plugin-seo": "^0.1.4",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   }
 }
