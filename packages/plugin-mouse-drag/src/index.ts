@@ -1,7 +1,7 @@
 import './index.scss';
 import type { PluginDefinition } from '@frsource/tiny-carousel-core';
 import { TinyCarousel } from '@frsource/tiny-carousel-core';
-import { on, off, throttle, horizontalSnapToIndex, referenceParentOffsetLeft, horizontalScrollContainerCenter } from '@frsource/tiny-carousel-utils';
+import { on, off, throttle, findXSnapIndex, referenceParentOffsetLeft } from '@frsource/tiny-carousel-utils';
 
 declare module '@frsource/tiny-carousel-core' {
   interface Config {
@@ -74,9 +74,10 @@ export const pluginMouseDrag = {
         pos.diffX /= instance.config.mouseDragMomentumGravity;
                 
         // final X, Y
-        const index = horizontalSnapToIndex(
+        const index = findXSnapIndex(
+          instance.carouselElement,
           instance.config.items,
-          horizontalScrollContainerCenter(instance.carouselElement, instance.config.items[0]) + pos.diffX * MOMENTUM_DISTANCE_FACTOR,
+          pos.diffX * MOMENTUM_DISTANCE_FACTOR,
         );
         const elementSoontoBeActive = instance.config.items[index];
         const offsetParentOffsetX = referenceParentOffsetLeft(instance.carouselElement, elementSoontoBeActive);

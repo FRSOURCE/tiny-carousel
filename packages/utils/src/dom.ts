@@ -8,15 +8,18 @@ export const referenceParentOffsetLeft = (parent: HTMLElement, child?: HTMLEleme
     : 0;
 }
 
-export const horizontalScrollContainerCenter = (element: HTMLElement, referenceItem?: HTMLElement) => {
+export const findScrollContainerXCenter = (element: HTMLElement, referenceItem?: HTMLElement) => {
     const scrollPositionX = element.scrollLeft + element.clientWidth / 2;
     
     return scrollPositionX + referenceParentOffsetLeft(element, referenceItem);
 }
 
-export const horizontalSnapToIndex = (items: HTMLElement[], scrollPositionX: number) => {
+export const findXSnapIndex = (carouselElement: HTMLElement, children: HTMLElement[], offset = 0) => {
+    if (carouselElement.scrollLeft === 0) return 0;
+
+    const scrollPositionX = findScrollContainerXCenter(carouselElement, children[0]) + offset;
     let i = 0;
     let item: HTMLElement;
-    while (!!(item = items[++i]) && scrollPositionX >= item.offsetLeft);
+    while ((item = children[++i]) && scrollPositionX >= item.offsetLeft);
     return --i;
 }

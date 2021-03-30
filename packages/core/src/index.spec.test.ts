@@ -1,14 +1,12 @@
-import { on, horizontalSnapToIndex, horizontalScrollContainerCenter } from '@frsource/tiny-carousel-utils';
+import { on, findXSnapIndex } from '@frsource/tiny-carousel-utils';
 import { TinyCarousel } from '.';
 
 jest.mock('@frsource/tiny-carousel-utils');
 const { 
-  horizontalSnapToIndex: horizontalSnapToIndexActual,
-  horizontalScrollContainerCenter: horizontalScrollContainerCenterActual,
+  findXSnapIndex: findXSnapIndexActual,
 } = jest.requireActual('@frsource/tiny-carousel-utils');
 
-const horizontalSnapToIndexMock = horizontalSnapToIndex as jest.Mock;
-const horizontalScrollContainerCenterMock = horizontalScrollContainerCenter as jest.Mock;
+const findXSnapIndexMock = findXSnapIndex as jest.Mock;
 
 let carousel: TinyCarousel;
 let element: HTMLElement;
@@ -26,8 +24,7 @@ const initializeCarousel = () => {
 };
 
 beforeAll(() => {
-  horizontalSnapToIndexMock.mockImplementation(horizontalSnapToIndexActual);
-  horizontalScrollContainerCenterMock.mockImplementation(horizontalScrollContainerCenterActual);
+  findXSnapIndexMock.mockImplementation(findXSnapIndexActual);
 });
 
 afterEach(() => {

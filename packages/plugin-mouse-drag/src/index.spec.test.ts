@@ -1,4 +1,4 @@
-import { on, off, throttle, horizontalSnapToIndex, referenceParentOffsetLeft, horizontalScrollContainerCenter } from '@frsource/tiny-carousel-utils';
+import { on, off, throttle, findXSnapIndex, referenceParentOffsetLeft } from '@frsource/tiny-carousel-utils';
 import { Config, TinyCarousel } from "@frsource/tiny-carousel-core";
 import { pluginMouseDrag } from ".";
 
@@ -12,9 +12,8 @@ const mouseDragMomentumClassName = 'momenTUMM-class';
 const onMock = on as jest.Mock;
 const offMock = off as jest.Mock;
 const throttleMock = throttle as jest.Mock;
-const horizontalSnapToIndexMock = horizontalSnapToIndex as jest.Mock;
+const findXSnapIndexMock = findXSnapIndex as jest.Mock;
 const referenceParentOffsetLeftMock = referenceParentOffsetLeft as jest.Mock;
-const horizontalScrollContainerCenterMock = horizontalScrollContainerCenter as jest.Mock;
 let init: jest.SpyInstance;
 let requestAnimationFrame: jest.SpyInstance;
 let preventDefault: jest.SpyInstance;
@@ -46,8 +45,7 @@ const callMouseUpHandler = () => {
 
 beforeAll(() => {
   throttleMock.mockImplementation(fn => fn);
-  horizontalSnapToIndexMock.mockReturnValue(1);
-  horizontalScrollContainerCenterMock.mockReturnValue(100);
+  findXSnapIndexMock.mockReturnValue(1);
   referenceParentOffsetLeftMock.mockReturnValue(20);
   requestAnimationFrame = jest.spyOn(global, 'requestAnimationFrame').mockReturnValue(0);
   init = jest.fn();
@@ -179,7 +177,7 @@ describe('install', () => {
     });
 
     it('should not call horizontalSnapToIndexMock yet', () => {
-      expect(horizontalSnapToIndexMock).not.toHaveBeenCalled();
+      expect(findXSnapIndexMock).not.toHaveBeenCalled();
     });
 
     describe('after throttle timeout', () => {
@@ -195,7 +193,7 @@ describe('install', () => {
       });
 
       it('should call horizontalSnapToIndex predict final index', () => {
-        expect(horizontalSnapToIndexMock).toHaveBeenCalledWith(carousel.config.items, 685.12135);
+        expect(findXSnapIndexMock).toHaveBeenCalledWith(carousel.carouselElement, carousel.config.items, 585.12135);
       });
 
       it('should immediately move carousel element with ease by 1 step', () => {

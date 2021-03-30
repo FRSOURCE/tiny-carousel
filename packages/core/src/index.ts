@@ -1,5 +1,5 @@
 import './index.scss';
-import { on, horizontalSnapToIndex, horizontalScrollContainerCenter } from '@frsource/tiny-carousel-utils';
+import { on, findXSnapIndex } from '@frsource/tiny-carousel-utils';
 import type { DeepPartial, OmitFirstItem } from './helpers';
 
 export type PluginDefinition<C extends unknown[] | undefined = undefined> = C extends unknown[]
@@ -74,9 +74,9 @@ export class TinyCarousel {
   get active () {
     if (this._active !== void 0) return this._active;
   
-    return this._active = horizontalSnapToIndex(
+    return this._active = findXSnapIndex(
+      this.carouselElement,
       this.config.items,
-      horizontalScrollContainerCenter(this.carouselElement, this.config.items[0]),
     );
   }
 

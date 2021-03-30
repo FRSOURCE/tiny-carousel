@@ -1,4 +1,4 @@
-import { referenceParentOffsetLeft, horizontalScrollContainerCenter, horizontalSnapToIndex } from "./dom";
+import { referenceParentOffsetLeft, findScrollContainerXCenter, findXSnapIndex } from "./dom";
 
 const parentScrollLeft = 150;
 const parentOffsetLeft = 200;
@@ -6,9 +6,6 @@ const parentClientWidth = 500;
 let parent: HTMLElement;
 let child: HTMLElement;
 
-// beforeAll(() => {
-
-// });
 beforeEach(() => {
   parent = {
     scrollLeft: parentScrollLeft,
@@ -43,19 +40,19 @@ describe('referenceParentOffsetLeft', () => {
   });
 });
 
-describe('horizontalScrollContainerCenter', () => {
+describe('findScrollContainerXCenter', () => {
   it('should correctly calculate horizontal center of a scroll container', () => {
-    expect(horizontalScrollContainerCenter(parent)).toBe(600);
+    expect(findScrollContainerXCenter(parent)).toBe(600);
   });
 
   describe('when child offsetParent is the parent', () => {
     it('should correctly calculate horizontal center of a scroll container', () => {
-      expect(horizontalScrollContainerCenter(parent, child)).toBe(600);
+      expect(findScrollContainerXCenter(parent, child)).toBe(600);
     });
   });
 });
 
-describe('horizontalSnapToIndex', () => {
+describe('findXSnapIndex', () => {
   const items = [
     { offsetLeft: 0 },
     { offsetLeft: 400 },
@@ -63,24 +60,31 @@ describe('horizontalSnapToIndex', () => {
   ] as HTMLElement[];
 
   it('should go through elements until it finds correct index', () => {
-    expect(horizontalSnapToIndex(items, 500)).toBe(1);
+    expect(findXSnapIndex(parent, items, 100)).toBe(1);
   });
 
   describe('when scrollPositionX = 0', () => {
     it('should return 0', () => {
-      expect(horizontalSnapToIndex(items, 0)).toBe(0);
+      expect(findXSnapIndex(parent, items, -400)).toBe(0);
     });
   });
 
   describe('when scrollPositionX is bigger than the offset of the last item', () => {
     it('should return index of the last item', () => {
-      expect(horizontalSnapToIndex(items, 1000)).toBe(2);
+      expect(findXSnapIndex(parent, items, 1000)).toBe(2);
     });
   });
 
   describe('when items array is empty', () => {
     it('should return 0', () => {
-      expect(horizontalSnapToIndex([], 500)).toBe(0);
+      expect(findXSnapIndex(parent, [], 500)).toBe(0);
+    });
+  });
+
+  describe('when carouselElement scrollLeft = 0', () => {
+    it('should return 0', () => {
+      const element = { ...parent, scrollLeft: 0 };
+      expect(findXSnapIndex(element, [], 500)).toBe(0);
     });
   });
 });
