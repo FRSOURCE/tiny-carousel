@@ -60,7 +60,7 @@ describe('findXSnapIndex', () => {
   ] as HTMLElement[];
 
   it('should go through elements until it finds correct index', () => {
-    expect(findXSnapIndex(parent, items, 100)).toBe(1);
+    expect(findXSnapIndex(parent, items)).toBe(1);
   });
 
   describe('when scrollPositionX = 0', () => {
