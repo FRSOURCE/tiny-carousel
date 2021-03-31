@@ -1,14 +1,18 @@
-import type { TinyCarousel } from '@frsource/tiny-carousel-core';
-
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface EventDetailMap {
   /**
-     * interface used to specify custom event names 
-     * and possible types for data passed along with each event type
-     * for the usage example, please have a look into @frsource/tiny-carousel-plugin-custom-events codebase
-     **/
+   * interface used to specify custom event names 
+   * and possible types for data passed along with each event type
+   * for the usage example, please have a look into @frsource/tiny-carousel-plugin-custom-events codebase
+   **/
 }
-export type CustomEventRequiredPayload = { tinyCarousel: TinyCarousel };
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface CustomEventRequiredPayload {
+  /**
+   * interface used to specify required part of each event payload
+   * should be set correctly by @frsource/tiny-carousel-plugin-custom-events codebase
+   **/
+}
 export type CustomEventPayload<E extends keyof EventDetailMap> = EventDetailMap[E] & CustomEventRequiredPayload;
 export type CustomEventListener<E extends keyof EventDetailMap = keyof EventDetailMap> =
   ((e: CustomEvent<CustomEventPayload<E>>)=> void);
