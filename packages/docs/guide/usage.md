@@ -261,7 +261,7 @@ document.querySelector('.pause')
 
 ## Plugin Custom Events
 
-This plugin adds [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent) for the most important methods of the [Core Tiny Carousel API](../../api-reference/core). Also, it extends Tiny Carousel instance with additional methods for the event handling.
+This plugin triggers [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent) for the most important methods of the [Core Tiny Carousel API](../../api-reference/core). Also, it extends Tiny Carousel instance with additional methods for the event handling.
 
 API Reference and the list of all events raised by this plugin you will find [here](../../api-reference/plugin-custom-events).
 
@@ -328,6 +328,14 @@ const carousel = new TinyCarousel(
   .on('after:init', () => {
     document.querySelector('h3')
       .textContent = 'Carousel has been loaded! 🚀';
+  })
+/**
+ * Here let`s log carousel items
+ * every time findPossibleItems
+ * method finishes it`s job
+ **/
+  .on('after:find-possible-items', (e) => {
+    console.log(e);
   })
   .init();
   </template>

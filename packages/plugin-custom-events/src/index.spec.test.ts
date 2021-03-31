@@ -52,9 +52,18 @@ describe('install', () => {
   });
 
   describe('dispatch', () => {
-    it('should call dispatch & return this context', () => {
+    it('should call dispatch with added tinyCarousel instance & return this context', () => {
       expect(carousel.dispatch(event, payload)).toBe(carousel);
-      expect(dispatch).toHaveBeenCalledWith(carousel.carouselElement, event, payload);
+      expect(dispatch).toHaveBeenCalledWith(carousel.carouselElement, event, { tinyCarousel: carousel, ...payload }, void 0);
+    });
+
+    describe('when payload is not an object', () => {
+      const payload = 'anything';
+
+      it('should dispatch it within the "data" field of the newly created event', () => {
+        expect(carousel.dispatch(event, payload)).toBe(carousel);
+        expect(dispatch).toHaveBeenCalledWith(carousel.carouselElement, event, { tinyCarousel: carousel, data: payload }, void 0);
+      });
     });
   });
 

@@ -1,4 +1,4 @@
-import { EventDetailMap, CustomEventListener, on, off, dispatch } from '@frsource/tiny-carousel-utils';
+import { EventDetailMap, CustomEventListener, on, off, dispatch, CustomEventRequiredPayload } from '@frsource/tiny-carousel-utils';
 import type { TinyCarousel, PluginDefinition } from '@frsource/tiny-carousel-core';
 
 declare module '@frsource/tiny-carousel-utils' {
@@ -29,7 +29,7 @@ type InstanceOffFn = {
 
 type InstanceDispatchFn = {
   <E extends keyof EventDetailMap, P extends EventDetailMap[E]>(event: E, ...[payload, options]: (P extends undefined ? [undefined?, EventInit?] : never)): TinyCarousel;
-  <E extends keyof EventDetailMap>(event: E, payload: EventDetailMap[E], options?: EventInit): TinyCarousel;
+  (event: string, payload?: unknown, options?: EventInit): TinyCarousel;
 };
 
 declare module '@frsource/tiny-carousel-core' {
@@ -50,8 +50,11 @@ export const pluginCustomEvents = {
       off(this.carouselElement, ...args);
       return this;
     } as InstanceOffFn;
-    instance.dispatch = function(this: typeof instance, ...args: Parameters<InstanceDispatchFn>) {
-      dispatch(this.carouselElement, ...args);
+    type IDParams = Parameters<InstanceDispatchFn>;
+    instance.dispatch = function(this: typeof instance, event: IDParams[0], payload: IDParams[1], options: IDParams[2]) {
+      if (typeof payload !== 'object') payload = { data: payload };
+      
+      dispatch(this.carouselElement, event, Object.assign({}, payload, { tinyCarousel: this }), options);
       return this;
     } as InstanceDispatchFn;
 
@@ -77,7 +80,7 @@ export const pluginCustomEvents = {
       this.dispatch('before:go-to', goToEventPayload);
       const result = goTo.apply(this, args);
       result
-        ? this.dispatch('after:go-to', goToEventPayload)
+        ? this.dispatch('after:go-to', Object.assign({}, goToEventPayload))
         : this.dispatch(
           'error:go-to',
           Object.assign({}, goToEventPayload, {cause: 'overflow'} as { cause: EventDetailMap['error:go-to']['cause'] })
