@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-mouse-drag@0.2.2...@frsource/tiny-carousel-plugin-mouse-drag@0.2.3) (2021-03-31)
+
+
+### Bug Fixes
+
+* move away from .mjs to avoid webpack bug ([5b01269](https://github.com/FRSource/tiny-carousel/commit/5b01269b8bb2cc607c3323ea54a7fe5d89a0363a))
+* snap index calculation for the first slide ([ef26087](https://github.com/FRSource/tiny-carousel/commit/ef2608795b6771100eace86f20548784b42e33f7))
+
+
+
+
+
 ## 0.2.2 (2021-03-28)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-mouse-drag

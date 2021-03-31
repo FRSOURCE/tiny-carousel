@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2021-03-31)
+
+
+### Bug Fixes
+
+* **utils:** move away from core devDependency ([55c8a6b](https://github.com/FRSource/tiny-carousel/commit/55c8a6b4d61eefc59a41c436ba7c013556fc2582))
+* move away from .mjs to avoid webpack bug ([5b01269](https://github.com/FRSource/tiny-carousel/commit/5b01269b8bb2cc607c3323ea54a7fe5d89a0363a))
+* snap index calculation for the first slide ([ef26087](https://github.com/FRSource/tiny-carousel/commit/ef2608795b6771100eace86f20548784b42e33f7))
+
+
+### Features
+
+* **utils:** refactor typings ([146368d](https://github.com/FRSource/tiny-carousel/commit/146368d3a437d467d5dc289dd280725a692ff234))
+
+
+
+
+
 # [0.3.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-utils@0.2.0...@frsource/tiny-carousel-utils@0.3.0) (2021-03-21)
 
 

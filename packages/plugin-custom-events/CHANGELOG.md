@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-custom-events@0.1.16...@frsource/tiny-carousel-plugin-custom-events@0.2.0) (2021-03-31)
+
+
+### Bug Fixes
+
+* move away from .mjs to avoid webpack bug ([5b01269](https://github.com/FRSource/tiny-carousel/commit/5b01269b8bb2cc607c3323ea54a7fe5d89a0363a))
+
+
+### Features
+
+* **plugin-custom-events:** extend required payload ([46bd801](https://github.com/FRSource/tiny-carousel/commit/46bd801e1e413e92835b08ea4f2768465d9451bf))
+
+
+
+
+
 ## 0.1.16 (2021-03-28)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-custom-events
