@@ -1,3 +1,5 @@
+import type { TinyCarousel } from '@frsource/tiny-carousel-core';
+
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface EventDetailMap {
   /**
@@ -6,8 +8,10 @@ export interface EventDetailMap {
      * for the usage example, please have a look into @frsource/tiny-carousel-plugin-custom-events codebase
      **/
 }
+export type CustomEventRequiredPayload = { tinyCarousel: TinyCarousel };
+export type CustomEventPayload<E extends keyof EventDetailMap> = EventDetailMap[E] & CustomEventRequiredPayload;
 export type CustomEventListener<E extends keyof EventDetailMap = keyof EventDetailMap> =
-  ((e: CustomEvent<EventDetailMap[E]>)=> void);
+  ((e: CustomEvent<CustomEventPayload<E>>)=> void);
 
 // TODO: add possibility to pass event/target array?
 
@@ -26,9 +30,9 @@ export const off: {
 }
 
 export const dispatch: {
-  <E extends keyof EventDetailMap, P extends EventDetailMap[E]>(target: EventTarget, event: E, ...[payload, options]: (P extends undefined ? [undefined?, EventInit?] : never)): boolean;
-  <E extends keyof EventDetailMap>(target: EventTarget, event: E, payload: EventDetailMap[E], options?: EventInit): boolean;
-} = <E extends keyof EventDetailMap>(
-  target: EventTarget, event: E, payload?: EventDetailMap[E], options?: EventInit
+  <E extends keyof EventDetailMap>(target: EventTarget, event: E, payload: CustomEventPayload<E>, options?: EventInit): boolean;
+  (target: EventTarget, event: string, payload?: unknown, options?: EventInit): boolean;
+} = (
+  target: EventTarget, event: string, payload?: unknown, options?: EventInit
 ) =>
   target.dispatchEvent(new CustomEvent(event, Object.assign({ detail: payload }, options)));
