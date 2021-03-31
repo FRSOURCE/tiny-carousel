@@ -11,7 +11,15 @@ export type PluginDefinition<C extends unknown[] | undefined = undefined> = C ex
   };
 export interface Config {
   active: number;
+  /**
+   * To be changed together with `$class-name` Sass variable
+   * More info: https://www.frsource.org/tiny-carousel/api-reference/core/#styling
+   */
   className: string;
+  /**
+   * To be changed together with `$item-class-name` Sass variable
+   * More info: https://www.frsource.org/tiny-carousel/api-reference/core/#styling
+   */
   itemClassName: string;
   /**
    * To be changed together with `$frs-hide-scroll` Sass variable

@@ -1,6 +1,14 @@
 @import '~@frsource/frs-hide-scrollbar';
 
+/**
+ * To be changed together with `className` core variable
+ * More info: https://www.frsource.org/tiny-carousel/api-reference/core/#config
+ */
 $class-name: 'frs-tc' !default;
+/**
+ * To be changed together with `itemClassName` core variable
+ * More info: https://www.frsource.org/tiny-carousel/api-reference/core/#config
+ */
 $item-class-name: 'frs-tc-item' !default;
 
 .#{$class-name} {
