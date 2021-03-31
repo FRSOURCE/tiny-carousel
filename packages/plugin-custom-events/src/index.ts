@@ -13,7 +13,6 @@ declare module '@frsource/tiny-carousel-utils' {
   }
 }
 
-
 type InstanceOnFn = {
   <E extends keyof EventDetailMap>(event: E, handler: CustomEventListener<E>, options?: boolean | AddEventListenerOptions): TinyCarousel;
   (event: string, handler: EventListener, options?: boolean | AddEventListenerOptions): TinyCarousel;
@@ -28,7 +27,6 @@ type InstanceDispatchFn = {
   <E extends keyof EventDetailMap, P extends EventDetailMap[E]>(event: E, ...[payload, options]: (P extends undefined ? [undefined?, EventInit?] : never)): TinyCarousel;
   <E extends keyof EventDetailMap>(event: E, payload: EventDetailMap[E], options?: EventInit): TinyCarousel;
 };
-
 
 declare module '@frsource/tiny-carousel-core' {
   interface TinyCarousel {

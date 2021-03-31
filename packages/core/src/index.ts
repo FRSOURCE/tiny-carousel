@@ -29,7 +29,6 @@ const _defaultConfig: Config = {
   items: [],
 };
 
-
 export class TinyCarousel {
   public config: Config;
   private _active?: number;
