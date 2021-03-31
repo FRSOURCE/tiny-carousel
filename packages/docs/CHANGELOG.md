@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-docs@0.2.6...@frsource/tiny-carousel-docs@0.3.0) (2021-03-31)
+
+
+### Features
+
+* add carousel instance to every custom event ([9123d69](https://github.com/FRSource/tiny-carousel/commit/9123d69d15ff9c3ae241e5c21294b0ad8743c3fb))
+
+
+
+
+
 ## [0.2.6](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-docs@0.2.5...@frsource/tiny-carousel-docs@0.2.6) (2021-03-31)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-docs
