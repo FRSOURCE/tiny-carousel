@@ -11,6 +11,10 @@ declare module '@frsource/tiny-carousel-utils' {
     'before:find-possible-items'?: undefined;
     'after:find-possible-items'?: undefined;
   }
+
+  interface CustomEventRequiredPayload {
+    tinyCarousel: TinyCarousel
+  }
 }
 
 type InstanceOnFn = {
