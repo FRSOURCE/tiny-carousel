@@ -62,17 +62,6 @@ describe('::updateDefaultConfig', () => {
 });
 
 describe('constructor', () => {
-  let findPossibleItemsSpy: jest.SpyInstance;
-  beforeAll(() => {
-    findPossibleItemsSpy = jest.spyOn(TinyCarousel.prototype, 'findPossibleItems').mockReturnValue([]);
-  });
-  afterAll(() => findPossibleItemsSpy.mockRestore());
-
-  it('should try to find possible items', () => {
-    initializeCarousel();
-    expect(findPossibleItemsSpy).toHaveBeenCalledTimes(1);
-  });
-
   describe('when no config passed', () => {
     it('should provide defaults', () => {
       initializeCarousel();
@@ -98,22 +87,6 @@ describe('constructor', () => {
         hideScrollClassName: 'frs-hide-scroll',
         itemClassName: 'frs-tc-item',
         items: [],
-      });
-      config = undefined;
-    });
-  });
-
-  describe('when config with items property set passed in as a parameter', () => {
-    it('shouldn`t call findPossible items and leave items as they were', () => {
-      config = {items: [ document.body /* any HTMLElement */ ]};
-      initializeCarousel();
-  
-      expect(carousel.config).toEqual({
-        active: 0,
-        className: 'frs-tc',
-        hideScrollClassName: 'frs-hide-scroll',
-        itemClassName: 'frs-tc-item',
-        items: config.items,
       });
       config = undefined;
     });
@@ -145,7 +118,12 @@ describe('use', () => {
 
 describe('init', () => {
   let goToSpy: jest.SpyInstance;
+  let findPossibleItemsSpy: jest.SpyInstance;
+
   beforeAll(() => {
+    findPossibleItemsSpy = jest.spyOn(TinyCarousel.prototype, 'findPossibleItems').mockReturnValue([
+      element.children[0] as HTMLElement, element.children[1] as HTMLElement
+    ]);
     config = {className: 'something', active: 2};
     goToSpy = jest.spyOn(TinyCarousel.prototype, 'goTo').mockReturnValue(carousel);
   });
@@ -153,6 +131,12 @@ describe('init', () => {
   afterAll(() => {
     config = undefined;
     goToSpy.mockRestore();
+    findPossibleItemsSpy.mockRestore();
+  });
+
+  it('should try to find possible items', () => {
+    carousel.init();
+    expect(findPossibleItemsSpy).toHaveBeenCalledTimes(1);
   });
 
   it('should bind handler to the "scroll" event', () => {
@@ -165,6 +149,12 @@ describe('init', () => {
     expect(element.className).toBe('something frs-hide-scroll');
   });
 
+  it('should add item classnames from the config to the items', () => {
+    carousel.init();
+    carousel.config.items
+      .forEach(child => expect(child.className).toBe('frs-tc-item'));
+  });
+
   it('shoud call goTo method', () => {
     carousel.init();
     expect(goToSpy).toHaveBeenCalledTimes(1);
@@ -173,6 +163,23 @@ describe('init', () => {
 
   it('should return instance context for easier chaining', () => {
     expect(carousel.init()).toBe(carousel);
+  });
+
+  describe('when `config.items` is set', () => {
+    beforeEach(() => carousel.config.items = [ document.body /* any HTMLElement */ ]);
+
+    it('shouldn`t update `config.items` with element children', () => {
+      carousel.init();
+  
+      expect(carousel.config).toEqual({
+        active: 2,
+        className: 'something',
+        hideScrollClassName: 'frs-hide-scroll',
+        itemClassName: 'frs-tc-item',
+        items: carousel.config.items,
+      });
+      config = undefined;
+    });
   });
 });
 
@@ -183,28 +190,32 @@ describe('goTo', () => {
     expect(carousel.goTo(0)).toBe(carousel);
   });
 
-  it('should move carousel to the correct position', () => {
-    carousel.goTo(1);
-    expect(element.scrollLeft).toBe(150);
-  });
+  describe('when items are set', () => {
+    beforeEach(() => carousel.init());
 
-  describe('when value is bigger than items count', () => {
-    it('should handle the overflow gracefully and move carousel to the correct position', () => {
-      carousel.goTo(4);
+    it('should move carousel to the correct position', () => {
+      carousel.goTo(1);
       expect(element.scrollLeft).toBe(150);
     });
-  });
-
-  describe('when value is < 0', () => {
-    it('should count items starting from the end', () => {
-      carousel.goTo(-2);
-      expect(element.scrollLeft).toBe(150);
-    });
-
-    describe('when value is smaller than -items.length', () => {
-      it('should repeat the counting with value + items.length until it gets a valid item number', () => {
-        carousel.goTo(-20); // 20 % 3 == 2
+  
+    describe('when value is bigger than items count', () => {
+      it('should handle the overflow gracefully and move carousel to the correct position', () => {
+        carousel.goTo(4);
         expect(element.scrollLeft).toBe(150);
+      });
+    });
+
+    describe('when value is < 0', () => {
+      it('should count items starting from the end', () => {
+        carousel.goTo(-2);
+        expect(element.scrollLeft).toBe(150);
+      });
+  
+      describe('when value is smaller than -items.length', () => {
+        it('should repeat the counting with value + items.length until it gets a valid item number', () => {
+          carousel.goTo(-20); // 20 % 3 == 2
+          expect(element.scrollLeft).toBe(150);
+        });
       });
     });
   });
@@ -229,6 +240,7 @@ describe('prev', () => {
   let goToSpy: jest.SpyInstance;
   const initializeCarouselAtActiveItem = (n: number) => {
     initializeCarousel();
+    carousel.init();
     carousel.goTo(n);
     goToSpy = jest.spyOn(carousel, 'goTo').mockReturnValue(carousel);
   };
@@ -259,10 +271,22 @@ describe('resetActive', () => {
 
 describe('findPossibleItems', () => {
   describe('when none of the children has itemClassName', () => {
+    beforeEach(initializeCarousel);
+
     it('should return an array of all carousel element`s children', () => {
-      initializeCarousel();
       expect(carousel.findPossibleItems()).toEqual(Array.from(element.children));
       expect(carousel.findPossibleItems() instanceof Array).toBeTruthy();
+    });
+
+    describe('after init, when new child is added', () => {
+      beforeEach(() => {
+        carousel.init();
+        carousel.carouselElement.append(document.createElement('li'));
+      });
+
+      it('should return it together with all of the other carousel element`s children', () => {
+        expect(carousel.findPossibleItems()).toEqual(Array.from(element.children));
+      });
     });
   });
 
@@ -278,10 +302,13 @@ describe('findPossibleItems', () => {
 });
 
 describe('active::get', () => {
-  beforeEach(initializeCarousel);
+  beforeEach(() => {
+    initializeCarousel();
+    carousel.init();
+  });
 
   it('should return proper active index', () => {
-    Object.defineProperty(element, 'scrollLeft', { value: 150 });
+    Object.defineProperty(element, 'scrollLeft', { value: 160 });
     Object.defineProperty(element, 'clientWidth', { value: 5 });
     expect(carousel.active).toBe(1);
   });

@@ -76,7 +76,7 @@ $frs-hide-scroll-classname: "your-new-hide-scroll-classname";
 
 - **Usage:**
 
-    Carousel wrapper element should be passed ad `carouselElement`. Every of the `config` properties (and the argument itself) are optional - if no `config.items` passed the library will fallback to the value returned by [`carousel.findPossibleItems` method](#carousel-findpossibleitems).
+    Carousel wrapper element should be passed ad `carouselElement`. Every of the `config` properties (and the `config` object itself) are optional.
 
 - **See also:** [`Config` data type description](#config)
 
@@ -143,7 +143,8 @@ $frs-hide-scroll-classname: "your-new-hide-scroll-classname";
 
 - **Usage:**
 
-    Initializes a TinyCarousel instance. Adds class names to the carousel wrapper and carousel items HTML elements. Also, this sets the correct active item index.
+    Initializes a TinyCarousel instance. If no `config.items` were set yet the library will fallback to the value returned by [`carousel.findPossibleItems` method](#carousel-findpossibleitems).
+    Also, this method adds class names to the carousel wrapper and carousel items HTML elements and sets the correct active slide based on `config.active` variable.
 
 <!-- textlint-disable -->
 ### carousel.goTo

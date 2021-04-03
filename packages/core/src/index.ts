@@ -29,6 +29,11 @@ export interface Config {
   items: HTMLElement[];
 }
 
+/**
+ * Used to distinguish whether the css class was added by TinyCarousel or not
+ */
+const TINYCAROUSEL_ADDED_CLASS = 'tcACls';
+
 const _defaultConfig: Config = {
   active: 0,
   className: 'frs-tc',
@@ -49,10 +54,8 @@ export class TinyCarousel {
     Object.assign(_defaultConfig, config);
   }
 
-  constructor(public carouselElement: HTMLElement, _config: DeepPartial<Config> = {}) {
-    this.config = Object.assign({}, _defaultConfig, _config);
-
-    if (!_config.items) this.config.items = this.findPossibleItems();
+  constructor(public carouselElement: HTMLElement, config: DeepPartial<Config> = {}) {
+    this.config = Object.assign({}, _defaultConfig, config);
   }
 
   use<PD extends PluginDefinition>(pluginDefinition: PD, ...args: OmitFirstItem<Parameters<PD['install']>>) {
@@ -62,12 +65,16 @@ export class TinyCarousel {
 
   init() {
     on(this.carouselElement, 'scroll', this.resetActive.bind(this), { passive: true });
+    if (!this.config.items.length) this.config.items = this.findPossibleItems();
 
     this.carouselElement.classList.add(this.config.className);
     this.carouselElement.classList.add(this.config.hideScrollClassName);
 
-    this.config.items.forEach(({ classList }) => {
-      classList.add(this.config.itemClassName)
+    this.config.items.forEach(({ classList, dataset }) => {
+      if (!classList.contains(this.config.itemClassName)) {
+        dataset[TINYCAROUSEL_ADDED_CLASS] = '';
+        classList.add(this.config.itemClassName)
+      }
     });
 
     this.goTo(this.config.active);
@@ -89,12 +96,14 @@ export class TinyCarousel {
 
   goTo (n: number) {
     const len = this.config.items.length;
-    // treat negative numbers as counting from the end of items array
-    while (n < 0) n += len; 
-    // treat numbers >= items length as overflow - start counting the rest from the beginning
-    while (n >= len) n -= len;
+    if (len) {
+      // treat negative numbers as counting from the end of items array
+      while (n < 0) n += len; 
+      // treat numbers >= items length as overflow - start counting the rest from the beginning
+      while (n >= len) n -= len;
 
-    this.carouselElement.scrollLeft = this.config.items[n].offsetLeft;
+      this.carouselElement.scrollLeft = this.config.items[n].offsetLeft;
+    }
 
     return this;
   }
@@ -114,7 +123,10 @@ export class TinyCarousel {
   findPossibleItems () {
     const children = Array.from(this.carouselElement.children) as HTMLElement[];
     const { itemClassName } = this.config;
-    const filtredChildren = children.filter(child => child.classList.contains(itemClassName));
+    const filtredChildren = children.filter(
+        child =>
+          !(TINYCAROUSEL_ADDED_CLASS in child.dataset) && child.classList.contains(itemClassName),
+      );
 
     if (filtredChildren.length) return filtredChildren;
     
