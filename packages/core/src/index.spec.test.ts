@@ -1,4 +1,4 @@
-import { on, findXSnapIndex } from '@frsource/tiny-carousel-utils';
+import { on, findXSnapIndex, off } from '@frsource/tiny-carousel-utils';
 import { TinyCarousel } from '.';
 
 jest.mock('@frsource/tiny-carousel-utils');
@@ -180,6 +180,15 @@ describe('init', () => {
       });
       config = undefined;
     });
+  });
+});
+
+describe('destroy', () => {
+  it('should unbind the "scroll" handler which was bound by `init` method', () => {
+    carousel.init();
+    carousel.destroy();
+    expect(off).toHaveBeenCalledWith(element, 'scroll', expect.any(Function));
+    expect((on as jest.Mock).mock.calls[0][2]).toBe((off as jest.Mock).mock.calls[0][2]);
   });
 });
 

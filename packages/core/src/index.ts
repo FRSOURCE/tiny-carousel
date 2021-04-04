@@ -1,5 +1,5 @@
 import './index.scss';
-import { on, findXSnapIndex } from '@frsource/tiny-carousel-utils';
+import { on, findXSnapIndex, off } from '@frsource/tiny-carousel-utils';
 import type { DeepPartial, OmitFirstItem } from './helpers';
 
 export type PluginDefinition<C extends unknown[] | undefined = undefined> = C extends unknown[]
@@ -45,6 +45,7 @@ const _defaultConfig: Config = {
 export class TinyCarousel {
   public config: Config;
   private _active?: number;
+  private _resetActive: TinyCarousel['resetActive'];
 
   static get defaultConfig () {
     return Object.assign({}, _defaultConfig);
@@ -56,6 +57,7 @@ export class TinyCarousel {
 
   constructor(public carouselElement: HTMLElement, config: DeepPartial<Config> = {}) {
     this.config = Object.assign({}, _defaultConfig, config);
+    this._resetActive = this.resetActive.bind(this);
   }
 
   use<PD extends PluginDefinition>(pluginDefinition: PD, ...args: OmitFirstItem<Parameters<PD['install']>>) {
@@ -64,7 +66,8 @@ export class TinyCarousel {
   }
 
   init() {
-    on(this.carouselElement, 'scroll', this.resetActive.bind(this), { passive: true });
+    on(this.carouselElement, 'scroll', this._resetActive, { passive: true });
+
     if (!this.config.items.length) this.config.items = this.findPossibleItems();
 
     this.carouselElement.classList.add(this.config.className);
@@ -80,6 +83,10 @@ export class TinyCarousel {
     this.goTo(this.config.active);
 
     return this;
+  }
+
+  destroy() {
+    off(this.carouselElement, 'scroll', this._resetActive);
   }
 
   /*
