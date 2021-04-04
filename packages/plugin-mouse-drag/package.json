@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-plugin-mouse-drag",
   "amdName": "tinyCarouselPluginMouseDrag",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Allow desktop users to swipe through the @frsource/tiny-carousel ✋",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -68,6 +68,6 @@
     "@frsource/tiny-carousel-utils": "^0.4.0"
   },
   "devDependencies": {
-    "@frsource/tiny-carousel-core": "^0.6.3"
+    "@frsource/tiny-carousel-core": "^0.7.0"
   }
 }

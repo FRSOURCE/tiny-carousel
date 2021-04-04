@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-core@0.6.3...@frsource/tiny-carousel-core@0.7.0) (2021-04-04)
+
+
+### Features
+
+* **core:** add destroy method ([2e40622](https://github.com/FRSource/tiny-carousel/commit/2e40622cd9b4ca25ac7ca04511ee2fb72c1e42fb))
+* **core:** detect classes added by tinyCarousel ([ab515fb](https://github.com/FRSource/tiny-carousel/commit/ab515fbf7ae4bba59d267ab2479fe748b0fd746a))
+
+
+
+
+
 ## 0.6.3 (2021-03-31)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-core

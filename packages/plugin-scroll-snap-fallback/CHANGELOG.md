@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.19](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-scroll-snap-fallback@0.1.18...@frsource/tiny-carousel-plugin-scroll-snap-fallback@0.1.19) (2021-04-04)
+
+**Note:** Version bump only for package @frsource/tiny-carousel-plugin-scroll-snap-fallback
+
+
+
+
+
 ## 0.1.18 (2021-03-31)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-scroll-snap-fallback
