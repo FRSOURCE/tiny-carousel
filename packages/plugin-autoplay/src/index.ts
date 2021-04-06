@@ -76,6 +76,13 @@ export const pluginAutoplay = {
 
       return this;
     };
+
+    const destroy = instance.destroy;
+    instance.destroy = function(...args) {
+      clearListeners(instance);
+
+      return destroy.apply(this, args);
+    }
   }
 } as PluginDefinition<[{
   autoplayTimeout?: number,

@@ -7,6 +7,7 @@ jest.mock('@frsource/tiny-carousel-utils');
 const timeoutId = 20;
 const onMock = on as jest.Mock;
 const offMock = off as jest.Mock;
+const destroy = jest.fn();
 let carousel: TinyCarousel;
 
 const installPlugin = (config?: Partial<Config>) => {
@@ -21,6 +22,7 @@ beforeEach(() =>
     carouselElement: document.createElement('div'),
     config: {},
     next: jest.fn(),
+    destroy,
   } as unknown as TinyCarousel
 );
 afterEach(() => jest.clearAllMocks());
@@ -150,6 +152,24 @@ describe('install', () => {
         carousel.pause({ leavePauseOnHoverListeners: true });
         expect(off).not.toHaveBeenCalled();
       });
+    });
+  });
+
+  describe('destroy', () => {
+    beforeEach(() => installPlugin({ autoplayTimeout: 200, pauseOnHover: true }));
+    
+    it('should deregister event listeners registered by play', () => {
+      carousel.play();
+      const [,,mouseOverListener] = onMock.mock.calls[0];
+      const [,,mouseOutListener] = onMock.mock.calls[1];
+      carousel.destroy();
+      expect(off).toHaveBeenCalledWith(carousel.carouselElement, 'mouseover', mouseOverListener);
+      expect(off).toHaveBeenCalledWith(carousel.carouselElement, 'mouseout', mouseOutListener);
+    });
+
+    it('should call original destroy method', () => {
+      carousel.destroy();
+      expect(destroy).toHaveBeenCalledTimes(1);
     });
   });
 });
