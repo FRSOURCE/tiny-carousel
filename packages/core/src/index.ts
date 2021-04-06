@@ -87,6 +87,7 @@ export class TinyCarousel {
 
   destroy() {
     off(this.carouselElement, 'scroll', this._resetActive);
+    return this;
   }
 
   /*

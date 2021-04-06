@@ -190,6 +190,10 @@ describe('destroy', () => {
     expect(off).toHaveBeenCalledWith(element, 'scroll', expect.any(Function));
     expect((on as jest.Mock).mock.calls[0][2]).toBe((off as jest.Mock).mock.calls[0][2]);
   });
+
+  it('should return TinyCarousel instance', () =>{
+    expect(carousel.destroy()).toBe(carousel);
+  })
 });
 
 describe('goTo', () => {

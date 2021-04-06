@@ -147,6 +147,18 @@ $frs-hide-scroll-classname: "your-new-hide-scroll-classname";
     Also, this method adds class names to the carousel wrapper and carousel items HTML elements and sets the correct active slide based on `config.active` variable.
 
 <!-- textlint-disable -->
+### carousel.destroy
+<!-- textlint-enable -->
+
+- **Arguments:** None
+
+- **Returns:** `this` - this TinyCarousel instance (for chaining purposes)
+
+- **Usage:**
+
+    Deregisters every event handler bound by the carousel and its plugins. Use this method before you’d like to remove the carousel or to reinitialize it (together with [`carousel.init` method](#carousel-init)).
+
+<!-- textlint-disable -->
 ### carousel.goTo
 <!-- textlint-enable -->
 
