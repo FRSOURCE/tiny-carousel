@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-autoplay@0.2.4...@frsource/tiny-carousel-plugin-autoplay@0.3.0) (2021-04-06)
+
+
+### Features
+
+* **plugin-autoplay:** event deregister on destry ([d2a12f5](https://github.com/FRSource/tiny-carousel/commit/d2a12f50a45f6cad7d262e151c76aa68ec40449d))
+
+
+
+
+
 ## [0.2.4](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-autoplay@0.2.3...@frsource/tiny-carousel-plugin-autoplay@0.2.4) (2021-04-04)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-autoplay

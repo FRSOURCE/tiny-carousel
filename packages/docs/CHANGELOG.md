@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-docs@0.4.0...@frsource/tiny-carousel-docs@0.5.0) (2021-04-06)
+
+
+### Features
+
+* **core:** make destroy method chainable ([0c8d802](https://github.com/FRSource/tiny-carousel/commit/0c8d80262e6c06018ce0d0ccad16e2cc79c5aa27))
+
+
+
+
+
 # [0.4.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-docs@0.3.1...@frsource/tiny-carousel-docs@0.4.0) (2021-04-04)
 
 

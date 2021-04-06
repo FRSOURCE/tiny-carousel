@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-custom-events@0.3.2...@frsource/tiny-carousel-plugin-custom-events@0.4.0) (2021-04-06)
+
+
+### Features
+
+* **plugin-custom-events:** trigger destroy events ([286aa2f](https://github.com/FRSource/tiny-carousel/commit/286aa2fa47d6d67efbd33ef98ad02c5bc70565c7))
+
+
+
+
+
 ## [0.3.2](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-custom-events@0.3.1...@frsource/tiny-carousel-plugin-custom-events@0.3.2) (2021-04-04)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-custom-events
