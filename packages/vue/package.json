@@ -3,7 +3,7 @@
   "amdName": "tinyCarouselVue",
   "version": "0.0.1",
   "description": "Vue integration of @frsource/tiny-carousel 💚",
-  "source": "index.ts",
+  "source": "dist/index.ts",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",

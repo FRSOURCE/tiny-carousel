@@ -9,11 +9,8 @@ fs.readFile('./src/components/TinyCarousel.vue', 'utf8', function (err, data) {
   }
 
   const component = compiler.parseComponent(data);
-  
+
   fs.writeFile('./dist/index.ts', component.script.content, function () {
-    process.exit();
-  });
-  fs.writeFile('./index.ts', component.script.content, function () {
     process.exit();
   });
 });
