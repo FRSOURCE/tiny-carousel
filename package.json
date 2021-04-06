@@ -97,6 +97,12 @@
     "packages": ["packages/*"],
     "nohoist": ["**/@vuepress", "**/@vuepress/**", "**/vuepress", "**/vuepress/**", "**/vuepress-*", "**/vuepress-*/**"]
   },
+  "resolutions": {
+    "**/jest": "^26.6.3",
+    "**/babel-jest": "^26.0.0",
+    "**/ts-jest": "^26.0.0",
+    "**/vue-jest": "^3.0.7"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
