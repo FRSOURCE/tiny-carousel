@@ -1,4 +1,5 @@
 import type { PluginDefinition } from '@frsource/tiny-carousel-core';
+import { off } from '@frsource/tiny-carousel-utils';
 import { useFallback } from './useFallback';
 
 export const pluginScrollSnapFallback = {
@@ -12,6 +13,14 @@ export const pluginScrollSnapFallback = {
         // @ts-ignore
         typeof InstallTrigger !== 'undefined' // or is not Firefox, based on https://stackoverflow.com/a/9851769
       )
-    ) useFallback(instance, config);
+    ) {
+      const { timeoutedOnScroll } = useFallback(instance, config);
+
+      const destroy = instance.destroy;
+      instance.destroy = function(...args) {
+        off(instance.carouselElement, 'scroll', timeoutedOnScroll);
+        return destroy.apply(this, args);
+      };
+    }
   }
 } as PluginDefinition<[{ force?: boolean; scrollTimeout?: number }?]>;

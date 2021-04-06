@@ -46,4 +46,9 @@ export const useFallback = (
       preventScrollEvent = 2;
       (e.target as TinyCarousel['carouselElement']).scrollLeft = offset + (direction * elementToSnapOffsetWidth);
     }
+
+    return {
+      onScroll,
+      timeoutedOnScroll,
+    };
   };

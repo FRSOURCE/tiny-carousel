@@ -9,6 +9,7 @@ let element: HTMLElement;
 let config: ConstructorParameters<typeof TinyCarousel>[1];
 // let scrollHandler: (scrollLeft: number, e: Event) => void;
 let scrollTimeout: number;
+let result: ReturnType<typeof useFallback>;
 
 const initializeCarousel = () => {
   element = document.createElement('ul');
@@ -22,13 +23,20 @@ const initializeCarousel = () => {
 
 beforeEach(() => {
   initializeCarousel();
-  useFallback(carousel, scrollTimeout ? { scrollTimeout } : {});
+  result = useFallback(carousel, scrollTimeout ? { scrollTimeout } : {});
   // scrollHandler = (on as jest.Mock).mock.calls[0][2];
 });
 afterEach(() => jest.clearAllMocks());
 
 it('should attach handler to scroll event', () => {
   expect(on).toHaveBeenCalled();
+});
+
+it('should return onScroll & timeoutedOnScroll handlers', () => {
+  expect(result).toStrictEqual({
+    onScroll: expect.any(Function),
+    timeoutedOnScroll: expect.any(Function),
+  })
 });
 
 describe('scroll handler', () => {

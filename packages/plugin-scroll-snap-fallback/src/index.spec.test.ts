@@ -1,11 +1,18 @@
 import { TinyCarousel } from "@frsource/tiny-carousel-core";
 import { pluginScrollSnapFallback } from ".";
 import { useFallback } from "./useFallback";
-
-const carouselMock: TinyCarousel = {} as TinyCarousel;
+import { off } from '@frsource/tiny-carousel-utils';
 
 jest.mock('./useFallback');
+jest.mock('@frsource/tiny-carousel-utils');
 
+const timeoutedOnScroll = jest.fn();
+const onScroll = jest.fn();
+const destroy = jest.fn();
+
+const carouselMock: TinyCarousel = { destroy } as unknown as TinyCarousel;
+
+beforeAll(() => (useFallback as jest.Mock).mockReturnValue({ onScroll, timeoutedOnScroll }));
 afterEach(() => jest.clearAllMocks());
 
 describe('install', () => {
@@ -42,6 +49,21 @@ describe('install', () => {
     it('should not call useFallback', () => {
       pluginScrollSnapFallback.install(carouselMock);
       expect(useFallback).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('destroy', () => {
+    beforeEach(() => {
+      pluginScrollSnapFallback.install(carouselMock);
+      carouselMock.destroy();
+    });
+
+    it('should deregister scroll event handler', () => {
+      expect(off).toHaveBeenCalledWith(carouselMock.carouselElement, 'scroll', timeoutedOnScroll);
+    });
+
+    it('should call original destroy method', () => {
+      expect(destroy).toHaveBeenCalledTimes(1);
     });
   });
 });
