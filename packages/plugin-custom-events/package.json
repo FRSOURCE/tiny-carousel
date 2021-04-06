@@ -23,7 +23,7 @@
     "build": "microbundle"
   },
   "peerDependencies": {
-    "@frsource/tiny-carousel-core": "^0.6.0"
+    "@frsource/tiny-carousel-core": "^0.7.0"
   },
   "dependencies": {
     "@frsource/tiny-carousel-utils": "^0.4.0"

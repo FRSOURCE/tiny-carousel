@@ -5,6 +5,8 @@ declare module '@frsource/tiny-carousel-utils' {
   interface EventDetailMap {
     'before:init'?: undefined;
     'after:init'?: undefined;
+    'before:destroy'?: undefined;
+    'after:destroy'?: undefined;
     'before:go-to': { to: { index: number; } };
     'after:go-to': { to: { index: number; }; };
     'error:go-to': { to: { index: number; }; cause: 'overflow' };
@@ -40,6 +42,27 @@ declare module '@frsource/tiny-carousel-core' {
   }
 }
 
+function addEventsToMethod<
+  MN extends ['findPossibleItems', 'find-possible-items']
+    | ['goTo', 'go-to']
+    | ['init', 'init']
+    | ['destroy', 'destroy']
+>(
+  instance: TinyCarousel,
+  methodName: MN[0],
+  eventName: MN[1],
+) {
+  const eventNameBefore = 'before:' + eventName;
+  const eventNameAfter = 'after:' + eventName;
+  const originalMethod = instance[methodName] as TinyCarousel[MN[0]] & ((this: TinyCarousel, ...args: unknown[]) => unknown);
+  instance[methodName] = function(this: TinyCarousel, ...args: Parameters<TinyCarousel[MN[0]]>) {
+    this.dispatch(eventNameBefore);
+    const result = originalMethod.apply(this, args);
+    this.dispatch(eventNameAfter);
+    return result;
+  } as TinyCarousel[MN[0]];
+}
+
 export const pluginCustomEvents = {
   install: (instance) => {
     instance.on = function(this: typeof instance, ...args: Parameters<InstanceOnFn>) {
@@ -58,21 +81,10 @@ export const pluginCustomEvents = {
       return this;
     } as InstanceDispatchFn;
 
-    const init = instance.init;
-    instance.init = function(...args) {
-      this.dispatch('before:init');
-      const result = init.apply(this, args);
-      this.dispatch('after:init');
-      return result;
-    };
 
-    const findPossibleItems = instance.findPossibleItems;
-    instance.findPossibleItems = function(...args) {
-      this.dispatch('before:find-possible-items');
-      const result = findPossibleItems.apply(this, args);
-      this.dispatch('after:find-possible-items');
-      return result;
-    };
+    addEventsToMethod(instance, 'init', 'init');
+    addEventsToMethod(instance, 'findPossibleItems', 'find-possible-items');
+    addEventsToMethod(instance, 'destroy', 'destroy');
 
     const goTo = instance.goTo;
     instance.goTo = function(...args) {

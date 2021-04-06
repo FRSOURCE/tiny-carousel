@@ -8,6 +8,7 @@ let carousel: TinyCarousel;
 let handler: ()=> void;
 let init: jest.SpyInstance;
 let findPossibleItems: jest.SpyInstance;
+let destroy: jest.SpyInstance;
 let goTo: jest.SpyInstance;
 const event = 'before:go-to';
 const opts = {};
@@ -17,6 +18,7 @@ beforeAll(() => {
   handler = jest.fn();
   init = jest.fn().mockReturnThis();
   findPossibleItems = jest.fn().mockReturnThis();
+  destroy = jest.fn().mockReturnThis();
   goTo = jest.fn().mockReturnThis();
 });
 beforeEach(() =>
@@ -24,6 +26,7 @@ beforeEach(() =>
     carouselElement: document.createElement('div'),
     init,
     findPossibleItems,
+    destroy,
     goTo,
   } as unknown as TinyCarousel
 );
@@ -86,6 +89,15 @@ describe('install', () => {
         expect(findPossibleItems).toHaveBeenCalled();
         expect(carouselDispatchSpy).toHaveBeenCalledWith('before:find-possible-items');
         expect(carouselDispatchSpy).toHaveBeenCalledWith('after:find-possible-items');
+      });
+    });
+
+    describe('destroy', () => {
+      it('should dispatch before and after events & run original destroy with correct context & return its result value', () => {
+        expect(carousel.destroy()).toBe(carousel);
+        expect(init).toHaveBeenCalled();
+        expect(carouselDispatchSpy).toHaveBeenCalledWith('before:destroy');
+        expect(carouselDispatchSpy).toHaveBeenCalledWith('after:destroy');
       });
     });
 
