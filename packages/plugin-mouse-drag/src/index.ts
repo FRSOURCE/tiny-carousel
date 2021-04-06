@@ -41,6 +41,11 @@ export const pluginMouseDrag = {
     let throttledMouseMove: EventListener;
     let pos: { top: number, left: number, diffX: number, diffY: number };
 
+    function clearDocumentListeners() {
+      off(document, 'mousemove', throttledMouseMove);
+      off(document, 'mouseup', mouseUpHandler as EventListener);
+    }
+
     function mouseDownHandler(e: MouseEvent) {
       instance.carouselElement.classList.add(instance.config.mouseDragDraggingClassName);
       e.preventDefault();
@@ -62,8 +67,7 @@ export const pluginMouseDrag = {
     }
 
     function mouseUpHandler() {
-      off(document, 'mousemove', throttledMouseMove);
-      off(document, 'mouseup', mouseUpHandler as EventListener);
+      clearDocumentListeners();
 
       instance.carouselElement.classList.add(instance.config.mouseDragMomentumClassName);
       instance.carouselElement.classList.remove(instance.config.mouseDragDraggingClassName);
@@ -111,6 +115,13 @@ export const pluginMouseDrag = {
 
       return init.apply(this, args);
     };
+
+    const destroy = instance.destroy;
+    instance.destroy = function(...args) {
+      clearDocumentListeners();
+      off(instance.carouselElement, 'mousedown', mouseDownHandler as EventListener);
+      return destroy.apply(this, args);
+    }
 
   }
 } as PluginDefinition<[{

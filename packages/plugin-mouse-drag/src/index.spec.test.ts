@@ -15,6 +15,7 @@ const throttleMock = throttle as jest.Mock;
 const findXSnapIndexMock = findXSnapIndex as jest.Mock;
 const referenceParentOffsetLeftMock = referenceParentOffsetLeft as jest.Mock;
 let init: jest.SpyInstance;
+let destroy: jest.SpyInstance;
 let requestAnimationFrame: jest.SpyInstance;
 let preventDefault: jest.SpyInstance;
 let carousel: TinyCarousel;
@@ -30,6 +31,7 @@ const callMouseDownHandler = () => {
     clientX: 200,
     clientY: 200,
   });
+  return mouseDownHandler;
 };
 const callMouseMoveHandler = () => {
   const [,,mouseMoveHandler] = onMock.mock.calls[0];
@@ -49,6 +51,7 @@ beforeAll(() => {
   referenceParentOffsetLeftMock.mockReturnValue(20);
   requestAnimationFrame = jest.spyOn(global, 'requestAnimationFrame').mockReturnValue(0);
   init = jest.fn();
+  destroy = jest.fn();
   preventDefault = jest.fn();
 });
 beforeEach(() =>
@@ -60,6 +63,7 @@ beforeEach(() =>
       mouseDragMomentumGravity,
       items: [document.createElement('div'), document.createElement('div')],
     },
+    destroy,
     init,
   } as unknown as TinyCarousel
 );
@@ -107,6 +111,32 @@ describe('install', () => {
 
     it('should call original init', () => {
       expect(init).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('destroy', () => {
+    beforeEach(() => {
+      installPlugin({ mouseDragDraggingClassName });
+      carousel.init();
+    });
+
+    it('should unbind event handlers', () => {
+      // call mouse down handler to get mousemove & mouseup handlers bound
+      const mouseDownHandler = callMouseDownHandler();
+      const [,,mouseMoveHandler] = onMock.mock.calls[0];
+      const [,,mouseUpHandler] = onMock.mock.calls[1];
+
+      carousel.destroy();
+
+      expect(offMock).toHaveBeenCalledWith(carousel.carouselElement, 'mousedown', mouseDownHandler);
+      expect(offMock).toHaveBeenCalledWith(document, 'mousemove', mouseMoveHandler);
+      expect(offMock).toHaveBeenCalledWith(document, 'mouseup', mouseUpHandler);
+    });
+
+    it('should call original destroy method', () => {
+      carousel.destroy();
+
+      expect(destroy).toHaveBeenCalledTimes(1);
     });
   });
 
