@@ -3,7 +3,7 @@
   "amdName": "tinyCarouselVue",
   "version": "0.1.0",
   "description": "Vue integration of @frsource/tiny-carousel 💚",
-  "source": "dist/index.ts",
+  "source": "src/TinyCarousel.ts",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -12,9 +12,8 @@
   "exports": "./dist/index.modern.js",
   "scripts": {
     "start": "vue-cli-service serve",
-    "prebuild": "node ./build.js",
     "build": "microbundle",
-    "vuebuild": "vue-cli-service build --target lib ./src/components/TinyCarousel.vue",
+    "vuebuild": "vue-cli-service build --target lib ./src/components/TinyCarousel.ts",
     "test": "vue-cli-service test:unit",
     "watch:test": "vue-cli-service test:unit --watch",
     "coverage": "vue-cli-service test:unit --coverage",
@@ -55,10 +54,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
   "devDependencies": {
     "@frsource/tiny-carousel-core": "^0.8.0",
     "@frsource/tiny-carousel-plugin-autoplay": "^0.3.0",
@@ -74,10 +69,13 @@
     "@vue/cli-service": "~4.5.12",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^1.0.3",
+    "core-js": "^3.6.5",
     "eslint-plugin-vue": "^7.8.0",
+    "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
-    "@frsource/tiny-carousel-core": "^0.8.0"
+    "@frsource/tiny-carousel-core": "^0.8.0",
+    "vue": "^2.6.11"
   }
 }

@@ -1,4 +1,3 @@
-<script lang="ts">
 import { Config, PluginDefinition, TinyCarousel } from '@frsource/tiny-carousel-core';
 import type { OmitFirstItem } from '@frsource/tiny-carousel-core/dist/helpers';
 import Vue, { PropType, VNode } from 'vue';
@@ -91,4 +90,3 @@ const component = Vue.extend({
 });
 
 export default component;
-</script>

@@ -37,7 +37,7 @@ import Vue from 'vue';
 import { pluginAutoplay } from '@frsource/tiny-carousel-plugin-autoplay';
 import { pluginCustomEvents } from '@frsource/tiny-carousel-plugin-custom-events';
 import { pluginMouseDrag } from '@frsource/tiny-carousel-plugin-mouse-drag';
-import TinyCarousel, { definePlugin, PluginsProp, TinyCarouselComponent } from './components/TinyCarousel.vue';
+import TinyCarousel, { definePlugin, PluginsProp, TinyCarouselComponent } from './TinyCarousel';
 
 export default Vue.extend({
   name: 'App',
