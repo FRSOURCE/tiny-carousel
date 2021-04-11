@@ -1,4 +1,4 @@
-import { EventDetailMap, CustomEventListener, on, off, dispatch, CustomEventRequiredPayload } from '@frsource/tiny-carousel-utils';
+import { EventDetailMap, CustomEventListener, on, off, dispatch } from '@frsource/tiny-carousel-utils';
 import type { TinyCarousel, PluginDefinition } from '@frsource/tiny-carousel-core';
 
 declare module '@frsource/tiny-carousel-utils' {
