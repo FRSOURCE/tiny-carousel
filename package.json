@@ -8,7 +8,7 @@
   "scripts": {
     "release": "lerna publish",
     "release:ci": "yarn release --yes",
-    "release:test": "yarn release --no-git-tag-version --no-push",
+    "release:test": "yarn release --no-git-tag-version --no-push --skip-npm",
     "start": "lerna run start --parallel",
     "build": "lerna run build --stream",
     "test": "lerna run test --parallel",
