@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.2.0...@frsource/tiny-carousel-vue@0.3.0) (2021-04-16)
+
+
+### Bug Fixes
+
+* **vue:** types source path ([521b4c2](https://github.com/FRSource/tiny-carousel/commit/521b4c2d67e48a5e2cac37583a73fe14c11a842d))
+
+
+### Features
+
+* **vue:** decrease bundle size a bit ([53393fa](https://github.com/FRSource/tiny-carousel/commit/53393fa40d63c1acca63400e6d33ca20c91b7b30))
+
+
+
+
+
 # [0.2.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.1.0...@frsource/tiny-carousel-vue@0.2.0) (2021-04-16)
 
 
