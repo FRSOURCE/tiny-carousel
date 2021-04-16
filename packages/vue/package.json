@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "description": "Vue integration of @frsource/tiny-carousel 💚",
   "source": "src/TinyCarousel.ts",
-  "types": "dist/index.d.ts",
+  "types": "dist/TinyCarousel.d.ts",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
