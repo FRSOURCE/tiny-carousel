@@ -15,6 +15,11 @@ export const definePlugin = <
     C extends PluginDefinitionConfig<PD>
   >(...args: C extends unknown[] ? [PD, ...C] : [PD]) => args;
 
+// this one makes output bundle few bytes smaller ¯\_(ツ)_/¯
+function initTinyCarouselWrapper (this: { initTinyCarousel: ()=> void}) {
+  this.initTinyCarousel();
+}
+
 const component = Vue.extend({
   name: 'TinyCarousel',
   props: {
@@ -37,22 +42,12 @@ const component = Vue.extend({
       slotChildrenCount: 0,
     };
   },
-  mounted() {
-    this.initTinyCarousel();
-  },
+  mounted: initTinyCarouselWrapper,
   watch: {
-    slotChildrenCount() {
-      this.initTinyCarousel();
-    },
-    tag() {
-      this.initTinyCarousel();
-    },
-    plugins() {
-      this.initTinyCarousel();
-    },
-    config() {
-      this.initTinyCarousel();
-    },
+    slotChildrenCount: initTinyCarouselWrapper,
+    tag: initTinyCarouselWrapper,
+    plugins: initTinyCarouselWrapper,
+    config: initTinyCarouselWrapper,
   },
   methods: {
     initTinyCarousel() {
