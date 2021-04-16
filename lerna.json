@@ -3,6 +3,9 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
+    "bootstrap": {
+      "npmClientArgs": ["--frozen-lockfile"]
+    },
     "publish": {
       "verifyAccess": false,
       "allowBranch": "master",
