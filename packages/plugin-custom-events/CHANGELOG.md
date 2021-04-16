@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2021-04-16)
+
+**Note:** Version bump only for package @frsource/tiny-carousel-plugin-custom-events
+
+
+
+
+
 # [0.4.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-custom-events@0.3.2...@frsource/tiny-carousel-plugin-custom-events@0.4.0) (2021-04-06)
 
 
