@@ -59,12 +59,17 @@ export default Vue.extend({
       isInitialized: false,
     };
   },
+  computed: {
+    carousel() {
+      return (this.$refs.tinyCarousel as TinyCarouselComponent | undefined)?.carousel;
+    }
+  },
   methods: {
     clickPrev() {
-      (this.$refs.tinyCarousel as TinyCarouselComponent)?.carousel?.prev();
+      this.carousel?.prev();
     },
     clickNext() {
-      (this.$refs.tinyCarousel as TinyCarouselComponent)?.carousel?.next();
+      this.carousel?.next();
     }
   }
 });
