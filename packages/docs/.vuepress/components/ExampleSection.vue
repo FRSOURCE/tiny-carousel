@@ -15,6 +15,7 @@
       <pre v-if="!!$slots.pug" data-lang="pug"><slot name="pug" /></pre>
       <pre v-if="!!$slots.scss" data-lang="scss"><slot name="scss" /></pre>
       <pre v-if="!!$slots.js" data-lang="js"><slot name="js" /></pre>
+      <pre v-if="!!$slots.typescript" data-lang="typescript"><slot name="typescript" /></pre>
     </div>
   </section>
 </template>
@@ -60,7 +61,7 @@ export default {
     height: {
       type: String,
       default: '400px',
-    }
+    },
   },
   async mounted() {
     await (scriptLoadPromise || loadEmbedScript());
@@ -84,9 +85,7 @@ export default {
         html_classes: [],
         head: "<meta name='viewport' content='width=device-width, initial-scale=1'>",
         stylesheets: "https://unpkg.com/water.css@2.0.0/out/water.min.css",
-        scripts: [
-            
-        ]
+        scripts: []
       });
     },
   },
