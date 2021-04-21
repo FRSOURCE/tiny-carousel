@@ -241,7 +241,7 @@ To recalculate [`carousel.active`](#carousel-active) in place, call `carousel.re
     - `{number} active = 0`
     - `{string} className = "frs-tc"`
     - `{string} itemClassName = "frs-tc-item"`
-    - `{string} hideScrollClassName - "frs-hide-scroll"`
+    - `{string} hideScrollClassName = "frs-hide-scroll"`
     - `HTMLElement[] items = []`
 
 - **Details:**
