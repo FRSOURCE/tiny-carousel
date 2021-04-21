@@ -11,6 +11,17 @@ Learn more about the core package:
 | [API reference](../api-reference/core) | [Usage guide](../guide/usage/#core) |
 | - | - |
 
+## Integrations
+
+Integration is a package which allows using TinyCarousel with a framework/library of your choice.
+
+### Vue
+
+Brings `@frsource/tiny-carousel` into the Vue world 💚
+
+| [API reference](../api-reference/integration-vue) | [Usage guide](../guide/usage/#vue) |
+| - | - |
+
 ## Plugins
 
 Plugin is a module which can be used to extend a Tiny Carousel instance with new set of functionalities.
