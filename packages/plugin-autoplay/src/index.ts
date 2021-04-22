@@ -28,13 +28,15 @@ TinyCarousel.updateDefaultConfig(
   )
 );
 
+type MouseListener = ()=>void;
+
 export const pluginAutoplay = {
   install: (instance, config = {}) => {
     Object.assign(instance.config, config);
   
     let timeout: ReturnType<Window['setTimeout']> | undefined;
-    let mouseOverListener: ()=>void;
-    let mouseOutListener: ()=>void;
+    let mouseOverListener: MouseListener;
+    let mouseOutListener: MouseListener;
 
     const clearListeners = function ({ carouselElement }: TinyCarousel) {
       off(carouselElement, 'mouseover', mouseOverListener);
