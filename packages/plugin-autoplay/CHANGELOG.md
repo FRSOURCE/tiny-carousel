@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2021-04-22)
+
+
+### Features
+
+* extract MouseListener type ([30754f1](https://github.com/FRSource/tiny-carousel/commit/30754f1db546ac4d47790573507cc629078c8e87))
+
+
+
+
+
 # [0.3.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-autoplay@0.2.4...@frsource/tiny-carousel-plugin-autoplay@0.3.0) (2021-04-06)
 
 
