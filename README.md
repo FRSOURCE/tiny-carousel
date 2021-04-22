@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.npmjs.com/package/">
+  <a href="https://www.npmjs.com/package/@frsource/tiny-carousel-core">
     <img src="https://img.shields.io/npm/v/@frsource/tiny-carousel-core" alt="NPM version badge">
   </a>
   <a href="https://bundlephobia.com/result?p=@frsource/tiny-carousel-core" title="Visit bundlephobia for more details!">

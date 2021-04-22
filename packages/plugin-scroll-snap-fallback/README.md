@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.npmjs.com/package/">
+  <a href="https://www.npmjs.com/package/@frsource/tiny-carousel-plugin-scroll-snap-fallback">
     <img src="https://img.shields.io/npm/v/@frsource/tiny-carousel-plugin-scroll-snap-fallback" alt="NPM version badge">
   </a>
   <a href="https://bundlephobia.com/result?p=@frsource/tiny-carousel-plugin-scroll-snap-fallback" title="Visit bundlephobia for more details!">
