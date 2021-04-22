@@ -9,7 +9,7 @@
       class="carousel"
       tag="ul"
       :plugins="carouselPlugins"
-      @before:init="isInitialized = true"
+      @after:init="isInitialized = true"
       ref="tinyCarousel"
     >
       <li v-for="index in number" :key="index">
