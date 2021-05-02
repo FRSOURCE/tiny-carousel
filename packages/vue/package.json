@@ -12,7 +12,7 @@
   "exports": "./dist/index.modern.js",
   "scripts": {
     "start": "vue-cli-service serve",
-    "build": "microbundle",
+    "build": "microbundle --globals vue=Vue",
     "vuebuild": "vue-cli-service build --target lib ./src/components/TinyCarousel.ts",
     "test": "vue-cli-service test:unit",
     "watch:test": "vue-cli-service test:unit --watch",
