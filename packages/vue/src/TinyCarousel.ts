@@ -91,11 +91,11 @@ const component = identityAsExtend({
     if (typeof h !== 'function')
       h = (Vue as unknown as { h: CreateElement }).h;
 
-    const data: VNodeData = this.$listeners
+    const data: VNodeData = '$listeners' in this
       // Vue 2
       ? { on: this.$listeners }
       // Vue 3
-      : this.$attrs;
+      : (this as Vue).$attrs;
 
     const slotDefault = typeof this.$slots.default !== 'function'
       // Vue 2
