@@ -1,7 +1,7 @@
 import { Config, PluginDefinition, TinyCarousel } from '@frsource/tiny-carousel-core';
 import type { OmitFirstItem } from '@frsource/tiny-carousel-core/dist/helpers';
-import Vue, { PropType, VNode } from 'vue';
-import { CreateElement } from 'vue/types/umd';
+import type { PropType, VNode, CreateElement, VNodeData } from 'vue';
+import Vue from 'vue';
 
 export type PluginProp<PD extends PluginDefinition> = [PD, ...OmitFirstItem<Parameters<PD['install']>>];
 export type PluginsProp<PD extends PluginDefinition = PluginDefinition<undefined | unknown[]>> = PluginProp<PD>[];
@@ -15,12 +15,29 @@ export const definePlugin = <
     C extends PluginDefinitionConfig<PD>
   >(...args: C extends unknown[] ? [PD, ...C] : [PD]) => args;
 
-// this one makes output bundle few bytes smaller ¯\_(ツ)_/¯
-function initTinyCarouselWrapper (this: { initTinyCarousel: ()=> void}) {
-  this.initTinyCarousel();
+let oldChildNodes: Node[] = []; 
+function initTinyCarouselWrapperIfNeeded (this: Vue & { initTinyCarousel: ()=> void}) {
+  this.$nextTick(function() {
+    const { childNodes } = this.$el as HTMLElement;
+    if (
+      oldChildNodes.length !== childNodes.length ||
+      oldChildNodes.some((oldChildNode, i) => oldChildNode !== childNodes[i])
+    ) {
+      oldChildNodes = Array.from(childNodes);
+      this.initTinyCarousel();
+    }
+  });
 }
 
-const component = Vue.extend({
+// this one makes output bundle few bytes smaller ¯\_(ツ)_/¯
+function initTinyCarouselWrapper (this: Vue & { initTinyCarousel: ()=> void}) {
+  this.$nextTick(this.initTinyCarousel);
+}
+
+// to make compatible Vue 3
+const identityAsExtend = ((v: unknown) => v) as typeof Vue['extend'];
+
+const component = identityAsExtend({
   name: 'TinyCarousel',
   props: {
     tag: {
@@ -39,12 +56,11 @@ const component = Vue.extend({
   data() {
     return {
       carousel: void 0 as TinyCarousel | undefined,
-      slotChildrenCount: 0,
     };
   },
-  mounted: initTinyCarouselWrapper,
+  mounted: initTinyCarouselWrapperIfNeeded,
+  updated: initTinyCarouselWrapperIfNeeded,
   watch: {
-    slotChildrenCount: initTinyCarouselWrapper,
     tag: initTinyCarouselWrapper,
     plugins: initTinyCarouselWrapper,
     config: initTinyCarouselWrapper,
@@ -60,8 +76,7 @@ const component = Vue.extend({
       }
 
       this.carousel?.destroy();
-
-      const carousel = new TinyCarousel(this.$refs.element as HTMLElement, config);
+      const carousel = new TinyCarousel(this.$el as HTMLElement, config);
 
       this.$emit('setup', carousel);
       this.plugins.forEach(([plugin, ...pluginOptions]) =>
@@ -71,15 +86,29 @@ const component = Vue.extend({
       return this.carousel = carousel.init();
     }
   },
-  render(createElement: CreateElement): VNode {
-    this.slotChildrenCount = this.$slots.default?.length ?? 0;
-    return createElement(
+  render(h: CreateElement): VNode {
+    h =
+      // Vue 3
+      (Vue as unknown as { h?: CreateElement }).h ||
+      // Vue 2
+      h;
+
+    const data: VNodeData = this.$listeners
+      // Vue 2
+      ? { on: this.$listeners }
+      // Vue 3
+      : this.$attrs;
+
+    const slotDefault = typeof this.$slots.default === 'function'
+      // Vue 3
+      ? (this.$slots.default as ()=> VNode[])()
+      // Vue 2
+      : this.$slots.default;
+
+    return h(
       this.tag,
-      {
-        ref: 'element',
-        on: this.$listeners,
-      },
-      this.$slots.default,
+      data,
+      slotDefault,
     );
   }
 });
