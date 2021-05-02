@@ -1164,46 +1164,6 @@
   resolved "https://registry.yarnpkg.com/@frsource/frs-hide-scrollbar/-/frs-hide-scrollbar-2.0.5.tgz#c00af210083182e0ef02db6d36e2000dc1e89bcb"
   integrity sha512-sEl+XgIlB3ZKVJ+Neq/Akxh90lztz9r16Q3RGiBqkNxE6+utrIdUtOWC4k3Xgm3lJ3D01+HfQE9HsMjOWQdFNg==
 
-"@frsource/tiny-carousel-core@^0.6.0":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-core/-/tiny-carousel-core-0.6.3.tgz#95d9c907216d0968f1e10466605424423c7f4e9b"
-  integrity sha512-zno9+jBC4xWk8EACWPNzfy/tcNqaEUFNrzS/pNGSprWGU1yj1BR8brT1cxc0QvlT0YF7n1DCnOLBzc76GPGTBg==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-autoplay@^0.2.0":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-autoplay/-/tiny-carousel-plugin-autoplay-0.2.4.tgz#e6514236e260a9f39659bafc54ee5c82ed667bf1"
-  integrity sha512-sY5KBZwVSSE6aVnGuvaynhIr+Hztz0foNtSTJ7WNt1PRNt4DeqQhbSLYhWdngxOQIEYZAMglpwRxkmaGc8CX+Q==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-custom-events@^0.1.15":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-custom-events/-/tiny-carousel-plugin-custom-events-0.1.16.tgz#ae84eab7a392b4a02b04600b30e9d804fd2e3eef"
-  integrity sha512-fSpQOVFw7TZ/d/E9iMhJaOYxaBYIqZmNJe7PF/dxhDqFEv/TxF8mXdojvX/TvSoNX3chQDTp8bH9Y3WpkI0sgw==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.3.0"
-
-"@frsource/tiny-carousel-plugin-mouse-drag@^0.2.1":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-mouse-drag/-/tiny-carousel-plugin-mouse-drag-0.2.5.tgz#12c902d1309cb8be85b3da1ab8520da629d87af3"
-  integrity sha512-FhS/N7ZUbi+iSJ+MlINIpHi8EIVrzYiqbAWoR3lV3tfhSuM+VUAR56xtCPfhFsIFiRx7obXa0bK3vhseYf7EcQ==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-scroll-snap-fallback@^0.1.15":
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-scroll-snap-fallback/-/tiny-carousel-plugin-scroll-snap-fallback-0.1.19.tgz#1f0fe42ff6de45d1e3c7ab63a69d1cebc2154e08"
-  integrity sha512-WGQM1zLoKyqwaInf38RW6nv5ziSB+q8AcF58I1/nsLw8EQCAJ60xqpjRg1onLHHCneHsLKkljuH9ke4DaD148g==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-utils@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-utils/-/tiny-carousel-utils-0.3.0.tgz#9cef20020e3f1705fd411c07498d3a9c76dea293"
-  integrity sha512-eAxXJYqaT6mvNcW/5Wjc5gjbBi6Jup2cLNY32vDta1JwXUTinXrcY6AG5DpjIZH0fzuYiaHfkYa/CTnyJZPZUA==
-
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -5162,10 +5122,10 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.0.0, chalk@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
-  integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
+chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
+  integrity sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
@@ -16614,15 +16574,15 @@ stylelint-scss@^3.18.0:
     postcss-value-parser "^4.1.0"
 
 stylelint@^13.8.0:
-  version "13.13.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-13.13.0.tgz#1a33bffde765920ac985f16ae6250ff914b27804"
-  integrity sha512-jvkM1iuH88vAvjdKPwPm6abiMP2/D/1chbfb+4GVONddOOskHuCXc0loyrLdxO1AwwH6jdnjYskkTKHQD7cXwQ==
+  version "13.13.1"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-13.13.1.tgz#fca9c9f5de7990ab26a00f167b8978f083a18f3c"
+  integrity sha512-Mv+BQr5XTUrKqAXmpqm6Ddli6Ief+AiPZkRsIrAoUKFuq/ElkUh9ZMYxXD0iQNZ5ADghZKLOWz1h7hTClB7zgQ==
   dependencies:
     "@stylelint/postcss-css-in-js" "^0.37.2"
     "@stylelint/postcss-markdown" "^0.36.2"
     autoprefixer "^9.8.6"
     balanced-match "^2.0.0"
-    chalk "^4.1.0"
+    chalk "^4.1.1"
     cosmiconfig "^7.0.0"
     debug "^4.3.1"
     execall "^2.0.0"
@@ -16663,7 +16623,7 @@ stylelint@^13.8.0:
     style-search "^0.1.0"
     sugarss "^2.0.0"
     svg-tags "^1.0.0"
-    table "^6.5.1"
+    table "^6.6.0"
     v8-compile-cache "^2.3.0"
     write-file-atomic "^3.0.3"
 
@@ -16786,10 +16746,10 @@ table@^3.8.3:
     slice-ansi "0.0.4"
     string-width "^2.0.0"
 
-table@^6.0.4, table@^6.5.1:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/table/-/table-6.5.1.tgz#930885a7430f15f8766b35cd1e36de40793db523"
-  integrity sha512-xGDXWTBJxahkzPQCsn1S9ESHEenU7TbMD5Iv4FeopXv/XwJyWatFjfbor+6ipI10/MNPXBYUamYukOrbPZ9L/w==
+table@^6.0.4, table@^6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/table/-/table-6.6.0.tgz#905654b79df98d9e9a973de1dd58682532c40e8e"
+  integrity sha512-iZMtp5tUvcnAdtHpZTWLPF0M7AgiQsURR2DwmxnJwSy8I3+cY+ozzVvYha3BOLG2TB+L0CqjIz+91htuj6yCXg==
   dependencies:
     ajv "^8.0.1"
     lodash.clonedeep "^4.5.0"
