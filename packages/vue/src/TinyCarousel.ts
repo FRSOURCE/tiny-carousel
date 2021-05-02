@@ -87,11 +87,9 @@ const component = identityAsExtend({
     }
   },
   render(h: CreateElement): VNode {
-    h = typeof h === 'function'
-      // Vue 2
-      ? h
-      // Vue 3
-      : (Vue as unknown as { h: CreateElement }).h;
+    // Vue 3
+    if (typeof h !== 'function')
+      h = (Vue as unknown as { h: CreateElement }).h;
 
     const data: VNodeData = this.$listeners
       // Vue 2
