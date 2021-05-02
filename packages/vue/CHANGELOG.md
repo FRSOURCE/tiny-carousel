@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.4.0...@frsource/tiny-carousel-vue@0.5.0) (2021-05-02)
+
+
+### Features
+
+* **vue:** add Vue 3 as peerDependency ([6e5d1e9](https://github.com/FRSource/tiny-carousel/commit/6e5d1e957934c4f21aa8bfc84d8216b3964bf474))
+
+
+
+
+
 # [0.4.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.3.2...@frsource/tiny-carousel-vue@0.4.0) (2021-05-02)
 
 
