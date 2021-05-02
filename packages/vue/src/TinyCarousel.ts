@@ -87,11 +87,11 @@ const component = identityAsExtend({
     }
   },
   render(h: CreateElement): VNode {
-    h =
-      // Vue 3
-      (Vue as unknown as { h?: CreateElement }).h ||
+    h = typeof h === 'function'
       // Vue 2
-      h;
+      ? h
+      // Vue 3
+      : (Vue as unknown as { h: CreateElement }).h;
 
     const data: VNodeData = this.$listeners
       // Vue 2
@@ -99,11 +99,11 @@ const component = identityAsExtend({
       // Vue 3
       : this.$attrs;
 
-    const slotDefault = typeof this.$slots.default === 'function'
-      // Vue 3
-      ? (this.$slots.default as ()=> VNode[])()
+    const slotDefault = typeof this.$slots.default !== 'function'
       // Vue 2
-      : this.$slots.default;
+      ? this.$slots.default
+      // Vue 3
+      : (this.$slots.default as ()=> VNode[])();
 
     return h(
       this.tag,

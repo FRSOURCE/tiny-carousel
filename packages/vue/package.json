@@ -76,6 +76,6 @@
   },
   "peerDependencies": {
     "@frsource/tiny-carousel-core": "^0.8.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11 || ^3.0.0"
   }
 }
