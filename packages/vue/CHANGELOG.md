@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.5.0...@frsource/tiny-carousel-vue@0.5.1) (2021-05-02)
+
+
+### Bug Fixes
+
+* **vue:** vue dependency name error in UMD bundle ([4d21a69](https://github.com/FRSource/tiny-carousel/commit/4d21a69d29ecaf09353c37e7b93b8124bc80f3e9))
+
+
+### Performance Improvements
+
+* optimise bundle size a bit ([084ee31](https://github.com/FRSource/tiny-carousel/commit/084ee31ad850633830d31e3a0541f040f397335f))
+
+
+
+
+
 # [0.5.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.4.0...@frsource/tiny-carousel-vue@0.5.0) (2021-05-02)
 
 
