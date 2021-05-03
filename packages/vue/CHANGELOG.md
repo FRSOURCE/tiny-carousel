@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.5.1...@frsource/tiny-carousel-vue@0.5.2) (2021-05-03)
+
+
+### Bug Fixes
+
+* **vue:** better Vue 3 support ([4f0c018](https://github.com/FRSource/tiny-carousel/commit/4f0c018000ed9143678e7907586fa3248ece5039))
+
+
+
+
+
 ## [0.5.1](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.5.0...@frsource/tiny-carousel-vue@0.5.1) (2021-05-02)
 
 
