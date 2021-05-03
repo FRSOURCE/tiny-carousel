@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2021-05-03)
+
+
+### Bug Fixes
+
+* **autoplay:** pause carousel before destroy ([c55f427](https://github.com/FRSource/tiny-carousel/commit/c55f4272c7b1ae4874d4320806e9d235d37e20f8))
+
+
+
+
+
 # 0.4.0 (2021-04-22)
 
 
