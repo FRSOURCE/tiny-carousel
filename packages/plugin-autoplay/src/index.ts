@@ -81,7 +81,7 @@ export const pluginAutoplay = {
 
     const destroy = instance.destroy;
     instance.destroy = function(...args) {
-      clearListeners(instance);
+      this.pause();
 
       return destroy.apply(this, args);
     }

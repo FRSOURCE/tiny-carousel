@@ -156,7 +156,10 @@ describe('install', () => {
   });
 
   describe('destroy', () => {
+    beforeAll(() => jest.useFakeTimers());
     beforeEach(() => installPlugin({ autoplayTimeout: 200, pauseOnHover: true }));
+    afterEach(() => jest.clearAllTimers());
+    afterAll(() => jest.useRealTimers());
     
     it('should deregister event listeners registered by play', () => {
       carousel.play();
@@ -165,6 +168,14 @@ describe('install', () => {
       carousel.destroy();
       expect(off).toHaveBeenCalledWith(carousel.carouselElement, 'mouseover', mouseOverListener);
       expect(off).toHaveBeenCalledWith(carousel.carouselElement, 'mouseout', mouseOutListener);
+    });
+
+    it('should pause running play command', () => {
+      carousel.play();
+      jest.advanceTimersByTime(400);
+      carousel.destroy();
+      jest.advanceTimersByTime(1000);
+      expect(carousel.next).toHaveBeenCalledTimes(2);
     });
 
     it('should call original destroy method', () => {
