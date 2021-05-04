@@ -30,7 +30,7 @@ module.exports = {
         editLinks: true,
         editLinkText: 'Help us improve this page on GitHub',
         smoothScroll: true,
-        displayAllHeaders: false,
+        displayAllHeaders: true,
         sidebarDepth: 4,
         image: '/logo.jpg',
         domain: 'https://www.frsource.org/tiny-carousel/'

@@ -16,7 +16,7 @@
   </a>
 </p>
 
-<h1 align="center">Brings @frsource/tiny-carousel into the Vue world 💚</h1>
+<h1 align="center">Brings @frsource/tiny-carousel into the Vue 2/3 world 💚</h1>
 
 <p align="center">
   <a href="https://www.frsource.org/tiny-carousel/guide/usage/#vue">Usage guide</a>
@@ -36,6 +36,7 @@
   <i>The @frsource/tiny-carousel integration for <a href="https://vuejs.org">Vue</a>.
     <br>Adds `TinyCarousel` component to your project.
     <br>Supports plugins from the <a href="https://www.frsource.org/tiny-carousel/ecosystem/">Tiny Carousel ecosystem</a>.
+    <br>Compatible with both Vue 2 & Vue 3.
     <br>
   <br></i>
   <br>

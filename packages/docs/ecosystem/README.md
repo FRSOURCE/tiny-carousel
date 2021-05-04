@@ -17,7 +17,7 @@ Integration is a package which allows using TinyCarousel with a framework/librar
 
 ### Vue
 
-Brings `@frsource/tiny-carousel` into the Vue world 💚
+Brings `@frsource/tiny-carousel` into the Vue 2/3 world 💚
 
 | [API reference](../api-reference/integration-vue) | [Usage guide](../guide/usage/#vue) |
 | - | - |

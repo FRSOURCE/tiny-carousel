@@ -2,7 +2,7 @@
   "name": "@frsource/tiny-carousel-vue",
   "amdName": "tinyCarouselVue",
   "version": "0.5.3",
-  "description": "Brings @frsource/tiny-carousel into the Vue world 💚",
+  "description": "Brings @frsource/tiny-carousel into the Vue 2/3 world 💚",
   "source": "src/TinyCarousel.ts",
   "types": "dist/TinyCarousel.d.ts",
   "main": "dist/index.js",
@@ -14,7 +14,12 @@
     "start": "vue-cli-service serve",
     "build": "microbundle --globals vue=Vue",
     "vuebuild": "vue-cli-service build --target lib ./src/components/TinyCarousel.ts",
-    "test": "vue-cli-service test:unit",
+    "test": "yarn test:vue2 && yarn test:vue3",
+    "pretest:vue2": "vue-demi-switch 2", 
+    "test:vue2": "yarn test:unit",
+    "pretest:vue3": "vue-demi-switch 3 vue3", 
+    "test:vue3": "yarn test:unit",
+    "test:unit": "vue-cli-service test:unit",
     "watch:test": "vue-cli-service test:unit --watch",
     "coverage": "vue-cli-service test:unit --coverage",
     "lint": "vue-cli-service lint",
@@ -29,6 +34,8 @@
     "integration",
     "vuejs",
     "vue2",
+    "vue3",
+    "vue.js",
     "efficient",
     "modular",
     "lightweight",
@@ -71,11 +78,13 @@
     "@vue/test-utils": "^1.0.3",
     "core-js": "^3.6.5",
     "eslint-plugin-vue": "^7.8.0",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue": "2.6.12",
+    "vue3": "npm:vue@^3.0.0",
+    "vue-demi": "^0.7.5",
+    "vue-template-compiler": "^2.6.12"
   },
   "peerDependencies": {
     "@frsource/tiny-carousel-core": "^0.8.0",
-    "vue": "^2.6.11 || ^3.0.0"
+    "vue": "^2.6.0 || ^3.0.0"
   }
 }

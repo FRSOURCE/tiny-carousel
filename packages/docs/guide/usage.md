@@ -184,13 +184,205 @@ yarn add @frsource/tiny-carousel-vue
 npm install @frsource/tiny-carousel-vue
 ```
 
+Now let’s see how to add the TinyCarousel to your Vue 3 application.
+
+:::tip
+Still developing Vue 2 application? Don’t worry! [Click here to see the Vue 2 example](#vue-2).
+:::
+
+### Vue 3
+
+First, the most basic example of how to add Tiny Carousel to your Vue 3 application:
+
+<!-- textlint-disable -->
+<ExampleSection
+    title="Example on how to use Tiny Carousel Vue integration with Vue 3"
+    description="This example code shows how to use Tiny Carousel integration for Vue 3 - @frsource/tiny-carousel-vue"
+    default-tab="js"
+    :scripts="['https://cdn.jsdelivr.net/npm/vue@next/dist/vue.global.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-vue/dist/index.umd.js']"
+    :tags="['vue','vue3']"
+>
+  <template slot="html">
+&lt;p&gt;Use arrows or scroll (or swipes on a mobile device) to change slides&lt;/p&gt;
+<!-- -->
+&lt;div id="app"&gt;&lt;/div&gt;
+<!-- -->
+&lt;script type="text/x-template" id="app-template"&gt;
+<!-- -->
+  &lt;TinyCarousel&gt;
+    &lt;li v-for="index in numberOfSlides" :key="index"&gt;
+      &lt;img
+        class="carousel__item-img"
+        :src="`https://picsum.photos/seed/${index}/800/600`"
+      &gt;
+    &lt;/li&gt;
+  &lt;/TinyCarousel&gt;
+<!-- -->
+&lt;/script&gt;
+  </template>
+  <template slot="scss">
+<div>
+@import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
+<!-- -->
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</div>
+  </template>
+  <template slot="typescript">
+// needed because of skypack/codepen limitations
+// in regular codebase use 
+// import * as Vue from "vue";
+// import TinyCarousel from "@frsource/tiny-carousel-vue";
+// instead of the two lines below:
+const { createApp, ref, watch, computed } = window.Vue;
+const TinyCarousel = window.tinyCarouselVue.default;
+<!-- -->
+const App = {
+  name: 'App',
+  template: '#app-template',
+  components: {
+    TinyCarousel,
+  },
+  data() {
+    return {
+      numberOfSlides: 4,
+    };
+  }
+};
+<!-- -->
+createApp(App)
+  .mount('#app');
+  </template>
+</ExampleSection>
+<!-- textlint-enable -->
+
+That’s the most basic usage, but Vue integration allows you to do much more than that!
+
+TinyCarousel component allows you to use any of the Tiny Carousel plugins, access carousel instance directly or change the carousel root element`s tag name to something custom. Let’s try it out in the next example:
+
+
+<!-- textlint-disable -->
+<ExampleSection
+    title="Example of advanced usage of the Tiny Carousel Vue integration with Vue 3"
+    description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element to something custom - like 'section'"
+    default-tab="js"
+    height="450px"
+    :tags="['vue','vue3','composition-api']"
+    :scripts="['https://cdn.jsdelivr.net/npm/vue@next/dist/vue.global.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-vue/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-autoplay/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-custom-events/dist/index.umd.js']"
+>
+  <template slot="html">
+&lt;div id="app"&gt;&lt;/div&gt;
+<!-- -->
+&lt;script type="text/x-template" id="app-template"&gt;
+<!-- -->
+  &lt;main&gt;
+    &lt;p&gt;Carousel is {<!-- needed for curly brackets to not be evaluated before entering codepen context -->{ isInitialized ? 'initialized' : 'not initialized' }}&lt;/p&gt;
+  <!-- -->
+    &lt;TinyCarousel
+      ref="tinyCarousel"
+      tag="section"
+      :plugins="carouselPlugins"
+      @after:init="isInitialized = true"
+    &gt;
+      &lt;article v-for="index in numberOfSlides" :key="index"&gt;
+        &lt;img
+          class="carousel__item-img"
+          :src="`https://picsum.photos/seed/${index}/800/600`"
+        &gt;
+      &lt;/article&gt;
+    &lt;/TinyCarousel&gt;
+  <!-- -->
+    &lt;nav&gt;
+      &lt;button type="button" @click="carousel?.prev()"&gt;prev&lt;/button&gt;
+      &lt;button type="button" @click="carousel?.next()"&gt;next&lt;/button&gt;
+    &lt;/nav&gt;
+    &lt;div&gt;
+      &lt;button type="button" @click="++numberOfSlides"&gt;Add slide&lt;/button&gt;
+      &lt;button type="button" @click="--numberOfSlides"&gt;Remove slide&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+<!-- -->
+&lt;/script&gt;
+  </template>
+  <template slot="scss">
+<div>
+@import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
+<!-- -->
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</div>
+  </template>
+  <template slot="typescript">
+// needed because of skypack/codepen limitations
+// in regular codebase use 
+// import TinyCarousel from "@frsource/tiny-carousel-vue";
+// or 
+// import { pluginCustomEvents } from '@frsource/tiny-carousel-plugin-custom-events';
+// instead of the three lines below:
+const { createApp, ref, watch, computed } = window.Vue;
+const {
+  default: TinyCarousel,
+  definePlugin,
+  PluginsProp,
+  TinyCarouselComponent
+} = window.tinyCarouselVue;
+const { pluginAutoplay } = window.tinyCarouselPluginAutoplay;
+const { pluginCustomEvents } = window.tinyCarouselPluginCustomEvents;
+<!-- -->
+<!-- -->
+const App = {
+  name: 'App',
+  template: '#app-template',
+  components: {
+    TinyCarousel,
+  },
+  setup() {
+    const tinyCarousel = ref();
+    const carousel = computed(() => tinyCarousel.value?.carousel);
+    const carouselPlugins: PluginsProp = [
+      definePlugin(pluginAutoplay, {
+        autoplayTimeout: 5000,
+      }),
+      // adds triggering of the custom events
+      definePlugin(pluginCustomEvents),
+    ];
+<!-- -->
+    watch(carousel, carousel => {
+      carousel?.play();
+    });
+<!-- -->
+    return {
+      numberOfSlides: ref(6),
+      carouselPlugins,
+      isInitialized: ref(false),
+      tinyCarousel,
+      carousel,
+    };
+  }
+};
+<!-- -->
+createApp(App)
+  .mount('#app');
+  </template>
+</ExampleSection>
+<!-- textlint-enable -->
+
+### Vue 2
+
 Next, follow the basic example of how to add Tiny Carousel to your Vue 2 application:
 
 <!-- textlint-disable -->
 <ExampleSection
-    title="Example on how to use Tiny Carousel Vue integration"
-    description="This example code shows how to use Tiny Carousel integration for Vue - @frsource/tiny-carousel-vue"
+    title="Example on how to use Tiny Carousel Vue integration with Vue 2"
+    description="This example code shows how to use Tiny Carousel integration for Vue 2 - @frsource/tiny-carousel-vue"
     default-tab="js"
+    :tags="['vue','vue2']"
 >
   <template slot="html">
 &lt;p&gt;Use arrows or scroll (or swipes on a mobile device) to change slides&lt;/p&gt;
@@ -247,17 +439,16 @@ new Vue({
 </ExampleSection>
 <!-- textlint-enable -->
 
-That’s the most basic usage. Vue integration allows you to do much more than that!
 
-TinyCarousel component allows you to use any of the Tiny Carousel plugins, access carousel instance directly or change the carousel root element`s tag name to something custom. Let’s try it out in the next example:
-
+In the more advanced usage example let’s see how you can use any of the Tiny Carousel plugins, access carousel instance directly or change the carousel root element`s tag name to something custom:
 
 <!-- textlint-disable -->
 <ExampleSection
-    title="Example of advanced usage of the Tiny Carousel Vue integration"
+    title="Example of advanced usage of the Tiny Carousel Vue integration with Vue 2"
     description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element to something custom - like 'section'"
     default-tab="js"
     height="450px"
+    :tags="['vue','vue2']"
 >
   <template slot="html">
 &lt;div id="app"&gt;&lt;/div&gt;
@@ -329,6 +520,12 @@ const App = {
       return (this.$refs.tinyCarousel as TinyCarouselComponent | undefined)?.carousel;
     }
   },
+  async updated() {
+    // always let the TinyCarousel to be rendered first
+    // before accessing carousel instance
+    await this.$nextTick()
+    this.carousel?.play();
+  },
   methods: {
     clickPrev() {
       this.carousel?.prev();
@@ -341,9 +538,9 @@ const App = {
 <!-- -->
 new Vue({
   el: '#app',
-  template: '&lt;App/&gt;',
+  template: '<App/>',
   components: { App }
-})
+});
   </template>
 </ExampleSection>
 <!-- textlint-enable -->

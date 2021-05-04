@@ -62,6 +62,10 @@ export default {
       type: String,
       default: '400px',
     },
+    scripts: {
+      type: Array,
+      default: () => [],
+    },
   },
   async mounted() {
     await (scriptLoadPromise || loadEmbedScript());
@@ -85,7 +89,7 @@ export default {
         html_classes: [],
         head: "<meta name='viewport' content='width=device-width, initial-scale=1'>",
         stylesheets: "https://unpkg.com/water.css@2.0.0/out/water.min.css",
-        scripts: []
+        scripts: this.scripts,
       });
     },
   },

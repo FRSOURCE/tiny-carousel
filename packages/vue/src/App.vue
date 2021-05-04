@@ -47,7 +47,7 @@ export default Vue.extend({
   data() {
     const carouselPlugins: PluginsProp = [
       definePlugin(pluginAutoplay, {
-        autoplayTimeout: 7000,
+        autoplayTimeout: 5000,
       }),
       definePlugin(pluginMouseDrag),
       definePlugin(pluginCustomEvents),
@@ -63,6 +63,12 @@ export default Vue.extend({
     carousel() {
       return (this.$refs.tinyCarousel as TinyCarouselComponent | undefined)?.carousel;
     }
+  },
+  async updated() {
+    // always let the TinyCarousel to be rendered first
+    // before accessing carousel instance
+    await this.$nextTick()
+    this.carousel?.play();
   },
   methods: {
     clickPrev() {
