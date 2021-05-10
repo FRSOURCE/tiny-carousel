@@ -1182,46 +1182,6 @@
   resolved "https://registry.yarnpkg.com/@frsource/frs-hide-scrollbar/-/frs-hide-scrollbar-2.0.5.tgz#c00af210083182e0ef02db6d36e2000dc1e89bcb"
   integrity sha512-sEl+XgIlB3ZKVJ+Neq/Akxh90lztz9r16Q3RGiBqkNxE6+utrIdUtOWC4k3Xgm3lJ3D01+HfQE9HsMjOWQdFNg==
 
-"@frsource/tiny-carousel-core@^0.6.0":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-core/-/tiny-carousel-core-0.6.3.tgz#95d9c907216d0968f1e10466605424423c7f4e9b"
-  integrity sha512-zno9+jBC4xWk8EACWPNzfy/tcNqaEUFNrzS/pNGSprWGU1yj1BR8brT1cxc0QvlT0YF7n1DCnOLBzc76GPGTBg==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-autoplay@^0.2.0":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-autoplay/-/tiny-carousel-plugin-autoplay-0.2.4.tgz#e6514236e260a9f39659bafc54ee5c82ed667bf1"
-  integrity sha512-sY5KBZwVSSE6aVnGuvaynhIr+Hztz0foNtSTJ7WNt1PRNt4DeqQhbSLYhWdngxOQIEYZAMglpwRxkmaGc8CX+Q==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-custom-events@^0.1.15":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-custom-events/-/tiny-carousel-plugin-custom-events-0.1.16.tgz#ae84eab7a392b4a02b04600b30e9d804fd2e3eef"
-  integrity sha512-fSpQOVFw7TZ/d/E9iMhJaOYxaBYIqZmNJe7PF/dxhDqFEv/TxF8mXdojvX/TvSoNX3chQDTp8bH9Y3WpkI0sgw==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.3.0"
-
-"@frsource/tiny-carousel-plugin-mouse-drag@^0.2.1":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-mouse-drag/-/tiny-carousel-plugin-mouse-drag-0.2.5.tgz#12c902d1309cb8be85b3da1ab8520da629d87af3"
-  integrity sha512-FhS/N7ZUbi+iSJ+MlINIpHi8EIVrzYiqbAWoR3lV3tfhSuM+VUAR56xtCPfhFsIFiRx7obXa0bK3vhseYf7EcQ==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-scroll-snap-fallback@^0.1.15":
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-scroll-snap-fallback/-/tiny-carousel-plugin-scroll-snap-fallback-0.1.19.tgz#1f0fe42ff6de45d1e3c7ab63a69d1cebc2154e08"
-  integrity sha512-WGQM1zLoKyqwaInf38RW6nv5ziSB+q8AcF58I1/nsLw8EQCAJ60xqpjRg1onLHHCneHsLKkljuH9ke4DaD148g==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-utils@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-utils/-/tiny-carousel-utils-0.3.0.tgz#9cef20020e3f1705fd411c07498d3a9c76dea293"
-  integrity sha512-eAxXJYqaT6mvNcW/5Wjc5gjbBi6Jup2cLNY32vDta1JwXUTinXrcY6AG5DpjIZH0fzuYiaHfkYa/CTnyJZPZUA==
-
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -17496,9 +17456,9 @@ tryer@^1.0.1:
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
 
 ts-jest@^24.2.0, ts-jest@^26.0.0, ts-jest@^26.5.0:
-  version "26.5.5"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.5.tgz#e40481b6ee4dd162626ba481a2be05fa57160ea5"
-  integrity sha512-7tP4m+silwt1NHqzNRAPjW1BswnAhopTdc2K3HEkRZjF0ZG2F/e/ypVH0xiZIMfItFtD3CX0XFbwPzp9fIEUVg==
+  version "26.5.6"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.6.tgz#c32e0746425274e1dfe333f43cd3c800e014ec35"
+  integrity sha512-rua+rCP8DxpA8b4DQD/6X2HQS8Zy/xzViVYfEs2OQu68tkCuKLV0Md8pmX55+W24uRIyAsf/BajRfxOs+R2MKA==
   dependencies:
     bs-logger "0.x"
     buffer-from "1.x"
@@ -18304,10 +18264,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-demi@^0.7.5:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.7.5.tgz#88dee7492fc99a0f911ff03fc02c658fa2a79af8"
-  integrity sha512-eFSQSvbQdY7C9ujOzvM6tn7XxwLjn0VQDXQsiYBLBwf28Na+2nTQR4BBBcomhmdP6mmHlBKAwarq6a0BPG87hQ==
+vue-demi@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.9.0.tgz#b30da61450079d60a132d7aaf9e86d1949e8445e"
+  integrity sha512-f8vVUpC726YXv99fF/3zHaw5CUYbP5H/DVWBN+pncXM8P2Uz88kkffwj9yD7MukuVzPICDHNrgS3VC2ursaP7g==
 
 vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.6.0:
   version "7.6.0"
