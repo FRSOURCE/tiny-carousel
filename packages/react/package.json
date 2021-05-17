@@ -3,7 +3,7 @@
   "amdName": "tinyCarouselReact",
   "version": "0.2.0",
   "description": "@frsource/tiny-carousel for your React app ⚛",
-  "source": "src/TinyCarousel.ts",
+  "source": "src/TinyCarousel.tsx",
   "types": "dist/TinyCarousel.d.ts",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -12,7 +12,7 @@
   "exports": "./dist/index.modern.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "microbundle --globals react=React",
+    "build": "microbundle --globals react=React,react/jsx-runtime=jsx",
     "reactbuild": "react-scripts build",
     "test": "yarn watch:test --watchAll=false",
     "watch:test": "react-scripts test",
@@ -55,6 +55,10 @@
     "access": "public"
   },
   "devDependencies": {
+    "@frsource/tiny-carousel-core": "^0.8.0",
+    "@frsource/tiny-carousel-plugin-autoplay": "^0.4.1",
+    "@frsource/tiny-carousel-plugin-custom-events": "^0.4.1",
+    "@frsource/tiny-carousel-plugin-mouse-drag": "^0.3.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -71,7 +75,6 @@
   },
   "peerDependencies": {
     "@frsource/tiny-carousel-core": "^0.8.0",
-    "@frsource/tiny-carousel-plugin-custom-events": "^0.4.1",
     "@frsource/tiny-carousel-utils": "^0.4.0",
     "react": "^17.0.0"
   }
