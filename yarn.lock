@@ -1807,46 +1807,6 @@
   resolved "https://registry.yarnpkg.com/@frsource/frs-hide-scrollbar/-/frs-hide-scrollbar-2.0.5.tgz#c00af210083182e0ef02db6d36e2000dc1e89bcb"
   integrity sha512-sEl+XgIlB3ZKVJ+Neq/Akxh90lztz9r16Q3RGiBqkNxE6+utrIdUtOWC4k3Xgm3lJ3D01+HfQE9HsMjOWQdFNg==
 
-"@frsource/tiny-carousel-core@^0.6.0":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-core/-/tiny-carousel-core-0.6.3.tgz#95d9c907216d0968f1e10466605424423c7f4e9b"
-  integrity sha512-zno9+jBC4xWk8EACWPNzfy/tcNqaEUFNrzS/pNGSprWGU1yj1BR8brT1cxc0QvlT0YF7n1DCnOLBzc76GPGTBg==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-autoplay@^0.2.0":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-autoplay/-/tiny-carousel-plugin-autoplay-0.2.4.tgz#e6514236e260a9f39659bafc54ee5c82ed667bf1"
-  integrity sha512-sY5KBZwVSSE6aVnGuvaynhIr+Hztz0foNtSTJ7WNt1PRNt4DeqQhbSLYhWdngxOQIEYZAMglpwRxkmaGc8CX+Q==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-custom-events@^0.1.15":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-custom-events/-/tiny-carousel-plugin-custom-events-0.1.16.tgz#ae84eab7a392b4a02b04600b30e9d804fd2e3eef"
-  integrity sha512-fSpQOVFw7TZ/d/E9iMhJaOYxaBYIqZmNJe7PF/dxhDqFEv/TxF8mXdojvX/TvSoNX3chQDTp8bH9Y3WpkI0sgw==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.3.0"
-
-"@frsource/tiny-carousel-plugin-mouse-drag@^0.2.1":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-mouse-drag/-/tiny-carousel-plugin-mouse-drag-0.2.5.tgz#12c902d1309cb8be85b3da1ab8520da629d87af3"
-  integrity sha512-FhS/N7ZUbi+iSJ+MlINIpHi8EIVrzYiqbAWoR3lV3tfhSuM+VUAR56xtCPfhFsIFiRx7obXa0bK3vhseYf7EcQ==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-plugin-scroll-snap-fallback@^0.1.15":
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-scroll-snap-fallback/-/tiny-carousel-plugin-scroll-snap-fallback-0.1.19.tgz#1f0fe42ff6de45d1e3c7ab63a69d1cebc2154e08"
-  integrity sha512-WGQM1zLoKyqwaInf38RW6nv5ziSB+q8AcF58I1/nsLw8EQCAJ60xqpjRg1onLHHCneHsLKkljuH9ke4DaD148g==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-utils@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-utils/-/tiny-carousel-utils-0.3.0.tgz#9cef20020e3f1705fd411c07498d3a9c76dea293"
-  integrity sha512-eAxXJYqaT6mvNcW/5Wjc5gjbBi6Jup2cLNY32vDta1JwXUTinXrcY6AG5DpjIZH0fzuYiaHfkYa/CTnyJZPZUA==
-
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -15478,9 +15438,9 @@ postcss-image-set-function@^3.0.1:
     postcss-values-parser "^2.0.0"
 
 postcss-import@^14.0.0:
-  version "14.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-14.0.1.tgz#6a3f8f2ce74a95fc7c72ecfe3eddfa0e9124e677"
-  integrity sha512-Xn2+z++vWObbEPhiiKO1a78JiyhqipyrXHBb3AHpv0ks7Cdg+GxQQJ24ODNMTanldf7197gSP3axppO9yaG0lA==
+  version "14.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-14.0.2.tgz#60eff77e6be92e7b67fe469ec797d9424cae1aa1"
+  integrity sha512-BJ2pVK4KhUyMcqjuKs9RijV5tatNzNa73e/32aBVE/ejYPe37iH+6vAu9WvqUkB5OAYgLHzbSvzHnorybJCm9g==
   dependencies:
     postcss-value-parser "^4.0.0"
     read-cache "^1.0.0"
