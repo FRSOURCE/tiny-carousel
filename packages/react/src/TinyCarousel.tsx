@@ -52,10 +52,7 @@ const MATCH_CAMEL_CASE = /([a-z]*)/i;
 function propToEventName (propEventName: keyof TinyCarouselReactEventProps): keyof EventDetailMap {
   const [prefix, ...rest] = propEventName.slice(2).split('Event');
   const eventParts = rest.join('Event').split(MATCH_CAMEL_CASE).filter(Boolean);
-  let result = '';
-  if (prefix) result += prefix.toLowerCase() + ':';
-  result += eventParts.join('-').toLowerCase();
-  return result as keyof EventDetailMap;
+  return (prefix ? prefix.toLowerCase() + ':' : '') + eventParts.join('-').toLowerCase() as keyof EventDetailMap;
 }
 
 const TinyCarousel = forwardRef<TinyCarouselRef, TinyCarouselProps>((
@@ -75,13 +72,13 @@ const TinyCarousel = forwardRef<TinyCarouselRef, TinyCarouselProps>((
   const Tag = tag;
   const initTinyCarousel = () => {
     if (!element.current) return;
-    if (carousel.current?.active) {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      config = { ...config, active: carousel.current.active };
-    }
+
+    const newConfig = carousel.current?.active
+      ? { ...config, active: carousel.current.active }
+      : config;
     
     carousel.current?.destroy();
-    const newCarousel = new TinyCarouselCore(element.current, config);
+    const newCarousel = new TinyCarouselCore(element.current, newConfig);
 
     plugins?.forEach(([plugin, ...pluginOptions]) =>
       newCarousel.use(plugin, ...pluginOptions)
@@ -105,7 +102,7 @@ const TinyCarousel = forwardRef<TinyCarouselRef, TinyCarouselProps>((
           element.current?.removeEventListener(
             propToEventName(eventName) as any,
             listener as EventListener,
-          )
+          );
         }
       });
     (Object.keys(eventListeners) as (keyof typeof eventListeners)[])
@@ -115,14 +112,14 @@ const TinyCarousel = forwardRef<TinyCarouselRef, TinyCarouselProps>((
           element.current?.addEventListener(
             propToEventName(eventName) as any,
             listener as EventListener,
-          )
+          );
         }
       });
   }, [eventListeners]);
 
   useEffect(
     initTinyCarousel,
-    [tag, plugins, config, children, className]
+    [tag, plugins, config, children, className, ref]
   );
 
   // to ignore "Expression produces a union type that is too complex to represent. ts(2590)"
