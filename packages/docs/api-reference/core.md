@@ -10,7 +10,7 @@ Styling can be imported via:
 >
 > CSS: `@frsource/tiny-carousel-core/dist/index.css`
 
-When importing Sass source file you can configure [the variables](sass-lang.com/documentation/variables):
+When importing Sass source file you can configure [the variables](https://sass-lang.com/documentation/variables):
 
 - **Sass variables:**
 

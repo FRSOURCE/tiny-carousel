@@ -10,9 +10,6 @@ const scrollToElementAfterTimeout = (selector, timeout) => {
     }, timeout);
 };
 
-const scrollToHash = ($route, timeout) => {
-};
-
 module.exports = {
     mounted () {
         this.$watch('$route', function() {

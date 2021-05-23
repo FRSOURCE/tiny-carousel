@@ -538,7 +538,7 @@ const App = {
 <!-- -->
 new Vue({
   el: '#app',
-  template: '<App/>',
+  template: '&lt;App/&gt;',
   components: { App }
 });
   </template>
