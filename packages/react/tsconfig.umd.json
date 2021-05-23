@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": [
+    "src/*"
+  ],
+  "compilerOptions": {
+    "module": "esnext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "noEmit": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true
+  }
+}

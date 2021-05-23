@@ -12,7 +12,8 @@
   "exports": "./dist/index.modern.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "microbundle --globals react=React,react/jsx-runtime=jsx",
+    "build": "microbundle --globals react=React",
+    "postbuild": "microbundle --tsconfig tsconfig.umd.json --globals react=React --format umd",
     "reactbuild": "react-scripts build",
     "test": "yarn watch:test --watchAll=false",
     "watch:test": "react-scripts test",
