@@ -29,7 +29,6 @@
       <button type="button" @click="--number">Remove slide</button>
     </nav>
   </main>
-  
 </template>
 
 <script lang="ts">

@@ -70,15 +70,12 @@ const component = identityAsExtend({
       let config = this.config;
 
       if (this.carousel?.active) {
-        config = config
-          ? { ...config, active: this.carousel.active }
-          : { active: this.carousel.active };
+        config = { ...config, active: this.carousel.active };
       }
 
       this.carousel?.destroy();
       const carousel = new TinyCarousel(this.$el as HTMLElement, config);
 
-      this.$emit('setup', carousel);
       this.plugins.forEach(([plugin, ...pluginOptions]) =>
         carousel.use(plugin, ...pluginOptions)
       );
