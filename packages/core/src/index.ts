@@ -105,7 +105,7 @@ export class TinyCarousel {
   goTo (n: number) {
     const len = this.config.items.length;
     if (len) {
-      // treat negative numbers as counting from the end of items array
+      // treat negative numbers as counter starting at the end of items array
       while (n < 0) n += len; 
       // treat numbers >= items length as overflow - start counting the rest from the beginning
       while (n >= len) n -= len;
@@ -121,7 +121,7 @@ export class TinyCarousel {
   }
 
   prev () {
-    return this.active > 0 && this.goTo(this.active - 1);
+    return this.goTo(this.active - 1);
   }
 
   resetActive () {
