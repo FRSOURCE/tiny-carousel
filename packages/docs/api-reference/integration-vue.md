@@ -1,6 +1,6 @@
 # Integration - Vue
 
-This packages provides a Vue wrapper component for the Tiny Carousel.
+This package provides a Vue wrapper component for the Tiny Carousel.
 
 To learn on how to install and use plugin, [please see our usage guide](../../guide/usage/#vue) or look into an example Vue app in the [Tiny Carousel Vue repository](https://github.com/FRSOURCE/tiny-carousel/blob/master/packages/vue/src/App.vue).
 
@@ -39,6 +39,7 @@ This integration supports **both** Vue 2 & 3.
 - **Events:**
 
     To add event emission you need to use [Plugin Custom Events](../ecosystem/#plugin-custom-events). All custom events can be handled with use of `v-bind` directive, directly on the `TinyCarousel` component element.
+    For reference [please see the advanced example in our usage guide (especially HTML tab)](../../guide/usage/#vue).
 
 - **Details:**
 
