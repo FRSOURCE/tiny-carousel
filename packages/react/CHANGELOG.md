@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-react@0.2.1...@frsource/tiny-carousel-react@0.3.0) (2021-05-23)
+
+
+### Features
+
+* **react:** redo build chain ([2551470](https://github.com/FRSource/tiny-carousel/commit/25514707dafe670617a1021eb54a311d7530621c))
+
+
+
+
+
 ## [0.2.1](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-react@0.2.0...@frsource/tiny-carousel-react@0.2.1) (2021-05-17)
 
 

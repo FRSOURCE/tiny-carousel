@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2021-05-23)
+
+
+### Features
+
+* **vue:** remove unnecessary setup event ([fa3e187](https://github.com/FRSource/tiny-carousel/commit/fa3e1874678b0fed63f32ceccf51d2ba4d2a7800))
+
+
+
+
+
 ## [0.5.4](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.5.3...@frsource/tiny-carousel-vue@0.5.4) (2021-05-04)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-vue

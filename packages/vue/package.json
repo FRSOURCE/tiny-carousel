@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-vue",
   "amdName": "tinyCarouselVue",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "description": "Brings @frsource/tiny-carousel into the Vue 2/3 world 💚",
   "source": "src/TinyCarousel.ts",
   "types": "dist/TinyCarousel.d.ts",
