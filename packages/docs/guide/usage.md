@@ -32,7 +32,7 @@ See the example below which uses **only** the core package:
 <ExampleSection
     title="Basic Tiny Carousel Core example"
     description="The most simplistic usage example of @frsource/tiny-carousel-core package"
-    default-tab="js"
+    default-tab="html"
 >
   <template slot="html">
 &lt;!-- You can navigate through slides using: scroll, arrows (first focus carousel with a click) or (on touch devices) swiping -->
