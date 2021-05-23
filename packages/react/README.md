@@ -21,6 +21,8 @@
 <p align="center">
   <a href="https://www.frsource.org/tiny-carousel/guide/usage/#react">Usage guide</a>
   ·
+  <a href="https://www.frsource.org/tiny-carousel/api-reference/integration-react/">API Reference</a>
+  ·
   <a href="https://www.frsource.org/tiny-carousel/contribution/">Contribution</a>
   ·
   <a href="https://github.com/FRSOURCE/tiny-carousel/issues">File an Issue</a>
@@ -54,6 +56,7 @@
 For docs, please visit [frsource.org/tiny-carousel](https://www.frsource.org/tiny-carousel/)
 
 - [Getting Started](https://www.frsource.org/tiny-carousel/guide/usage/#react)
+- [API Reference](https://www.frsource.org/tiny-carousel/api-reference/integration-react/)
 - [Ecosystem & plugins](https://www.frsource.org/tiny-carousel/ecosystem/)
 
 ## Questions
