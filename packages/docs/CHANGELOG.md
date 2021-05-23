@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2021-05-23)
+
+
+### Bug Fixes
+
+* **docs:** few errors ([14236e4](https://github.com/FRSource/tiny-carousel/commit/14236e4e962def68e9ecfd4e5e14b1d604f398b8))
+* **docs:** support dark mode favicon properly ([f30ae58](https://github.com/FRSource/tiny-carousel/commit/f30ae5813aafe759d9dda945c0835b4612b89a2d))
+
+
+### Features
+
+* **docs:** sync sidebar scroll with main content ([41b5d45](https://github.com/FRSource/tiny-carousel/commit/41b5d4580b9e51235c138b4e73ec30f02d7e2d1a))
+
+
+
+
+
 ## 0.5.3 (2021-05-04)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-docs
