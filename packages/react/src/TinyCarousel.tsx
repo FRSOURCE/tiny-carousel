@@ -57,7 +57,7 @@ function propToEventName (propEventName: keyof TinyCarouselReactEventProps): key
 
 const TinyCarousel = forwardRef<TinyCarouselRef, TinyCarouselProps>((
   {
-    tag = 'ul',
+    tag: Tag = 'ul',
     plugins,
     config,
     children,
@@ -69,7 +69,6 @@ const TinyCarousel = forwardRef<TinyCarouselRef, TinyCarouselProps>((
   const element = useRef<HTMLElement>(null);
   const previousEventListeners = useRef(eventListeners);
   const carousel = useRef<TinyCarouselCore>();
-  const Tag = tag;
   const initTinyCarousel = () => {
     if (!element.current) return;
 
@@ -119,7 +118,7 @@ const TinyCarousel = forwardRef<TinyCarouselRef, TinyCarouselProps>((
 
   useEffect(
     initTinyCarousel,
-    [tag, plugins, config, children, className, ref]
+    [Tag, plugins, config, children, className, ref]
   );
 
   // to ignore "Expression produces a union type that is too complex to represent. ts(2590)"
