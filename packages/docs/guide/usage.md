@@ -170,6 +170,183 @@ document.querySelector('.last')
 
 In most cases, the same functionality can be obtained using proper Tiny Carousel plugin - we’ve got you covered! But, if you ever find yourself in a situation where you need to do something more custom - know that Tiny Carousel JavaScript API is there and is ready to be used! Read more in the [API docs for core package](../../api-reference/core).
 
+## React
+
+This package integrates Tiny Carousel into React. More detailed info about the API can be found [here](../../api-reference/integration-react).
+
+To start, you need to install the integration:
+
+```bash
+# yarn
+yarn add @frsource/tiny-carousel-react
+
+# npm
+npm install @frsource/tiny-carousel-react
+```
+
+Now let’s see how to add the TinyCarousel to your React application.
+
+<!-- textlint-disable -->
+<ExampleSection
+    title="Example on how to use Tiny Carousel React integration with React"
+    description="This example code shows how to use Tiny Carousel integration for React - @frsource/tiny-carousel-react"
+    default-tab="js"
+    :scripts="['https://unpkg.com/react/umd/react.production.min.js','https://unpkg.com/react-dom/umd/react-dom.production.min.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-react/dist/index.umd.js']"
+    :tags="['react','hooks']"
+>
+  <template slot="html">
+&lt;p&gt;Use arrows or scroll (or swipes on a mobile device) to change slides&lt;/p&gt;
+<!-- -->
+&lt;div id="root"&gt;&lt;/div&gt;
+  </template>
+  <template slot="scss">
+<div>
+@import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
+<!-- -->
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</div>
+  </template>
+  <template slot="typescript">
+// needed because of UMD build
+// it's an equivalent of
+// import TinyCarousel from "@frsource/tiny-carousel-react";
+const TinyCarousel = window.tinyCarouselReact.default;
+<!-- -->
+function App() {
+  const [number, setNumber] = React.useState(6);
+<!-- -->
+  return (
+    &lt;TinyCarousel&gt;
+      {new Array(number).fill(1).map(
+          (_, index) =>
+      &lt;li key={index}&gt;
+          &lt;img
+            className="carousel__item-img"
+            alt={`Demo ${index}`}
+            src={`https://picsum.photos/seed/${index + 1}/800/600`}
+          /&gt;
+          &lt;/li&gt;
+        )
+      }
+    &lt;/TinyCarousel&gt;
+  );
+}
+<!-- -->
+ReactDOM.render(
+  &lt;App /&gt;,
+  document.getElementById('root')
+);
+  </template>
+</ExampleSection>
+<!-- textlint-enable -->
+
+TinyCarousel React component give you possibility to configure carousel, import TinyCarousel plugins, customize tag name and use listen for custom events. To know more about the event handling read [React TinyCarousel API reference](../api-reference/integration-react/#tinycarousel) or have a look at the advanced example below:
+
+<!-- textlint-disable -->
+<ExampleSection
+    title="Example of advanced usage of the Tiny Carousel React integration"
+    description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element tag name to something custom - like 'section' when using React integration - @frsource/tiny-carousel-react"
+    default-tab="js"
+    height="450px"
+    :scripts="['https://unpkg.com/react/umd/react.production.min.js','https://unpkg.com/react-dom/umd/react-dom.production.min.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-react/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-autoplay/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-custom-events/dist/index.umd.js']"
+    :tags="['react','hooks']"
+>
+  <template slot="html">
+&lt;p&gt;Use arrows or scroll (or swipes on a mobile device) to change slides&lt;/p&gt;
+<!-- -->
+&lt;div id="root"&gt;&lt;/div&gt;
+  </template>
+  <template slot="scss">
+<div>
+@import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
+<!-- -->
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</div>
+  </template>
+  <template slot="typescript">
+// needed because of skypack/codepen limitations
+// it's an equivalent of e.g.:
+// import TinyCarousel from "@frsource/tiny-carousel-react";
+// and
+// import { pluginCustomEvents } from '@frsource/tiny-carousel-plugin-custom-events';
+const {
+  default: TinyCarousel,
+  definePlugin,
+  PluginsProp,
+  TinyCarouselProps,
+  TinyCarouselRef
+} = window.tinyCarouselReact;
+const { pluginAutoplay } = window.tinyCarouselPluginAutoplay;
+const { pluginCustomEvents } = window.tinyCarouselPluginCustomEvents;
+<!-- -->
+const carouselPlugins: PluginsProp = [
+  definePlugin(pluginAutoplay, {
+    autoplayTimeout: 4000,
+  }),
+  definePlugin(pluginCustomEvents),
+];
+<!-- -->
+function App() {
+  const [number, setNumber] = React.useState(6);
+  const [isInitialized, setIsInitialized] = React.useState(false);
+  const tinyCarousel = React.useRef&lt;TinyCarouselRef&gt;(null);
+  const onCarouselInit: TinyCarouselProps['onAfterEventInit'] = e => {
+    setIsInitialized(true);
+    e.detail.tinyCarousel.play();
+  };
+  const clickPrev = () => tinyCarousel.current?.prev();
+  const clickNext = () => tinyCarousel.current?.next();
+<!-- -->
+  return (
+  &lt;main&gt;
+    &lt;p className="carousel-status"&gt;Carousel is { isInitialized ? 'initialized' : 'not initialized' }&lt;/p&gt;
+<!-- -->
+    &lt;TinyCarousel
+      className="carousel"
+      tag="section"
+      plugins={carouselPlugins}
+      onAfterEventInit={onCarouselInit}
+      ref={tinyCarousel}
+    &gt;
+      {new Array(number).fill(1).map(
+          (_, index) =>
+      &lt;article key={index}&gt;
+          &lt;img
+            className="carousel__item-img"
+            alt={`Demo ${index}`}
+            src={`https://picsum.photos/seed/${index + 1}/800/600`}
+          /&gt;
+          &lt;/article&gt;
+        )
+      }
+    &lt;/TinyCarousel&gt;
+<!-- -->
+    &lt;nav className="row"&gt;
+      &lt;button type="button" onClick={clickPrev}&gt;prev&lt;/button&gt;
+      &lt;button type="button" onClick={clickNext}&gt;next&lt;/button&gt;
+      &lt;button type="button" onClick={() => setNumber(number + 1)}&gt;Add slide&lt;/button&gt;
+      &lt;button type="button" onClick={() => setNumber(number - 1)}&gt;Remove slide&lt;/button&gt;
+    &lt;/nav&gt;
+  &lt;/main&gt;
+  );
+}
+<!-- -->
+ReactDOM.render(
+  &lt;App /&gt;,
+  document.getElementById('root')
+);
+  </template>
+</ExampleSection>
+<!-- textlint-enable -->
+
 ## Vue
 
 This package integrates Tiny Carousel into Vue. More detailed info about the API can be found [here](../../api-reference/integration-vue).
