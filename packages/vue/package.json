@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-vue",
   "amdName": "tinyCarouselVue",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Brings @frsource/tiny-carousel into the Vue 2/3 world 💚",
   "source": "src/TinyCarousel.ts",
   "types": "dist/TinyCarousel.d.ts",
@@ -62,10 +62,10 @@
     "access": "public"
   },
   "devDependencies": {
-    "@frsource/tiny-carousel-core": "^0.8.0",
-    "@frsource/tiny-carousel-plugin-autoplay": "^0.4.1",
-    "@frsource/tiny-carousel-plugin-custom-events": "^0.4.1",
-    "@frsource/tiny-carousel-plugin-mouse-drag": "^0.3.0",
+    "@frsource/tiny-carousel-core": "^0.9.0",
+    "@frsource/tiny-carousel-plugin-autoplay": "^0.4.2",
+    "@frsource/tiny-carousel-plugin-custom-events": "^0.4.2",
+    "@frsource/tiny-carousel-plugin-mouse-drag": "^0.3.1",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",

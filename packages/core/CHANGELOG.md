@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2021-05-23)
+
+
+### Features
+
+* **core:** unify blocking of next & prev methods ([17de32c](https://github.com/FRSource/tiny-carousel/commit/17de32c641f6fe2da77bae8743a4eb7af3792de0))
+
+
+
+
+
 # [0.8.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-core@0.7.0...@frsource/tiny-carousel-core@0.8.0) (2021-04-06)
 
 
