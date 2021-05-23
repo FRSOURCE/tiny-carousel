@@ -1,7 +1,7 @@
-const scrollToHash = ($route, timeout) => {
+const scrollToElementAfterTimeout = (selector, timeout) => {
     setTimeout(() => {
-        if ($route.hash) {
-            const element = document.getElementById($route.hash.slice(1));
+        if (selector) {
+            const element = document.querySelector(selector);
 
             if (element && element.scrollIntoView) {
                 element.scrollIntoView();
@@ -10,8 +10,15 @@ const scrollToHash = ($route, timeout) => {
     }, timeout);
 };
 
+const scrollToHash = ($route, timeout) => {
+};
+
 module.exports = {
     mounted () {
-        scrollToHash(this.$route, 800);
+        this.$watch('$route', function() {
+            scrollToElementAfterTimeout('.sidebar-sub-headers .sidebar-link.active', 0);
+        });
+        scrollToElementAfterTimeout(this.$route.hash, 800);
+        scrollToElementAfterTimeout('.sidebar-sub-headers .sidebar-link.active', 800);
     }
 };
