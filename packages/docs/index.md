@@ -12,7 +12,7 @@ features:
 - title: 📚 Modular
   details: Choose only the modules you need to use in your application and don't import any unnecessary code. No more bloating of your bundle!
 - title: 👫 Community-driven
-  details: From developer for developers. Is anything missing? Have you found a bug? Feel free to post a feature request/bug report/PR on GitHub!
+  details: From developers for developers. Is anything missing? Have you found a bug? Feel free to post a feature request/bug report/PR on GitHub!
 ---
 
 <HeroSection :link="{href: '/contribution/', text: 'Contribute\xa0→'}">
