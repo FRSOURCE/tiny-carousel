@@ -48,7 +48,6 @@ module.exports = {
         ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'white' }],
         ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=2' }],
         ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg?v=2', color: '#f150a0' }],
-        ['link', { rel: 'shortcut icon', href: '/favicon.ico?v=2' }],
         ['meta', { name: 'msapplication-TileColor', content: '#f150a0' }]
     ],
     markdown: {
