@@ -265,14 +265,6 @@ describe('prev', () => {
     expect(goToSpy).toHaveBeenCalledTimes(1);
     expect(goToSpy).toHaveBeenCalledWith(0);
   });
-
-  describe('when active <= 0', () => {
-    it('should do nothing', () => {
-      initializeCarouselAtActiveItem(0);
-      carousel.prev();
-      expect(goToSpy).not.toHaveBeenCalled();
-    });
-  });
 });
 
 describe('resetActive', () => {
@@ -320,9 +312,10 @@ describe('active::get', () => {
     carousel.init();
   });
 
-  it('should return proper active index', () => {
+  it('should return proper active index no matter how many times is being run', () => {
     Object.defineProperty(element, 'scrollLeft', { value: 160 });
     Object.defineProperty(element, 'clientWidth', { value: 5 });
+    expect(carousel.active).toBe(1);
     expect(carousel.active).toBe(1);
   });
 
