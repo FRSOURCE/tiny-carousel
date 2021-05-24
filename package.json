@@ -68,7 +68,7 @@
     "postcss-import": "^14.0.0",
     "postcss-reporter": "^7.0.2",
     "precss": "^4.0.0",
-    "puppeteer": "^5.5.0",
+    "puppeteer": "^8.0.0",
     "rimraf": "^3.0.2",
     "sass": "^1.32.2",
     "standard-version": "^9.1.0",
