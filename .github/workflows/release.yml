@@ -21,7 +21,7 @@ jobs:
             git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
       - uses: actions/setup-node@v1
         with:
-          node-version: '15.x'
+          node-version: '16.x'
       - name: Set yarn cache directory
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
