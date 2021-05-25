@@ -15,7 +15,7 @@
     "watch:test": "lerna run watch:test --parallel",
     "coverage": "lerna run coverage --parallel",
     "lint": "concurrently 'lerna run lint --parallel' 'yarn lint:text'",
-    "lint:text": "textlint README.md packages/*/README.md",
+    "lint:text": "textlint CODE_OF_CONDUCT.md CONTRIBUTING.md README.md packages/*/README.md",
     "fix:lint": "concurrently 'lerna run fix:lint --parallel' 'yarn lint:text --fix'",
     "link": "lerna link",
     "postinstall": "lerna bootstrap",

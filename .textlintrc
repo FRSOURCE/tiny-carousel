@@ -6,7 +6,7 @@
     "@textlint-rule/no-unmatched-pair": true,
     "abbr-within-parentheses": true,
     "alex": {
-        "allow": []
+        "allow": ["master"]
     },
     "apostrophe": true,
     "common-misspellings": {
@@ -27,9 +27,10 @@
     "spelling": {
         "language": "en",
         "skipPatterns": [
-          "/\\b(?:SASS|camelCased|reinitialization|typings|Integrations|Deregisters|minifies|pluggable|scrollbars?|mousemove|JavaScript|autoplay|Autoplay|lifecycle|CustomEvents?|polyfill|Config|PluginDefinition|interface|getter|Getter|defaultConfig|doesn’t|TinyCarousel|carouselElement|CarouselElement|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|Jakub|vanillaJS|customizable|polyfills|performant|2020|2021)\\b/g",
+          "/\\b(?:SASS|camelCased|npm|isn’t|reinitialization|typings|Integrations|Deregisters|minifies|pluggable|scrollbars?|mousemove|JavaScript|autoplay|Node\\.js|Autoplay|lifecycle|CustomEvents?|polyfill|Config|PluginDefinition|interface|getter|Getter|defaultConfig|doesn’t|TinyCarousel|carouselElement|CarouselElement|I18n|Vue|W3C|CDN|TODO|frsource|FRSOURCE|Freisler|FRS|changelogs|Jakub|v1|vanillaJS|customizable|polyfills|performant|2020|2021)\\b/g",
           "/\\bchangelog\\b/i",
           "/(?:\\s|^):[a-z]+:(?:\\s|$)/ig",
+          "/(?:\\s|^)https:\/\/[^\\s]+\/(?:\\s|$)/ig",
           "/(?:\\s|^)<[a-z].*>?(?:\\s|$)/ig",
           "/\\b(?:’ve)\\b/i"
         ]
