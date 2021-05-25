@@ -15,7 +15,7 @@ Learn more about the core package:
 
 Integration is a package which allows using TinyCarousel with a framework/library of your choice.
 
-### Vue
+### React
 
 `@frsource/tiny-carousel` for your React app ⚛️
 
