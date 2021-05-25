@@ -1,4 +1,4 @@
-# Vue.js Contributing Guide
+# TinyCarousel Contributing Guide
 
 Hey! It's really exciting for us to see your interest in contributing to TinyCarousel. Before taking off with your work, please take a moment to read through these guidelines:
 
@@ -80,17 +80,6 @@ $ yarn build
 
 There are some other scripts available in the `scripts` section of the `package.json` file.
 
-
-## Financial Contribution
-
-As a pure community-driven project without major corporate backing, we also welcome financial contributions via Patreon and OpenCollective.
-
-- [Become a backer or sponsor on Patreon](https://www.patreon.com/evanyou)
-- [Become a backer or sponsor on OpenCollective](https://opencollective.com/vuejs)
-- [One-time donation via PayPal or crypto-currencies](https://vuejs.org/support-vuejs/#One-time-Donations)
-
 ## Credits
 
 Special thanks to all the people who have already contributed to TinyCarousel! ❤️
-
-- [Become a backer or sponsor on OpenCollective](https://opencollective.com/vuejs)
