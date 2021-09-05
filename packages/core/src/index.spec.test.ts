@@ -337,7 +337,7 @@ describe('handleOverflow', () => {
     beforeEach(() => carousel.config.overflow = false);
 
     it('shouldn\'t call goTo', () => {
-      carousel.handleOverflow();
+      (carousel as unknown as {handleOverflow: ()=> void}).handleOverflow();
       expect(goToSpy).not.toHaveBeenCalled();
     });
   });
@@ -346,7 +346,7 @@ describe('handleOverflow', () => {
     describe('when config.items.length === 0', () => {
       it('shouldn\'t call goTo', () => {
         carousel.config.items = [];
-        carousel.handleOverflow();
+        (carousel as unknown as {handleOverflow: ()=> void}).handleOverflow();
         expect(goToSpy).not.toHaveBeenCalled();
       });
     });
@@ -356,7 +356,7 @@ describe('handleOverflow', () => {
       afterAll(() => findXSnapIndexMock.mockImplementation(findXSnapIndexActual));
       beforeEach(() => {
         carousel.resetActive();
-        carousel.handleOverflow();
+        (carousel as unknown as {handleOverflow: ()=> void}).handleOverflow();
       });
 
       it('should call goTo with this.active', () => {
@@ -369,7 +369,7 @@ describe('handleOverflow', () => {
       afterAll(() => findXSnapIndexMock.mockImplementation(findXSnapIndexActual));
       beforeEach(() => {
         carousel.resetActive();
-        carousel.handleOverflow();
+        (carousel as unknown as {handleOverflow: ()=> void}).handleOverflow();
       });
 
       it('should call goTo with this.active', () => {
@@ -382,7 +382,7 @@ describe('handleOverflow', () => {
       afterAll(() => findXSnapIndexMock.mockImplementation(findXSnapIndexActual));
       beforeEach(() => {
         carousel.resetActive();
-        carousel.handleOverflow();
+        (carousel as unknown as {handleOverflow: ()=> void}).handleOverflow();
       });
 
       it('shouldn\'t call goTo', () => {
