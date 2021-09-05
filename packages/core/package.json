@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-core",
   "amdName": "tinyCarouselCore",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Core module for @frsource/tiny-carousel, based on CSS scroll snap feature 🚀",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -58,7 +58,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@frsource/tiny-carousel-utils": "^0.4.0"
+    "@frsource/tiny-carousel-utils": "^0.5.0"
   },
   "peerDependencies": {
     "@frsource/frs-hide-scrollbar": "^2.0.5"

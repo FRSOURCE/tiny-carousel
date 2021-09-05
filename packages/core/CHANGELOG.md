@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-core@0.9.0...@frsource/tiny-carousel-core@0.10.0) (2021-09-05)
+
+
+### Features
+
+* carousel overflow ([96e06af](https://github.com/FRSource/tiny-carousel/commit/96e06af280f358f65dc87117a604b2fdf13a9c47))
+* carousel overflow pt2 ([8775761](https://github.com/FRSource/tiny-carousel/commit/8775761891174214dee54cc96908253675d3465e))
+
+
+### BREAKING CHANGES
+
+* change SCSS variable names
+
+
+
+
+
 # 0.9.0 (2021-05-23)
 
 

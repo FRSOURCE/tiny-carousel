@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.6.1...@frsource/tiny-carousel-vue@0.7.0) (2021-09-05)
+
+
+### Features
+
+* carousel overflow ([96e06af](https://github.com/FRSource/tiny-carousel/commit/96e06af280f358f65dc87117a604b2fdf13a9c47))
+
+
+
+
+
 ## 0.6.1 (2021-05-23)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-vue
