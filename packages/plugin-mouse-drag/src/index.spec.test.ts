@@ -16,6 +16,7 @@ const findXSnapIndexMock = findXSnapIndex as jest.Mock;
 const referenceParentOffsetLeftMock = referenceParentOffsetLeft as jest.Mock;
 let init: jest.SpyInstance;
 let destroy: jest.SpyInstance;
+let goTo: jest.SpyInstance;
 let requestAnimationFrame: jest.SpyInstance;
 let preventDefault: jest.SpyInstance;
 let carousel: TinyCarousel;
@@ -51,6 +52,7 @@ beforeAll(() => {
   referenceParentOffsetLeftMock.mockReturnValue(20);
   requestAnimationFrame = jest.spyOn(global, 'requestAnimationFrame').mockReturnValue(0);
   init = jest.fn();
+  goTo = jest.fn();
   destroy = jest.fn();
   preventDefault = jest.fn();
 });
@@ -63,6 +65,7 @@ beforeEach(() =>
       mouseDragMomentumGravity,
       items: [document.createElement('div'), document.createElement('div')],
     },
+    goTo,
     destroy,
     init,
   } as unknown as TinyCarousel
@@ -189,49 +192,55 @@ describe('install', () => {
       carousel.carouselElement.scrollLeft = 30;
       callMouseDownHandler();
       callMouseMoveHandler();
-      callMouseUpHandler();
     });
     afterAll(() => jest.useRealTimers());
 
     it('should remove mousemove & mouseup listeners', () => {
+      callMouseUpHandler();
       expect(offMock).toHaveBeenCalledWith(document, 'mousemove', expect.any(Function));
       expect(offMock).toHaveBeenCalledWith(document, 'mouseup', expect.any(Function));
     });
 
     it('should remove dragging class name', () => {
+      callMouseUpHandler();
       expect(carousel.carouselElement.classList.contains(mouseDragDraggingClassName)).toBeFalsy();
     });
 
     it('should add momentum class name', () => {
+      callMouseUpHandler();
       expect(carousel.carouselElement.classList.contains(mouseDragMomentumClassName)).toBeTruthy();
     });
 
-    it('should not call horizontalSnapToIndexMock yet', () => {
+    it('should not call findXSnapIndex yet', () => {
+      callMouseUpHandler();
       expect(findXSnapIndexMock).not.toHaveBeenCalled();
     });
 
     describe('after throttle timeout', () => {
-      const diffX = -4.2726179791593655;
-      const step = (start: number, n: number) =>
+      const step = (start: number, n: number, diffX = -4.229891799367771) =>
         Array(n).fill(0).reduce(
           (p, _, i) => p + diffX * Math.sin(1 - .02 * i),
           start
         );
       const round = (n: number, approx: number) => Math.round(n * 10 ** approx) / 10 ** approx
-      beforeEach(() => {
+      const startAnimation = () => {
+        callMouseUpHandler();
         jest.advanceTimersByTime(mouseDragThrottle);
-      });
+      };
 
       it('should call horizontalSnapToIndex predict final index', () => {
-        expect(findXSnapIndexMock).toHaveBeenCalledWith(carousel.carouselElement, carousel.config.items, 585.12135);
+        startAnimation();
+        expect(findXSnapIndexMock).toHaveBeenCalledWith(carousel.carouselElement, carousel.config.items, false, 585.12135);
       });
 
       it('should immediately move carousel element with ease by 1 step', () => {
+        startAnimation();
         expect(carousel.carouselElement.scrollLeft).toBe(step(80, 1));
       });
       
       describe('after 2 animation frames', () => {
         beforeEach(() => {
+          startAnimation();
           const [ animate ] = requestAnimationFrame.mock.calls[0];
           animate();
           animate();
@@ -248,6 +257,7 @@ describe('install', () => {
       
       describe('after 50 animation frames', () => {
         beforeEach(() => {
+          startAnimation();
           const [ animate ] = requestAnimationFrame.mock.calls[0];
           Array(49).fill(0).forEach(animate);
           requestAnimationFrame.mockClear();
@@ -268,6 +278,43 @@ describe('install', () => {
 
         it('should not call requestAnimationFrame for last animation step', () => {
           expect(requestAnimationFrame).not.toHaveBeenCalled();
+        });
+      });
+
+      describe('when diffX > 0', () => {
+        beforeEach(() => {
+          carousel.carouselElement.scrollLeft = -30;
+          startAnimation();
+        });
+
+        it('should immediately move carousel element with ease by 1 step', () => {
+          expect(carousel.carouselElement.scrollLeft).toBe(step(-30, 1, .3845356181243429));
+        });
+      });
+
+      describe('when findXSnapIndex returns -1', () => {
+        beforeEach(() => {
+          findXSnapIndexMock.mockReturnValueOnce(-1);
+          startAnimation();
+        });
+
+        it('should try to calculate offset towards the first item', () => {
+          expect(referenceParentOffsetLeftMock).toHaveBeenCalledWith(carousel.carouselElement, carousel.config.items[0]);
+        });
+      });
+
+      describe('when findXSnapIndex returns config.items.length', () => {
+        beforeEach(() => {
+          findXSnapIndexMock.mockReturnValueOnce(carousel.config.items.length);
+          startAnimation();
+        });
+
+        it('should try to calculate offset towards the last item', () => {
+          expect(referenceParentOffsetLeftMock)
+            .toHaveBeenCalledWith(
+              carousel.carouselElement,
+              carousel.config.items[carousel.config.items.length - 1]
+            );
         });
       });
     });

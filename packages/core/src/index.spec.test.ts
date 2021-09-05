@@ -35,9 +35,11 @@ afterEach(() => {
 const defaultConfiguration = {
   active: 0,
   className: 'frs-tc',
+  classNameOverflow: 'frs-tc--o',
   hideScrollClassName: 'frs-hide-scroll',
   itemClassName: 'frs-tc-item',
   items: [],
+  overflow: true,
 };
 
 describe('::defaultConfig::get', () => {
@@ -69,9 +71,11 @@ describe('constructor', () => {
       expect(carousel.config).toEqual({
         active: 0,
         className: 'frs-tc',
+        classNameOverflow: 'frs-tc--o',
         hideScrollClassName: 'frs-hide-scroll',
         itemClassName: 'frs-tc-item',
         items: [],
+        overflow: true,
       });
     });
   });
@@ -84,9 +88,11 @@ describe('constructor', () => {
       expect(carousel.config).toEqual({
         active: 1,
         className: 'frs-tc',
+        classNameOverflow: 'frs-tc--o',
         hideScrollClassName: 'frs-hide-scroll',
         itemClassName: 'frs-tc-item',
         items: [],
+        overflow: true,
       });
       config = undefined;
     });
@@ -146,7 +152,7 @@ describe('init', () => {
 
   it('should add classnames from the config', () => {
     carousel.init();
-    expect(element.className).toBe('something frs-hide-scroll');
+    expect(element.className).toBe('something frs-hide-scroll frs-tc--o');
   });
 
   it('should add item classnames from the config to the items', () => {
@@ -174,11 +180,23 @@ describe('init', () => {
       expect(carousel.config).toEqual({
         active: 2,
         className: 'something',
+        classNameOverflow: 'frs-tc--o',
         hideScrollClassName: 'frs-hide-scroll',
         itemClassName: 'frs-tc-item',
         items: carousel.config.items,
+        overflow: true,
       });
       config = undefined;
+    });
+  });
+
+  describe('when `config.overflow` = false', () => {
+    beforeEach(() => carousel.config.overflow = false);
+
+    it('shouldn`t add overflow css class to the carouselElement', () => {
+      carousel.init();
+  
+      expect(carousel.carouselElement.className).toBe('frs-tc frs-hide-scroll');
     });
   });
 });
@@ -210,11 +228,27 @@ describe('goTo', () => {
       carousel.goTo(1);
       expect(element.scrollLeft).toBe(150);
     });
+
+    describe('when config.overflow = false', () => {
+      it('should move carousel to the correct position', () => {
+        carousel.config.overflow = false;
+        carousel.goTo(2);
+        expect(element.scrollLeft).toBe(300);
+      });
+    });
   
     describe('when value is bigger than items count', () => {
       it('should handle the overflow gracefully and move carousel to the correct position', () => {
         carousel.goTo(4);
         expect(element.scrollLeft).toBe(150);
+      });
+
+      describe('when config.overflow = false', () => {
+        it('should stay at the last item', () => {
+          carousel.config.overflow = false;
+          carousel.goTo(4);
+          expect(element.scrollLeft).toBe(300);
+        });
       });
     });
 
@@ -223,11 +257,27 @@ describe('goTo', () => {
         carousel.goTo(-2);
         expect(element.scrollLeft).toBe(150);
       });
+
+      describe('when config.overflow = false', () => {
+        it('should stay at the first item', () => {
+          carousel.config.overflow = false;
+          carousel.goTo(-2);
+          expect(element.scrollLeft).toBe(0);
+        });
+      });
+    });
   
-      describe('when value is smaller than -items.length', () => {
-        it('should repeat the counting with value + items.length until it gets a valid item number', () => {
-          carousel.goTo(-20); // 20 % 3 == 2
-          expect(element.scrollLeft).toBe(150);
+    describe('when value is smaller than -items.length', () => {
+      it('should repeat the counting with value + items.length until it gets a valid item number', () => {
+        carousel.goTo(-20); // 20 % 3 == 2
+        expect(element.scrollLeft).toBe(150);
+      });
+
+      describe('when config.overflow = false', () => {
+        it('should stay at the first item', () => {
+          carousel.config.overflow = false;
+          carousel.goTo(-20);
+          expect(element.scrollLeft).toBe(0);
         });
       });
     });
@@ -271,6 +321,74 @@ describe('resetActive', () => {
   it('should run without any errors', () => {
     initializeCarousel();
     expect(carousel.resetActive()).toBeUndefined();
+  });
+});
+
+describe('handleOverflow', () => {
+  let goToSpy: jest.SpyInstance;
+  beforeEach(() => {
+    initializeCarousel();
+    carousel.init();
+    goToSpy = jest.spyOn(carousel, 'goTo').mockReturnValue(carousel);
+  });
+  afterEach(() => goToSpy.mockRestore());
+
+  describe('when config.overflow = false', () => {
+    beforeEach(() => carousel.config.overflow = false);
+
+    it('shouldn\'t call goTo', () => {
+      carousel.handleOverflow();
+      expect(goToSpy).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('when config.overflow = true', () => {
+    describe('when config.items.length === 0', () => {
+      it('shouldn\'t call goTo', () => {
+        carousel.config.items = [];
+        carousel.handleOverflow();
+        expect(goToSpy).not.toHaveBeenCalled();
+      });
+    });
+
+    describe('when active === -1', () => {
+      beforeAll(() => findXSnapIndexMock.mockReturnValue(-1));
+      afterAll(() => findXSnapIndexMock.mockImplementation(findXSnapIndexActual));
+      beforeEach(() => {
+        carousel.resetActive();
+        carousel.handleOverflow();
+      });
+
+      it('should call goTo with this.active', () => {
+        expect(goToSpy).toHaveBeenCalledWith(-1);
+      });
+    });
+
+    describe('when active === config.items.length', () => {
+      beforeAll(() => findXSnapIndexMock.mockReturnValue(3));
+      afterAll(() => findXSnapIndexMock.mockImplementation(findXSnapIndexActual));
+      beforeEach(() => {
+        carousel.resetActive();
+        carousel.handleOverflow();
+      });
+
+      it('should call goTo with this.active', () => {
+        expect(goToSpy).toHaveBeenCalledWith(carousel.config.items.length);
+      });
+    });
+
+    describe('when active !== -1 or config.items.length', () => {
+      beforeAll(() => findXSnapIndexMock.mockReturnValue(2));
+      afterAll(() => findXSnapIndexMock.mockImplementation(findXSnapIndexActual));
+      beforeEach(() => {
+        carousel.resetActive();
+        carousel.handleOverflow();
+      });
+
+      it('shouldn\'t call goTo', () => {
+        expect(goToSpy).not.toHaveBeenCalled();
+      });
+    });
   });
 });
 

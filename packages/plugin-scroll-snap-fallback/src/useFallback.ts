@@ -23,8 +23,7 @@ export const useFallback = (
     };
   
     on(carousel.carouselElement, 'scroll', timeoutedOnScroll, { passive: true });
-  
-    //
+
     // TODO: cover this method with tests (Playwright/Puppeteer/cypress E2E?)
     /* istanbul ignore next */
     function onScroll (oldInitialScrollLeft: number, e: Event) {

@@ -1,19 +1,24 @@
-import { throttle } from "./limiters";
+import { throttle, debounce } from "./limiters";
 
 const context = {};
 const args = ['anything', 2];
 let callback: jest.Mock;
 let throttled: (...args: unknown[])=> void;
+let debounced: (...args: unknown[])=> void;
 
 beforeAll(() => {
   jest.useFakeTimers('modern');
   callback = jest.fn();
 });
-beforeEach(() => throttled = throttle(callback, 1000));
-afterEach(() => jest.clearAllMocks());
+afterEach(() => {
+  jest.advanceTimersByTime(1000); // flush all pending debounced/throttled fns
+  jest.clearAllMocks();
+});
 afterAll(() => jest.useRealTimers());
 
 describe('throttle', () => {
+  beforeEach(() => throttled = throttle(callback, 1000));
+
   it('should run the callback immediately with correct context and arguments', () => {
     throttled.apply(context, args);
     expect(callback).toHaveBeenCalledTimes(1);
@@ -63,6 +68,59 @@ describe('throttle', () => {
       expect(callback.mock.instances[0]).toBe(context);
       expect(callback.mock.instances[1]).toBe(context);
       expect(callback.mock.instances[2]).toBe(context);
+    });
+  });
+});
+
+describe('debounce', () => {
+  beforeEach(() => debounced = debounce(callback, 1000));
+
+  it('should not call callback immediately', () => {
+    debounced();
+
+    expect(callback).not.toHaveBeenCalled();
+  });
+
+  describe('when 500ms passed', () => {
+    it('should not call callback yet', () => {
+      debounced();
+      jest.advanceTimersByTime(500);
+
+      expect(callback).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('when called twice and 1000ms passed', () => {
+    it('should call callback once', () => {
+      debounced();
+      debounced();
+      jest.advanceTimersByTime(1000);
+
+      expect(callback).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('when nothing passed as the timeout argument', () => {
+    it('should default to 500ms', () => {
+      debounced = debounce(callback);
+
+      debounced();
+      jest.advanceTimersByTime(500);
+
+      expect(callback).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('when called single time, wait 500ms, called second time, wait 1500s, called third time, wait 1000ms', () => {
+    it('should be called twice', () => {
+      debounced();
+      jest.advanceTimersByTime(500);
+      debounced();
+      jest.advanceTimersByTime(1500);
+      debounced();
+      jest.advanceTimersByTime(1000);
+
+      expect(callback).toHaveBeenCalledTimes(2);
     });
   });
 });

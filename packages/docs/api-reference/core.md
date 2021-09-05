@@ -14,13 +14,26 @@ When importing Sass source file you can configure [the variables](https://sass-l
 
 - **Sass variables:**
 
-    - `{string} $class-name = "frs-tc"`
-    - `{string} $item-class-name = "frs-tc-item"`
+    - `{string} $frs-tc-class-name = "frs-tc"`
+    - `{string} $frs-tc-class-name-overflow = "frs-tc--o"`
+    - `{string} $frs-tc-item-class-name = "frs-tc-item"`
 
 - **Details:**
 
-    - `$class-name` is a class name added to the carousel element
-    - `$item-class-name` is a class name added to the carousel items (slides)
+    - `$frs-tc-class-name` is a class name added to the carousel element
+    - `$frs-tc-class-name-overflow` is a class name added to the carousel element when [overflow option](#config) is set to `true`
+    - `$frs-tc-item-class-name` is a class name added to the carousel items (slides)
+
+:::tip
+Every `SCSS variable` should be changed together with a corresponding [Config](#config) option.
+:::
+
+- **Example:**
+
+```scss
+$frs-tc-class-name: "some-custom-classname";
+@import "~@frsource/tiny-carousel-core";
+```
 
 :::tip
 This packages uses [`@frsource/frs-hide-scrollbar`](https://www.npmjs.com/package/@frsource/frs-hide-scrollbar) to hide native scrollbars. So, when importing the core Sass styling you have a possibility to set [`@frsource/frs-hide-scrollbar` configuration](https://www.frsource.org/FRS-hide-scrollbar/usage) beforehand.
@@ -240,13 +253,18 @@ To recalculate [`carousel.active`](#carousel-active) in place, call `carousel.re
 
     - `{number} active = 0`
     - `{string} className = "frs-tc"`
+    - `{string} classNameOverflow = "frs-tc--o"`
     - `{string} itemClassName = "frs-tc-item"`
     - `{string} hideScrollClassName = "frs-hide-scroll"`
+    - `{boolean} overflow = true`
     - `HTMLElement[] items = []`
 
 - **Details:**
 
-    Data type which holds most of the Tiny Carousel configuration.
+    Data type which holds most of the Tiny Carousel configuration. To be changed together with `SCSS variables` - more in [the styling section](#styling).
+
+    - `active` index of the item which should be activated during carousel initialization
+    - `overflow` allows toggling the overflow behavior on/off
 
 :::tip
 When changing `hideScrollClassName` always remember to change the `$frs-hide-scroll` Sass variable as well. More information available in [the styling section](#styling) or [`@frsource/frs-hide-scrollbar` documentation](https://www.frsource.org/FRS-hide-scrollbar/usage).

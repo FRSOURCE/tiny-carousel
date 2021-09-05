@@ -4,12 +4,17 @@
  * To be changed together with `className` core variable
  * More info: https://www.frsource.org/tiny-carousel/api-reference/core/#config
  */
-$class-name: 'frs-tc' !default;
+$frs-tc-class-name: 'frs-tc' !default;
+/**
+ * To be changed together with `classNameOverflow` core variable
+ * More info: https://www.frsource.org/tiny-carousel/api-reference/core/#config
+ */
+$frs-tc-class-name-overflow: 'frs-tc--o' !default;
 /**
  * To be changed together with `itemClassName` core variable
  * More info: https://www.frsource.org/tiny-carousel/api-reference/core/#config
  */
-$item-class-name: 'frs-tc-item' !default;
+$frs-tc-item-class-name: 'frs-tc-item' !default;
 
 .#{$class-name} {
   display: flex;
@@ -34,6 +39,15 @@ $item-class-name: 'frs-tc-item' !default;
   }
 }
 
+.#{$class-name-overflow} {
+  &::before,
+  &::after {
+    content: '';
+  }
+}
+
+.#{$class-name-overflow}::before,
+.#{$class-name-overflow}::after,
 .#{$item-class-name} {
   flex: 0 0 100%;
   overflow: hidden;

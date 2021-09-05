@@ -40,6 +40,7 @@ export const pluginMouseDrag = {
     
     let throttledMouseMove: EventListener;
     let pos: { top: number, left: number, diffX: number, diffY: number };
+    let overflowValue: boolean | undefined;
 
     function clearDocumentListeners() {
       off(document, 'mousemove', throttledMouseMove);
@@ -47,6 +48,8 @@ export const pluginMouseDrag = {
     }
 
     function mouseDownHandler(e: MouseEvent) {
+      overflowValue = instance.config.overflow;
+      instance.config.overflow = false;
       instance.carouselElement.classList.add(instance.config.mouseDragDraggingClassName);
       e.preventDefault();
 
@@ -78,18 +81,25 @@ export const pluginMouseDrag = {
         pos.diffX /= instance.config.mouseDragMomentumGravity;
                 
         // final X, Y
-        const index = findXSnapIndex(
+        let index = findXSnapIndex(
           instance.carouselElement,
           instance.config.items,
+          instance.config.overflow,
           pos.diffX * MOMENTUM_DISTANCE_FACTOR,
         );
+
+        // let goTo method handle overflow
+        if (index === -1) index = instance.config.items.length - 1;
+        else if (index === instance.config.items.length) index = 0;
+
         const elementSoontoBeActive = instance.config.items[index];
         const offsetParentOffsetX = referenceParentOffsetLeft(instance.carouselElement, elementSoontoBeActive);
         
         // store scrollLeft and raise it separately (not directly through carouselElement.scrollLeft +=)
         // because browsers do rounding on every assignment which can break our calculations
         let { scrollLeft } = instance.carouselElement;
-        pos.diffX = (elementSoontoBeActive.offsetLeft - offsetParentOffsetX - scrollLeft) / MOMENTUM_DISTANCE_FACTOR;
+        const diffX = elementSoontoBeActive.offsetLeft - offsetParentOffsetX - scrollLeft;
+        pos.diffX = (diffX + (diffX > 0 ? -1 : 1)) / MOMENTUM_DISTANCE_FACTOR;
 
         function animate() {
             const step = Math.sin(start);
@@ -99,7 +109,9 @@ export const pluginMouseDrag = {
               start -= 0.02;
               requestAnimationFrame(animate);
             } else {
+              instance.config.overflow = overflowValue;
               instance.carouselElement.classList.remove(instance.config.mouseDragMomentumClassName);
+              instance.goTo(index);
             }
         }
         animate();

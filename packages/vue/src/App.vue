@@ -8,6 +8,7 @@
     <TinyCarousel
       class="carousel"
       tag="ul"
+      :config="carouselConfig"
       :plugins="carouselPlugins"
       @after:init="isInitialized = true"
       ref="tinyCarousel"
@@ -16,6 +17,7 @@
         <img
           class="carousel__item-img"
           :src="`https://picsum.photos/seed/${index}/800/600`"
+          :alt="index"
         >
       </li>
     </TinyCarousel>
@@ -54,6 +56,9 @@ export default Vue.extend({
 
     return {
       carouselPlugins,
+      carouselConfig: {
+        // overflow: false,
+      },
       number: 6,
       isInitialized: false,
     };
