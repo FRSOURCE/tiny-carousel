@@ -16,7 +16,7 @@ $frs-tc-class-name-overflow: 'frs-tc--o' !default;
  */
 $frs-tc-item-class-name: 'frs-tc-item' !default;
 
-.#{$class-name} {
+.#{$frs-tc-class-name} {
   display: flex;
   height: 100%;
   overflow: scroll;
@@ -39,16 +39,16 @@ $frs-tc-item-class-name: 'frs-tc-item' !default;
   }
 }
 
-.#{$class-name-overflow} {
+.#{$frs-tc-class-name-overflow} {
   &::before,
   &::after {
     content: '';
   }
 }
 
-.#{$class-name-overflow}::before,
-.#{$class-name-overflow}::after,
-.#{$item-class-name} {
+.#{$frs-tc-class-name-overflow}::before,
+.#{$frs-tc-class-name-overflow}::after,
+.#{$frs-tc-item-class-name} {
   flex: 0 0 100%;
   overflow: hidden;
   scroll-snap-align: start;

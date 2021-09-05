@@ -40,7 +40,7 @@ export const pluginMouseDrag = {
     
     let throttledMouseMove: EventListener;
     let pos: { top: number, left: number, diffX: number, diffY: number };
-    let overflowValue: boolean | undefined;
+    let overflowValue: boolean;
 
     function clearDocumentListeners() {
       off(document, 'mousemove', throttledMouseMove);
