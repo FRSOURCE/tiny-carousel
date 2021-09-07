@@ -1563,9 +1563,9 @@
     strip-json-comments "^3.1.1"
 
 "@frsource/frs-hide-scrollbar@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@frsource/frs-hide-scrollbar/-/frs-hide-scrollbar-2.0.5.tgz#c00af210083182e0ef02db6d36e2000dc1e89bcb"
-  integrity sha512-sEl+XgIlB3ZKVJ+Neq/Akxh90lztz9r16Q3RGiBqkNxE6+utrIdUtOWC4k3Xgm3lJ3D01+HfQE9HsMjOWQdFNg==
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@frsource/frs-hide-scrollbar/-/frs-hide-scrollbar-2.0.6.tgz#cf89ff06562c5d0bed26a7d61adf2a5a8e7d3746"
+  integrity sha512-TFIA9+LVsh0uFvaUp0lyLyxrTTD4fmsT8N8nXC5amPFAn1V+/qX/4u3fn76hZfH6Y3SMwg1ETCx3YbjzQwMJMg==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
