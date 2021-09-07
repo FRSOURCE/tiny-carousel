@@ -3,11 +3,11 @@
 
 
 "@axe-core/puppeteer@^4.1.0":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@axe-core/puppeteer/-/puppeteer-4.2.1.tgz#5b7a191e4f4f3d56f975fdf5c2682eed3ad306a7"
-  integrity sha512-2JDELbLCKK2KqBvLOpsROtJU0i+zqyseMCd8S86S1H8loxy30/v7xJQo32WWbAa+x8xABQcejO1U4Kk1VEVssw==
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@axe-core/puppeteer/-/puppeteer-4.2.2.tgz#97cf74ee4b2ee95f181b4e1adc05e7ba4df66c96"
+  integrity sha512-kBB+e0ndxuIWSF7kLEmsPVhxHh6nRKKP7OgZbBbS3HobZ4h7hyg+q9Lu8N4WOWN6jlqEcrJC95ORT7ZZkGbYBg==
   dependencies:
-    axe-core "^4.2.1"
+    axe-core "^4.2.3"
 
 "@azu/format-text@^1.0.1":
   version "1.0.1"
@@ -5006,10 +5006,10 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axe-core@^4.0.2, axe-core@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.2.1.tgz#2e50bcf10ee5b819014f6e342e41e45096239e34"
-  integrity sha512-evY7DN8qSIbsW2H/TWQ1bX3sXN1d4MNb5Vb4n7BzPuCwRHdkZ1H2eNLuSh73EoQqkGKUtju2G2HCcjCfhvZIAA==
+axe-core@^4.0.2, axe-core@^4.2.3:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.3.3.tgz#b55cd8e8ddf659fe89b064680e1c6a4dceab0325"
+  integrity sha512-/lqqLAmuIPi79WYfRpy2i8z+x+vxU3zX2uAm0gs1q52qTuKwolOj1P8XbufpXcsydrpKx2yGn2wzAnxCMV86QA==
 
 axobject-query@^2.2.0:
   version "2.2.0"
@@ -6845,9 +6845,9 @@ core-js@^2.4.0:
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
 core-js@^3.6.4, core-js@^3.6.5:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.14.0.tgz#62322b98c71cc2018b027971a69419e2425c2a6c"
-  integrity sha512-3s+ed8er9ahK+zJpp9ZtuVcDoFzHNiZsPbNAAE4KXgrRHbjSqqNN6xGSXq6bq7TZIbKj4NLrLb6bJ5i+vSVjHA==
+  version "3.17.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.17.2.tgz#f960eae710dc62c29cca93d5332e3660e289db10"
+  integrity sha512-XkbXqhcXeMHPRk2ItS+zQYliAMilea2euoMsnpRRdDad6b2VY6CQQcwz1K8AnWesfw4p165RzY0bTnr3UrbYiA==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
