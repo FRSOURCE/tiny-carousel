@@ -1563,9 +1563,9 @@
     strip-json-comments "^3.1.1"
 
 "@frsource/frs-hide-scrollbar@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@frsource/frs-hide-scrollbar/-/frs-hide-scrollbar-2.0.5.tgz#c00af210083182e0ef02db6d36e2000dc1e89bcb"
-  integrity sha512-sEl+XgIlB3ZKVJ+Neq/Akxh90lztz9r16Q3RGiBqkNxE6+utrIdUtOWC4k3Xgm3lJ3D01+HfQE9HsMjOWQdFNg==
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@frsource/frs-hide-scrollbar/-/frs-hide-scrollbar-2.0.6.tgz#cf89ff06562c5d0bed26a7d61adf2a5a8e7d3746"
+  integrity sha512-TFIA9+LVsh0uFvaUp0lyLyxrTTD4fmsT8N8nXC5amPFAn1V+/qX/4u3fn76hZfH6Y3SMwg1ETCx3YbjzQwMJMg==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -6845,9 +6845,9 @@ core-js@^2.4.0:
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
 core-js@^3.6.4, core-js@^3.6.5:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.14.0.tgz#62322b98c71cc2018b027971a69419e2425c2a6c"
-  integrity sha512-3s+ed8er9ahK+zJpp9ZtuVcDoFzHNiZsPbNAAE4KXgrRHbjSqqNN6xGSXq6bq7TZIbKj4NLrLb6bJ5i+vSVjHA==
+  version "3.17.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.17.2.tgz#f960eae710dc62c29cca93d5332e3660e289db10"
+  integrity sha512-XkbXqhcXeMHPRk2ItS+zQYliAMilea2euoMsnpRRdDad6b2VY6CQQcwz1K8AnWesfw4p165RzY0bTnr3UrbYiA==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
