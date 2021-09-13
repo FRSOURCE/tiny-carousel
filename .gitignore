@@ -4,6 +4,7 @@ node_modules
 report.html
 .nyc_output
 .vscode
+.yarn
 dist
 coverage
 

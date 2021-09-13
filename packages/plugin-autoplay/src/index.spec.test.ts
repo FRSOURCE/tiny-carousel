@@ -15,7 +15,7 @@ const installPlugin = (config?: Partial<Config>) => {
 };
 
 beforeAll(() => {
-  jest.spyOn(global, 'setTimeout').mockReturnValue(timeoutId);
+  jest.spyOn(global, 'setTimeout').mockReturnValue(timeoutId as unknown as NodeJS.Timeout);
 });
 beforeEach(() =>
   carousel = {
