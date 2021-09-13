@@ -182,7 +182,10 @@ describe('install', () => {
   });
 
   describe('mouseup listener', () => {
-    beforeAll(() => jest.useFakeTimers());
+    beforeAll(() => {
+      jest.useFakeTimers();
+      requestAnimationFrame = jest.spyOn(global, 'requestAnimationFrame').mockReturnValue(0);
+    });
     beforeEach(() => {
       installPlugin({
         mouseDragDraggingClassName,
@@ -225,7 +228,7 @@ describe('install', () => {
       const round = (n: number, approx: number) => Math.round(n * 10 ** approx) / 10 ** approx
       const startAnimation = () => {
         callMouseUpHandler();
-        jest.advanceTimersByTime(mouseDragThrottle);
+        jest.advanceTimersByTime(mouseDragThrottle + 200);
       };
 
       it('should call horizontalSnapToIndex predict final index', () => {

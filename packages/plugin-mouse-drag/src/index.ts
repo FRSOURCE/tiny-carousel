@@ -88,7 +88,7 @@ export const pluginMouseDrag = {
           pos.diffX * MOMENTUM_DISTANCE_FACTOR,
         );
 
-        // let goTo method handle overflow
+      // let goTo method handle overflow
         if (index === -1) index = instance.config.items.length - 1;
         else if (index === instance.config.items.length) index = 0;
 
