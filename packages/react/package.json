@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-react",
   "amdName": "tinyCarouselReact",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "@frsource/tiny-carousel for your React app ⚛",
   "source": "src/TinyCarousel.tsx",
   "types": "dist/TinyCarousel.d.ts",
