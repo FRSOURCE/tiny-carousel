@@ -1,4 +1,3 @@
-<!-- textlint-disable no-dead-link -->
 <p align="center">
   <a href="https://www.npmjs.com/package/@frsource/tiny-carousel-plugin-custom-events">
     <img src="https://img.shields.io/npm/v/@frsource/tiny-carousel-plugin-custom-events" alt="NPM version badge">
