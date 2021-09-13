@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-react",
   "amdName": "tinyCarouselReact",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "@frsource/tiny-carousel for your React app ⚛",
   "source": "src/TinyCarousel.tsx",
   "types": "dist/TinyCarousel.d.ts",
@@ -59,7 +59,7 @@
     "@frsource/tiny-carousel-core": "^0.10.0",
     "@frsource/tiny-carousel-plugin-autoplay": "^0.4.3",
     "@frsource/tiny-carousel-plugin-custom-events": "^0.4.3",
-    "@frsource/tiny-carousel-plugin-mouse-drag": "^0.4.0",
+    "@frsource/tiny-carousel-plugin-mouse-drag": "^0.4.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.0",
     "@testing-library/user-event": "^13.2.1",
