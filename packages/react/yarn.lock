@@ -1177,38 +1177,38 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@frsource/tiny-carousel-core@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-core/-/tiny-carousel-core-0.9.0.tgz#e64167996fd54c6a884ddc2e7d4b858df20392cc"
-  integrity sha512-++c4BrMjXYuNuVZDQtYDsx6jaub833cw7rgJkq0ABVSR1OX70PXdHHZIgzDEJ1PUbuD8oC4MQD+mY3O3J4cQjA==
+"@frsource/tiny-carousel-core@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-core/-/tiny-carousel-core-0.10.0.tgz#5161e58567402f7b80453590075b5d969caa977a"
+  integrity sha512-NA895AhF1vgGtsqBjn6DtK/Qqy7n422FnNoJJG0shpfV8ByP5D5gALTH36JVje5PxkRU5lFUGob8n+R6tBsh0g==
   dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
+    "@frsource/tiny-carousel-utils" "^0.5.0"
 
-"@frsource/tiny-carousel-plugin-autoplay@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-autoplay/-/tiny-carousel-plugin-autoplay-0.4.2.tgz#cf2d453bd7315d02aab8cec34c99af4ff2ed868a"
-  integrity sha512-Vps2/cQpXn9A3IQ4LUGA1GY/A2qyk9KKAfxm041Na0DBR/Bg+Qv5Fk4UM981DRyJgF26FpQ6h7Xdp3fQnwkrCQ==
+"@frsource/tiny-carousel-plugin-autoplay@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-autoplay/-/tiny-carousel-plugin-autoplay-0.4.3.tgz#0a9167c96844813387e87a361de90cac1b30b3ad"
+  integrity sha512-VjOgM7pQ6+Gy/9apchp8LUaIqUVb9BlVsdo0UYQDm/xtUwdkTlIKLDiUDt7uXc+pZJHzAXY7DldVSE3UkAFW7w==
   dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
+    "@frsource/tiny-carousel-utils" "^0.5.0"
 
-"@frsource/tiny-carousel-plugin-custom-events@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-custom-events/-/tiny-carousel-plugin-custom-events-0.4.2.tgz#970c9991c6a11be2ab35588b9d0b604c853e1265"
-  integrity sha512-tA1/GTYPnd1KTLHhvw21BeyKZnithxIhMqstUt5Kel9wJN5LQr7HrAnH8d5xTVcwWcFo618FO8KVOGgKM09MBQ==
+"@frsource/tiny-carousel-plugin-custom-events@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-custom-events/-/tiny-carousel-plugin-custom-events-0.4.3.tgz#acfd5a3125c86cac837d283303b3868b44696c12"
+  integrity sha512-sm56LShJ55kdSFkbEz1QG3wLd88KCltBy8Y5q4749DSmE5BnSrGdlq2q+VuBhN2BJ0DxWErFcViIBPdTSlaAaA==
   dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
+    "@frsource/tiny-carousel-utils" "^0.5.0"
 
-"@frsource/tiny-carousel-plugin-mouse-drag@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-mouse-drag/-/tiny-carousel-plugin-mouse-drag-0.3.1.tgz#a995ea425de579d05f424bf38ac88c40fb5c35f1"
-  integrity sha512-TCE5rctFXuHXkWekHi8F4C2SuQgmW1cpqGl+WlHMbTWekst+Cg72Hu5mb22N3hOi+TygGKXzqPEcBzb5F7UfTQ==
-  dependencies:
-    "@frsource/tiny-carousel-utils" "^0.4.0"
-
-"@frsource/tiny-carousel-utils@^0.4.0":
+"@frsource/tiny-carousel-plugin-mouse-drag@^0.4.0":
   version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-utils/-/tiny-carousel-utils-0.4.0.tgz#f1f2e078e4642cf9d8fceb909372d49c3ae1dabd"
-  integrity sha512-mQjlCzZznwx5BV/2IrDVnB0Pao5XpICn0LxyWJWgucYCd1JchLkVIwwvvbV5cikBmm4z+4NmRHcIcVb2wgdgqA==
+  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-plugin-mouse-drag/-/tiny-carousel-plugin-mouse-drag-0.4.0.tgz#41f75b388e8d66d568ec46bfad6753e338a25fa8"
+  integrity sha512-/CosJxEhjsnM/dPNe+zl+MaKF1pxPU0FYUHR+njhRGTMqoxBx7tM51g27txORd3lAKiF8hQds5IUUN/u6BJmuA==
+  dependencies:
+    "@frsource/tiny-carousel-utils" "^0.5.0"
+
+"@frsource/tiny-carousel-utils@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@frsource/tiny-carousel-utils/-/tiny-carousel-utils-0.5.0.tgz#aedb6bbc77b6720c34eda854fb528ce966a2725d"
+  integrity sha512-Sco0xn6V4d0YzFLUfbTxZ73dLtPfGPJm6QgUODwLZBIYh1jHejAQj1TQTTW8hzpLAWi5ZClLJrIfzgKMPNOntw==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -10820,9 +10820,9 @@ url-loader@4.1.1:
     schema-utils "^3.0.0"
 
 url-parse@^1.4.3, url-parse@^1.4.7:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.1.tgz#d5fa9890af8a5e1f274a2c98376510f6425f6e3b"
-  integrity sha512-HOfCOUJt7iSYzEx/UqgtwKRMC6EU91NFhsCHMv9oM03VJcVo2Qrp8T8kI9D7amFf1cu+/3CEhgb3rF9zL7k85Q==
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.3.tgz#71c1303d38fb6639ade183c2992c8cc0686df862"
+  integrity sha512-IIORyIQD9rvj0A4CLWsHkBBJuNqWpFQe224b6j9t/ABmquIS0qDU2pY6kl6AuOrL5OkCXHMCFNe1jBcuAggjvQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
