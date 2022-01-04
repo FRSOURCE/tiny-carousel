@@ -79,6 +79,10 @@ new TinyCarousel(
 </ExampleSection>
 <!-- textlint-enable -->
 
+:::tip
+Make sure to not override `overflow: scroll` styling on the carousel element - it`s necessary for library to work well!
+:::
+
 That’s the most basic usage of the core package.
 
 Next, we can try out using core JavaScript API to add next/previous buttons with only few lines of code:
