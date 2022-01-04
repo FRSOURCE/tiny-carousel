@@ -23,7 +23,7 @@ npm install @frsource/tiny-carousel-core
 To use this package you need to import **both the SASS/CSS and Typescript/JavaScript files**.
 
 ::: warning The animations in an example are not working.
-By default, the core package disables scroll animations for some users to make the carousel accessible for the broader audience. If somebody (maybe you?) have the `reduce motion` option enabled in the system settings of his/her device - the carousel will follow that rule and turn off the animations. To learn more, please read [this article](https://web.dev/prefers-reduced-motion/).
+By default, the core package disables scroll animations for some users to make the carousel accessible for the broader audience. If somebody (maybe you?) has the `reduce motion` option enabled in the system settings of his/her device the carousel will follow that rule and turn off the animations. To learn more, please [read&nbsp;this&nbsp;article](https://web.dev/prefers-reduced-motion/).
 :::
 
 See the example below which uses **only** the core package:
@@ -738,6 +738,17 @@ yarn add @frsource/tiny-carousel-plugin-autoplay
 # npm
 npm install @frsource/tiny-carousel-plugin-autoplay
 ```
+
+:::tip Prerequisites
+This plugin requires to explicitly install [`@frsource/tiny-carousel-plugin-custom-events`](./#plugin-custom-events) as your project\`s dependency. You might need to run additional installation commands before using the `Plugin Autoplay` for the first time:
+```bash
+# yarn
+yarn add @frsource/tiny-carousel-plugin-custom-events
+
+# npm
+npm install @frsource/tiny-carousel-plugin-custom-events
+```
+:::
 
 After installation, you need to add the plugin to your Tiny Carousel instance using [`carousel.use` method](../api-reference/core/#carousel-use). Provide it with the options object to override the default configuration.
 
