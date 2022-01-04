@@ -83,7 +83,7 @@
     "vue3": "npm:vue@^3.0.0"
   },
   "peerDependencies": {
-    "@frsource/tiny-carousel-core": "^0.8.0",
+    "@frsource/tiny-carousel-core": "^0.10.0",
     "vue": "^2.6.0 || ^3.0.0"
   }
 }
