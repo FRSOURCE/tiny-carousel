@@ -47,7 +47,7 @@
   "devDependencies": {
     "@axe-core/puppeteer": "^4.2.2",
     "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.7",
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
