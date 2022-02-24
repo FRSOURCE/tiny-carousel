@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "3eab2a64d58f60bde89b0557e64d03d2"
+    "revision": "14205e2f9289d32b0a1e6b919559a23b"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -39,35 +39,35 @@ self.__precacheManifest = [
   },
   {
     "url": "api-reference/core/index.html",
-    "revision": "8dc441a3f111e72c96dbe2d8bc89a1ff"
+    "revision": "4e90245e474eac937945153d853ff0dc"
   },
   {
     "url": "api-reference/index.html",
-    "revision": "4fed5425ca3ebc800dbf0b844401ce7d"
+    "revision": "b47dd3ad761b05475ee83f90740275e9"
   },
   {
     "url": "api-reference/integration-react/index.html",
-    "revision": "02c89eb5a7afff736bd3febc7ea63e52"
+    "revision": "47f1ffc5a3561f4ff2b5dcf95563f90d"
   },
   {
     "url": "api-reference/integration-vue/index.html",
-    "revision": "bbbca035a87d62c5db89d834c8d2d8d8"
+    "revision": "e9142b3395de4c4339881be19a03fbba"
   },
   {
     "url": "api-reference/plugin-autoplay/index.html",
-    "revision": "c63cd1fae3d61442addcd835b5342c3e"
+    "revision": "e79269dc839a8cd940f50a0fab766471"
   },
   {
     "url": "api-reference/plugin-custom-events/index.html",
-    "revision": "2db08dcc6cb385750a08e632363257dc"
+    "revision": "7b86250b7cd9b2af66013e4e6329c9ea"
   },
   {
     "url": "api-reference/plugin-mouse-drag/index.html",
-    "revision": "5ef8a05acb4118c52f916e66d3c26678"
+    "revision": "9b9a121cb98cea772e8caec9970b9b30"
   },
   {
     "url": "api-reference/plugin-scroll-snap-fallback/index.html",
-    "revision": "46fa0a410ec90f3242f3453395257762"
+    "revision": "edfc72ceceaa56c206b2d0d84d71e7d4"
   },
   {
     "url": "apple-touch-icon.png",
@@ -190,20 +190,20 @@ self.__precacheManifest = [
     "revision": "266f910762c32c56cbb02aa265507908"
   },
   {
-    "url": "assets/js/app.fa48873a.js",
-    "revision": "439aa0e9f9eabec389dc1decf909bf55"
+    "url": "assets/js/app.e604da7c.js",
+    "revision": "dacb9a9d0811a5832d0e029b60706dbe"
   },
   {
     "url": "CHANGELOG/index.html",
-    "revision": "b8fb93b72cac8ef5d9710aaa7eb3aed0"
+    "revision": "dae5547df9b8616a7b196968e01cc9d3"
   },
   {
     "url": "contribution/index.html",
-    "revision": "9e2e6f2eeb2916a68097fba8aabadd61"
+    "revision": "3a2a915fab7c4d29bae1f6750c9fe977"
   },
   {
     "url": "ecosystem/index.html",
-    "revision": "602cce159d8b0461c5f84c3f7c061528"
+    "revision": "d9ff155decdd0846d02297cc44663a73"
   },
   {
     "url": "favicon-16x16.png",
@@ -215,19 +215,19 @@ self.__precacheManifest = [
   },
   {
     "url": "guide/index.html",
-    "revision": "f38b78334bf13681fdff7c57c60bd898"
+    "revision": "9ae937a1c71dfac12bb2e9857ad11ac3"
   },
   {
     "url": "guide/installation/index.html",
-    "revision": "b99a700b3197ddacc8b547cc8abda941"
+    "revision": "2933c3dc89201695405cf74ca4d384aa"
   },
   {
     "url": "guide/usage/index.html",
-    "revision": "fb72121b2c5059676f6342488dae6d59"
+    "revision": "a2cdb9b9ad13a24e7a9e5f805a68c6c0"
   },
   {
     "url": "index.html",
-    "revision": "c1e4b2e39c9ebabba5e4f3f2ea04fe64"
+    "revision": "71f5ad2eb73c2d29e828b5b25daa4f46"
   },
   {
     "url": "logo.jpg",
