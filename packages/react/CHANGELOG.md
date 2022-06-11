@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.9](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-react@0.3.8...@frsource/tiny-carousel-react@0.3.9) (2022-06-11)
+
+**Note:** Version bump only for package @frsource/tiny-carousel-react
+
+
+
+
+
 ## [0.3.8](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-react@0.3.7...@frsource/tiny-carousel-react@0.3.8) (2022-02-28)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-react
