@@ -10,40 +10,21 @@ jobs:
   test-coverage:
     name: Test coverage
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16]
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: pnpm/action-setup@v2.2.2
         with:
-          node-version: '16.x'
-      - name: Set yarn cache directory
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Cache node modules
-        id: lerna-yarn-cache
-        uses: actions/cache@v2
-        env:
-            cache-name: cache-node-modules
+          version: 7
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-            path: |
-                ${{ steps.yarn-cache-dir-path.outputs.dir }}
-                node_modules
-                */*/node_modules
-            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-            restore-keys: |
-                ${{ runner.os }}-build-${{ env.cache-name }}-
-                ${{ runner.os }}-build-
-                ${{ runner.os }}-
-      - name: Install dependencies if needed.
-        if: steps.lerna-yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install --ignore-platform --frozen-lockfile
-        env:
-          HUSKY: 0
-      - name: Link package directories together if it's not already done as a part of install.
-        if: steps.lerna-yarn-cache.outputs.cache-hit == 'true'
-        run: yarn lerna link
-      - name: Run lerna bootstrap if it's not already done as a part of install.
-        if: steps.lerna-yarn-cache.outputs.cache-hit == 'true'
-        run: yarn lerna bootstrap
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
       - name: Build packages to get cross-references working 🔧
-        run: yarn build
-      - run: yarn coverage
+        run: pnpm build
+      - run: pnpm coverage

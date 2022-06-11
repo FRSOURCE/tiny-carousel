@@ -4,9 +4,9 @@
   "description": "Documentation for @frsource/tiny-carousel 📄",
   "main": ".vuepress/dist/index.html",
   "scripts": {
-    "lint": "concurrently yarn:lint:*",
+    "lint": "concurrently pnpm:lint:*",
     "lint:text": "textlint --config ../../.textlintrc **/*.md",
-    "fix:lint": "yarn lint:text --fix",
+    "fix:lint": "pnpm lint:text --fix",
     "build": "vuepress build .",
     "start": "vuepress dev ."
   },
@@ -40,16 +40,22 @@
     "access": "public"
   },
   "dependencies": {
-    "@frsource/tiny-carousel-core": "^0.10.0",
-    "@frsource/tiny-carousel-plugin-custom-events": "^0.4.3",
-    "@frsource/tiny-carousel-plugin-scroll-snap-fallback": "^0.3.0",
-    "@frsource/tiny-carousel-utils": "^0.5.0"
+    "@frsource/tiny-carousel-core": "workspace:^0.10.0",
+    "@frsource/tiny-carousel-plugin-custom-events": "workspace:^0.4.3",
+    "@frsource/tiny-carousel-plugin-scroll-snap-fallback": "workspace:^0.3.0",
+    "@frsource/tiny-carousel-utils": "workspace:^0.5.0"
   },
   "devDependencies": {
-    "@vuepress/plugin-pwa": "^1.8.2",
-    "vuepress": "^1.8.0",
+    "@vuepress/client": "2.0.0-beta.48",
+    "@vuepress/plugin-active-header-links": "2.0.0-beta.48",
+    "@vuepress/plugin-pwa": "2.0.0-beta.48",
+    "@vuepress/plugin-pwa-popup": "2.0.0-beta.48",
+    "@vuepress/plugin-register-components": "2.0.0-beta.48",
+    "@vuepress/theme-default": "2.0.0-beta.48",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16",
+    "vuepress": "2.0.0-beta.48",
     "vuepress-plugin-clean-urls": "^1.1.2",
-    "vuepress-plugin-seo": "^0.1.4",
-    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
+    "vuepress-plugin-seo": "^0.2.0"
   }
 }

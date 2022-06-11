@@ -22,7 +22,7 @@ Don’t hesitate to ask a question directly on the [discussions board](https://g
 
 - Checkout the master branch and (after you do your work) file a PR against it
 
-- Read through the [development setup](#development-setup) to learn how to work with this project. Always make sure that `yarn lint`, `yarn coverage` pass
+- Read through the [development setup](#development-setup) to learn how to work with this project. Always make sure that `pnpm lint`, `pnpm coverage` pass
 
 - Please use [conventional commits v1.0.0 style guide](https://www.conventionalcommits.org/en/v1.0.0/) for commits and PR names
 
@@ -40,13 +40,13 @@ Don’t hesitate to ask a question directly on the [discussions board](https://g
 ## Development Setup
 
 <!-- textlint-disable spelling -->
-You will need [Node.js](https://nodejs.org/en/) **version 16+** and [yarn](https://classic.yarnpkg.com/en/docs/install).
+You will need [Node.js](https://nodejs.org/en/) **version 16+** and [pnpm](https://pnpm.io/installation).
 <!-- textlint-enable -->
 
 After cloning the repository, run:
 
 ``` bash
-$ yarn # installs the project dependencies (for all of the nested packages)
+$ pnpm i # installs the project dependencies (for all of the nested packages)
 ```
 
 ### Committing Changes
@@ -59,25 +59,25 @@ When fired in the project root they will run corresponding actions in every nest
 
 ``` bash
 # watches and rebuilds the package in development version
-$ yarn start
+$ pnpm start
 
 # run tests once
-$ yarn test
+$ pnpm test
 
 # watch & run tests on every file change
-$ yarn watch:test
+$ pnpm watch:test
 
 # run tests and collect coverage
-$ yarn coverage
+$ pnpm coverage
 
 # lint & try to autofix linting errors
-$ yarn fix:lint
+$ pnpm fix:lint
 
 # lint files
-$ yarn lint
+$ pnpm lint
 
 # build the project for NPM
-$ yarn build
+$ pnpm build
 ```
 
 There are some other scripts available in the `scripts` section of the `package.json` file.

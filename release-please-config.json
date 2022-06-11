@@ -1,0 +1,14 @@
+{
+  "plugins": ["node-workspace"],
+  "packages": {
+    "packages/core": {},
+    "packages/docs": {},
+    "packages/plugin-autoplay": {},
+    "packages/plugin-custom-events": {},
+    "packages/plugin-mouse-drag": {},
+    "packages/plugin-scroll-snap-fallback": {},
+    "packages/react": {},
+    "packages/utils": {},
+    "packages/vue": {}
+  }
+}

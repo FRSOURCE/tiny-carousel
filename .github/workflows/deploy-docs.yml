@@ -8,39 +8,25 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' }}
     name: Build and deploy docs
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16]
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           persist-credentials: false
-      - name: Set yarn cache directory
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Cache node modules
-        id: lerna-yarn-cache
-        uses: actions/cache@v2
-        env:
-            cache-name: cache-node-modules
+      - uses: pnpm/action-setup@v2.2.2
         with:
-            path: |
-                ${{ steps.yarn-cache-dir-path.outputs.dir }}
-                node_modules
-                */*/node_modules
-            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-            restore-keys: |
-                ${{ runner.os }}-build-${{ env.cache-name }}-
-                ${{ runner.os }}-build-
-                ${{ runner.os }}-
-      - name: Install dependencies if needed.
-        if: steps.lerna-yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install --ignore-platform --frozen-lockfile
-        env:
-          HUSKY: 0
-      - name: Link package directories together if it's not already done as a part of install.
-        if: steps.lerna-yarn-cache.outputs.cache-hit == 'true'
-        run: yarn lerna link
+          version: 7
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
       - name: Build packages 🔧 (docs included 📄) 
-        run: yarn build
+        run: pnpm build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
