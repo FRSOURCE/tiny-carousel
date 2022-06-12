@@ -101,10 +101,10 @@ importers:
 
   packages/docs:
     specifiers:
-      '@frsource/tiny-carousel-core': workspace:^0.10.0
-      '@frsource/tiny-carousel-plugin-custom-events': workspace:^0.4.3
-      '@frsource/tiny-carousel-plugin-scroll-snap-fallback': workspace:^0.3.0
-      '@frsource/tiny-carousel-utils': workspace:^0.5.0
+      '@frsource/tiny-carousel-core': ^0.10.0
+      '@frsource/tiny-carousel-plugin-custom-events': ^0.4.3
+      '@frsource/tiny-carousel-plugin-scroll-snap-fallback': ^0.3.0
+      '@frsource/tiny-carousel-utils': ^0.5.0
       '@vuepress/client': 2.0.0-beta.48
       '@vuepress/plugin-active-header-links': 2.0.0-beta.48
       '@vuepress/plugin-pwa': 2.0.0-beta.48
@@ -178,6 +178,7 @@ importers:
       '@frsource/tiny-carousel-plugin-autoplay': ^0.4.3
       '@frsource/tiny-carousel-plugin-custom-events': ^0.4.3
       '@frsource/tiny-carousel-plugin-mouse-drag': ^0.4.1
+      '@frsource/tiny-carousel-utils': ^0.5.0
       '@testing-library/dom': ^8.13.0
       '@testing-library/jest-dom': ^5.14.1
       '@testing-library/react': ^12.1.0
@@ -204,6 +205,7 @@ importers:
       '@frsource/tiny-carousel-plugin-autoplay': link:../plugin-autoplay
       '@frsource/tiny-carousel-plugin-custom-events': link:../plugin-custom-events
       '@frsource/tiny-carousel-plugin-mouse-drag': link:../plugin-mouse-drag
+      '@frsource/tiny-carousel-utils': link:../utils
       '@testing-library/dom': 8.13.0
       '@testing-library/jest-dom': 5.16.4
       '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
@@ -22608,7 +22610,7 @@ packages:
     dev: true
 
   /webidl-conversions/3.0.1:
-    resolution: {integrity: sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=}
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
     dev: true
 
   /webidl-conversions/4.0.2:
@@ -22973,7 +22975,7 @@ packages:
     dev: true
 
   /whatwg-url/5.0.0:
-    resolution: {integrity: sha1-lmRU6HZUYuN2RNNib2dCzotwll0=}
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
     dependencies:
       tr46: 0.0.3
       webidl-conversions: 3.0.1

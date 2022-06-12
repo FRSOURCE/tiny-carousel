@@ -11,29 +11,37 @@ jobs:
       matrix:
         node-version: [16]
     steps:
-      - uses: google-github-actions/release-please-action@v2
+      - uses: google-github-actions/release-please-action@v3.1.2
         id: release
         with:
           command: manifest
+          token: '${{secrets.GITHUB_TOKEN}}'
           default-branch: master
+          monorepo-tags: true
       - name: Checkout Repository
         if: ${{ steps.release.outputs.releases_created }}
         uses: actions/checkout@v2
       - uses: pnpm/action-setup@v2.2.2
+        if: ${{ steps.release.outputs.releases_created }}
         with:
           version: 7
       - name: Use Node.js ${{ matrix.node-version }}
+        if: ${{ steps.release.outputs.releases_created }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
+        env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install dependencies
+        if: ${{ steps.release.outputs.releases_created }}
         run: pnpm install
       - name: Build packages to get cross-references working 🔧
+        if: ${{ steps.release.outputs.releases_created }}
         run: pnpm build
       - name: Release package
+        if: ${{ steps.release.outputs.releases_created }}
         run: pnpm release:ci
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

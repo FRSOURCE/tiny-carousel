@@ -21,7 +21,7 @@
     "test:vue3": "pnpm test:unit",
     "test:unit": "vue-cli-service test:unit",
     "watch:test": "vue-cli-service test:unit --watch",
-    "coverage": "vue-cli-service test:unit --coverage",
+    "fixme.coverage": "vue-cli-service test:unit --coverage",
     "lint": "vue-cli-service lint",
     "fix:lint": "vue-cli-service lint --fix"
   },
