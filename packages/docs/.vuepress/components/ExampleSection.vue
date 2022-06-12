@@ -21,9 +21,11 @@
 </template>
 
 <script>
+import { toRefs, computed, onMounted, defineComponent } from 'vue';
 
 let scriptElement;
 let scriptLoadPromise = undefined;
+let uid = -1;
 const loadEmbedScript = () => {
   scriptElement = document.createElement('script');
   scriptLoadPromise = new Promise(resolve =>
@@ -39,7 +41,7 @@ const loadEmbedScript = () => {
   return scriptLoadPromise;
 };
 
-export default {
+export default defineComponent({
   name: 'ExampleSection',
   props: {
     title: {
@@ -67,36 +69,34 @@ export default {
       default: () => [],
     },
   },
-  async mounted() {
-    await (scriptLoadPromise || loadEmbedScript());
-    window.__CPEmbed('.' + this.className);
-  },
-  computed: {
-    preparsedDefaultTab() {
-      return this.defaultTab + ',result';
-    },
-    className() {
-      return 'codepen-' + this._uid;
-    },
-    parsedTags() {
-      return ['tiny-carousel', '@frsource/tiny-carousel', ...this.tags]
-    },
-    prefilDataStringified() {
-      return JSON.stringify({
-        title: this.title,
-        description: this.description,
-        tags: this.parsedTags,
+  setup(props) {
+    const { defaultTab, tags, title, description, scripts } = toRefs(props);
+    const className = computed(() => 'codepen-' + ++uid);
+    const parsedTags = computed(() => ['tiny-carousel', '@frsource/tiny-carousel', ...tags.value]);
+
+    onMounted(async () => {
+      await (scriptLoadPromise || loadEmbedScript());
+      window.__CPEmbed('.' + className.value);
+    });
+
+    return {
+      preparsedDefaultTab: computed(() => defaultTab.value + ',result'),
+      className,
+      prefilDataStringified: computed(() => JSON.stringify({
+        title: title.value,
+        description: description.value,
+        tags: parsedTags.value,
         html_classes: [],
         head: "<meta name='viewport' content='width=device-width, initial-scale=1'>",
         stylesheets: "https://unpkg.com/water.css@2.0.0/out/water.min.css",
-        scripts: this.scripts,
-      });
-    },
+        scripts: scripts.value,
+      })),
+    };
   },
-};
+});
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 pre[data-lang]::before {
   content: attr(data-lang);
   display: block;

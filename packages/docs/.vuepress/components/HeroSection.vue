@@ -1,9 +1,9 @@
 <template>
   <section class="hero footer">
     <p class="hero-section">
-      <slot name="text" />
+      <slot />
     </p>
-    <NavLink
+    <AutoLink
       class="action-button"
       :item="item"
     />
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import NavLink from '@vuepress/theme-default/components/NavLink.vue'
+import AutoLink from '@vuepress/theme-default/lib/client/components/AutoLink.vue';
 
 export default {
   name: 'HeroSection',
-  components: { NavLink },
+  components: { AutoLink },
   props: ['text', 'link'],
   computed: {
     item() {

@@ -1,0 +1,36 @@
+$accentColor: rgb(241, 80, 160);
+$borderColor: rgb(230, 236, 241);
+$codeBgColor: #282c34;
+$arrowBgColor: #ccc;
+$badgeTipColor: rgb(38, 166, 154);
+$badgeWarningColor: darken(#ffe564, 35%);
+$badgeDangerColor: #DA5961;
+
+:root, :root.dark {
+  --c-brand: #{$accentColor};
+  --c-brand-light: #{lighten($accentColor, 10%)};
+  --c-badge-tip: #{lighten($accentColor, 8%)};
+  --darken10AccentColor: #{darken($accentColor, 10%)};
+  --code-bg-color: #{$codeBgColor};
+  --code-ln-color: #{transparentize($accentColor, 0.75)};
+  --c-bg-arrow: #{$arrowBgColor};
+  --c-badge-tip: #{$badgeTipColor};
+  --c-badge-warning: #{$badgeWarningColor};
+  --c-badge-danger: #{$badgeDangerColor};
+
+  --font-family: "Titillium Web", system-ui, sans-serif;
+}
+
+:root.dark {
+  --c-warning-text: #e2e2e2;
+
+  .home .hero .action-button.primary {
+    color: #e2e2e2;
+  }
+}
+
+#main-title {
+  display: none;
+}
+
+

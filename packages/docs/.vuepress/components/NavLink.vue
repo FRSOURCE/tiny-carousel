@@ -1,4 +1,4 @@
 <script>
-import NavLink from '@vuepress/theme-default/components/NavLink.vue'
-export default NavLink;
+import AutoLink from '@vuepress/theme-default/lib/client/components/AutoLink.vue';
+export default AutoLink;
 </script>

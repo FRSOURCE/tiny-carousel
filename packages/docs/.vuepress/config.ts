@@ -1,20 +1,29 @@
 const fs = require('fs');
-const path = require('path');
-const { isIndexFile: { isIndexFile }, slugify } = require('@vuepress/shared-utils');
+const { defaultTheme } = require('@vuepress/theme-default');
+const { path } = require('@vuepress/utils');
+const { pwaPlugin } = require('@vuepress/plugin-pwa');
+const { pwaPopupPlugin } = require('@vuepress/plugin-pwa-popup');
+const seoPlugin = require('vuepress-plugin-seo');
+const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
+const { viteBundler } = require('vuepress');
+
+const indexRE = /(^|.*\/)(index|readme)\.(md|vue)$/i;
+const isIndexFile = (file: string) => indexRE.test(file);
 
 module.exports = {
     title: 'Tiny carousel',
     description: 'Mobile & desktop-friendly, tiny, efficient (vanilaJS) carousel which takes advantage of CSS snap points (or polyfills it)!',
     base: '/tiny-carousel/',
-    theme: 'default-prefers-color-scheme',
-    themeConfig: {
-        sidebarDepth: 2,
+    pagePatterns: ['**/*.md', '!.vuepress', '!node_modules', '!CHANGELOG.md'],
+    theme: defaultTheme({
+        home: '/',
         logo: '/logo.svg',
-        nav: [
+        repo: 'frsource/tiny-carousel',
+        navbar: [
             {
                 text: 'Documentation',
                 ariaLabel: 'Documentation Menu',
-                items: [
+                children: [
                   { text: 'Guide', link: '/guide/' },
                   { text: 'Api reference', link: '/api-reference/' },
                   { text: 'Ecosystem', link: '/ecosystem/' }
@@ -23,18 +32,12 @@ module.exports = {
             { text: 'Contribution', link: '/contribution/' },
             { text: 'Looking for Web wizards?', link: 'https://www.frsource.org/' }
         ],
-        sidebar: getSideBar(),
-        searchPlaceholder: 'Search in docs...',
-        repo: 'frsource/tiny-carousel',
-        docsDir: 'packages/docs',
-        editLinks: true,
-        editLinkText: 'Help us improve this page on GitHub',
-        smoothScroll: true,
-        displayAllHeaders: true,
         sidebarDepth: 4,
-        image: '/logo.jpg',
-        domain: 'https://www.frsource.org/tiny-carousel/'
-    },
+        sidebar: getSideBar(),
+        editLink: true,
+        editLinkText: 'Help us improve this page on GitHub',
+        docsDir: 'packages/docs',
+    }),
     head: [
         ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/' }],
         ['link', { as: 'style', href: 'https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap' }],
@@ -54,48 +57,51 @@ module.exports = {
         extractHeaders: ['h2', 'h3', 'h4', 'h5'],
     },
     plugins: [
-        '@vuepress/last-updated',
-        [
-            'vuepress-plugin-clean-urls',
-            {
-                normalSuffix: '/',
-                indexSuffix: '/',
-                notFoundPath: '/404.html',
-            },
-        ],
-        [
-            'seo',
-            {
-                title: ($page, $site) => $page.path === '/' ? $site.title : $page.title,
-                description: ($page, $site) => $page.frontmatter.description || $site.description,
-                type: $page => $page.path === '/' ? 'website' : 'article',
-                image: ($page, $site) => {
-                    const image = $page.frontmatter.image || $site.themeConfig.image;
-                    return image && ((!image.startsWith('http') && $site.themeConfig.domain || '') + image)
-                }
-            },
-        ],
-        [
-            () => ({
-                name: 'scroll-anchor-into-view-plugin',
-                clientRootMixin: require('path').resolve(__dirname, 'mixins', 'scrollAnchorIntoView.js')
-            })
-        ],
-        [
-            '@vuepress/pwa',
-            {
-                serviceWorker: true,
-                updatePopup: {
-                    message: 'New content is available.',
-                    buttonText: 'Refresh'
-                }
+        registerComponentsPlugin({
+            componentsDir: path.resolve(__dirname, './components'),
+        }),
+        // [
+        //     'vuepress-plugin-clean-urls',
+        //     {
+        //         normalSuffix: '/',
+        //         indexSuffix: '/',
+        //         notFoundPath: '/404.html',
+        //     },
+        // ],
+        () => seoPlugin({
+            title: ($page, $site) => $page.path === '/' ? $site.title : $page.title,
+            description: ($page, $site) => $page.frontmatter.description || $site.description,
+            type: $page => $page.path === '/' ? 'website' : 'article',
+            image: ($page, $site) => {
+                const image = $page.frontmatter.image || $site.themeConfig.image;
+                return image && ((!image.startsWith('http') && $site.themeConfig.domain || '') + image)
             }
-        ]
+        }),
+        () => ({
+            name: 'scroll-anchor-into-view-plugin',
+            clientConfigFile: path.resolve(__dirname, 'clientConfigs', 'scrollAnchorIntoView.ts')
+        }),
+        pwaPlugin(),
+        pwaPopupPlugin({
+            '/': {
+                message: 'New content is available.',
+                buttonText: 'Refresh',
+            },
+        })
     ],
+    bundler: viteBundler({
+        vuePluginOptions: {
+            template: {
+                compilerOptions: {
+                    whitespace: 'preserve',
+                },
+            },
+        },
+    }),
 }
 
 function getSideBar() {
-    const ignoreDirs = ['.vuepress', 'node_modules'];
+    const ignoreDirs = ['.turbo', '.vuepress', 'node_modules'];
     
     return fs
         .readdirSync(path.join(__dirname, '..'), { withFileTypes: true })
@@ -109,11 +115,10 @@ function getSideBar() {
                 fs.readdirSync(path.join(__dirname, '..', name), { withFileTypes: true })
                     .reduce((p, item) => {
                         if (item.isFile() && !isIndexFile(item.name)) {
-                            const subPageName = item.name.substring(0, item.name.lastIndexOf('.'));
-                            p.push(subPageName);
+                            p.push(path.sep + path.join(name, item.name));
                         }
                         return p;
-                    }, ['']);
+                    }, [path.sep + path.join(name, 'README.md')]);
             return p;
         }, {})
 }

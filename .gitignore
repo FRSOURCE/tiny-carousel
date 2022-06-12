@@ -29,3 +29,4 @@ pnpm-debug.log*
 
 # Turbo temporary files
 **/.turbo/*.log
+**/.vuepress/.temp

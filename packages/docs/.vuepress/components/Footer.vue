@@ -1,15 +1,15 @@
 <template>
   <footer class="footer">
-    {{ text }} <NavLink :item="item" />
+    {{ text }} <AutoLink class="secondary" :item="item" />
   </footer>
 </template>
 
 <script>
-import NavLink from '@vuepress/theme-default/components/NavLink.vue'
+import AutoLink from '@vuepress/theme-default/lib/client/components/AutoLink.vue';
 
 export default {
   name: 'Footer',
-  components: { NavLink },
+  components: { AutoLink },
   props: ['text', 'link'],
   computed: {
     item() {

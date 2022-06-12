@@ -2,10 +2,11 @@
 home: true
 heroImage: /logo.svg
 heroText: Tiny carousel
+heroAlt: Tiny carousel logo
 tagline: Lightweight, cross-platform & modular carousel which takes advantage of CSS snap points!
-description: Lightweight, cross-platform, modular & performant carousel which takes advantage of CSS snap points!
-actionText: Get Started →
-actionLink: /guide/
+actions:
+- text: Get Started →
+  link: /guide/
 features:
 - title: 👌 Super Simple
   details: A minimal setup and a straightforward library design makes it trivial to set up & use!
@@ -16,9 +17,7 @@ features:
 ---
 
 <HeroSection :link="{href: '/contribution/', text: 'Contribute\xa0→'}">
-  <template slot="text">
-    Tiny carousel is (and it will stay always that way) an open source project licensed under MIT. It started out as an part of the internal UI library of <NavLink :item="{link:'https://www.frsource.org/', text: 'FRSource'}" /> webdevelopment company. Help us in our mission to provide free, performant and top-notch quality libraries & tools for the FrontEnd community!
-  </template>
+  Tiny carousel is (and it will stay always that way) an open source project licensed under MIT. It started out as an part of the internal UI library of <NavLink :item="{link:'https://www.frsource.org/', text: 'FRSource'}" /> webdevelopment company. Help us in our mission to provide free, performant and top-notch quality libraries & tools for the FrontEnd community!
 </HeroSection>
 
 <Footer

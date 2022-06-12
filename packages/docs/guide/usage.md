@@ -29,12 +29,8 @@ By default, the core package disables scroll animations for some users to make t
 See the example below which uses **only** the core package:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Basic Tiny Carousel Core example"
-    description="The most simplistic usage example of @frsource/tiny-carousel-core package"
-    default-tab="html"
->
-  <template slot="html">
+<ExampleSection title="Basic Tiny Carousel Core example" description="The most simplistic usage example of @frsource/tiny-carousel-core package" default-tab="html">
+  <template #html>
 &lt;!-- You can navigate through slides using: scroll, arrows (first focus carousel with a click) or (on touch devices) swiping -->
 &lt;ul&gt;
   &lt;li&gt;
@@ -57,7 +53,7 @@ See the example below which uses **only** the core package:
   &lt;/li&gt;
 &lt;/ul&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -68,7 +64,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="js">
+  <template #js>
 import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
 <!-- -->
 new TinyCarousel(
@@ -88,12 +84,8 @@ That’s the most basic usage of the core package.
 Next, we can try out using core JavaScript API to add next/previous buttons with only few lines of code:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Advanced Tiny Carousel Core example"
-    description="A bit more advanced usage example of @frsource/tiny-carousel-core library"
-    default-tab="js"
->
-  <template slot="html">
+<ExampleSection title="Advanced Tiny Carousel Core example" description="A bit more advanced usage example of @frsource/tiny-carousel-core library" default-tab="js">
+  <template #html>
 &lt;nav&gt;
   &lt;button type="button" class="first"&gt;&amp;lt;&amp;lt;&lt;/button&gt;
   &lt;button type="button" class="prev"&gt;&amp;lt;&lt;/button&gt;
@@ -122,7 +114,7 @@ Next, we can try out using core JavaScript API to add next/previous buttons with
   &lt;/li&gt;
 &lt;/ul&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -133,7 +125,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="js">
+  <template #js>
 import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
 <!-- -->
 const carousel = new TinyCarousel(
@@ -191,19 +183,13 @@ npm install @frsource/tiny-carousel-react
 Now let’s see how to add the TinyCarousel to your React application.
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example on how to use Tiny Carousel React integration with React"
-    description="This example code shows how to use Tiny Carousel integration for React - @frsource/tiny-carousel-react"
-    default-tab="js"
-    :scripts="['https://unpkg.com/react/umd/react.production.min.js','https://unpkg.com/react-dom/umd/react-dom.production.min.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-react/dist/index.umd.js']"
-    :tags="['react','hooks']"
->
-  <template slot="html">
+<ExampleSection title="Example on how to use Tiny Carousel React integration with React" description="This example code shows how to use Tiny Carousel integration for React - @frsource/tiny-carousel-react" default-tab="js" :scripts="['https://unpkg.com/react/umd/react.production.min.js','https://unpkg.com/react-dom/umd/react-dom.production.min.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-react/dist/index.umd.js']" :tags="['react','hooks']">
+  <template #html>
 &lt;p&gt;Use arrows or scroll (or swipes on a mobile device) to change slides&lt;/p&gt;
 <!-- -->
 &lt;div id="root"&gt;&lt;/div&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -214,7 +200,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="typescript">
+  <template #typescript>
 // needed because of UMD build
 // it's an equivalent of
 // import TinyCarousel from "@frsource/tiny-carousel-react";
@@ -251,20 +237,13 @@ ReactDOM.render(
 TinyCarousel React component give you possibility to configure carousel, import TinyCarousel plugins, customize tag name and use listen for custom events. To know more about the event handling read [React TinyCarousel API reference](../api-reference/integration-react/#tinycarousel) or have a look at the advanced example below:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example of advanced usage of the Tiny Carousel React integration"
-    description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element tag name to something custom - like 'section' when using React integration - @frsource/tiny-carousel-react"
-    default-tab="js"
-    height="450px"
-    :scripts="['https://unpkg.com/react/umd/react.production.min.js','https://unpkg.com/react-dom/umd/react-dom.production.min.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-react/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-autoplay/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-custom-events/dist/index.umd.js']"
-    :tags="['react','hooks']"
->
-  <template slot="html">
+<ExampleSection title="Example of advanced usage of the Tiny Carousel React integration" description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element tag name to something custom - like 'section' when using React integration - @frsource/tiny-carousel-react" default-tab="js" height="450px" :scripts="['https://unpkg.com/react/umd/react.production.min.js','https://unpkg.com/react-dom/umd/react-dom.production.min.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-react/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-autoplay/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-custom-events/dist/index.umd.js']" :tags="['react','hooks']">
+  <template #html>
 &lt;p&gt;Use arrows or scroll (or swipes on a mobile device) to change slides&lt;/p&gt;
 <!-- -->
 &lt;div id="root"&gt;&lt;/div&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -275,7 +254,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="typescript">
+  <template #typescript>
 // needed because of skypack/codepen limitations
 // it's an equivalent of e.g.:
 // import TinyCarousel from "@frsource/tiny-carousel-react";
@@ -376,14 +355,8 @@ Still developing Vue 2 application? Don’t worry! [Click here to see the Vue 2 
 First, the most basic example of how to add Tiny Carousel to your Vue 3 application:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example on how to use Tiny Carousel Vue integration with Vue 3"
-    description="This example code shows how to use Tiny Carousel integration for Vue 3 - @frsource/tiny-carousel-vue"
-    default-tab="js"
-    :scripts="['https://cdn.jsdelivr.net/npm/vue@next/dist/vue.global.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-vue/dist/index.umd.js']"
-    :tags="['vue','vue3']"
->
-  <template slot="html">
+<ExampleSection title="Example on how to use Tiny Carousel Vue integration with Vue 3" description="This example code shows how to use Tiny Carousel integration for Vue 3 - @frsource/tiny-carousel-vue" default-tab="js" :scripts="['https://cdn.jsdelivr.net/npm/vue@next/dist/vue.global.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-vue/dist/index.umd.js']" :tags="['vue','vue3']">
+  <template #html>
 &lt;p&gt;Use arrows or scroll (or swipes on a mobile device) to change slides&lt;/p&gt;
 <!-- -->
 &lt;div id="app"&gt;&lt;/div&gt;
@@ -401,7 +374,7 @@ First, the most basic example of how to add Tiny Carousel to your Vue 3 applicat
 <!-- -->
 &lt;/script&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -412,7 +385,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="typescript">
+  <template #typescript>
 // needed because of skypack/codepen limitations
 // in regular codebase use 
 // import * as Vue from "vue";
@@ -446,15 +419,8 @@ TinyCarousel component allows you to use any of the Tiny Carousel plugins, acces
 
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example of advanced usage of the Tiny Carousel Vue integration with Vue 3"
-    description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element to something custom - like 'section'"
-    default-tab="js"
-    height="450px"
-    :tags="['vue','vue3','composition-api']"
-    :scripts="['https://cdn.jsdelivr.net/npm/vue@next/dist/vue.global.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-vue/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-autoplay/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-custom-events/dist/index.umd.js']"
->
-  <template slot="html">
+<ExampleSection title="Example of advanced usage of the Tiny Carousel Vue integration with Vue 3" description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element to something custom - like 'section'" default-tab="js" height="450px" :tags="['vue','vue3','composition-api']" :scripts="['https://cdn.jsdelivr.net/npm/vue@next/dist/vue.global.js','https://unpkg.com/@frsource/tiny-carousel-utils/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-core/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-vue/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-autoplay/dist/index.umd.js','https://unpkg.com/@frsource/tiny-carousel-plugin-custom-events/dist/index.umd.js']">
+  <template #html>
 &lt;div id="app"&gt;&lt;/div&gt;
 <!-- -->
 &lt;script type="text/x-template" id="app-template"&gt;
@@ -488,7 +454,7 @@ TinyCarousel component allows you to use any of the Tiny Carousel plugins, acces
 <!-- -->
 &lt;/script&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -499,7 +465,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="typescript">
+  <template #typescript>
 // needed because of skypack/codepen limitations
 // in regular codebase use 
 // import TinyCarousel from "@frsource/tiny-carousel-vue";
@@ -559,13 +525,8 @@ createApp(App)
 Next, follow the basic example of how to add Tiny Carousel to your Vue 2 application:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example on how to use Tiny Carousel Vue integration with Vue 2"
-    description="This example code shows how to use Tiny Carousel integration for Vue 2 - @frsource/tiny-carousel-vue"
-    default-tab="js"
-    :tags="['vue','vue2']"
->
-  <template slot="html">
+<ExampleSection title="Example on how to use Tiny Carousel Vue integration with Vue 2" description="This example code shows how to use Tiny Carousel integration for Vue 2 - @frsource/tiny-carousel-vue" default-tab="js" :tags="['vue','vue2']">
+  <template #html>
 &lt;p&gt;Use arrows or scroll (or swipes on a mobile device) to change slides&lt;/p&gt;
 <!-- -->
 &lt;div id="app"&gt;&lt;/div&gt;
@@ -583,7 +544,7 @@ Next, follow the basic example of how to add Tiny Carousel to your Vue 2 applica
 <!-- -->
 &lt;/script&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -594,7 +555,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="typescript">
+  <template #typescript>
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2/dist/vue.esm.browser.js';
 import TinyCarousel from 'https://cdn.skypack.dev/@frsource/tiny-carousel-vue';
 <!-- -->
@@ -624,14 +585,8 @@ new Vue({
 In the more advanced usage example let’s see how you can use any of the Tiny Carousel plugins, access carousel instance directly or change the carousel root element`s tag name to something custom:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example of advanced usage of the Tiny Carousel Vue integration with Vue 2"
-    description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element to something custom - like 'section'"
-    default-tab="js"
-    height="450px"
-    :tags="['vue','vue2']"
->
-  <template slot="html">
+<ExampleSection title="Example of advanced usage of the Tiny Carousel Vue integration with Vue 2" description="This example shows how to access carousel API, add plugins to your Tiny Carousel instance and change carousel element to something custom - like 'section'" default-tab="js" height="450px" :tags="['vue','vue2']">
+  <template #html>
 &lt;div id="app"&gt;&lt;/div&gt;
 <!-- -->
 &lt;script type="text/x-template" id="app-template"&gt;
@@ -665,12 +620,12 @@ In the more advanced usage example let’s see how you can use any of the Tiny C
 <!-- -->
 &lt;/script&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 </div>
   </template>
-  <template slot="typescript">
+  <template #typescript>
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2/dist/vue.esm.browser.js';
 import { pluginAutoplay } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-autoplay';
 import { pluginCustomEvents } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-custom-events';
@@ -759,12 +714,8 @@ After installation, you need to add the plugin to your Tiny Carousel instance us
 For reference and information about the defaults, please see [`PluginConfig` documentation page](../api-reference/plugin-autoplay/#pluginconfig) or have a look at the example below:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example on how to use Tiny Carousel Autoplay"
-    description="This example code shows how to use 'carousel.play()' and `carousel.pause()` methods coming from @frsource/tiny-carousel-plugin-autoplay library"
-    default-tab="js"
->
-  <template slot="html">
+<ExampleSection title="Example on how to use Tiny Carousel Autoplay" description="This example code shows how to use 'carousel.play()' and `carousel.pause()` methods coming from @frsource/tiny-carousel-plugin-autoplay library" default-tab="js">
+  <template #html>
 &lt;button class="play" type="button"&gt;PLAY&lt;/button&gt;
 &lt;button class="pause" type="button"&gt;PAUSE&lt;/button&gt;
 <!-- -->
@@ -783,7 +734,7 @@ For reference and information about the defaults, please see [`PluginConfig` doc
   &lt;/li&gt;
 &lt;/ul&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -794,7 +745,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="js">
+  <template #js>
 import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
 import { pluginAutoplay } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-autoplay';
 <!-- -->
@@ -846,12 +797,8 @@ npm install @frsource/tiny-carousel-plugin-custom-events
 Then, add it to your carousel instance using [`carousel.use` method](../api-reference/core/#carousel-use). That’s it, now you can use methods newly added by the Tiny Carousel Plugin Custom Events, like `carousel.on()` on the example below:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example on how to use Tiny Carousel Custom Events"
-    description="This example code shows how to use 'carousel.on()' method coming from @frsource/tiny-carousel-plugin-custom-events library"
-    default-tab="js"
->
-  <template slot="html">
+<ExampleSection title="Example on how to use Tiny Carousel Custom Events" description="This example code shows how to use 'carousel.on()' method coming from @frsource/tiny-carousel-plugin-custom-events library" default-tab="js">
+  <template #html>
 &lt;h3&gt;Tiny Carousel is not loaded yet ⏳&lt;/h3&gt;
 <!-- -->
 &lt;ul&gt;
@@ -869,7 +816,7 @@ Then, add it to your carousel instance using [`carousel.use` method](../api-refe
   &lt;/li&gt;
 &lt;/ul&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -880,7 +827,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="js">
+  <template #js>
 import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
 import { pluginCustomEvents } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-custom-events';
 <!-- -->
@@ -933,12 +880,8 @@ After you add it to your carousel instance (using [`carousel.use` method](../api
 See the example below on the device with mouse connected to see the plugin in action:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example on how to use Tiny Carousel Mouse Drag"
-    description="This example code shows @frsource/tiny-carousel-plugin-mouse-drag library in action - now mouse users can swipe the carousel"
-    default-tab="js"
->
-  <template slot="html">
+<ExampleSection title="Example on how to use Tiny Carousel Mouse Drag" description="This example code shows @frsource/tiny-carousel-plugin-mouse-drag library in action - now mouse users can swipe the carousel" default-tab="js">
+  <template #html>
 &lt;h3&gt;The carousel is now swipeable, even on desktop 🖐&lt;/h3&gt;
 <!-- -->
 &lt;ul&gt;
@@ -956,7 +899,7 @@ See the example below on the device with mouse connected to see the plugin in ac
   &lt;/li&gt;
 &lt;/ul&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-mouse-drag/dist/index.css";
@@ -968,7 +911,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="js">
+  <template #js>
 import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
 import { pluginMouseDrag } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-mouse-drag';
 <!-- -->
@@ -1010,12 +953,8 @@ npm install @frsource/tiny-carousel-plugin-scroll-snap-fallback
 Then, add it to your carousel instance using [`carousel.use` method](../api-reference/core/#carousel-use), as shown on the example below:
 
 <!-- textlint-disable -->
-<ExampleSection
-    title="Example on how to use Tiny Carousel Scroll Snap Fallback"
-    description="This example code shows how to use @frsource/tiny-carousel-plugin-scroll-snap-fallback library in your project"
-    default-tab="js"
->
-  <template slot="html">
+<ExampleSection title="Example on how to use Tiny Carousel Scroll Snap Fallback" description="This example code shows how to use @frsource/tiny-carousel-plugin-scroll-snap-fallback library in your project" default-tab="js">
+  <template #html>
 &lt;!-- This example works on IE9 and Chrome 69- -->
 &lt;!-- You can navigate through slides using: scroll, arrows (first focus carousel with a click) or (on touch devices) swiping -->
 <!-- -->
@@ -1034,7 +973,7 @@ Then, add it to your carousel instance using [`carousel.use` method](../api-refe
   &lt;/li&gt;
 &lt;/ul&gt;
   </template>
-  <template slot="scss">
+  <template #scss>
 <div>
 @import "https://cdn.skypack.dev/@frsource/tiny-carousel-core/dist/index.css";
 <!-- -->
@@ -1045,7 +984,7 @@ ul {
 }
 </div>
   </template>
-  <template slot="js">
+  <template #js>
 import { TinyCarousel } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-core';
 import { pluginScrollSnapFallback } from 'https://cdn.skypack.dev/@frsource/tiny-carousel-plugin-scroll-snap-fallback';
 <!-- -->
