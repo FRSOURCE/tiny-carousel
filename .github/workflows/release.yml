@@ -21,6 +21,8 @@ jobs:
       - name: Checkout Repository
         if: ${{ steps.release.outputs.releases_created }}
         uses: actions/checkout@v2
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
       - uses: pnpm/action-setup@v2.2.2
         if: ${{ steps.release.outputs.releases_created }}
         with:
@@ -32,8 +34,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install dependencies
         if: ${{ steps.release.outputs.releases_created }}
         run: pnpm install
@@ -43,7 +43,3 @@ jobs:
       - name: Release package
         if: ${{ steps.release.outputs.releases_created }}
         run: pnpm release:ci
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

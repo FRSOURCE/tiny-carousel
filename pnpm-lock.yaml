@@ -91,7 +91,7 @@ importers:
   packages/core:
     specifiers:
       '@frsource/frs-hide-scrollbar': ^2.0.6
-      '@frsource/tiny-carousel-utils': ^0.5.0
+      '@frsource/tiny-carousel-utils': ^0.6.0
     dependencies:
       '@frsource/tiny-carousel-utils': link:../utils
     devDependencies:
@@ -99,10 +99,10 @@ importers:
 
   packages/docs:
     specifiers:
-      '@frsource/tiny-carousel-core': ^0.10.1
-      '@frsource/tiny-carousel-plugin-custom-events': ^0.4.4
-      '@frsource/tiny-carousel-plugin-scroll-snap-fallback': ^0.3.1
-      '@frsource/tiny-carousel-utils': ^0.5.0
+      '@frsource/tiny-carousel-core': ^0.10.2
+      '@frsource/tiny-carousel-plugin-custom-events': ^0.4.5
+      '@frsource/tiny-carousel-plugin-scroll-snap-fallback': ^0.3.2
+      '@frsource/tiny-carousel-utils': ^0.6.0
       '@vuepress/client': 2.0.0-beta.48
       '@vuepress/plugin-active-header-links': 2.0.0-beta.48
       '@vuepress/plugin-pwa': 2.0.0-beta.48
@@ -134,8 +134,8 @@ importers:
 
   packages/plugin-autoplay:
     specifiers:
-      '@frsource/tiny-carousel-core': ^0.10.1
-      '@frsource/tiny-carousel-utils': ^0.5.0
+      '@frsource/tiny-carousel-core': ^0.10.2
+      '@frsource/tiny-carousel-utils': ^0.6.0
     dependencies:
       '@frsource/tiny-carousel-utils': link:../utils
     devDependencies:
@@ -143,8 +143,8 @@ importers:
 
   packages/plugin-custom-events:
     specifiers:
-      '@frsource/tiny-carousel-core': ^0.10.1
-      '@frsource/tiny-carousel-utils': ^0.5.0
+      '@frsource/tiny-carousel-core': ^0.10.2
+      '@frsource/tiny-carousel-utils': ^0.6.0
     dependencies:
       '@frsource/tiny-carousel-utils': link:../utils
     devDependencies:
@@ -152,8 +152,8 @@ importers:
 
   packages/plugin-mouse-drag:
     specifiers:
-      '@frsource/tiny-carousel-core': ^0.10.1
-      '@frsource/tiny-carousel-utils': ^0.5.0
+      '@frsource/tiny-carousel-core': ^0.10.2
+      '@frsource/tiny-carousel-utils': ^0.6.0
     dependencies:
       '@frsource/tiny-carousel-utils': link:../utils
     devDependencies:
@@ -161,8 +161,8 @@ importers:
 
   packages/plugin-scroll-snap-fallback:
     specifiers:
-      '@frsource/tiny-carousel-core': ^0.10.1
-      '@frsource/tiny-carousel-utils': ^0.5.0
+      '@frsource/tiny-carousel-core': ^0.10.2
+      '@frsource/tiny-carousel-utils': ^0.6.0
     dependencies:
       '@frsource/tiny-carousel-utils': link:../utils
     devDependencies:
@@ -172,11 +172,11 @@ importers:
     specifiers:
       '@babel/plugin-syntax-flow': ^7.17.12
       '@babel/plugin-transform-react-jsx': ^7.17.12
-      '@frsource/tiny-carousel-core': ^0.10.1
-      '@frsource/tiny-carousel-plugin-autoplay': ^0.4.4
-      '@frsource/tiny-carousel-plugin-custom-events': ^0.4.4
-      '@frsource/tiny-carousel-plugin-mouse-drag': ^0.4.2
-      '@frsource/tiny-carousel-utils': ^0.5.0
+      '@frsource/tiny-carousel-core': ^0.10.2
+      '@frsource/tiny-carousel-plugin-autoplay': ^0.4.5
+      '@frsource/tiny-carousel-plugin-custom-events': ^0.4.5
+      '@frsource/tiny-carousel-plugin-mouse-drag': ^0.4.3
+      '@frsource/tiny-carousel-utils': ^0.6.0
       '@testing-library/dom': ^8.13.0
       '@testing-library/jest-dom': ^5.14.1
       '@testing-library/react': ^12.1.0
@@ -229,10 +229,10 @@ importers:
 
   packages/vue:
     specifiers:
-      '@frsource/tiny-carousel-core': ^0.10.1
-      '@frsource/tiny-carousel-plugin-autoplay': ^0.4.4
-      '@frsource/tiny-carousel-plugin-custom-events': ^0.4.4
-      '@frsource/tiny-carousel-plugin-mouse-drag': ^0.4.2
+      '@frsource/tiny-carousel-core': ^0.10.2
+      '@frsource/tiny-carousel-plugin-autoplay': ^0.4.5
+      '@frsource/tiny-carousel-plugin-custom-events': ^0.4.5
+      '@frsource/tiny-carousel-plugin-mouse-drag': ^0.4.3
       '@typescript-eslint/eslint-plugin': ^4.31.1
       '@typescript-eslint/parser': ^4.31.1
       '@vue/cli-plugin-babel': ~5.0.1

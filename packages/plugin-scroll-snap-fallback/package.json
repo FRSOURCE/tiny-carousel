@@ -1,7 +1,7 @@
 {
   "name": "@frsource/tiny-carousel-plugin-scroll-snap-fallback",
   "amdName": "tinyCarouselPluginScrollSnapFallback",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Add CSS Scroll Snap fallback polyfill to your @frsource/tiny-carousel 🧩",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",

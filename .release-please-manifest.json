@@ -1,10 +1,10 @@
 {
-  "packages/core": "0.10.1",
+  "packages/core": "0.10.2",
   "packages/docs": "0.7.1",
-  "packages/plugin-autoplay": "0.4.4",
-  "packages/plugin-custom-events": "0.4.4",
-  "packages/plugin-mouse-drag": "0.4.2",
-  "packages/plugin-scroll-snap-fallback": "0.3.1",
+  "packages/plugin-autoplay": "0.4.5",
+  "packages/plugin-custom-events": "0.4.5",
+  "packages/plugin-mouse-drag": "0.4.3",
+  "packages/plugin-scroll-snap-fallback": "0.3.2",
   "packages/react": "0.3.10",
   "packages/utils": "0.6.0",
   "packages/vue": "0.7.2"
