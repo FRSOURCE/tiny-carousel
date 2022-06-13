@@ -6,6 +6,6 @@
   "packages/plugin-mouse-drag": "0.4.2",
   "packages/plugin-scroll-snap-fallback": "0.3.1",
   "packages/react": "0.3.10",
-  "packages/utils": "0.5.0",
+  "packages/utils": "0.6.0",
   "packages/vue": "0.7.2"
 }

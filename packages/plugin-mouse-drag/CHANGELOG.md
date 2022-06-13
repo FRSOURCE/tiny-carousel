@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+* The following workspace dependencies were updated
+  * dependencies
+    * @frsource/tiny-carousel-utils bumped from ^0.5.0 to ^0.6.0
+  * devDependencies
+    * @frsource/tiny-carousel-core bumped from ^0.10.1 to ^0.10.2
+
 ## [0.4.2](https://github.com/FRSOURCE/tiny-carousel/compare/@frsource/tiny-carousel-plugin-mouse-drag@0.4.1...@frsource/tiny-carousel-plugin-mouse-drag-v0.4.2) (2022-06-13)
 
 
