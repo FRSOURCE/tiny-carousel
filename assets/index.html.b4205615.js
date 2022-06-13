@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-42d847c6","path":"/contribution/","title":"Contribution","lang":"en-US","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1655083047000,"contributors":[{"name":"Jakub Freisler","email":"jakub@frsource.org","commits":1}]},"filePathRelative":"contribution/README.md"}');export{t as data};
