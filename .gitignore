@@ -27,6 +27,5 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# Turbo temporary files
-**/.turbo/*.log
+# Vuepress
 **/.vuepress/.temp

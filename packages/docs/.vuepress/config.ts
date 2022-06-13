@@ -101,7 +101,7 @@ module.exports = {
 }
 
 function getSideBar() {
-    const ignoreDirs = ['.turbo', '.vuepress', 'node_modules'];
+    const ignoreDirs = ['.vuepress', 'node_modules'];
     
     return fs
         .readdirSync(path.join(__dirname, '..'), { withFileTypes: true })
