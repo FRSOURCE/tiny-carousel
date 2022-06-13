@@ -14,6 +14,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @frsource/tiny-carousel-core bumped from ^0.10.0 to ^0.10.1
+    * @frsource/tiny-carousel-plugin-custom-events bumped from ^0.4.3 to ^0.4.4
+    * @frsource/tiny-carousel-plugin-scroll-snap-fallback bumped from ^0.3.0 to ^0.3.1
+
 ## [0.6.2](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-docs@0.6.1...@frsource/tiny-carousel-docs@0.6.2) (2021-05-23)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-docs

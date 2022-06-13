@@ -14,6 +14,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [0.3.1](https://github.com/FRSOURCE/tiny-carousel/compare/@frsource/tiny-carousel-plugin-scroll-snap-fallback@0.3.0...@frsource/tiny-carousel-plugin-scroll-snap-fallback-v0.3.1) (2022-06-13)
+
+
+### Bug Fixes
+
+* docs examples by raising cross-peer-deps ([7d5dcb7](https://github.com/FRSOURCE/tiny-carousel/commit/7d5dcb734bfbfdbf7c7a8ea7a4718aae297e8660))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @frsource/tiny-carousel-core bumped from ^0.10.0 to ^0.10.1
+
 ## 0.2.1 (2021-05-23)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-scroll-snap-fallback

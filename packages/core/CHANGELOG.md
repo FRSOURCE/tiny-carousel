@@ -54,6 +54,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [0.10.1](https://github.com/FRSOURCE/tiny-carousel/compare/@frsource/tiny-carousel-core@0.10.0...@frsource/tiny-carousel-core-v0.10.1) (2022-06-13)
+
+
+### Bug Fixes
+
+* tests typings ([73c1b5f](https://github.com/FRSOURCE/tiny-carousel/commit/73c1b5f37813fc189f0d984f3409362852f9cfac))
+
 ## 0.6.3 (2021-03-31)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-core

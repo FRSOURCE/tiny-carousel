@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/FRSOURCE/tiny-carousel/compare/@frsource/tiny-carousel-vue@0.7.1...@frsource/tiny-carousel-vue-v0.7.2) (2022-06-13)
+
+
+### Bug Fixes
+
+* docs examples by raising cross-peer-deps ([7d5dcb7](https://github.com/FRSOURCE/tiny-carousel/commit/7d5dcb734bfbfdbf7c7a8ea7a4718aae297e8660))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @frsource/tiny-carousel-core bumped from ^0.10.0 to ^0.10.1
+    * @frsource/tiny-carousel-plugin-autoplay bumped from ^0.4.3 to ^0.4.4
+    * @frsource/tiny-carousel-plugin-custom-events bumped from ^0.4.3 to ^0.4.4
+    * @frsource/tiny-carousel-plugin-mouse-drag bumped from ^0.4.1 to ^0.4.2
+
 ## 0.7.1 (2021-09-13)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-vue
