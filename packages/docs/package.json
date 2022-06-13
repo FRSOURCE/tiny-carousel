@@ -40,10 +40,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@frsource/tiny-carousel-core": "^0.10.1",
-    "@frsource/tiny-carousel-plugin-custom-events": "^0.4.4",
-    "@frsource/tiny-carousel-plugin-scroll-snap-fallback": "^0.3.1",
-    "@frsource/tiny-carousel-utils": "^0.5.0"
+    "@frsource/tiny-carousel-core": "^0.10.2",
+    "@frsource/tiny-carousel-plugin-custom-events": "^0.4.5",
+    "@frsource/tiny-carousel-plugin-scroll-snap-fallback": "^0.3.2",
+    "@frsource/tiny-carousel-utils": "^0.6.0"
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.48",

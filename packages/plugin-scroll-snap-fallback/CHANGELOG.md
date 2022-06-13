@@ -14,6 +14,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+* The following workspace dependencies were updated
+  * dependencies
+    * @frsource/tiny-carousel-utils bumped from ^0.5.0 to ^0.6.0
+  * devDependencies
+    * @frsource/tiny-carousel-core bumped from ^0.10.1 to ^0.10.2
+
 ## [0.3.1](https://github.com/FRSOURCE/tiny-carousel/compare/@frsource/tiny-carousel-plugin-scroll-snap-fallback@0.3.0...@frsource/tiny-carousel-plugin-scroll-snap-fallback-v0.3.1) (2022-06-13)
 
 

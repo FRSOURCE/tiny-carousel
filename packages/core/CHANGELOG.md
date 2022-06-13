@@ -54,6 +54,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+* The following workspace dependencies were updated
+  * dependencies
+    * @frsource/tiny-carousel-utils bumped from ^0.5.0 to ^0.6.0
+
 ## [0.10.1](https://github.com/FRSOURCE/tiny-carousel/compare/@frsource/tiny-carousel-core@0.10.0...@frsource/tiny-carousel-core-v0.10.1) (2022-06-13)
 
 
