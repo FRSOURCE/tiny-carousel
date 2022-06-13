@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @frsource/tiny-carousel-core bumped from ^0.10.0 to ^0.10.1
+    * @frsource/tiny-carousel-plugin-autoplay bumped from ^0.4.3 to ^0.4.4
+    * @frsource/tiny-carousel-plugin-custom-events bumped from ^0.4.3 to ^0.4.4
+    * @frsource/tiny-carousel-plugin-mouse-drag bumped from ^0.4.1 to ^0.4.2
+
 ## [0.3.9](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-react@0.3.8...@frsource/tiny-carousel-react@0.3.9) (2022-06-11)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-react

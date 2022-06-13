@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/FRSOURCE/tiny-carousel/compare/@frsource/tiny-carousel-plugin-autoplay@0.4.3...@frsource/tiny-carousel-plugin-autoplay-v0.4.4) (2022-06-13)
+
+
+### Bug Fixes
+
+* docs examples by raising cross-peer-deps ([7d5dcb7](https://github.com/FRSOURCE/tiny-carousel/commit/7d5dcb734bfbfdbf7c7a8ea7a4718aae297e8660))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @frsource/tiny-carousel-core bumped from ^0.10.0 to ^0.10.1
+
 ## [0.4.3](https://github.com/FRSource/tiny-carousel/compare/@frsource/tiny-carousel-plugin-autoplay@0.4.2...@frsource/tiny-carousel-plugin-autoplay@0.4.3) (2021-09-05)
 
 **Note:** Version bump only for package @frsource/tiny-carousel-plugin-autoplay
