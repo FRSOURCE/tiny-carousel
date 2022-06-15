@@ -245,7 +245,7 @@ importers:
       core-js: 3.23.1
       eslint-plugin-vue: 8.7.1
       vue: 2.6.14
-      vue-demi: 0.12.5
+      vue-demi: 0.13.1
       vue-template-compiler: 2.6.14
       vue3: npm:vue@3.2.37
     devDependencies:
@@ -265,7 +265,7 @@ importers:
       core-js: 3.23.1
       eslint-plugin-vue: 8.7.1_eslint@7.32.0
       vue: 2.6.14
-      vue-demi: 0.12.5_vue@2.6.14
+      vue-demi: 0.13.1_vue@2.6.14
       vue-template-compiler: 2.6.14
       vue3: /vue/3.2.37
 
@@ -21867,8 +21867,8 @@ packages:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
     dev: true
 
-  /vue-demi/0.12.5_vue@2.6.14:
-    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
+  /vue-demi/0.13.1_vue@2.6.14:
+    resolution: {integrity: sha512-xmkJ56koG3ptpLnpgmIzk9/4nFf4CqduSJbUM0OdPoU87NwRuZ6x49OLhjSa/fC15fV+5CbEnrxU4oyE022svg==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
