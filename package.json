@@ -59,7 +59,7 @@
     "husky": "7.0.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.5.1",
-    "microbundle": "0.14.2",
+    "microbundle": "0.15.0",
     "postcss-import": "14.1.0",
     "postcss-reporter": "7.0.5",
     "rimraf": "3.0.2",

@@ -21,7 +21,7 @@ importers:
       husky: 7.0.4
       identity-obj-proxy: 3.0.0
       jest: 27.5.1
-      microbundle: 0.14.2
+      microbundle: 0.15.0
       postcss-import: 14.1.0
       postcss-reporter: 7.0.5
       rimraf: 3.0.2
@@ -63,7 +63,7 @@ importers:
       husky: 7.0.4
       identity-obj-proxy: 3.0.0
       jest: 27.5.1
-      microbundle: 0.14.2
+      microbundle: 0.15.0
       postcss-import: 14.1.0_postcss@8.4.14
       postcss-reporter: 7.0.5_postcss@8.4.14
       rimraf: 3.0.2
@@ -15113,8 +15113,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /microbundle/0.14.2:
-    resolution: {integrity: sha512-jODALfU3w7jnJAqw7Tou9uU8e8zH0GRVWzOd/V7eAvD1fsfb9pyMbmzhFZqnX6SCb54eP1EF5oRyNlSxBAxoag==}
+  /microbundle/0.15.0:
+    resolution: {integrity: sha512-EkFst5ntLXoQGewkvga/Kd72RcN7IuJRl5ivLihJSbvLfJQo8LDS0n9X0q81vegiC59vhtKIM6qjrl1fOAtuGw==}
     hasBin: true
     dependencies:
       '@babel/core': 7.18.2
@@ -15153,6 +15153,7 @@ packages:
       rollup-plugin-postcss: 4.0.2_postcss@8.4.14
       rollup-plugin-terser: 7.0.2_rollup@2.75.6
       rollup-plugin-typescript2: 0.29.0_fgms252lqu3rk7srzpqqayl4ya
+      rollup-plugin-visualizer: 5.6.0_rollup@2.75.6
       sade: 1.8.1
       terser: 5.14.1
       tiny-glob: 0.2.9
@@ -19069,6 +19070,20 @@ packages:
       rollup: 2.75.6
       tslib: 2.0.1
       typescript: 4.7.3
+    dev: true
+
+  /rollup-plugin-visualizer/5.6.0_rollup@2.75.6:
+    resolution: {integrity: sha512-CKcc8GTUZjC+LsMytU8ocRr/cGZIfMR7+mdy4YnlyetlmIl/dM8BMnOEpD4JPIGt+ZVW7Db9ZtSsbgyeBH3uTA==}
+    engines: {node: '>=12'}
+    hasBin: true
+    peerDependencies:
+      rollup: ^2.0.0
+    dependencies:
+      nanoid: 3.3.4
+      open: 8.4.0
+      rollup: 2.75.6
+      source-map: 0.7.4
+      yargs: 17.5.1
     dev: true
 
   /rollup-pluginutils/2.8.2:
