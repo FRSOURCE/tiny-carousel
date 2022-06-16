@@ -10,7 +10,7 @@ importers:
       '@types/jest': 27.5.2
       '@typescript-eslint/eslint-plugin': 4.33.0
       '@typescript-eslint/parser': 4.33.0
-      concurrently: 6.5.1
+      concurrently: 7.2.2
       coveralls: 3.1.1
       cpy-cli: 3.1.1
       dictionary-en: 3.2.0
@@ -52,7 +52,7 @@ importers:
       '@types/jest': 27.5.2
       '@typescript-eslint/eslint-plugin': 4.33.0_b2rfmdvuwe4rokpupduzboofj4
       '@typescript-eslint/parser': 4.33.0_kix3shd7zvxuvkzdjm72bpp2vy
-      concurrently: 6.5.1
+      concurrently: 7.2.2
       coveralls: 3.1.1
       cpy-cli: 3.1.1
       dictionary-en: 3.2.0
@@ -6863,7 +6863,7 @@ packages:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
       tar: 6.1.11
@@ -7506,19 +7506,20 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /concurrently/6.5.1:
-    resolution: {integrity: sha512-FlSwNpGjWQfRwPLXvJ/OgysbBxPkWpiVjy1042b0U7on7S7qwwMIILRj7WTN1mTgqa582bG6NFuScOoh6Zgdag==}
-    engines: {node: '>=10.0.0'}
+  /concurrently/7.2.2:
+    resolution: {integrity: sha512-DcQkI0ruil5BA/g7Xy3EWySGrFJovF5RYAYxwGvv9Jf9q9B1v3jPFP2tl6axExNf1qgF30kjoNYrangZ0ey4Aw==}
+    engines: {node: ^12.20.0 || ^14.13.0 || >=16.0.0}
     hasBin: true
     dependencies:
       chalk: 4.1.2
       date-fns: 2.28.0
       lodash: 4.17.21
-      rxjs: 6.6.7
+      rxjs: 7.5.5
+      shell-quote: 1.7.3
       spawn-command: 0.0.2-1
       supports-color: 8.1.1
       tree-kill: 1.2.2
-      yargs: 16.2.0
+      yargs: 17.5.1
     dev: true
 
   /condense-newlines/0.2.1:
@@ -17873,6 +17874,15 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: true
 
+  /promise-inflight/1.0.1:
+    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
+    peerDependencies:
+      bluebird: '*'
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+    dev: true
+
   /promise-inflight/1.0.1_bluebird@3.7.2:
     resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
     peerDependencies:
@@ -19123,11 +19133,10 @@ packages:
       aproba: 1.2.0
     dev: true
 
-  /rxjs/6.6.7:
-    resolution: {integrity: sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==}
-    engines: {npm: '>=2.0.0'}
+  /rxjs/7.5.5:
+    resolution: {integrity: sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==}
     dependencies:
-      tslib: 1.14.1
+      tslib: 2.4.0
     dev: true
 
   /sade/1.8.1:
