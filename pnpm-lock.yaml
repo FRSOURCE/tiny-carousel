@@ -179,7 +179,7 @@ importers:
       '@frsource/tiny-carousel-utils': ^0.6.0
       '@testing-library/dom': 8.13.0
       '@testing-library/jest-dom': 5.16.4
-      '@testing-library/react': 12.1.5
+      '@testing-library/react': 13.3.0
       '@testing-library/user-event': 14.2.0
       '@types/node': 17.0.43
       '@types/react': 17.0.45
@@ -206,7 +206,7 @@ importers:
       '@frsource/tiny-carousel-utils': link:../utils
       '@testing-library/dom': 8.13.0
       '@testing-library/jest-dom': 5.16.4
-      '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
+      '@testing-library/react': 13.3.0_sfoxds7t5ydpegc3knd667wn6m
       '@testing-library/user-event': 14.2.0_tlwynutqiyp5mns3woioasuxnq
       '@types/node': 17.0.43
       '@types/react': 17.0.45
@@ -3182,16 +3182,16 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/12.1.5_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-OfTXCJUFgjd/digLUuPxa0+/3ZxsQmE7ub9kcbW/wi96Bh3o/p5vrETcBGfP17NWPGqeYYl5LTRpwyGoMC4ysg==}
+  /@testing-library/react/13.3.0_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-DB79aA426+deFgGSjnf5grczDPiL4taK3hFaa+M5q7q20Kcve9eQottOG5kZ74KEr55v0tU2CQormSSDK87zYQ==}
     engines: {node: '>=12'}
     peerDependencies:
-      react: <18.0.0
-      react-dom: <18.0.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.18.3
       '@testing-library/dom': 8.13.0
-      '@types/react-dom': 17.0.17
+      '@types/react-dom': 18.0.5
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: true
@@ -3656,12 +3656,6 @@ packages:
 
   /@types/range-parser/1.2.4:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
-    dev: true
-
-  /@types/react-dom/17.0.17:
-    resolution: {integrity: sha512-VjnqEmqGnasQKV0CWLevqMTXBYG9GbwuE6x3VetERLh0cq2LTptFE73MrQi2S7GkKXCf2GgwItB/melLnxfnsg==}
-    dependencies:
-      '@types/react': 17.0.45
     dev: true
 
   /@types/react-dom/18.0.5:
