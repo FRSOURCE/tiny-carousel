@@ -16,7 +16,7 @@ importers:
       dictionary-en: 3.2.0
       eslint: 7.32.0
       eslint-plugin-eslint-comments: 3.2.0
-      eslint-plugin-jest: 24.7.0
+      eslint-plugin-jest: 26.5.3
       eslint-plugin-monorepo: 0.3.2
       husky: 7.0.4
       identity-obj-proxy: 3.0.0
@@ -58,7 +58,7 @@ importers:
       dictionary-en: 3.2.0
       eslint: 7.32.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@7.32.0
-      eslint-plugin-jest: 24.7.0_5y6ynyznamtfamlk3wyqdjjvty
+      eslint-plugin-jest: 26.5.3_7camhmzwcooi4nubnxjhxamcxy
       eslint-plugin-monorepo: 0.3.2_sz4i7qznf44sliit4yqchbvfk4
       husky: 7.0.4
       identity-obj-proxy: 3.0.0
@@ -3680,14 +3680,6 @@ packages:
     resolution: {integrity: sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==}
     dependencies:
       '@types/react': 18.0.14
-    dev: true
-
-  /@types/react/17.0.45:
-    resolution: {integrity: sha512-YfhQ22Lah2e3CHPsb93tRwIGNiSwkuz1/blk4e6QrWS0jQzCSNbGLtOEYhPg02W0yGTTmpajp7dCTbBAMN3qsg==}
-    dependencies:
-      '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.2
-      csstype: 3.1.0
     dev: true
 
   /@types/react/18.0.14:
@@ -9902,6 +9894,28 @@ packages:
       '@typescript-eslint/experimental-utils': 5.28.0_kix3shd7zvxuvkzdjm72bpp2vy
       eslint: 7.32.0
       jest: 26.6.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
+  /eslint-plugin-jest/26.5.3_7camhmzwcooi4nubnxjhxamcxy:
+    resolution: {integrity: sha512-sICclUqJQnR1bFRZGLN2jnSVsYOsmPYYnroGCIMVSvTS3y8XR3yjzy1EcTQmk6typ5pRgyIWzbjqxK6cZHEZuQ==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.0.0
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+      jest: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+      jest:
+        optional: true
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 4.33.0_b2rfmdvuwe4rokpupduzboofj4
+      '@typescript-eslint/utils': 5.28.0_kix3shd7zvxuvkzdjm72bpp2vy
+      eslint: 7.32.0
+      jest: 27.5.1
     transitivePeerDependencies:
       - supports-color
       - typescript
