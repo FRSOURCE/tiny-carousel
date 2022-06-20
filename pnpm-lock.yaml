@@ -40,7 +40,7 @@ importers:
       textlint-rule-no-todo: 2.0.1
       textlint-rule-period-in-list-item: 0.3.2
       textlint-rule-spelling: 0.3.0
-      textlint-rule-stop-words: 2.0.9
+      textlint-rule-stop-words: 3.0.1
       textlint-rule-terminology: 3.0.1
       textlint-rule-unexpanded-acronym: 1.2.4
       ts-jest: 27.1.5
@@ -82,7 +82,7 @@ importers:
       textlint-rule-no-todo: 2.0.1_4ye76y54xad35l4e4ikwfatiny
       textlint-rule-period-in-list-item: 0.3.2
       textlint-rule-spelling: 0.3.0_textlint@12.1.1
-      textlint-rule-stop-words: 2.0.9_4ye76y54xad35l4e4ikwfatiny
+      textlint-rule-stop-words: 3.0.1_4ye76y54xad35l4e4ikwfatiny
       textlint-rule-terminology: 3.0.1_4ye76y54xad35l4e4ikwfatiny
       textlint-rule-unexpanded-acronym: 1.2.4
       ts-jest: 27.1.5_kz45wmo4i2t6klurdgejts3uhm
@@ -20995,9 +20995,9 @@ packages:
       textlint: 12.1.1
     dev: true
 
-  /textlint-rule-stop-words/2.0.9_4ye76y54xad35l4e4ikwfatiny:
-    resolution: {integrity: sha512-UW7nWrqBUHfz/sRLTFo40BNjwXOiXSHg00TJuYY4GVDQtsWRLyAsOnXSBqClP4i6wl7ejMBeYmB5mfllYAYMgA==}
-    engines: {node: '>=8.9'}
+  /textlint-rule-stop-words/3.0.1_4ye76y54xad35l4e4ikwfatiny:
+    resolution: {integrity: sha512-gO4N3OnPLvE6+fvJ1Y5m8MzDVrqMEWzW8pTGMXjL8VAXmQkD6YQ9eDMbsVN0/DzEe8tcsBqNgA/iIrQ64oECuQ==}
+    engines: {node: '>=14'}
     dependencies:
       lodash: 4.17.21
       split-lines: 2.1.0
