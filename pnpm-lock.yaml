@@ -192,8 +192,8 @@ importers:
       eslint-plugin-react: 7.30.0
       eslint-plugin-react-hooks: 4.6.0
       eslint-plugin-testing-library: 5.5.1
-      react: 17.0.2
-      react-dom: 17.0.2
+      react: 18.2.0
+      react-dom: 18.2.0
       react-scripts: 4.0.3
       web-vitals: 2.1.4
     devDependencies:
@@ -206,7 +206,7 @@ importers:
       '@frsource/tiny-carousel-utils': link:../utils
       '@testing-library/dom': 8.14.0
       '@testing-library/jest-dom': 5.16.4
-      '@testing-library/react': 13.3.0_sfoxds7t5ydpegc3knd667wn6m
+      '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
       '@testing-library/user-event': 14.2.1_ihvo3xlg2d6kwqju3os3zitn3y
       '@types/node': 17.0.43
       '@types/react': 18.0.14
@@ -219,9 +219,9 @@ importers:
       eslint-plugin-react: 7.30.0_eslint@7.32.0
       eslint-plugin-react-hooks: 4.6.0_eslint@7.32.0
       eslint-plugin-testing-library: 5.5.1_hxadhbs2xogijvk7vq4t2azzbu
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      react-scripts: 4.0.3_s7dhm7uhgnhsqh75wuilf3r4wi
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-scripts: 4.0.3_qtbnez4q7bzoc4eqybg3efzzxe
       web-vitals: 2.1.4
 
   packages/utils:
@@ -3183,7 +3183,7 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/13.3.0_sfoxds7t5ydpegc3knd667wn6m:
+  /@testing-library/react/13.3.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-DB79aA426+deFgGSjnf5grczDPiL4taK3hFaa+M5q7q20Kcve9eQottOG5kZ74KEr55v0tU2CQormSSDK87zYQ==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -3193,8 +3193,8 @@ packages:
       '@babel/runtime': 7.18.3
       '@testing-library/dom': 8.14.0
       '@types/react-dom': 18.0.5
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: true
 
   /@testing-library/user-event/14.2.1_ihvo3xlg2d6kwqju3os3zitn3y:
@@ -18330,15 +18330,14 @@ packages:
       - webpack
     dev: true
 
-  /react-dom/17.0.2_react@17.0.2:
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
+  /react-dom/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
-      react: 17.0.2
+      react: ^18.2.0
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
+      react: 18.2.0
+      scheduler: 0.23.0
     dev: true
 
   /react-error-overlay/6.0.11:
@@ -18358,7 +18357,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-scripts/4.0.3_s7dhm7uhgnhsqh75wuilf3r4wi:
+  /react-scripts/4.0.3_qtbnez4q7bzoc4eqybg3efzzxe:
     resolution: {integrity: sha512-S5eO4vjUzUisvkIPB7jVsKtuH2HhWcASREYWHAQ1FP5HyCv3xgn+wpILAEWkmy+A+tTNbSZClhxjT3qz6g4L1A==}
     engines: {node: ^10.12.0 || >=12.0.0}
     hasBin: true
@@ -18412,7 +18411,7 @@ packages:
       postcss-preset-env: 6.7.0
       postcss-safe-parser: 5.0.2
       prompts: 2.4.0
-      react: 17.0.2
+      react: 18.2.0
       react-app-polyfill: 2.0.0
       react-dev-utils: 11.0.4_7n2mvbiuqdc2ir4fpwittov5w4
       react-refresh: 0.8.3
@@ -18453,12 +18452,11 @@ packages:
       - webpack-plugin-serve
     dev: true
 
-  /react/17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: true
 
   /read-cache/1.0.0:
@@ -19395,11 +19393,10 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler/0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
+  /scheduler/0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: true
 
   /schema-utils/1.0.0:
