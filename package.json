@@ -64,7 +64,7 @@
     "postcss-reporter": "7.0.5",
     "rimraf": "3.0.2",
     "sass": "1.52.3",
-    "stylelint": "13.13.1",
+    "stylelint": "14.9.1",
     "stylelint-config-sass-guidelines": "9.0.1",
     "textlint": "12.1.1",
     "textlint-filter-rule-comments": "1.2.2",
