@@ -18,7 +18,7 @@ importers:
       eslint-plugin-eslint-comments: 3.2.0
       eslint-plugin-jest: 26.5.3
       eslint-plugin-monorepo: 0.3.2
-      husky: 7.0.4
+      husky: 8.0.1
       identity-obj-proxy: 3.0.0
       jest: 27.5.1
       microbundle: 0.15.0
@@ -60,7 +60,7 @@ importers:
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.18.0
       eslint-plugin-jest: 26.5.3_hkaktba3mic4t6mktu5mmyzyhi
       eslint-plugin-monorepo: 0.3.2_nphynxzgml2b4zuean7i6hr2hq
-      husky: 7.0.4
+      husky: 8.0.1
       identity-obj-proxy: 3.0.0
       jest: 27.5.1
       microbundle: 0.15.0
@@ -11446,9 +11446,9 @@ packages:
     resolution: {integrity: sha512-FArOOhsfu1Rzc6wj8TZWTEpO/+TQOqhU0YNx+IyRaScE7HVanOwn8knN1OjjUngJOLaRqFSLjX0EzvMiNnT7zw==}
     dev: true
 
-  /husky/7.0.4:
-    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
-    engines: {node: '>=12'}
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
