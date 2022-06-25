@@ -42,8 +42,8 @@
     "url": "https://github.com/FRSource/tiny-carousel/issues"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.0.2",
-    "@commitlint/config-conventional": "17.0.2",
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "1.0.8",
     "@types/jest": "27.5.2",
     "@typescript-eslint/eslint-plugin": "5.29.0",
