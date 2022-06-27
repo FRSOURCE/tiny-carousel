@@ -56,8 +56,8 @@
     "access": "public"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-flow": "7.17.12",
-    "@babel/plugin-transform-react-jsx": "7.17.12",
+    "@babel/plugin-syntax-flow": "7.18.6",
+    "@babel/plugin-transform-react-jsx": "7.18.6",
     "@frsource/tiny-carousel-core": "^0.10.2",
     "@frsource/tiny-carousel-utils": "^0.6.0",
     "@frsource/tiny-carousel-plugin-autoplay": "^0.4.5",
