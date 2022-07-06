@@ -243,7 +243,7 @@ importers:
       '@vue/cli-plugin-unit-jest': 4.5.18
       '@vue/cli-service': 4.5.18
       '@vue/eslint-config-typescript': 11.0.0
-      '@vue/test-utils': 2.0.0
+      '@vue/test-utils': 2.0.2
       core-js: 3.23.3
       eslint-plugin-vue: 9.1.1
       vue: 2.6.14
@@ -263,7 +263,7 @@ importers:
       '@vue/cli-plugin-unit-jest': 4.5.18_xm4jb3nwujld22bzixe2uyiepq
       '@vue/cli-service': 4.5.18_x6wjcbhak27hsa5sstktde3x2i
       '@vue/eslint-config-typescript': 11.0.0_rbwfxavh274jq5nrli6gjtdzua
-      '@vue/test-utils': 2.0.0_vue@2.6.14
+      '@vue/test-utils': 2.0.2_vue@2.6.14
       core-js: 3.23.3
       eslint-plugin-vue: 9.1.1_eslint@8.19.0
       vue: 2.6.14
@@ -5151,8 +5151,8 @@ packages:
     resolution: {integrity: sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==}
     dev: true
 
-  /@vue/test-utils/2.0.0_vue@2.6.14:
-    resolution: {integrity: sha512-zL5kygNq7hONrO1CzaUGprEAklAX+pH8J1MPMCU3Rd2xtSYkZ+PmKU3oEDRg8VAGdL5lNJHzDgrud5amFPtirw==}
+  /@vue/test-utils/2.0.2_vue@2.6.14:
+    resolution: {integrity: sha512-E2P4oXSaWDqTZNbmKZFVLrNN/siVN78YkEqs7pHryWerrlZR9bBFLWdJwRoguX45Ru6HxIflzKl4vQvwRMwm5g==}
     peerDependencies:
       vue: ^3.0.1
     dependencies:
@@ -11184,7 +11184,7 @@ packages:
       vue-template-compiler:
         optional: true
     dependencies:
-      '@babel/code-frame': 7.16.7
+      '@babel/code-frame': 7.18.6
       '@types/json-schema': 7.0.11
       chalk: 4.1.2
       cosmiconfig: 6.0.0
@@ -13742,7 +13742,7 @@ packages:
     resolution: {integrity: sha512-oCj8FiZ3U0hTP4aSui87P4L4jC37BtQwUMqk+zk/b11FR19BJDeZsZAvIHutWnmtw7r85UmR3CEWZ0HWU2mAlw==}
     engines: {node: '>= 6'}
     dependencies:
-      '@babel/code-frame': 7.16.7
+      '@babel/code-frame': 7.18.6
       '@jest/test-result': 24.9.0
       '@jest/types': 24.9.0
       '@types/stack-utils': 1.0.1
@@ -15908,6 +15908,7 @@ packages:
 
   /nan/2.16.0:
     resolution: {integrity: sha512-UdAqHyFngu7TfQKsCBgAA6pWDkT8MAO7d0jyOecVhN5354xbLqdn8mV9Tat9gepAupm0bt2DbeaSC8vS52MuFA==}
+    requiresBuild: true
     dev: true
     optional: true
 
