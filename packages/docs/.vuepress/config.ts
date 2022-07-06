@@ -4,8 +4,9 @@ const { path } = require('@vuepress/utils');
 const { pwaPlugin } = require('@vuepress/plugin-pwa');
 const { pwaPopupPlugin } = require('@vuepress/plugin-pwa-popup');
 const seoPlugin = require('vuepress-plugin-seo');
-const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
+const { registerComponentsPlugin } = require('@vuepress/plugin-register-components');
 const { viteBundler } = require('vuepress');
+const { docsearchPlugin } = require('@vuepress/plugin-docsearch');
 
 const indexRE = /(^|.*\/)(index|readme)\.(md|vue)$/i;
 const isIndexFile = (file: string) => indexRE.test(file);
@@ -57,6 +58,11 @@ module.exports = {
         extractHeaders: ['h2', 'h3', 'h4', 'h5'],
     },
     plugins: [
+        docsearchPlugin({
+            appId: 'PEZPH70M28',
+            apiKey: 'f3397cee543a54ea756174589de9dc60',
+            indexName: 'tiny-carousel',
+        }),
         registerComponentsPlugin({
             componentsDir: path.resolve(__dirname, './components'),
         }),
