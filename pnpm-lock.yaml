@@ -184,7 +184,7 @@ importers:
       '@testing-library/react': 13.3.0
       '@testing-library/user-event': 14.2.1
       '@types/node': 17.0.43
-      '@types/react': 18.0.14
+      '@types/react': 18.0.15
       '@types/react-dom': 18.0.6
       babel-eslint: 10.1.0
       eslint-config-react-app: 7.0.1
@@ -211,7 +211,7 @@ importers:
       '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
       '@testing-library/user-event': 14.2.1_ihvo3xlg2d6kwqju3os3zitn3y
       '@types/node': 17.0.43
-      '@types/react': 18.0.14
+      '@types/react': 18.0.15
       '@types/react-dom': 18.0.6
       babel-eslint: 10.1.0_eslint@8.19.0
       eslint-config-react-app: 7.0.1_2q22o7yntub6dgnjkyx65wx6su
@@ -3942,14 +3942,6 @@ packages:
     resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
       '@types/react': 18.0.15
-    dev: true
-
-  /@types/react/18.0.14:
-    resolution: {integrity: sha512-x4gGuASSiWmo0xjDLpm5mPb52syZHJx02VKbqUKdLmKtAwIh63XClGsiTI1K6DO5q7ox4xAsQrU+Gl3+gGXF9Q==}
-    dependencies:
-      '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.2
-      csstype: 3.1.0
     dev: true
 
   /@types/react/18.0.15:
@@ -7928,7 +7920,7 @@ packages:
       lodash: ^4.17.20
       marko: ^3.14.4
       mote: ^0.2.0
-      mustache: ^4.0.1
+      mustache: ^3.0.0
       nunjucks: ^3.2.2
       plates: ~0.4.11
       pug: ^3.0.0
