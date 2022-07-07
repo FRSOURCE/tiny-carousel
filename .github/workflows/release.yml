@@ -11,7 +11,7 @@ jobs:
       matrix:
         node-version: [16]
     steps:
-      - uses: google-github-actions/release-please-action@v3.2.7
+      - uses: google-github-actions/release-please-action@v3.2.8
         id: release
         with:
           command: manifest
