@@ -103,7 +103,7 @@ importers:
       '@frsource/tiny-carousel-plugin-custom-events': ^0.4.5
       '@frsource/tiny-carousel-plugin-scroll-snap-fallback': ^0.3.2
       '@frsource/tiny-carousel-utils': ^0.6.0
-      '@vuepress/client': 2.0.0-beta.48
+      '@vuepress/client': 2.0.0-beta.49
       '@vuepress/plugin-active-header-links': 2.0.0-beta.48
       '@vuepress/plugin-docsearch': 2.0.0-beta.49
       '@vuepress/plugin-pwa': 2.0.0-beta.48
@@ -121,7 +121,7 @@ importers:
       '@frsource/tiny-carousel-plugin-scroll-snap-fallback': link:../plugin-scroll-snap-fallback
       '@frsource/tiny-carousel-utils': link:../utils
     devDependencies:
-      '@vuepress/client': 2.0.0-beta.48
+      '@vuepress/client': 2.0.0-beta.49
       '@vuepress/plugin-active-header-links': 2.0.0-beta.48
       '@vuepress/plugin-docsearch': 2.0.0-beta.49_tbq7qqbbedk3tko5ldgdax3r7a
       '@vuepress/plugin-pwa': 2.0.0-beta.48
@@ -130,7 +130,7 @@ importers:
       '@vuepress/theme-default': 2.0.0-beta.48
       vue: 3.2.37
       vue-router: 4.1.1_vue@3.2.37
-      vuepress: 2.0.0-beta.48_cvdz5rjhltiqfsopd7oft5nvg4
+      vuepress: 2.0.0-beta.48_2swkti5cn42xfigpmsn6ifcgpu
       vuepress-plugin-clean-urls: 1.1.2
       vuepress-plugin-seo: 0.2.0
 
@@ -22306,7 +22306,7 @@ packages:
     resolution: {integrity: sha512-/Rqul20UTL30mZyCbNwkfAfP50Yr7jzWlavQ92OVzZ8PcpZGXoDc+eoKQyKLQKL3G96dqvuCCbIMbW7RRs7Bhw==}
     dev: true
 
-  /vuepress-vite/2.0.0-beta.48_cvdz5rjhltiqfsopd7oft5nvg4:
+  /vuepress-vite/2.0.0-beta.48_2swkti5cn42xfigpmsn6ifcgpu:
     resolution: {integrity: sha512-1TKEXg26W7VlTBU9J6BcJTW/NFtzkAveM33jccVs6HieYgvK7lyTpbhs5eRu9fUWawGR8ULa+b5kdk0dSLpjew==}
     hasBin: true
     peerDependencies:
@@ -22315,7 +22315,7 @@ packages:
     dependencies:
       '@vuepress/bundler-vite': 2.0.0-beta.48
       '@vuepress/cli': 2.0.0-beta.48
-      '@vuepress/client': 2.0.0-beta.48
+      '@vuepress/client': 2.0.0-beta.49
       '@vuepress/core': 2.0.0-beta.48
       '@vuepress/theme-default': 2.0.0-beta.48
       vue: 3.2.37
@@ -22328,11 +22328,11 @@ packages:
       - supports-color
     dev: true
 
-  /vuepress/2.0.0-beta.48_cvdz5rjhltiqfsopd7oft5nvg4:
+  /vuepress/2.0.0-beta.48_2swkti5cn42xfigpmsn6ifcgpu:
     resolution: {integrity: sha512-m1CzjgMrHdrOzNr3eMoFrdqHlp3wK23TBIHZJtm9tDnwg4OF59FG6y6gGoBLo+zpfzVOwi/V8FR13ehiQwG/3A==}
     hasBin: true
     dependencies:
-      vuepress-vite: 2.0.0-beta.48_cvdz5rjhltiqfsopd7oft5nvg4
+      vuepress-vite: 2.0.0-beta.48_2swkti5cn42xfigpmsn6ifcgpu
     transitivePeerDependencies:
       - '@vue/composition-api'
       - '@vuepress/client'

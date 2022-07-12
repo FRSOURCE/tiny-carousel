@@ -46,7 +46,7 @@
     "@frsource/tiny-carousel-utils": "^0.6.0"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.48",
+    "@vuepress/client": "2.0.0-beta.49",
     "@vuepress/plugin-active-header-links": "2.0.0-beta.48",
     "@vuepress/plugin-docsearch": "2.0.0-beta.49",
     "@vuepress/plugin-pwa": "2.0.0-beta.48",
