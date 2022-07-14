@@ -78,7 +78,7 @@
     "core-js": "3.23.4",
     "eslint-plugin-vue": "9.2.0",
     "vue": "2.7.5",
-    "vue-demi": "0.13.2",
+    "vue-demi": "0.13.4",
     "vue-template-compiler": "2.7.5",
     "vue3": "npm:vue@3.2.37"
   },
