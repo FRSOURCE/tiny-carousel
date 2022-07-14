@@ -244,7 +244,7 @@ importers:
       '@vue/cli-service': 4.5.18
       '@vue/eslint-config-typescript': 11.0.0
       '@vue/test-utils': 2.0.2
-      core-js: 3.23.3
+      core-js: 3.23.4
       eslint-plugin-vue: 9.2.0
       vue: 2.6.14
       vue-demi: 0.13.2
@@ -264,7 +264,7 @@ importers:
       '@vue/cli-service': 4.5.18_x6wjcbhak27hsa5sstktde3x2i
       '@vue/eslint-config-typescript': 11.0.0_hko2ljsyixuca7xzzs7dalplrm
       '@vue/test-utils': 2.0.2_vue@2.6.14
-      core-js: 3.23.3
+      core-js: 3.23.4
       eslint-plugin-vue: 9.2.0_eslint@8.19.0
       vue: 2.6.14
       vue-demi: 0.13.2_vue@2.6.14
@@ -4476,7 +4476,7 @@ packages:
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.18.2
       '@vue/babel-preset-jsx': 1.3.0_deuxxetcrpsi4nz2eu5xcybq4a
       babel-plugin-dynamic-import-node: 2.3.3
-      core-js: 3.23.3
+      core-js: 3.23.4
       core-js-compat: 3.22.8
       semver: 7.3.7
       vue: 2.6.14
@@ -8224,6 +8224,11 @@ packages:
 
   /core-js/3.23.3:
     resolution: {integrity: sha512-oAKwkj9xcWNBAvGbT//WiCdOMpb9XQG92/Fe3ABFM/R16BsHgePG00mFOgKf7IsCtfj8tA1kHtf/VwErhriz5Q==}
+    requiresBuild: true
+    dev: true
+
+  /core-js/3.23.4:
+    resolution: {integrity: sha512-vjsKqRc1RyAJC3Ye2kYqgfdThb3zYnx9CrqoCcjMOENMtQPC7ZViBvlDxwYU/2z2NI/IPuiXw5mT4hWhddqjzQ==}
     requiresBuild: true
     dev: true
 
