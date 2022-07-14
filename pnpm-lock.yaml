@@ -247,7 +247,7 @@ importers:
       core-js: 3.23.4
       eslint-plugin-vue: 9.2.0
       vue: 2.7.5
-      vue-demi: 0.13.2
+      vue-demi: 0.13.4
       vue-template-compiler: 2.7.5
       vue3: npm:vue@3.2.37
     devDependencies:
@@ -267,7 +267,7 @@ importers:
       core-js: 3.23.4
       eslint-plugin-vue: 9.2.0_eslint@8.19.0
       vue: 2.7.5
-      vue-demi: 0.13.2_vue@2.7.5
+      vue-demi: 0.13.4_vue@2.7.5
       vue-template-compiler: 2.7.5
       vue3: /vue/3.2.37
 
@@ -22156,21 +22156,6 @@ packages:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
     dev: true
 
-  /vue-demi/0.13.2_vue@2.7.5:
-    resolution: {integrity: sha512-41ukrclEbMddAyP7PvxMSYqnOSzPV6r7GNnyTSKSCNTaz19GehxmTiXyP9kwHSUv2+Dr6hHqiUiF7L1VAw2KdQ==}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue: 2.7.5
-    dev: true
-
   /vue-demi/0.13.2_vue@3.2.37:
     resolution: {integrity: sha512-41ukrclEbMddAyP7PvxMSYqnOSzPV6r7GNnyTSKSCNTaz19GehxmTiXyP9kwHSUv2+Dr6hHqiUiF7L1VAw2KdQ==}
     engines: {node: '>=12'}
@@ -22184,6 +22169,21 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
+    dev: true
+
+  /vue-demi/0.13.4_vue@2.7.5:
+    resolution: {integrity: sha512-KP4lq9uSz0KZbaqCllRhnxMV3mYRsRWJfdsAhZyt5bV5O1RTpoeDptBRV9NOa/JgOpfaA9ane88VF7OjWNK/DA==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 2.7.5
     dev: true
 
   /vue-eslint-parser/9.0.3_eslint@8.19.0:
