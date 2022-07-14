@@ -182,7 +182,7 @@ importers:
       '@testing-library/dom': 8.16.0
       '@testing-library/jest-dom': 5.16.4
       '@testing-library/react': 13.3.0
-      '@testing-library/user-event': 14.2.1
+      '@testing-library/user-event': 14.2.2
       '@types/node': 17.0.43
       '@types/react': 18.0.15
       '@types/react-dom': 18.0.6
@@ -209,7 +209,7 @@ importers:
       '@testing-library/dom': 8.16.0
       '@testing-library/jest-dom': 5.16.4
       '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
-      '@testing-library/user-event': 14.2.1_gwcpuyfvwbszhlmedmugzivgzu
+      '@testing-library/user-event': 14.2.2_gwcpuyfvwbszhlmedmugzivgzu
       '@types/node': 17.0.43
       '@types/react': 18.0.15
       '@types/react-dom': 18.0.6
@@ -3504,8 +3504,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@testing-library/user-event/14.2.1_gwcpuyfvwbszhlmedmugzivgzu:
-    resolution: {integrity: sha512-HOr1QiODrq+0j9lKU5i10y9TbhxMBMRMGimNx10asdmau9cb8Xb1Vyg0GvTwyIL2ziQyh2kAloOtAQFBQVuecA==}
+  /@testing-library/user-event/14.2.2_gwcpuyfvwbszhlmedmugzivgzu:
+    resolution: {integrity: sha512-qVUBP9JFPpfxhrQL9U85pZ3Wro4poglBHY/SBr1SkQblpD19G1bW04kQGeqy1SUrKqxQKv2QCJ0p+dPX0rnXhQ==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
