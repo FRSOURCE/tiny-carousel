@@ -10,7 +10,7 @@ importers:
       '@types/jest': 27.5.2
       '@typescript-eslint/eslint-plugin': 5.30.7
       '@typescript-eslint/parser': 5.30.7
-      concurrently: 7.2.2
+      concurrently: 7.3.0
       coveralls: 3.1.1
       cpy-cli: 4.1.0
       dictionary-en: 3.2.0
@@ -52,7 +52,7 @@ importers:
       '@types/jest': 27.5.2
       '@typescript-eslint/eslint-plugin': 5.30.7_6wltbjakwuqm7awqswigmiuhd4
       '@typescript-eslint/parser': 5.30.7_he2ccbldppg44uulnyq4rwocfa
-      concurrently: 7.2.2
+      concurrently: 7.3.0
       coveralls: 3.1.1
       cpy-cli: 4.1.0
       dictionary-en: 3.2.0
@@ -8061,8 +8061,8 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /concurrently/7.2.2:
-    resolution: {integrity: sha512-DcQkI0ruil5BA/g7Xy3EWySGrFJovF5RYAYxwGvv9Jf9q9B1v3jPFP2tl6axExNf1qgF30kjoNYrangZ0ey4Aw==}
+  /concurrently/7.3.0:
+    resolution: {integrity: sha512-IiDwm+8DOcFEInca494A8V402tNTQlJaYq78RF2rijOrKEk/AOHTxhN4U1cp7GYKYX5Q6Ymh1dLTBlzIMN0ikA==}
     engines: {node: ^12.20.0 || ^14.13.0 || >=16.0.0}
     hasBin: true
     dependencies:

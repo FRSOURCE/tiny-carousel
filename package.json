@@ -48,7 +48,7 @@
     "@types/jest": "27.5.2",
     "@typescript-eslint/eslint-plugin": "5.30.7",
     "@typescript-eslint/parser": "5.30.7",
-    "concurrently": "7.2.2",
+    "concurrently": "7.3.0",
     "coveralls": "3.1.1",
     "cpy-cli": "4.1.0",
     "dictionary-en": "3.2.0",
