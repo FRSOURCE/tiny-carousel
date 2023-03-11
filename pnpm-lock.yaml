@@ -41,7 +41,7 @@ importers:
       textlint-rule-period-in-list-item: 0.3.2
       textlint-rule-spelling: 0.3.0
       textlint-rule-stop-words: 3.0.1
-      textlint-rule-terminology: 3.0.2
+      textlint-rule-terminology: 3.0.4
       textlint-rule-unexpanded-acronym: 1.2.4
       ts-jest: 27.1.5
       typescript: 4.7.4
@@ -83,7 +83,7 @@ importers:
       textlint-rule-period-in-list-item: 0.3.2
       textlint-rule-spelling: 0.3.0_textlint@12.2.1
       textlint-rule-stop-words: 3.0.1_lnfvi5qkchyz6ykl3uzwwdbugi
-      textlint-rule-terminology: 3.0.2_lnfvi5qkchyz6ykl3uzwwdbugi
+      textlint-rule-terminology: 3.0.4_lnfvi5qkchyz6ykl3uzwwdbugi
       textlint-rule-unexpanded-acronym: 1.2.4
       ts-jest: 27.1.5_kz45wmo4i2t6klurdgejts3uhm
       typescript: 4.7.4
@@ -8330,8 +8330,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      is-text-path: 1.0.1
       JSONStream: 1.3.5
+      is-text-path: 1.0.1
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -21398,8 +21398,8 @@ packages:
       - '@textlint/types'
     dev: true
 
-  /textlint-rule-terminology/3.0.2_lnfvi5qkchyz6ykl3uzwwdbugi:
-    resolution: {integrity: sha512-PgHg7wkf0gWbihSL+GZF+rG8GJX01azQXIUtWZ4UniDs5GwcwXpb98Dts8jrFQ+c9UeLb1u2HtBgjTmlWkWlQw==}
+  /textlint-rule-terminology/3.0.4_lnfvi5qkchyz6ykl3uzwwdbugi:
+    resolution: {integrity: sha512-obQ3y0hqX6OWCrM8K5K6WSJGE4BOyNfGF6hUGPet56taTm/xzkRu8XA6vpn2GFr4zom/oMa0sBJ3OtDWCgrS/g==}
     engines: {node: '>=14'}
     dependencies:
       lodash: 4.17.21
