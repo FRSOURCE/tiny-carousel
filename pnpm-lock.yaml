@@ -123,7 +123,7 @@ importers:
     devDependencies:
       '@vuepress/client': 2.0.0-beta.49
       '@vuepress/plugin-active-header-links': 2.0.0-beta.49
-      '@vuepress/plugin-docsearch': 2.0.0-beta.49_afco6qrzoxo3m365bbrqaft6pi
+      '@vuepress/plugin-docsearch': 2.0.0-beta.49_gubkubvt6brnoalkginta45ssu
       '@vuepress/plugin-pwa': 2.0.0-beta.49
       '@vuepress/plugin-pwa-popup': 2.0.0-beta.49
       '@vuepress/plugin-register-components': 2.0.0-beta.49
@@ -185,7 +185,7 @@ importers:
       '@testing-library/react': 13.4.0
       '@testing-library/user-event': 14.4.3
       '@types/node': 17.0.43
-      '@types/react': 18.2.8
+      '@types/react': 18.2.11
       '@types/react-dom': 18.2.4
       eslint-config-react-app: 7.0.1
       eslint-plugin-flowtype: 8.0.3
@@ -212,7 +212,7 @@ importers:
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
       '@testing-library/user-event': 14.4.3_yxlyej73nftwmh2fiao7paxmlm
       '@types/node': 17.0.43
-      '@types/react': 18.2.8
+      '@types/react': 18.2.11
       '@types/react-dom': 18.2.4
       eslint-config-react-app: 7.0.1_wh5ezbhk6fzjhrgfc5pxopavnu
       eslint-plugin-flowtype: 8.0.3_5abf6bpqlysk26bxgmocvbsj7u
@@ -2310,10 +2310,10 @@ packages:
     resolution: {integrity: sha512-utLgg7E1agqQeqCJn05DWC7XXMk4tMUUnL7MZupcknRu2OzGN13qwey2qA/0NAKkVBGugiWtON0+rlU0QIPojg==}
     dev: true
 
-  /@docsearch/js/3.1.1_afco6qrzoxo3m365bbrqaft6pi:
+  /@docsearch/js/3.1.1_gubkubvt6brnoalkginta45ssu:
     resolution: {integrity: sha512-bt7l2aKRoSnLUuX+s4LVQ1a7AF2c9myiZNv5uvQCePG5tpvVGpwrnMwqVXOUJn9q6FwVVhOrQMO/t+QmnnAEUw==}
     dependencies:
-      '@docsearch/react': 3.1.1_afco6qrzoxo3m365bbrqaft6pi
+      '@docsearch/react': 3.1.1_gubkubvt6brnoalkginta45ssu
       preact: 10.9.0
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -2322,7 +2322,7 @@ packages:
       - react-dom
     dev: true
 
-  /@docsearch/react/3.1.1_afco6qrzoxo3m365bbrqaft6pi:
+  /@docsearch/react/3.1.1_gubkubvt6brnoalkginta45ssu:
     resolution: {integrity: sha512-cfoql4qvtsVRqBMYxhlGNpvyy/KlCoPqjIsJSZYqYf9AplZncKjLBTcwBu6RXFMVCe30cIFljniI4OjqAU67pQ==}
     peerDependencies:
       '@types/react': '>= 16.8.0 < 19.0.0'
@@ -2332,7 +2332,7 @@ packages:
       '@algolia/autocomplete-core': 1.7.1
       '@algolia/autocomplete-preset-algolia': 1.7.1_jr4xm7x4v4vd7iifhnoo3rb33u
       '@docsearch/css': 3.1.1
-      '@types/react': 18.2.8
+      '@types/react': 18.2.11
       algoliasearch: 4.13.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -4080,11 +4080,11 @@ packages:
   /@types/react-dom/18.2.4:
     resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
     dependencies:
-      '@types/react': 18.2.8
+      '@types/react': 18.2.11
     dev: true
 
-  /@types/react/18.2.8:
-    resolution: {integrity: sha512-lTyWUNrd8ntVkqycEEplasWy2OxNlShj3zqS0LuB1ENUGis5HodmhM7DtCoUGbxj3VW/WsGA0DUhpG6XrM7gPA==}
+  /@types/react/18.2.11:
+    resolution: {integrity: sha512-+hsJr9hmwyDecSMQAmX7drgbDpyE+EgSF6t7+5QEBAn1tQK7kl1vWZ4iRf6SjQ8lk7dyEULxUmZOIpN0W5baZA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -5502,12 +5502,12 @@ packages:
       - supports-color
     dev: true
 
-  /@vuepress/plugin-docsearch/2.0.0-beta.49_afco6qrzoxo3m365bbrqaft6pi:
+  /@vuepress/plugin-docsearch/2.0.0-beta.49_gubkubvt6brnoalkginta45ssu:
     resolution: {integrity: sha512-580pQ9AyOjTe64YH8h3MHsvj+EfxCmJ6IJ/3kp51tT0/zL59mE8aLyveyvgwJrvhBdki5PMOGgBx95tOT7QVwQ==}
     dependencies:
       '@docsearch/css': 3.1.1
-      '@docsearch/js': 3.1.1_afco6qrzoxo3m365bbrqaft6pi
-      '@docsearch/react': 3.1.1_afco6qrzoxo3m365bbrqaft6pi
+      '@docsearch/js': 3.1.1_gubkubvt6brnoalkginta45ssu
+      '@docsearch/react': 3.1.1_gubkubvt6brnoalkginta45ssu
       '@vuepress/client': 2.0.0-beta.49
       '@vuepress/core': 2.0.0-beta.49
       '@vuepress/shared': 2.0.0-beta.49
