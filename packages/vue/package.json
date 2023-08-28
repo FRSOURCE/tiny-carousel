@@ -74,13 +74,13 @@
     "@vue/cli-plugin-unit-jest": "4.5.19",
     "@vue/cli-service": "4.5.19",
     "@vue/eslint-config-typescript": "11.0.0",
-    "@vue/test-utils": "2.0.2",
-    "core-js": "3.23.4",
+    "@vue/test-utils": "2.4.1",
+    "core-js": "3.32.1",
     "eslint-plugin-vue": "9.15.1",
     "vue": "2.7.8",
-    "vue-demi": "0.13.4",
+    "vue-demi": "0.14.6",
     "vue-template-compiler": "2.7.8",
-    "vue3": "npm:vue@3.2.37"
+    "vue3": "npm:vue@3.3.4"
   },
   "peerDependencies": {
     "@frsource/tiny-carousel-core": "^0.10.0",
