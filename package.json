@@ -5,7 +5,7 @@
   "description": "Mobile & desktop-friendly, tiny, efficient (vanilaJS) carousel which takes advantage of CSS snap points (or polyfills it)!",
   "author": "Jakub Freisler <jakub.freisler@frsource.org>",
   "license": "MIT",
-  "packageManager": "pnpm@7.9.0",
+  "packageManager": "pnpm@7.33.6",
   "scripts": {
     "release": "pnpm -r publish",
     "release:ci": "pnpm release",
@@ -42,15 +42,15 @@
     "url": "https://github.com/FRSource/tiny-carousel/issues"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
+    "@commitlint/cli": "17.7.1",
+    "@commitlint/config-conventional": "17.7.0",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "1.0.8",
     "@types/jest": "27.5.2",
     "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
-    "concurrently": "7.3.0",
+    "concurrently": "7.6.0",
     "coveralls": "3.1.1",
-    "cpy-cli": "4.1.0",
+    "cpy-cli": "4.2.0",
     "dictionary-en": "3.2.0",
     "eslint": "8.44.0",
     "eslint-plugin-eslint-comments": "3.2.0",
@@ -63,10 +63,10 @@
     "postcss-import": "14.1.0",
     "postcss-reporter": "7.0.5",
     "rimraf": "3.0.2",
-    "sass": "1.54.4",
+    "sass": "1.66.1",
     "stylelint": "15.10.1",
     "stylelint-config-sass-guidelines": "9.0.1",
-    "textlint": "12.2.1",
+    "textlint": "12.6.1",
     "textlint-filter-rule-comments": "1.2.2",
     "textlint-rule-abbr-within-parentheses": "1.0.2",
     "textlint-rule-alex": "3.0.0",
@@ -82,7 +82,7 @@
     "textlint-rule-terminology": "3.0.2",
     "textlint-rule-unexpanded-acronym": "1.2.4",
     "ts-jest": "27.1.5",
-    "typescript": "4.7.4"
+    "typescript": "4.9.5"
   },
   "workspaces": {
     "packages": [
