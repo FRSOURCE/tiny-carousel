@@ -181,7 +181,7 @@ importers:
       '@frsource/tiny-carousel-plugin-mouse-drag': ^0.4.3
       '@frsource/tiny-carousel-utils': ^0.6.0
       '@testing-library/dom': 8.20.1
-      '@testing-library/jest-dom': 5.16.5
+      '@testing-library/jest-dom': 5.17.0
       '@testing-library/react': 13.4.0
       '@testing-library/user-event': 14.4.3
       '@types/node': 17.0.45
@@ -208,7 +208,7 @@ importers:
       '@frsource/tiny-carousel-plugin-mouse-drag': link:../plugin-mouse-drag
       '@frsource/tiny-carousel-utils': link:../utils
       '@testing-library/dom': 8.20.1
-      '@testing-library/jest-dom': 5.16.5
+      '@testing-library/jest-dom': 5.17.0
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
       '@testing-library/user-event': 14.4.3_szfc7t2zqsdonxwckqxkjn2the
       '@types/node': 17.0.45
@@ -1678,7 +1678,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.3.1_@babel+core@7.18.2
       babel-plugin-polyfill-corejs3: 0.5.2_@babel+core@7.18.2
       babel-plugin-polyfill-regenerator: 0.3.1_@babel+core@7.18.2
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1907,13 +1907,6 @@ packages:
       '@babel/plugin-transform-typescript': 7.18.6_@babel+core@7.18.2
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/runtime/7.18.3:
-    resolution: {integrity: sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.13.11
     dev: true
 
   /@babel/runtime/7.22.3:
@@ -3457,8 +3450,8 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@testing-library/jest-dom/5.16.5:
-    resolution: {integrity: sha512-N5ixQ2qKpi5OLYfwQmUb/5mSV9LneAcaUfp32pn4yCnpb8r/Yz0pXFPck21dIicKmi+ta5WRAknkZCfA8refMA==}
+  /@testing-library/jest-dom/5.17.0:
+    resolution: {integrity: sha512-ynmNeT7asXyH3aSVv4vvX4Rb+0qjOhdNHnO/3vuZNqPmhDpV/+rCSGwQ7bLcmU2cJ4dvoheIO85LQj0IbJHEtg==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
     dependencies:
       '@adobe/css-tools': 4.2.0
@@ -3871,13 +3864,6 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@types/jest/28.1.4:
-    resolution: {integrity: sha512-telv6G5N7zRJiLcI3Rs3o+ipZ28EnE+7EvF0pSrt2pZOMnAVI/f+6/LucDxOvcBcTeTL3JMF744BbVQAVBUQRA==}
-    dependencies:
-      jest-matcher-utils: 28.1.1
-      pretty-format: 28.1.1
-    dev: true
-
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
@@ -4063,7 +4049,7 @@ packages:
   /@types/testing-library__jest-dom/5.14.5:
     resolution: {integrity: sha512-SBwbxYoyPIvxHbeHxTZX2Pe/74F/tX2/D3mMvzabdeJ25bBojfW0TyB8BHrbq/9zaaKICJZjLP+8r6AeZMFCuQ==}
     dependencies:
-      '@types/jest': 28.1.4
+      '@types/jest': 27.5.2
     dev: true
 
   /@types/trusted-types/2.0.2:
@@ -6539,7 +6525,7 @@ packages:
   /babel-plugin-dynamic-import-node/2.3.3:
     resolution: {integrity: sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==}
     dependencies:
-      object.assign: 4.1.2
+      object.assign: 4.1.4
     dev: true
 
   /babel-plugin-istanbul/5.2.0:
@@ -9284,11 +9270,6 @@ packages:
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dev: true
 
-  /diff-sequences/28.1.1:
-    resolution: {integrity: sha512-FU0iFaH/E23a+a718l8Qa/19bF9p06kgE0KipMOMadwa3SjnaElKzPaUC0vnibs6/B/9ni97s61mcejk8W1fQw==}
-    engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
-    dev: true
-
   /diff/4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
     engines: {node: '>=0.3.1'}
@@ -9686,12 +9667,12 @@ packages:
       es-to-primitive: 1.2.1
       function-bind: 1.1.1
       function.prototype.name: 1.1.5
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.2.1
       get-symbol-description: 1.0.0
       has: 1.0.3
       has-property-descriptors: 1.0.0
       has-symbols: 1.0.3
-      internal-slot: 1.0.3
+      internal-slot: 1.0.5
       is-callable: 1.2.4
       is-negative-zero: 2.0.2
       is-regex: 1.1.4
@@ -9700,8 +9681,8 @@ packages:
       is-weakref: 1.0.2
       object-inspect: 1.12.2
       object-keys: 1.1.1
-      object.assign: 4.1.2
-      regexp.prototype.flags: 1.4.3
+      object.assign: 4.1.4
+      regexp.prototype.flags: 1.5.0
       string.prototype.trimend: 1.0.5
       string.prototype.trimstart: 1.0.5
       unbox-primitive: 1.0.2
@@ -11292,7 +11273,7 @@ packages:
       memfs: 3.4.7
       minimatch: 3.1.2
       schema-utils: 2.7.0
-      semver: 7.3.7
+      semver: 7.5.4
       tapable: 1.1.3
       typescript: 4.9.5
       webpack: 5.73.0
@@ -12588,15 +12569,6 @@ packages:
       ipaddr.js: 1.9.1
     dev: true
 
-  /internal-slot/1.0.3:
-    resolution: {integrity: sha512-O0DB1JC/sPyZl7cIo78n5dR7eUSwwpYPiXRhTzNxZVAMUuB8vlnRFyLxdrVToks6XPLVnFfbzaVd5WLjhgg+vA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      get-intrinsic: 1.2.1
-      has: 1.0.3
-      side-channel: 1.0.4
-    dev: true
-
   /internal-slot/1.0.5:
     resolution: {integrity: sha512-Y+R5hJrzs52QCG2laLn4udYVnxsfny9CpOhNhUvk/SSSVyF6T27FzRbF0sroPidSu3X8oEAkOn2K804mjpt6UQ==}
     engines: {node: '>= 0.4'}
@@ -13205,7 +13177,7 @@ packages:
       '@babel/traverse': 7.18.6
       '@babel/types': 7.22.11
       istanbul-lib-coverage: 2.0.5
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -13218,7 +13190,7 @@ packages:
       '@babel/parser': 7.22.11
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.0
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -13552,16 +13524,6 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /jest-diff/28.1.1:
-    resolution: {integrity: sha512-/MUUxeR2fHbqHoMMiffe/Afm+U8U4olFRJ0hiVG2lZatPJcnGxx292ustVu7bULhjV65IYMxRdploAKLbcrsyg==}
-    engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
-    dependencies:
-      chalk: 4.1.2
-      diff-sequences: 28.1.1
-      jest-get-type: 28.0.2
-      pretty-format: 28.1.1
-    dev: true
-
   /jest-docblock/24.9.0:
     resolution: {integrity: sha512-F1DjdpDMJMA1cN6He0FNYNZlo3yYmOtRUnktrT9Q37njYzC5WEaDdmbynIgy0L/IvXvvgsG8OsqhLPXTpfmZAA==}
     engines: {node: '>= 6'}
@@ -13683,11 +13645,6 @@ packages:
   /jest-get-type/27.5.1:
     resolution: {integrity: sha512-2KY95ksYSaK7DMBWQn6dQz3kqAf3BB64y2udeG+hv4KfSOb9qwcYQstTJc1KCbsix+wLZWZYN8t7nwX3GOBLRw==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-    dev: true
-
-  /jest-get-type/28.0.2:
-    resolution: {integrity: sha512-ioj2w9/DxSYHfOm5lJKCdcAmPJzQXmbM/Url3rhlghrPvT3tt+7a/+oXc9azkKmLvoiXjtV83bEWqi+vs5nlPA==}
-    engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     dev: true
 
   /jest-haste-map/24.9.0:
@@ -13814,16 +13771,6 @@ packages:
       jest-diff: 27.5.1
       jest-get-type: 27.5.1
       pretty-format: 27.5.1
-    dev: true
-
-  /jest-matcher-utils/28.1.1:
-    resolution: {integrity: sha512-NPJPRWrbmR2nAJ+1nmnfcKKzSwgfaciCCrYZzVnNoxVoyusYWIjkBMNvu0RHJe7dNj4hH3uZOPZsQA+xAYWqsw==}
-    engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
-    dependencies:
-      chalk: 4.1.2
-      jest-diff: 28.1.1
-      jest-get-type: 28.0.2
-      pretty-format: 28.1.1
     dev: true
 
   /jest-message-util/24.9.0:
@@ -16262,16 +16209,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       isobject: 3.0.1
-    dev: true
-
-  /object.assign/4.1.2:
-    resolution: {integrity: sha512-ixT2L5THXsApyiUPYKmW+2EHpXXe5Ii3M+f4e+aJFAHao5amFRW6J0OO6c/LU8Be47utCx2GL89hxGB6XSmKuQ==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      call-bind: 1.0.2
-      define-properties: 1.2.0
-      has-symbols: 1.0.3
-      object-keys: 1.1.1
     dev: true
 
   /object.assign/4.1.4:
@@ -20811,9 +20748,9 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.2.0
       es-abstract: 1.20.1
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.2.1
       has-symbols: 1.0.3
-      internal-slot: 1.0.3
+      internal-slot: 1.0.5
       regexp.prototype.flags: 1.5.0
       side-channel: 1.0.4
     dev: true
@@ -23485,7 +23422,7 @@ packages:
       '@apideck/better-ajv-errors': 0.3.4_ajv@8.11.0
       '@babel/core': 7.18.2
       '@babel/preset-env': 7.18.2_@babel+core@7.18.2
-      '@babel/runtime': 7.18.3
+      '@babel/runtime': 7.22.3
       '@rollup/plugin-babel': 5.3.1_wwj6nrjtrryxuar2uaqwelbtjy
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.75.6
       '@rollup/plugin-replace': 2.4.2_rollup@2.75.6
