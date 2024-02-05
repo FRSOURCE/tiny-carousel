@@ -38,7 +38,7 @@ importers:
       textlint-rule-no-empty-section: 1.1.0
       textlint-rule-no-start-duplicated-conjunction: 2.0.2
       textlint-rule-no-todo: 2.0.1
-      textlint-rule-period-in-list-item: 0.3.2
+      textlint-rule-period-in-list-item: 1.0.1
       textlint-rule-spelling: 0.3.0
       textlint-rule-stop-words: 3.0.1
       textlint-rule-terminology: 3.0.2
@@ -80,7 +80,7 @@ importers:
       textlint-rule-no-empty-section: 1.1.0
       textlint-rule-no-start-duplicated-conjunction: 2.0.2_ulq2ivwxpxbm4gjv7av355kqm4
       textlint-rule-no-todo: 2.0.1_ulq2ivwxpxbm4gjv7av355kqm4
-      textlint-rule-period-in-list-item: 0.3.2
+      textlint-rule-period-in-list-item: 1.0.1
       textlint-rule-spelling: 0.3.0_textlint@12.6.1
       textlint-rule-stop-words: 3.0.1_ulq2ivwxpxbm4gjv7av355kqm4
       textlint-rule-terminology: 3.0.2_ulq2ivwxpxbm4gjv7av355kqm4
@@ -470,7 +470,7 @@ packages:
       convert-source-map: 1.8.0
       debug: 4.3.4
       gensync: 1.0.0-beta.2
-      json5: 2.2.1
+      json5: 2.2.3
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -793,11 +793,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@babel/helper-validator-identifier/7.18.6:
-    resolution: {integrity: sha512-MmetCkz9ej86nJQV+sFCxoGGrUbU3q02kgLciwkrt9QqEB7cP39oKEY0PakknEO0Gu20SskMRi+AYZ3b1TpN9g==}
-    engines: {node: '>=6.9.0'}
-    dev: true
-
   /@babel/helper-validator-identifier/7.22.5:
     resolution: {integrity: sha512-aJXu+6lErq8ltp+JhkJUfk1MTGyuA4v7f3pA+BJ5HLfNC6nAQ0Cpi9uOquUj8Hehg0aUiHzWQbOVJGao6ztBAQ==}
     engines: {node: '>=6.9.0'}
@@ -835,17 +830,9 @@ packages:
     resolution: {integrity: sha512-u7stbOuYjaPezCuLj29hNW1v64M2Md2qupEKP1fHc7WdOA3DgLh37suiSrZYY7haUB7iBeQZ9P1uiRF359do3g==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/helper-validator-identifier': 7.18.6
+      '@babel/helper-validator-identifier': 7.22.5
       chalk: 2.4.2
       js-tokens: 4.0.0
-    dev: true
-
-  /@babel/parser/7.18.6:
-    resolution: {integrity: sha512-uQVSa9jJUe/G/304lXspfWVpKpK4euFLgGiMQFOCpM/bgcAdeoHwi/OQz23O9GK2osz26ZiXRRV9aV+Yl1O8tw==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.22.11
     dev: true
 
   /@babel/parser/7.22.11:
@@ -4968,8 +4955,8 @@ packages:
   /@vue/compiler-sfc/2.7.8:
     resolution: {integrity: sha512-2DK4YWKfgLnW9VDR9gnju1gcYRk3flKj8UNsms7fsRmFcg35slVTZEkqwBtX+wJBXaamFfn6NxSsZh3h12Ix/Q==}
     dependencies:
-      '@babel/parser': 7.18.6
-      postcss: 8.4.24
+      '@babel/parser': 7.22.11
+      postcss: 8.4.29
       source-map: 0.6.1
     dev: true
 
@@ -4984,7 +4971,7 @@ packages:
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
       magic-string: 0.30.3
-      postcss: 8.4.24
+      postcss: 8.4.29
       source-map-js: 1.0.2
     dev: true
 
@@ -5175,9 +5162,9 @@ packages:
       '@vuepress/core': 2.0.0-beta.49
       '@vuepress/shared': 2.0.0-beta.49
       '@vuepress/utils': 2.0.0-beta.49
-      autoprefixer: 10.4.7_postcss@8.4.24
+      autoprefixer: 10.4.7_postcss@8.4.29
       connect-history-api-fallback: 2.0.0
-      postcss: 8.4.24
+      postcss: 8.4.29
       rollup: 2.76.0
       vite: 2.9.14
       vue: 3.3.4
@@ -6218,15 +6205,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /array.prototype.find/2.2.0:
-    resolution: {integrity: sha512-sn40qmUiLYAcRb/1HsIQjTTZ1kCy8II8VtZJpMn2Aoen9twULhbWXisfh3HimGqMlHGUul0/TfKCnXg42LuPpQ==}
-    dependencies:
-      call-bind: 1.0.2
-      define-properties: 1.2.0
-      es-abstract: 1.21.2
-      es-shim-unscopables: 1.0.0
-    dev: true
-
   /array.prototype.findlastindex/1.2.3:
     resolution: {integrity: sha512-LzLoiOMAxvy+Gd3BAq3B7VeIgPdo+Q8hthvKtXybMvRV0jrXfJM/t8mw7nNlpEcVlVUnCnM2KSX4XU5HmpodOA==}
     engines: {node: '>= 0.4'}
@@ -6411,7 +6389,7 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /autoprefixer/10.4.7_postcss@8.4.24:
+  /autoprefixer/10.4.7_postcss@8.4.29:
     resolution: {integrity: sha512-ypHju4Y2Oav95SipEcCcI5J7CGPuvz8oat7sUtYj3ClK44bldfvtvcxK6IEK++7rqB7YchDGzweZIBG+SD0ZAA==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -6423,7 +6401,7 @@ packages:
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
-      postcss: 8.4.24
+      postcss: 8.4.29
       postcss-value-parser: 4.2.0
     dev: true
 
@@ -7488,12 +7466,10 @@ packages:
     resolution: {integrity: sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA==}
     dev: true
 
-  /check-ends-with-period/1.0.1:
-    resolution: {integrity: sha512-vhGWpphk52Q1CiU2YHpWhOOKyI1FMCVPfPO7X6M6fN60JbnzZCwnf9cgR+T4LDSZGCDd1mqzgCdIcffEFBrUFQ==}
+  /check-ends-with-period/3.0.2:
+    resolution: {integrity: sha512-/Bw+avucqqZ7PjKCVDod1QDGyZjo7Ht2701pdgcpTXzK5jI73/OUh3VR+m18jNUoJx5DSOUv0AxELZF7FYtcDA==}
     dependencies:
-      array.prototype.find: 2.2.0
-      emoji-regex: 6.5.1
-      end-with: 1.0.2
+      emoji-regex: 10.3.0
     dev: true
 
   /check-types/11.1.2:
@@ -9569,8 +9545,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /emoji-regex/6.5.1:
-    resolution: {integrity: sha512-PAHp6TxrCy7MGMFidro8uikr+zlJJKJ/Q6mm2ExZ7HwkyR9lSVFfE3kt36qcwa24BQL7y0G9axycGjK1A/0uNQ==}
+  /emoji-regex/10.3.0:
+    resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
     dev: true
 
   /emoji-regex/7.0.3:
@@ -9629,10 +9605,6 @@ packages:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
     dependencies:
       once: 1.4.0
-    dev: true
-
-  /end-with/1.0.2:
-    resolution: {integrity: sha512-DA7B8EjHnFqKjIj8bUkw+HCVAJza1++3rV88sCUQ8aCyf8gvtl6SgFAJy0JwrOotWyx5Cdfmo3GkRobcBpYYcQ==}
     dev: true
 
   /enhanced-resolve/4.5.0:
@@ -14688,13 +14660,6 @@ packages:
     hasBin: true
     dev: true
 
-  /json5/1.0.1:
-    resolution: {integrity: sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==}
-    hasBin: true
-    dependencies:
-      minimist: 1.2.6
-    dev: true
-
   /json5/1.0.2:
     resolution: {integrity: sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==}
     hasBin: true
@@ -14957,7 +14922,7 @@ packages:
     dependencies:
       big.js: 5.2.2
       emojis-list: 3.0.0
-      json5: 1.0.1
+      json5: 1.0.2
     dev: true
 
   /loader-utils/2.0.2:
@@ -14966,7 +14931,7 @@ packages:
     dependencies:
       big.js: 5.2.2
       emojis-list: 3.0.0
-      json5: 2.2.1
+      json5: 2.2.3
     dev: true
 
   /loader-utils/3.2.0:
@@ -18516,15 +18481,6 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /postcss/8.4.24:
-    resolution: {integrity: sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: true
-
   /postcss/8.4.29:
     resolution: {integrity: sha512-cbI+jaqIeu/VGqXEarWkRCCffhjgXc0qjBtXpqJhTBohMUjUQnbBr0xqX3vEKudc4iviTewcJo5ajcec5+wdJw==}
     engines: {node: ^10 || ^12 || >=14}
@@ -21594,10 +21550,10 @@ packages:
       - '@textlint/types'
     dev: true
 
-  /textlint-rule-period-in-list-item/0.3.2:
-    resolution: {integrity: sha512-47yQZ14SbNfyBGKcSV/89eXwxLlGIwj8WzbKk1jvDh/uPy59skVfFbWoF4tUn09mYnRyVldMsdqB0llYgQMLUA==}
+  /textlint-rule-period-in-list-item/1.0.1:
+    resolution: {integrity: sha512-dNPa4WzePcgsz8A+CxFGQgKNZCEvjjwMCu3DFcpYB4eKuhcSISEiS/mvEO42oGAALJluYdYVZxN3yMD6XzkLBA==}
     dependencies:
-      check-ends-with-period: 1.0.1
+      check-ends-with-period: 3.0.2
     dev: true
 
   /textlint-rule-spelling/0.3.0_textlint@12.6.1:
