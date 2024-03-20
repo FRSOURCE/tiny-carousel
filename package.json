@@ -60,7 +60,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "27.5.1",
     "microbundle": "0.15.0",
-    "postcss-import": "14.1.0",
+    "postcss-import": "16.1.0",
     "postcss-reporter": "7.0.5",
     "rimraf": "3.0.2",
     "sass": "1.66.1",
