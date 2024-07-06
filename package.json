@@ -62,7 +62,7 @@
     "microbundle": "0.15.0",
     "postcss-import": "14.1.0",
     "postcss-reporter": "7.0.5",
-    "rimraf": "3.0.2",
+    "rimraf": "5.0.8",
     "sass": "1.66.1",
     "stylelint": "15.10.3",
     "stylelint-config-sass-guidelines": "9.0.1",
