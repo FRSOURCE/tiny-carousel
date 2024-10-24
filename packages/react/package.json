@@ -56,8 +56,8 @@
     "access": "public"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-flow": "7.22.5",
-    "@babel/plugin-transform-react-jsx": "7.22.5",
+    "@babel/plugin-syntax-flow": "7.25.9",
+    "@babel/plugin-transform-react-jsx": "7.25.9",
     "@frsource/tiny-carousel-core": "^0.10.2",
     "@frsource/tiny-carousel-utils": "^0.6.0",
     "@frsource/tiny-carousel-plugin-autoplay": "^0.4.5",
@@ -78,8 +78,8 @@
     "eslint-config-react-app": "7.0.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-testing-library": "5.11.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "2.1.4"
   },
