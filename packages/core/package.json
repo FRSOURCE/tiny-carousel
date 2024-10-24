@@ -64,6 +64,6 @@
     "@frsource/frs-hide-scrollbar": "^2.0.5"
   },
   "devDependencies": {
-    "@frsource/frs-hide-scrollbar": "2.0.7"
+    "@frsource/frs-hide-scrollbar": "2.0.50"
   }
 }
