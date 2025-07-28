@@ -20,7 +20,7 @@ jobs:
           monorepo-tags: true
       - name: Checkout Repository
         if: ${{ steps.release.outputs.releases_created }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
       - uses: pnpm/action-setup@v2.4.0
